@@ -32,15 +32,15 @@ function AdminPanel() {
   const [bannersList, setBannersList] = useState([]);
   
   const loadData = () => {
-    fetch(`/series`).then(r => r.json()).then(setSeriesList);
-    fetch(`/models`).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
+    fetch(`https://app.goodfilmshop.com/series`).then(r => r.json()).then(setSeriesList);
+    fetch(`https://app.goodfilmshop.com/models`).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
       const numA = parseInt(a.name.match(/\d+/)?.[0] || 0);
       const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
       return numA - numB;
     })));
-    fetch(`/portfolio`).then(r => r.json()).then(setPortfolioList);
-    fetch(`/downloads`).then(r => r.json()).then(setDownloadsList);
-    fetch(`/banners`).then(r => r.json()).then(setBannersList);
+    fetch(`https://app.goodfilmshop.com/portfolio`).then(r => r.json()).then(setPortfolioList);
+    fetch(`https://app.goodfilmshop.com/downloads`).then(r => r.json()).then(setDownloadsList);
+    fetch(`https://app.goodfilmshop.com/banners`).then(r => r.json()).then(setBannersList);
   };
 
   useEffect(() => {
@@ -60,7 +60,7 @@ function AdminPanel() {
   const handleDelete = async (endpoint, id) => {
     if (!window.confirm('คุณแน่ใจหรือไม่ที่จะลบรายการนี้?')) return;
     try {
-      await fetch(`/${endpoint}/${id}`, { method: 'DELETE' });
+      await fetch(`https://app.goodfilmshop.com/${endpoint}/${id}`, { method: 'DELETE' });
       loadData();
     } catch (error) {
       console.error(error);
@@ -217,7 +217,7 @@ function PortfolioManager({ seriesList, modelsList, portfolioList, onRefresh, on
         if (!(imgBlob instanceof Blob)) return imgBlob;
         const formDataObj = new FormData();
         formDataObj.append('file', imgBlob, prefix + '.jpg');
-        const res = await fetch(`/upload-portfolio`, { method: 'POST', body: formDataObj });
+        const res = await fetch(`https://app.goodfilmshop.com/upload-portfolio`, { method: 'POST', body: formDataObj });
         return (await res.json()).url;
       };
 
@@ -240,7 +240,7 @@ function PortfolioManager({ seriesList, modelsList, portfolioList, onRefresh, on
         image4: img4Url || formData.image4
       };
 
-      const res = await fetch(`/portfolio`, {
+      const res = await fetch(`https://app.goodfilmshop.com/portfolio`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
@@ -371,7 +371,7 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
   const handleSaveEditSeries = async () => {
     try {
       const currentSeries = seriesList.find(s => s.id === editingSeriesId);
-      await fetch(`/series/${editingSeriesId}`, {
+      await fetch(`https://app.goodfilmshop.com/series/${editingSeriesId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...currentSeries, ...editSeriesData })
@@ -391,7 +391,7 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
   const handleSaveEditModel = async () => {
     try {
       const currentModel = modelsList.find(m => m.id === editingModelId);
-      await fetch(`/models/${editingModelId}`, {
+      await fetch(`https://app.goodfilmshop.com/models/${editingModelId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...currentModel, name: editModelData.name, shgc: editModelData.shgc, vlt: editModelData.vlt, vlr: editModelData.vlr, reflectance: editModelData.vlr, uv: editModelData.uv, ir: editModelData.ir, tser: editModelData.tser, thickness: editModelData.thickness })
@@ -409,7 +409,7 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
 
   const handleAddSeries = async (e) => {
     e.preventDefault();
-    await fetch(`/series`, {
+    await fetch(`https://app.goodfilmshop.com/series`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...newSeries, id: 's-' + Date.now().toString(), referenceFile: '' })
     });
@@ -419,7 +419,7 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
 
   const handleAddModel = async (e) => {
     e.preventDefault();
-    await fetch(`/models`, {
+    await fetch(`https://app.goodfilmshop.com/models`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: 'm-' + Date.now().toString(), seriesId: newModel.seriesId, name: newModel.name, shgc: newModel.shgc, vlt: newModel.vlt, vlr: newModel.vlr, reflectance: newModel.vlr, uv: newModel.uv, ir: newModel.ir, tser: newModel.tser, thickness: newModel.thickness })
     });
@@ -648,7 +648,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
 
   const handleEditSave = async (id) => {
     try {
-      const res = await fetch(`/downloads/${id}`, {
+      const res = await fetch(`https://app.goodfilmshop.com/downloads/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: editData.title, seriesId: editData.seriesId, category: editData.category })
@@ -677,7 +677,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
       data.append('category', formData.category);
       data.append('file', file);
       
-      const uploadRes = await fetch(`/upload-download`, {
+      const uploadRes = await fetch(`https://app.goodfilmshop.com/upload-download`, {
         method: 'POST', body: data
       });
       
@@ -687,7 +687,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
       const ext = file.name.split('.').pop().toUpperCase();
       const fileSize = (file.size / (1024 * 1024)).toFixed(1) + ' MB';
 
-      const res = await fetch(`/downloads`, {
+      const res = await fetch(`https://app.goodfilmshop.com/downloads`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           id: Date.now().toString(),
@@ -848,13 +848,13 @@ function BannerManager({ bannersList, onRefresh, onDelete }) {
       const data = new FormData();
       data.append('file', file);
       
-      const uploadRes = await fetch(`/upload-banner`, {
+      const uploadRes = await fetch(`https://app.goodfilmshop.com/upload-banner`, {
         method: 'POST', body: data
       });
       if (!uploadRes.ok) throw new Error('Upload failed');
       const uploadData = await uploadRes.json();
 
-      const res = await fetch(`/banners`, {
+      const res = await fetch(`https://app.goodfilmshop.com/banners`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           id: Date.now().toString(),

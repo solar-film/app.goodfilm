@@ -209,14 +209,14 @@ function MainApp() {
   const getFullUrl = (path) => {
     if (!path) return path;
     if (path.startsWith('/')) {
-      return `${path}`;
+      return `https://app.goodfilmshop.com${path}`;
     }
     return path;
   };
 
   const loadData = () => {
     setLoadState('loading');
-    const API_URL = ``;
+    const API_URL = `https://app.goodfilmshop.com`;
     Promise.all([
       fetch(`${API_URL}/groups`).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
       fetch(`${API_URL}/series`).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
