@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#001B4D"/>
+    </linearGradient>
+  </defs>
+  <!-- Background transparent -->
+  <!-- The G shape -->
+  <path d="M256,48C141.1,48,48,141.1,48,256c0,114.9,93.1,208,208,208c114.9,0,208-93.1,208-208h-64c0,79.5-64.5,144-144,144 S112,335.5,112,256S176.5,112,256,112c37.5,0,71.5,14.5,97,38l45-45C363.5,70.5,312.5,48,256,48z" fill="url(#g)"/>
+  <rect x="256" y="224" width="160" height="64" fill="url(#g)"/>
+  
+  <!-- Red Squeegee / Triangle shape inside -->
+  <path d="M220,256 L420,50 L420,256 Z" fill="#E31837"/>
+</svg>

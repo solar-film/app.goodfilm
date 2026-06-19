@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  good-film-app:
+    build: .
+    container_name: good-film-app
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./db.json:/app/db.json
+      - ./public:/app/public
+      - ./server.js:/app/server.js
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: good-film-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token eyJhIjoiYmI0ODI4MmQwMjkyMTY4ZmEyODUxYjQ3M2I1N2YzMjciLCJ0IjoiZTA4ZDgzYzMtMTA5MC00ODEzLWI2NjgtMjJhNDI1MWZjYjcxIiwicyI6IllqRm1PRFF4T0RVdE5UUTJPQzAwWWpRd0xXSmxOakV0WXpCaU1HRTBZamM0TkdJdyJ9
+    depends_on:
+      - good-film-app

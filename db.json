@@ -1,0 +1,638 @@
+{
+  "banners": [
+    {
+      "id": "1781587310151",
+      "imageUrl": "/banners/1781587310982-725436446.jpg",
+      "linkUrl": "https://www.goodfilmshop.com/3m-prestige-exterior-series"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "1781517077743",
+      "title": "Ceramic Arch Interior(CA)",
+      "category": "catalog",
+      "ext": "PNG",
+      "info": "PNG  4.6 MB",
+      "file": "/download/e-catalog/1781517077695-3M-Ceramic-(CA).png"
+    },
+    {
+      "id": "1781518701083",
+      "title": "Prestige Exterior Series(PRex)",
+      "category": "catalog",
+      "ext": "PNG",
+      "info": "PNG  1.0 MB",
+      "file": "/download/e-catalog/1781518559343-3M-PRex.png"
+    },
+    {
+      "id": "1781518740988",
+      "title": "Prestige Series (PR)",
+      "category": "catalog",
+      "ext": "PNG",
+      "info": "PNG  4.0 MB",
+      "file": "/download/e-catalog/1781518599119-3M-PR.png"
+    },
+    {
+      "id": "1781518772889",
+      "title": "Night Vision Series (NV)",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  0.3 MB",
+      "file": "/download/e-catalog/1781518631168-3M-Night-Vision-Series-(NV).jpg"
+    },
+    {
+      "id": "1781518788989",
+      "title": "Ceramic IR Series (CMIR)",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  0.3 MB",
+      "file": "/download/e-catalog/1781518647280-3M-Ceramic-(CM-IR).jpg"
+    },
+    {
+      "id": "1781518808876",
+      "title": "Ceramic-X (X)",
+      "category": "catalog",
+      "ext": "PNG",
+      "info": "PNG  9.9 MB",
+      "file": "/download/e-catalog/1781518666796-3M-Ceramic-X.png"
+    },
+    {
+      "id": "1781518857994",
+      "title": "Reflective Series (BC)",
+      "category": "catalog",
+      "ext": "PNG",
+      "info": "PNG  3.7 MB",
+      "file": "/download/e-catalog/1781518716167-3M-CMIR_BC.png"
+    },
+    {
+      "id": "1781519041176",
+      "title": "3M Scotchcal 7725 Series",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  0.2 MB",
+      "file": "/download/e-catalog/1781518899466-แคตตาลอคฟิล์มฝ้า_3M.jpg"
+    },
+    {
+      "id": "1781519100619",
+      "title": "3M Scotchcal 5525 Series",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  0.2 MB",
+      "file": "/download/e-catalog/1781518958895-แคตตาลอคฟิล์มฝ้า_3M2.jpg"
+    }
+  ],
+  "groups": [
+    {
+      "id": "g1",
+      "title": "ฟิล์มกรองแสงอาคาร 3M"
+    },
+    {
+      "id": "g2",
+      "title": "ฟิล์มนิรภัย 3M"
+    },
+    {
+      "id": "g3",
+      "title": "ฟิล์มฝ้า 3M"
+    }
+  ],
+  "series": [
+    {
+      "id": "prex",
+      "groupId": "g1",
+      "title": "Prestige Exterior Series",
+      "desc": "ฟิล์มนาโนเทคโนโลยีใสเรียงซ้อนกว่า 200 ชั้น สำหรับติดตั้งภายนอก กันความร้อนสูงถึง 62%",
+      "referenceFile": ""
+    },
+    {
+      "id": "pr",
+      "groupId": "g1",
+      "title": "Prestige Series (PR)",
+      "desc": "ฟิล์มใสระดับพรีเมียม กันความร้อนสูงมาก ไม่สะท้อนแสง",
+      "referenceFile": ""
+    },
+    {
+      "id": "nv",
+      "groupId": "g1",
+      "title": "Night Vision Series (NV)",
+      "desc": "ฟิล์มกันความร้อนที่ช่วยลดแสงจ้า และให้ทัศนวิสัยชัดเจนในเวลากลางคืน",
+      "referenceFile": ""
+    },
+    {
+      "id": "cmir",
+      "groupId": "g1",
+      "title": "Ceramic IR Series (CMIR)",
+      "desc": "ฟิล์มเซรามิคกันความร้อนสูง เข้มภายนอก สว่างภายใน (ยอดนิยม)",
+      "referenceFile": ""
+    },
+    {
+      "id": "ca",
+      "groupId": "g1",
+      "title": "Ceramic Arch Interior(CA)",
+      "desc": "ฟิล์มเซรามิคสำหรับอาคารโดยเฉพาะ สว่างชัดเจน ไม่รบกวนสัญญาณ",
+      "referenceFile": ""
+    },
+    {
+      "id": "x",
+      "groupId": "g1",
+      "title": "Ceramic-X (X)",
+      "desc": "ฟิล์มเซรามิคคุณภาพสูง คุ้มค่า ทนทานยาวนาน",
+      "referenceFile": ""
+    },
+    {
+      "id": "bc",
+      "groupId": "g1",
+      "title": "Reflective Series (BC)",
+      "desc": "ฟิล์มปรอทสะท้อนแสง กันความร้อนดีเยี่ยม เพิ่มความเป็นส่วนตัว",
+      "referenceFile": ""
+    },
+    {
+      "id": "upr",
+      "groupId": "g2",
+      "title": "Ultra Prestige Series",
+      "desc": "ฟิล์มนิรภัยผสานฟิล์มกรองแสงใส กันความร้อนสูง ลดเศษกระจกแตก",
+      "referenceFile": ""
+    },
+    {
+      "id": "unv",
+      "groupId": "g2",
+      "title": "Ultra Night Vision Series",
+      "desc": "ฟิล์มนิรภัยผสานฟิล์มกรองแสง ลดแสงจ้า ทัศนวิสัยชัดเจนยามค่ำคืน",
+      "referenceFile": ""
+    },
+    {
+      "id": "usafety",
+      "groupId": "g2",
+      "title": "Ultra Safety Series",
+      "desc": "ฟิล์มนิรภัยใสพิเศษ โครงสร้าง Micro-Layered เหนียวและยืดหยุ่นสูง",
+      "referenceFile": ""
+    },
+    {
+      "id": "safety",
+      "groupId": "g2",
+      "title": "Safety Series",
+      "desc": "ฟิล์มนิรภัยใสมาตรฐาน ป้องกันกระจกแตกกระจาย",
+      "referenceFile": ""
+    },
+    {
+      "id": "sas",
+      "groupId": "g2",
+      "title": "Solar & Safety Series",
+      "desc": "ฟิล์มนิรภัยผสานฟิล์มกรองแสง ลดความร้อนและปกป้องจากอุบัติเหตุ",
+      "referenceFile": ""
+    },
+    {
+      "id": "7725",
+      "groupId": "g3",
+      "title": "3M Scotchcal 7725 Series",
+      "desc": "ฟิล์มไวนิลฝ้าเกรดพรีเมียม (Dusted/Frosted Crystal) อายุการใช้งานภายใน 10 ปี ภายนอก 3-5 ปี",
+      "referenceFile": ""
+    },
+    {
+      "id": "5525",
+      "groupId": "g3",
+      "title": "3M Scotchcal 5525 Series",
+      "desc": "ฟิล์มไวนิลฝ้า (Haze/Sandblast) อายุการใช้งานภายใน 5 ปี ภายนอก 2-3 ปี",
+      "referenceFile": ""
+    }
+  ],
+  "models": [
+    {
+      "id": "prex-70",
+      "seriesId": "prex",
+      "name": "PR 70 EX",
+      "color": "Bluish",
+      "shgc": "0.48",
+      "vlt": "71%",
+      "reflectance": "8% / 9%",
+      "tser": "52%",
+      "uv": "99.90%",
+      "ir": "97%"
+    },
+    {
+      "id": "prex-50",
+      "seriesId": "prex",
+      "name": "PR 50 EX",
+      "color": "Dark Smoke",
+      "shgc": "0.42",
+      "vlt": "51%",
+      "reflectance": "7% / 7%",
+      "tser": "58%",
+      "uv": "99.90%",
+      "ir": "97%"
+    },
+    {
+      "id": "prex-40",
+      "seriesId": "prex",
+      "name": "PR 40 EX",
+      "color": "Dark Smoke",
+      "shgc": "0.39",
+      "vlt": "42%",
+      "reflectance": "6% / 6%",
+      "tser": "61%",
+      "uv": "99.90%",
+      "ir": "97%"
+    },
+    {
+      "id": "prex-20",
+      "seriesId": "prex",
+      "name": "PR 20 EX",
+      "color": "Dark Smoke",
+      "shgc": "0.34",
+      "vlt": "21%",
+      "reflectance": "5% / 5%",
+      "tser": "66%",
+      "uv": "99.90%",
+      "ir": "97%"
+    },
+    {
+      "id": "pr-70",
+      "seriesId": "pr",
+      "name": "PR 70",
+      "color": "Bluish",
+      "shgc": "0.51",
+      "vlt": "69%",
+      "reflectance": "8% / 8%",
+      "tser": "49%",
+      "uv": "99.9%",
+      "ir": "97%"
+    },
+    {
+      "id": "pr-50",
+      "seriesId": "pr",
+      "name": "PR 50",
+      "color": "Dark Smoke",
+      "shgc": "0.44",
+      "vlt": "51%",
+      "reflectance": "8% / 7%",
+      "tser": "56%",
+      "uv": "99.9%",
+      "ir": "97%"
+    },
+    {
+      "id": "pr-40",
+      "seriesId": "pr",
+      "name": "PR 40",
+      "color": "Dark Smoke",
+      "shgc": "0.41",
+      "vlt": "40%",
+      "reflectance": "7% / 7%",
+      "tser": "60%",
+      "uv": "99.9%",
+      "ir": "97%"
+    },
+    {
+      "id": "pr-20",
+      "seriesId": "pr",
+      "name": "PR 20",
+      "color": "Dark Smoke",
+      "shgc": "0.38",
+      "vlt": "21%",
+      "reflectance": "6% / 5%",
+      "tser": "62%",
+      "uv": "99.9%",
+      "ir": "97%"
+    },
+    {
+      "id": "ca-35",
+      "seriesId": "ca",
+      "name": "CA 35",
+      "color": "Light Bluish Black",
+      "shgc": "0.45",
+      "vlt": "37%",
+      "reflectance": "6% / 6%",
+      "tser": "55%",
+      "uv": "99%"
+    },
+    {
+      "id": "ca-45",
+      "seriesId": "ca",
+      "name": "CA 45",
+      "color": "Light Bluish Black",
+      "shgc": "0.48",
+      "vlt": "45%",
+      "reflectance": "6% / 6%",
+      "tser": "52%",
+      "uv": "99%"
+    },
+    {
+      "id": "ca-60",
+      "seriesId": "ca",
+      "name": "CA 60",
+      "color": "Light Bluish Black",
+      "shgc": "0.53",
+      "vlt": "62%",
+      "reflectance": "7% / 7%",
+      "tser": "48%",
+      "uv": "99%"
+    },
+    {
+      "id": "ca-80",
+      "seriesId": "ca",
+      "name": "CA 80",
+      "color": "Light Bluish Black",
+      "shgc": "0.57",
+      "vlt": "77%",
+      "reflectance": "8% / 8%",
+      "tser": "43%",
+      "uv": "99%"
+    },
+    {
+      "id": "x-5",
+      "seriesId": "x",
+      "name": "Ceramic-X 5",
+      "color": "Ceramic-X",
+      "shgc": "-",
+      "vlt": "8.7%",
+      "reflectance": "4.6% / 4.6%",
+      "tser": "61.8%",
+      "uv": "99.9%"
+    },
+    {
+      "id": "x-15",
+      "seriesId": "x",
+      "name": "Ceramic-X 15",
+      "color": "Ceramic-X",
+      "shgc": "-",
+      "vlt": "17.3%",
+      "reflectance": "4.7% / 4.7%",
+      "tser": "57.7%",
+      "uv": "99.7%"
+    },
+    {
+      "id": "x-35",
+      "seriesId": "x",
+      "name": "Ceramic-X 35",
+      "color": "Ceramic-X",
+      "shgc": "-",
+      "vlt": "32.2%",
+      "reflectance": "4.9% / 4.9%",
+      "tser": "53.4%",
+      "uv": "98.6%"
+    },
+    {
+      "id": "cmir-5",
+      "seriesId": "cmir",
+      "name": "CM-IR 5",
+      "color": "Dark Bluish Black",
+      "shgc": "0.37",
+      "vlt": "6%",
+      "reflectance": "5% / 5%",
+      "tser": "63%",
+      "uv": "99.9%"
+    },
+    {
+      "id": "cmir-15",
+      "seriesId": "cmir",
+      "name": "CM-IR 15",
+      "color": "Dark Bluish Black",
+      "shgc": "0.41",
+      "vlt": "19%",
+      "reflectance": "5% / 5%",
+      "tser": "59%",
+      "uv": "99.8%"
+    },
+    {
+      "id": "cmir-25",
+      "seriesId": "cmir",
+      "name": "CM-IR 25",
+      "color": "Dark Bluish Black",
+      "shgc": "0.43",
+      "vlt": "31%",
+      "reflectance": "5% / 5%",
+      "tser": "57%",
+      "uv": "99.7%"
+    },
+    {
+      "id": "cmir-35",
+      "seriesId": "cmir",
+      "name": "CM-IR 35",
+      "color": "Light Bluish Black",
+      "shgc": "0.48",
+      "vlt": "45%",
+      "reflectance": "5% / 6%",
+      "tser": "52%",
+      "uv": "99.6%"
+    },
+    {
+      "id": "cmir-50",
+      "seriesId": "cmir",
+      "name": "CM-IR 50",
+      "color": "Light Bluish Black",
+      "shgc": "0.53",
+      "vlt": "60%",
+      "reflectance": "7% / 7%",
+      "tser": "47%",
+      "uv": "99.6%"
+    },
+    {
+      "id": "nv-15",
+      "seriesId": "nv",
+      "name": "NV 15",
+      "color": "Dark Smoke",
+      "shgc": "0.28",
+      "vlt": "13%",
+      "reflectance": "35% / 9%",
+      "tser": "72%",
+      "uv": "99.9%"
+    },
+    {
+      "id": "nv-25",
+      "seriesId": "nv",
+      "name": "NV 25",
+      "color": "Dark Smoke",
+      "shgc": "0.37",
+      "vlt": "24%",
+      "reflectance": "24% / 9%",
+      "tser": "63%",
+      "uv": "99.9%"
+    },
+    {
+      "id": "nv-35",
+      "seriesId": "nv",
+      "name": "NV 35",
+      "color": "Light Smoke",
+      "shgc": "0.46",
+      "vlt": "33%",
+      "reflectance": "14% / 7%",
+      "tser": "54%",
+      "uv": "99.9%"
+    },
+    {
+      "id": "bc-10",
+      "seriesId": "bc",
+      "name": "BC 10",
+      "color": "Dark Reflective",
+      "shgc": "0.28",
+      "vlt": "10%",
+      "reflectance": "22% / 18%",
+      "tser": "72%",
+      "uv": "99%"
+    },
+    {
+      "id": "bc-20",
+      "seriesId": "bc",
+      "name": "BC 20",
+      "color": "Dark Reflective",
+      "shgc": "0.32",
+      "vlt": "17%",
+      "reflectance": "20% / 25%",
+      "tser": "68%",
+      "uv": "99%"
+    },
+    {
+      "id": "7725se-314",
+      "seriesId": "7725",
+      "name": "7725SE-314 (ลายฝุ่น)",
+      "specs": {
+        "vlt": "85%",
+        "vlr": "79%",
+        "uv": "-",
+        "ir": "-",
+        "tser": "-",
+        "thickness": "50 micron"
+      }
+    },
+    {
+      "id": "7725se-324",
+      "seriesId": "7725",
+      "name": "7725SE-324 (สีกระจกฝ้า)",
+      "specs": {
+        "vlt": "-",
+        "vlr": "-",
+        "uv": "-",
+        "ir": "-",
+        "tser": "-",
+        "thickness": "50 micron"
+      }
+    },
+    {
+      "id": "upr-s50",
+      "seriesId": "upr",
+      "name": "Ultra PR S50",
+      "shgc": "0.44",
+      "vlt": "49%",
+      "reflectance": "8% / 7%",
+      "tser": "56%",
+      "uv": "99.90%",
+      "thickness": "8 mil (0.20 mm)",
+      "ir": "97%"
+    },
+    {
+      "id": "unv-s25",
+      "seriesId": "unv",
+      "name": "Ultra NV S25",
+      "shgc": "0.42",
+      "vlt": "27%",
+      "reflectance": "17% / 7%",
+      "tser": "58%",
+      "uv": "99.90%",
+      "thickness": "8 mil (0.20 mm)"
+    },
+    {
+      "id": "usafety-s800",
+      "seriesId": "usafety",
+      "name": "Ultra S800",
+      "shgc": "-",
+      "vlt": "-",
+      "reflectance": "-",
+      "tser": "-",
+      "uv": "-",
+      "thickness": "8 mil (0.20 mm)"
+    },
+    {
+      "id": "safety-s40",
+      "seriesId": "safety",
+      "name": "Safety S40",
+      "shgc": "-",
+      "vlt": "-",
+      "reflectance": "-",
+      "tser": "-",
+      "uv": "-",
+      "thickness": "4 mil (0.10 mm)"
+    },
+    {
+      "id": "safety-s70",
+      "seriesId": "safety",
+      "name": "Safety S70",
+      "shgc": "-",
+      "vlt": "-",
+      "reflectance": "-",
+      "tser": "-",
+      "uv": "-",
+      "thickness": "7 mil (0.18 mm)"
+    },
+    {
+      "id": "sas-5",
+      "seriesId": "sas",
+      "name": "SAS 5",
+      "shgc": "-",
+      "vlt": "6%",
+      "reflectance": "5%",
+      "tser": "41%",
+      "uv": "99%",
+      "thickness": "4 mil (0.10 mm)"
+    },
+    {
+      "id": "sas-20",
+      "seriesId": "sas",
+      "name": "SAS 20",
+      "shgc": "-",
+      "vlt": "20%",
+      "reflectance": "5%",
+      "tser": "39%",
+      "uv": "98%",
+      "thickness": "4 mil (0.10 mm)"
+    },
+    {
+      "id": "sas-35",
+      "seriesId": "sas",
+      "name": "SAS 35",
+      "shgc": "-",
+      "vlt": "33%",
+      "reflectance": "6%",
+      "tser": "36%",
+      "uv": "99%",
+      "thickness": "4 mil (0.10 mm)"
+    },
+    {
+      "id": "sas-50",
+      "seriesId": "sas",
+      "name": "SAS 50",
+      "shgc": "-",
+      "vlt": "50%",
+      "reflectance": "6%",
+      "tser": "30%",
+      "uv": "97%",
+      "thickness": "4 mil (0.10 mm)"
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "หมู่บ้าน BUGAAN ชอย พัฒนาการ 32",
+      "seriesId": "pr",
+      "modelId": "pr-70",
+      "beforeImage": "/portfolio/1781514588064-121693013.jpg",
+      "afterImage": "/portfolio/1781514588071-269925861.jpg",
+      "image1": "/portfolio/1781514588076-946514923.jpg",
+      "image2": "/portfolio/1781514588081-94001136.jpg",
+      "image3": "/portfolio/1781514588087-832661420.jpg",
+      "image4": "/portfolio/1781514588092-644987751.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1781514588096"
+    },
+    {
+      "title": "หมู่บ้านนันทวัน ปิ่นเกล้า-กาญจนา",
+      "seriesId": "ca",
+      "modelId": "ca-80",
+      "beforeImage": "/portfolio/1781516780303-602317450.jpg",
+      "afterImage": "/portfolio/1781516780637-310101873.jpg",
+      "image1": "/portfolio/1781516780660-866910342.jpg",
+      "image2": "/portfolio/1781516780685-159657684.jpg",
+      "image3": "/portfolio/1781516780703-310712901.jpg",
+      "image4": "/portfolio/1781516780716-960330435.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1781516922369"
+    }
+  ]
+}
