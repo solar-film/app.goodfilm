@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+﻿import { useState, useRef, useEffect } from 'react';
 import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
@@ -209,14 +209,14 @@ function MainApp() {
   const getFullUrl = (path) => {
     if (!path) return path;
     if (path.startsWith('/')) {
-      return `https://app.goodfilmshop.com${path}`;
+      return `https://nas.goodfilmshop.com${path}`;
     }
     return path;
   };
 
   const loadData = () => {
     setLoadState('loading');
-    const API_URL = `https://app.goodfilmshop.com`;
+    const API_URL = `https://nas.goodfilmshop.com`;
     Promise.all([
       fetch(`${API_URL}/groups`).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
       fetch(`${API_URL}/series`).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
