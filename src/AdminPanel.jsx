@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Trash2, FileText, Image as ImageIcon, Download, Edit2, Check, X } from 'lucide-react';
 import ReactQuill from 'react-quill-new';
@@ -8,7 +8,7 @@ import './App.css';
 const getFullUrl = (path) => {
   if (!path) return path;
   if (path.startsWith('/')) {
-    return `${path}`;
+    return `https://nas.goodfilmshop.com${path}`;
   }
   return path;
 };
