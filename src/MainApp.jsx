@@ -839,9 +839,9 @@ function MainApp() {
 
             <div onClick={() => { setShowWelcome(false); setShowCompareModal(true); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '22%', cursor: 'pointer' }}>
               <div style={{ width: '56px', height: '56px', backgroundColor: 'white', borderRadius: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.02)', color: 'var(--primary-blue)' }}>
-                <Columns size={28} strokeWidth={1.25} />
+                <GitCompare size={28} strokeWidth={1.25} />
               </div>
-              <span style={{ fontSize: '0.65rem', color: '#555', fontWeight: '600', whiteSpace: 'nowrap' }}>ก่อน-หลัง</span>
+              <span style={{ fontSize: '0.65rem', color: '#555', fontWeight: '600', whiteSpace: 'nowrap' }}>เทียบสเปค</span>
             </div>
 
             <div onClick={() => { setShowWelcome(false); setCurrentTab('download'); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '22%', cursor: 'pointer' }}>
