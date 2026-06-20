@@ -149,8 +149,10 @@ body {
   margin: 0 auto;
 }
 
-.detail-desc.ql-editor { color: #000000 !important; line-height: 1.4 !important; }
-.detail-desc.ql-editor p { margin-bottom: 0.2rem !important; }
-.detail-desc.ql-editor p:last-child { margin-bottom: 0 !important; }
-.detail-desc.ql-editor ul, .detail-desc.ql-editor ol { margin-bottom: 0.5rem !important; padding-left: 1.5rem !important; }
-.detail-desc.ql-editor li { margin-bottom: 0.2rem !important; }
+.ql-editor { color: #000000 !important; line-height: 1.4 !important; }
+.ql-editor p { margin-bottom: 0.2rem !important; }
+.ql-editor p:last-child { margin-bottom: 0 !important; }
+.ql-editor ul, .ql-editor ol { margin-bottom: 0.5rem !important; padding-left: 1.5rem !important; }
+.ql-editor li { margin-bottom: 0.2rem !important; }
+
+.ql-editor p:has(br:only-child) { min-height: 1.5rem; margin-bottom: 0.5rem !important; }
