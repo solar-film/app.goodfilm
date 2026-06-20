@@ -1,5 +1,5 @@
-﻿import { useState, useRef, useEffect } from 'react';
-import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare, BookOpen, Columns } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 
@@ -823,32 +823,35 @@ function MainApp() {
 
           {/* 4 Icons Row */}
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '340px', marginBottom: '3rem' }}>
-            <div onClick={() => { setShowWelcome(false); setCurrentTab('home'); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '22%', cursor: 'pointer' }}>
-              <div style={{ width: '48px', height: '48px', backgroundColor: 'white', borderRadius: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.06)', color: 'var(--primary-blue)' }}>
-                <Briefcase size={22} />
+            <div onClick={() => { setShowWelcome(false); setCurrentTab('home'); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '22%', cursor: 'pointer' }}>
+              <div style={{ width: '56px', height: '56px', backgroundColor: 'white', borderRadius: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.02)', color: 'var(--primary-blue)' }}>
+                <BookOpen size={28} strokeWidth={1.25} />
               </div>
-              <span style={{ fontSize: '0.65rem', color: '#666', fontWeight: '600', whiteSpace: 'nowrap' }}>E-Catalog</span>
+              <span style={{ fontSize: '0.65rem', color: '#555', fontWeight: '600', whiteSpace: 'nowrap' }}>E-Catalog</span>
             </div>
             
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '22%' }}>
-              <div style={{ width: '48px', height: '48px', backgroundColor: 'white', borderRadius: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.06)', color: 'var(--primary-blue)' }}>
-                <Building2 size={22} />
+            <div onClick={() => { setShowWelcome(false); setCurrentTab('works'); setActiveGroupId('all'); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '22%', cursor: 'pointer' }}>
+              <div style={{ width: '56px', height: '56px', backgroundColor: 'white', borderRadius: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.02)', color: 'var(--primary-blue)' }}>
+                <Building2 size={28} strokeWidth={1.25} />
               </div>
-              <span style={{ fontSize: '0.65rem', color: '#666', fontWeight: '600', whiteSpace: 'nowrap' }}>ผลงานจริง</span>
+              <span style={{ fontSize: '0.65rem', color: '#555', fontWeight: '600', whiteSpace: 'nowrap' }}>ผลงานจริง</span>
             </div>
 
-            <div onClick={() => { setShowWelcome(false); setShowCompareModal(true); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '22%', cursor: 'pointer' }}>
-              <div style={{ width: '48px', height: '48px', backgroundColor: 'white', borderRadius: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.06)', color: 'var(--primary-blue)' }}>
-                <Image size={22} />
+            <div onClick={() => { setShowWelcome(false); setShowCompareModal(true); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '22%', cursor: 'pointer' }}>
+              <div style={{ width: '56px', height: '56px', backgroundColor: 'white', borderRadius: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.02)', color: 'var(--primary-blue)' }}>
+                <Columns size={28} strokeWidth={1.25} />
               </div>
-              <span style={{ fontSize: '0.65rem', color: '#666', fontWeight: '600', whiteSpace: 'nowrap' }}>เทียบสเปค</span>
+              <span style={{ fontSize: '0.65rem', color: '#555', fontWeight: '600', whiteSpace: 'nowrap' }}>ก่อน-หลัง</span>
             </div>
 
-            <div onClick={() => { setShowWelcome(false); setCurrentTab('download'); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '22%', cursor: 'pointer' }}>
-              <div style={{ width: '48px', height: '48px', backgroundColor: 'white', borderRadius: '12px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.06)', color: 'var(--primary-blue)' }}>
-                <Download size={22} />
+            <div onClick={() => { setShowWelcome(false); setCurrentTab('download'); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '22%', cursor: 'pointer' }}>
+              <div style={{ width: '56px', height: '56px', backgroundColor: 'white', borderRadius: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.02)', color: 'var(--primary-blue)' }}>
+                <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <FileText size={28} strokeWidth={1.25} />
+                  <Download size={14} strokeWidth={2.5} color="var(--primary-red)" style={{ position: 'absolute', bottom: -2, right: -4, backgroundColor: 'white', borderRadius: '50%', padding: '1px' }} />
+                </div>
               </div>
-              <span style={{ fontSize: '0.65rem', color: '#666', fontWeight: '600', whiteSpace: 'nowrap', position: 'relative', left: '-5px' }}>ดาวน์โหลดเอกสาร</span>
+              <span style={{ fontSize: '0.65rem', color: '#555', fontWeight: '600', whiteSpace: 'nowrap', position: 'relative', left: '-2px' }}>ดาวน์โหลดเอกสาร</span>
             </div>
           </div>
 
