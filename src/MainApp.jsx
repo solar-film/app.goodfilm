@@ -119,60 +119,53 @@ const BannerCarousel = ({ bannersList, navigate, getFullUrl }) => {
 const SectionHeader = ({ icon: Icon, title, subtitle }) => {
   return (
     <div style={{ marginBottom: '1.5rem', marginTop: '1.5rem' }}>
-      <div style={{ position: 'relative', display: 'flex', alignItems: 'center', minHeight: '56px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
         
-        {/* Banner wrapper (placed behind the badge) */}
-        <div style={{ position: 'relative', marginLeft: '26px', zIndex: 1, flex: 1, maxWidth: 'max-content' }}>
-          
-          {/* Red shadow/underline underneath the ribbon */}
-          <div style={{ 
-            position: 'absolute', 
-            top: '4px', 
-            left: '-16px', 
-            height: '100%', 
-            width: '100%', 
-            backgroundColor: 'var(--primary-red)', 
-            zIndex: 0, 
-            clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)'
-          }}></div>
-
-          {/* Ribbon banner background */}
-          <div style={{ 
-            position: 'relative', 
-            zIndex: 1, 
-            padding: '8px 45px 8px 36px', 
-            backgroundColor: 'var(--primary-blue)', 
-            color: 'white', 
-            fontWeight: 'bold', 
-            fontSize: '1.2rem',
-            clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)',
-            display: 'inline-flex',
-            alignItems: 'center',
-            marginLeft: '-16px'
-          }}>
-            {title}
-          </div>
-        </div>
-
-        {/* Circular Badge (placed absolute on the left) */}
+        {/* Rounded Square Badge */}
         <div style={{ 
-          position: 'absolute', 
-          left: 0,
-          top: '50%',
-          transform: 'translateY(-50%)',
-          zIndex: 2, 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center', 
-          width: '52px', 
-          height: '52px', 
+          width: '48px', 
+          height: '48px', 
           backgroundColor: 'var(--primary-blue)', 
-          borderRadius: '50%', 
-          border: '3px solid white', 
-          boxShadow: '-3px 3px 0px 0px var(--primary-red)',
+          borderRadius: '12px', 
           flexShrink: 0
         }}>
           <Icon size={24} color="white" strokeWidth={2.5} />
+        </div>
+
+        {/* Decorative Diagonal Lines */}
+        <div style={{ 
+          display: 'flex', 
+          gap: '4px', 
+          alignItems: 'center',
+          flexShrink: 0,
+          opacity: 0.3
+        }}>
+          <div style={{ width: '2px', height: '32px', backgroundColor: 'var(--primary-blue)', transform: 'rotate(20deg)' }}></div>
+          <div style={{ width: '2px', height: '32px', backgroundColor: 'var(--primary-blue)', transform: 'rotate(20deg)' }}></div>
+        </div>
+
+        {/* Title Text */}
+        <div>
+          <h3 style={{ 
+            color: 'var(--primary-blue)', 
+            fontSize: '1.5rem', 
+            fontWeight: '900', 
+            margin: 0,
+            lineHeight: 1.2,
+            letterSpacing: '-0.02em'
+          }}>
+            {title}
+          </h3>
+          <div style={{ 
+            width: '50px', 
+            height: '3px', 
+            backgroundColor: 'var(--primary-red)',
+            borderRadius: '2px',
+            marginTop: '4px'
+          }}></div>
         </div>
 
       </div>
