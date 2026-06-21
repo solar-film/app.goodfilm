@@ -799,9 +799,10 @@ function MainApp() {
             if (relatedDownloads.length === 0) return null;
             return (
               <div style={{ marginBottom: '2rem' }}>
-                <h3 className="section-title" style={{ color: 'var(--primary-blue)', borderBottom: '2px solid var(--primary-red)', display: 'inline-flex', alignItems: 'center', gap: '8px', paddingBottom: '4px', marginBottom: '1.5rem' }}>
-                  <Download size={20} /> ไฟล์ที่เกี่ยวข้อง
-                </h3>
+                <SectionHeader 
+                  icon={Download} 
+                  title="ไฟล์ที่เกี่ยวข้อง" 
+                />
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
                   {relatedDownloads.map(item => (
                     <a 
