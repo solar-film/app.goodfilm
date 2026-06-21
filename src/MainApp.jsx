@@ -518,7 +518,8 @@ function MainApp() {
   const renderDetail = () => {
     if (!selectedSeries) return null;
     const seriesModels = models.filter(m => m.seriesId === selectedSeries.id);
-    const seriesPortfolio = portfolio.filter(p => p.seriesId === selectedSeries.id);
+    const seriesSamples = portfolio.filter(p => p.seriesId === selectedSeries.id && p.type === 'sample');
+    const seriesPortfolio = portfolio.filter(p => p.seriesId === selectedSeries.id && p.type !== 'sample');
 
     const handleShare = async () => {
       if (navigator.share) {
@@ -560,6 +561,42 @@ function MainApp() {
              )}
           </div>
           
+          {seriesSamples.length > 0 && (
+            <div style={{ marginBottom: '2rem' }}>
+              <h3 className="section-title" style={{ color: 'var(--primary-blue)', borderBottom: '2px solid var(--primary-red)', display: 'inline-block', paddingBottom: '4px', marginBottom: '1.5rem' }}>รูปตัวอย่างสินค้า</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                {seriesSamples.map((sample) => (
+                  <div key={sample.id}>
+                    <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
+                      {sample.title}
+                      {sample.modelId && (
+                        <span style={{ color: 'var(--primary-red)', fontWeight: 'bold', marginLeft: '0.5rem' }}>
+                          <span style={{ color: '#ccc', marginRight: '0.5rem', fontWeight: 'normal' }}>|</span>
+                          {models.find(m => m.id === sample.modelId)?.name}
+                        </span>
+                      )}
+                    </h4>
+                    {sample.image1 && (
+                      <img 
+                        src={getFullUrl(sample.image1)} 
+                        alt="main sample" 
+                        onClick={() => setExpandedImage(getFullUrl(sample.image1))} 
+                        style={{ width: '100%', borderRadius: '12px', cursor: 'pointer', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} 
+                      />
+                    )}
+                    {(sample.image2 || sample.image3 || sample.image4) && (
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem', marginTop: '0.5rem' }}>
+                        {sample.image2 && <img src={getFullUrl(sample.image2)} alt="img2" onClick={() => setExpandedImage(getFullUrl(sample.image2))} style={{ width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }} />}
+                        {sample.image3 && <img src={getFullUrl(sample.image3)} alt="img3" onClick={() => setExpandedImage(getFullUrl(sample.image3))} style={{ width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }} />}
+                        {sample.image4 && <img src={getFullUrl(sample.image4)} alt="img4" onClick={() => setExpandedImage(getFullUrl(sample.image4))} style={{ width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }} />}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {seriesModels.length > 0 && (() => {
             const hasSHGC = seriesModels.some(m => m.shgc && String(m.shgc).trim() !== '-');
             const hasVLT = seriesModels.some(m => m.vlt && String(m.vlt).trim() !== '-');
