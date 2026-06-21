@@ -840,13 +840,13 @@ function MainApp() {
                 {seriesPortfolio.map((work) => (
                   <div key={work.id}>
                     <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
-                      {work.title}
                       {work.modelId && (
-                        <span style={{ color: 'var(--primary-red)', fontWeight: 'bold', marginLeft: '0.5rem' }}>
-                          <span style={{ color: '#ccc', marginRight: '0.5rem', fontWeight: 'normal' }}>|</span>
+                        <span style={{ color: 'var(--primary-red)', fontWeight: 'bold' }}>
                           {models.find(m => m.id === work.modelId)?.name}
+                          <span style={{ color: '#ccc', marginLeft: '0.5rem', marginRight: '0.5rem', fontWeight: 'normal' }}>|</span>
                         </span>
                       )}
+                      {work.title}
                     </h4>
                     <BeforeAfterSlider 
                       beforeImage={getFullUrl(work.beforeImage)} 
