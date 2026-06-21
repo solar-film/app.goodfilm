@@ -350,7 +350,14 @@ function MainApp() {
                             return (
                               <div key={s.id} style={{ marginBottom: '0.6rem', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '10px', overflow: 'hidden', backgroundColor: '#f8f9fa' }}>
                                 <div 
-                                  onClick={(e) => { e.stopPropagation(); setExpandedSeriesId(isSeriesExpanded ? null : s.id); }}
+                                  onClick={(e) => { 
+                                    e.stopPropagation(); 
+                                    if (seriesModels.length === 0) {
+                                      setSelectedSeries(s);
+                                    } else {
+                                      setExpandedSeriesId(isSeriesExpanded ? null : s.id); 
+                                    }
+                                  }}
                                   style={{ padding: '1rem', display: 'flex', gap: '1rem', alignItems: 'center', cursor: 'pointer', backgroundColor: isSeriesExpanded ? '#fff' : 'transparent' }}
                                 >
                                   <div style={{ backgroundColor: 'white', border: '1px solid #E0E0E0', color: 'var(--primary-red)', width: '45px', height: '45px', borderRadius: '8px', display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold', fontSize: '1rem', flexShrink: 0 }}>
@@ -360,16 +367,18 @@ function MainApp() {
                                   <h4 style={{ color: 'var(--primary-blue)', fontSize: '1.05rem', marginBottom: '0.2rem', fontWeight: 'bold' }}>{s.title}</h4>
                                   <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.4', margin: 0 }}>{s.desc}</p>
                                   </div>
+                                  {seriesModels.length > 0 && (
                                   <div style={{ transform: isSeriesExpanded ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}>
                                     <ChevronRight size={20} color="#ccc" />
                                   </div>
+                                  )}
                                 </div>
                                 
                                 {/* Expanded Models List */}
+                                {seriesModels.length > 0 && (
                                 <div className={`accordion-content ${isSeriesExpanded ? 'expanded' : ''}`}>
                                   <div className="accordion-inner">
                                     <div style={{ padding: '1rem', backgroundColor: 'white', borderTop: isSeriesExpanded ? '1px solid rgba(0,0,0,0.05)' : 'none' }}>
-                                      {seriesModels.length > 0 ? (
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                                           {seriesModels.map(m => (
                                             <div key={m.id} style={{ padding: '0.8rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderRadius: '8px', border: '1px solid #eee', backgroundColor: '#fafafa' }}>
@@ -386,20 +395,10 @@ function MainApp() {
                                             ดูรายละเอียดสเปคทั้งหมด
                                           </div>
                                         </div>
-                                      ) : (
-                                        <div style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '1.2rem', backgroundColor: 'white' }}>
-                                          <div style={{ marginBottom: '1rem' }}>ไม่มีข้อมูลสเปครุ่นย่อย</div>
-                                          <div 
-                                            onClick={(e) => { e.stopPropagation(); setSelectedSeries(s); }}
-                                            style={{ padding: '0.8rem', textAlign: 'center', color: 'var(--primary-blue)', border: '2px solid var(--primary-blue)', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}
-                                          >
-                                            คลิกเพื่อดูรายละเอียด
-                                          </div>
-                                        </div>
-                                      )}
                                     </div>
                                   </div>
                                 </div>
+                                )}
                               </div>
                             );
                           })}
