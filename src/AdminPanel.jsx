@@ -708,6 +708,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
         setStatus('✅ บันทึกสำเร็จ!');
         setFormData({ title: '', category: 'catalog', seriesId: '' });
         setFile(null);
+        e.target.reset();
         onRefresh();
         setTimeout(() => setStatus(''), 3000);
       } else {
