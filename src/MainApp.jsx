@@ -560,8 +560,6 @@ function MainApp() {
                <a href="#" onClick={(e) => handleForceDownload(e, selectedSeries.referenceFile, 'reference-document')} className="btn-download" style={{ textDecoration: 'none', textAlign: 'center', backgroundColor: 'var(--primary-red)' }}>ดาวน์โหลดเอกสารอ้างอิง</a>
              )}
           </div>
-
-          <h3 className="section-title" style={{ color: 'var(--primary-blue)', borderBottom: '2px solid var(--primary-red)', display: 'inline-block', paddingBottom: '4px' }}>สเปคฟิล์ม</h3>
           
           {seriesModels.length > 0 && (() => {
             const hasSHGC = seriesModels.some(m => m.shgc && String(m.shgc).trim() !== '-');
@@ -582,6 +580,7 @@ function MainApp() {
             
             return (
               <div style={{ margin: '1rem -1.5rem 2rem -1.5rem', padding: '0 1.5rem' }}>
+                <h3 className="section-title" style={{ color: 'var(--primary-blue)', borderBottom: '2px solid var(--primary-red)', display: 'inline-block', paddingBottom: '4px', marginBottom: '1rem' }}>สเปคฟิล์ม</h3>
                 <div style={{ overflowX: 'auto', paddingBottom: '0.5rem' }}>
                   <table className="specs-table-real" style={{ width: '100%', minWidth: '500px', borderCollapse: 'collapse', textAlign: 'center', fontSize: '0.85rem' }}>
                     <thead>
