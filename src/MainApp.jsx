@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare, BookOpen, Columns } from 'lucide-react';
+import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare, BookOpen, Columns, Layers } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 
@@ -118,50 +118,73 @@ const BannerCarousel = ({ bannersList, navigate, getFullUrl }) => {
 
 const SectionHeader = ({ icon: Icon, title, subtitle }) => {
   return (
-    <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.5rem', marginTop: '1rem' }}>
-      <div style={{ 
-        backgroundColor: '#f0f4f8', 
-        padding: '0.8rem', 
-        borderRadius: '12px', 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center',
-        flexShrink: 0
-      }}>
-        <Icon size={28} color="var(--primary-blue)" />
-      </div>
-      <div style={{ paddingTop: '0.2rem' }}>
-        <h3 style={{ 
-          color: 'var(--primary-blue)', 
-          fontSize: '1.4rem', 
-          fontWeight: 'bold', 
-          margin: 0,
-          position: 'relative',
-          display: 'inline-block',
-          paddingBottom: '6px'
-        }}>
-          {title}
+    <div style={{ marginBottom: '1.5rem', marginTop: '1.5rem' }}>
+      <div style={{ position: 'relative', display: 'flex', alignItems: 'center', minHeight: '56px' }}>
+        
+        {/* Banner wrapper (placed behind the badge) */}
+        <div style={{ position: 'relative', marginLeft: '26px', zIndex: 1, flex: 1, maxWidth: 'max-content' }}>
+          
+          {/* Red shadow/underline underneath the ribbon */}
           <div style={{ 
             position: 'absolute', 
-            bottom: 0, 
-            left: 0, 
-            width: '40px', 
-            height: '3px', 
-            backgroundColor: 'var(--primary-red)',
-            borderRadius: '2px'
-          }} />
-        </h3>
-        {subtitle && (
-          <p style={{ 
-            color: 'var(--text-muted)', 
-            fontSize: '0.95rem', 
-            margin: '0.4rem 0 0 0',
-            lineHeight: 1.4
+            top: '4px', 
+            left: '-16px', 
+            height: '100%', 
+            width: '100%', 
+            backgroundColor: 'var(--primary-red)', 
+            zIndex: 0, 
+            clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)'
+          }}></div>
+
+          {/* Ribbon banner background */}
+          <div style={{ 
+            position: 'relative', 
+            zIndex: 1, 
+            padding: '8px 45px 8px 36px', 
+            backgroundColor: 'var(--primary-blue)', 
+            color: 'white', 
+            fontWeight: 'bold', 
+            fontSize: '1.2rem',
+            clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)',
+            display: 'inline-flex',
+            alignItems: 'center',
+            marginLeft: '-16px'
           }}>
-            {subtitle}
-          </p>
-        )}
+            {title}
+          </div>
+        </div>
+
+        {/* Circular Badge (placed absolute on the left) */}
+        <div style={{ 
+          position: 'absolute', 
+          left: 0,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          zIndex: 2, 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          width: '52px', 
+          height: '52px', 
+          backgroundColor: 'var(--primary-blue)', 
+          borderRadius: '50%', 
+          border: '3px solid white', 
+          boxShadow: '-3px 3px 0px 0px var(--primary-red)',
+          flexShrink: 0
+        }}>
+          <Icon size={24} color="white" strokeWidth={2.5} />
+        </div>
+
       </div>
+      
+      {/* Subtitle if any */}
+      {subtitle && (
+        <div style={{ marginTop: '0.5rem', paddingLeft: '8px' }}>
+          {typeof subtitle === 'string' ? (
+            <p style={{ color: '#777', fontSize: '0.9rem', margin: 0 }}>{subtitle}</p>
+          ) : subtitle}
+        </div>
+      )}
     </div>
   );
 };
@@ -671,7 +694,10 @@ function MainApp() {
             
             return (
               <div style={{ margin: '1rem -1.5rem 2rem -1.5rem', padding: '0 1.5rem' }}>
-                <h3 className="section-title" style={{ color: 'var(--primary-blue)', borderBottom: '2px solid var(--primary-red)', display: 'inline-block', paddingBottom: '4px', marginBottom: '1rem' }}>สเปคฟิล์ม</h3>
+                <SectionHeader 
+                  icon={Layers} 
+                  title="สเปคฟิล์ม" 
+                />
                 <div style={{ overflowX: 'auto', paddingBottom: '0.5rem' }}>
                   <table className="specs-table-real" style={{ width: '100%', minWidth: '500px', borderCollapse: 'collapse', textAlign: 'center', fontSize: '0.85rem' }}>
                     <thead>
