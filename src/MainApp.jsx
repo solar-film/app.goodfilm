@@ -630,7 +630,7 @@ function MainApp() {
                   <div key={sample.id}>
                     <SectionHeader 
                       icon={Image} 
-                      title="ตัวอย่างผิวฟิล์มจริง" 
+                      title="ตัวอย่างสีและความเข้มฟิล์ม" 
                       subtitle={
                         <>
                           {sample.title}
