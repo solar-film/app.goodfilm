@@ -126,20 +126,20 @@ const SectionHeader = ({ icon: Icon, title, subtitle }) => {
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center', 
-          width: '56px', 
-          height: '56px', 
+          width: '42px', 
+          height: '42px', 
           backgroundColor: 'var(--primary-blue)', 
-          borderRadius: '14px', 
+          borderRadius: '10px', 
           flexShrink: 0,
-          boxShadow: '0 4px 12px rgba(0, 45, 114, 0.25)'
+          boxShadow: '0 3px 10px rgba(0, 45, 114, 0.2)'
         }}>
-          <Icon size={28} color="white" strokeWidth={2} />
+          <Icon size={20} color="white" strokeWidth={2} />
         </div>
 
         {/* Decorative Diagonal Slashes */}
-        <svg width="16" height="40" viewBox="0 0 16 40" style={{ flexShrink: 0, opacity: 0.2 }}>
-          <line x1="4" y1="36" x2="8" y2="4" stroke="var(--primary-blue)" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="10" y1="36" x2="14" y2="4" stroke="var(--primary-blue)" strokeWidth="2.5" strokeLinecap="round" />
+        <svg width="12" height="28" viewBox="0 0 12 28" style={{ flexShrink: 0, opacity: 0.2 }}>
+          <line x1="3" y1="25" x2="6" y2="3" stroke="var(--primary-blue)" strokeWidth="2" strokeLinecap="round" />
+          <line x1="7" y1="25" x2="10" y2="3" stroke="var(--primary-blue)" strokeWidth="2" strokeLinecap="round" />
         </svg>
 
         {/* Title + Red Underline */}
