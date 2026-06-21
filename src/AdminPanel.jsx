@@ -1105,8 +1105,11 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
         formData.image4 ? uploadFile(formData.image4, 'sample-4') : Promise.resolve(formData.existingImage4 || '')
       ]);
 
-      const res = await fetch('https://nas.goodfilmshop.com/portfolio', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
+      const method = editId ? 'PUT' : 'POST';
+      const url = editId ? `https://nas.goodfilmshop.com/portfolio/${editId}` : 'https://nas.goodfilmshop.com/portfolio';
+
+      const res = await fetch(url, {
+        method: method, headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           id: payloadId, 
           type: 'sample',
