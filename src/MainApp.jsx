@@ -805,7 +805,12 @@ function MainApp() {
                       }}
                     >
                       <div style={{ width: '40px', height: '40px', borderRadius: '8px', backgroundColor: 'var(--primary-red)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexShrink: 0 }}>
-                        <Download size={20} />
+                        {(() => {
+                          const ext = (item.file || '').split('.').pop().toLowerCase();
+                          if (['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'].includes(ext)) return <Image size={20} />;
+                          if (['pdf'].includes(ext)) return <FileText size={20} />;
+                          return <Download size={20} />;
+                        })()}
                       </div>
                       <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                         <span style={{ fontWeight: '600', fontSize: '0.95rem', lineHeight: '1.4', whiteSpace: 'pre-line' }}>{item.title}</span>
