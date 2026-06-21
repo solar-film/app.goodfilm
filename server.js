@@ -11,7 +11,12 @@ const __dirname = path.dirname(__filename);
 
 const server = express();
 
-const dbPath = path.join(__dirname, 'database.json');
+const dbDir = path.join(__dirname, 'data');
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
+
+const dbPath = path.join(dbDir, 'database.json');
 const initialDbPath = path.join(__dirname, 'db.json');
 
 // Ensure persistent untracked database exists
@@ -19,7 +24,7 @@ if (!fs.existsSync(dbPath) && fs.existsSync(initialDbPath)) {
   fs.copyFileSync(initialDbPath, dbPath);
 }
 
-const router = jsonServer.router('database.json');
+const router = jsonServer.router(dbPath);
 const middlewares = jsonServer.defaults();
 
 // Setup storage

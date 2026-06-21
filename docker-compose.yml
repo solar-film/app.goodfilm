@@ -11,6 +11,8 @@ services:
       - ./db.json:/app/db.json
       - ./public:/app/public
       - ./server.js:/app/server.js
+      - ./dist:/app/dist
+      - ./data:/app/data
 
   cloudflared:
     image: cloudflare/cloudflared:latest
