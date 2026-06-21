@@ -1182,13 +1182,13 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพตัวอย่างจำลองความเข้ม มองจากภายนอกอาคาร <span style={{ color: 'red' }}>*</span></label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพจำลองความเข้ม มองจากภายนอกอาคาร <span style={{ color: 'red' }}>*</span></label>
             {formData.existingImage1 && !formData.image1 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image1')} accept="image/*" required={!formData.existingImage1 && !formData.image1} />
             {formData.image1 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพตัวอย่างจำลองความเข้ม มองจากภายในอาคาร</label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพจำลองความเข้ม มองจากภายในอาคาร <span style={{ color: 'red' }}>*</span></label>
             {formData.existingImage2 && !formData.image2 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image2')} accept="image/*" />
             {formData.image2 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
