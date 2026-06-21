@@ -644,18 +644,25 @@ function MainApp() {
                       } 
                     />
                     {sample.image1 && (
-                      <img 
-                        src={getFullUrl(sample.image1)} 
-                        alt="main sample" 
-                        onClick={() => setExpandedImage(getFullUrl(sample.image1))} 
-                        style={{ width: '100%', borderRadius: '12px', cursor: 'pointer', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} 
-                      />
+                      <div style={{ marginBottom: '1.5rem' }}>
+                        <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-dark)' }}>ภาพตัวอย่างจำลองความเข้ม มองจากภายนอกอาคาร</p>
+                        <img 
+                          src={getFullUrl(sample.image1)} 
+                          alt="มองจากภายนอกอาคาร" 
+                          onClick={() => setExpandedImage(getFullUrl(sample.image1))} 
+                          style={{ width: '100%', borderRadius: '12px', cursor: 'pointer', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} 
+                        />
+                      </div>
                     )}
-                    {(sample.image2 || sample.image3 || sample.image4) && (
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem', marginTop: '0.5rem' }}>
-                        {sample.image2 && <img src={getFullUrl(sample.image2)} alt="img2" onClick={() => setExpandedImage(getFullUrl(sample.image2))} style={{ width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }} />}
-                        {sample.image3 && <img src={getFullUrl(sample.image3)} alt="img3" onClick={() => setExpandedImage(getFullUrl(sample.image3))} style={{ width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }} />}
-                        {sample.image4 && <img src={getFullUrl(sample.image4)} alt="img4" onClick={() => setExpandedImage(getFullUrl(sample.image4))} style={{ width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }} />}
+                    {sample.image2 && (
+                      <div>
+                        <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-dark)' }}>ภาพตัวอย่างจำลองความเข้ม มองจากภายในอาคาร</p>
+                        <img 
+                          src={getFullUrl(sample.image2)} 
+                          alt="มองจากภายในอาคาร" 
+                          onClick={() => setExpandedImage(getFullUrl(sample.image2))} 
+                          style={{ width: '100%', borderRadius: '12px', cursor: 'pointer', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} 
+                        />
                       </div>
                     )}
                   </div>

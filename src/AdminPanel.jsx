@@ -1180,30 +1180,18 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
           <input type="text" className="form-control" value={formData.title} onChange={e => setFormData({...formData, title: e.target.value})} placeholder="เช่น รูปตัวอย่างติดตั้งฟิล์มรุ่น..." required />
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปหลัก (ต้องมี) <span style={{ color: 'red' }}>*</span></label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพตัวอย่างจำลองความเข้ม มองจากภายนอกอาคาร <span style={{ color: 'red' }}>*</span></label>
             {formData.existingImage1 && !formData.image1 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image1')} accept="image/*" required={!formData.existingImage1 && !formData.image1} />
             {formData.image1 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปเพิ่มเติม 1 (ถ้ามี)</label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพตัวอย่างจำลองความเข้ม มองจากภายในอาคาร</label>
             {formData.existingImage2 && !formData.image2 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image2')} accept="image/*" />
             {formData.image2 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
-          </div>
-          <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปเพิ่มเติม 2 (ถ้ามี)</label>
-            {formData.existingImage3 && !formData.image3 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
-            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image3')} accept="image/*" />
-            {formData.image3 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
-          </div>
-          <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปเพิ่มเติม 3 (ถ้ามี)</label>
-            {formData.existingImage4 && !formData.image4 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
-            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image4')} accept="image/*" />
-            {formData.image4 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
         </div>
 
