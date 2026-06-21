@@ -116,6 +116,56 @@ const BannerCarousel = ({ bannersList, navigate, getFullUrl }) => {
   );
 };
 
+const SectionHeader = ({ icon: Icon, title, subtitle }) => {
+  return (
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.5rem', marginTop: '1rem' }}>
+      <div style={{ 
+        backgroundColor: '#f0f4f8', 
+        padding: '0.8rem', 
+        borderRadius: '12px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        flexShrink: 0
+      }}>
+        <Icon size={28} color="var(--primary-blue)" />
+      </div>
+      <div style={{ paddingTop: '0.2rem' }}>
+        <h3 style={{ 
+          color: 'var(--primary-blue)', 
+          fontSize: '1.4rem', 
+          fontWeight: 'bold', 
+          margin: 0,
+          position: 'relative',
+          display: 'inline-block',
+          paddingBottom: '6px'
+        }}>
+          {title}
+          <div style={{ 
+            position: 'absolute', 
+            bottom: 0, 
+            left: 0, 
+            width: '40px', 
+            height: '3px', 
+            backgroundColor: 'var(--primary-red)',
+            borderRadius: '2px'
+          }} />
+        </h3>
+        {subtitle && (
+          <p style={{ 
+            color: 'var(--text-muted)', 
+            fontSize: '0.95rem', 
+            margin: '0.4rem 0 0 0',
+            lineHeight: 1.4
+          }}>
+            {subtitle}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+};
+
 function MainApp() {
   const navigate = useNavigate();
   const [showWelcome, setShowWelcome] = useState(true);
@@ -563,19 +613,24 @@ function MainApp() {
           
           {seriesSamples.length > 0 && (
             <div style={{ marginBottom: '2rem' }}>
-              <h3 className="section-title" style={{ color: 'var(--primary-blue)', borderBottom: '2px solid var(--primary-red)', display: 'inline-block', paddingBottom: '4px', marginBottom: '1.5rem' }}>รูปตัวอย่างสินค้า</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 {seriesSamples.map((sample) => (
                   <div key={sample.id}>
-                    <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
-                      {sample.title}
-                      {sample.modelId && (
-                        <span style={{ color: 'var(--primary-red)', fontWeight: 'bold', marginLeft: '0.5rem' }}>
-                          <span style={{ color: '#ccc', marginRight: '0.5rem', fontWeight: 'normal' }}>|</span>
-                          {models.find(m => m.id === sample.modelId)?.name}
-                        </span>
-                      )}
-                    </h4>
+                    <SectionHeader 
+                      icon={Image} 
+                      title="ตัวอย่างผิวฟิล์มจริง" 
+                      subtitle={
+                        <>
+                          {sample.title}
+                          {sample.modelId && (
+                            <span style={{ color: 'var(--primary-red)', fontWeight: 'bold', marginLeft: '0.5rem' }}>
+                              <span style={{ color: '#ccc', marginRight: '0.5rem', fontWeight: 'normal' }}>|</span>
+                              {models.find(m => m.id === sample.modelId)?.name}
+                            </span>
+                          )}
+                        </>
+                      } 
+                    />
                     {sample.image1 && (
                       <img 
                         src={getFullUrl(sample.image1)} 
@@ -755,7 +810,11 @@ function MainApp() {
 
           {seriesPortfolio.length > 0 && (
             <>
-              <h3 className="section-title" style={{ color: 'var(--primary-blue)', borderBottom: '2px solid var(--primary-red)', display: 'inline-block', paddingBottom: '4px', marginBottom: '1.5rem' }}>ผลงานติดตั้ง</h3>
+              <SectionHeader 
+                icon={Briefcase} 
+                title="ผลงานติดตั้ง" 
+                subtitle={`ภาพตัวอย่างผลงานการติดตั้งฟิล์มรุ่น ${selectedSeries.title}`} 
+              />
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 {seriesPortfolio.map((work) => (
                   <div key={work.id}>
