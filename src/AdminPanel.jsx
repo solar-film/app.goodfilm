@@ -33,17 +33,17 @@ function AdminPanel() {
   const [bannersList, setBannersList] = useState([]);
   
   const loadData = () => {
-    const ts = Date.now();
-    fetch(`https://nas.goodfilmshop.com/groups?t=${ts}`).then(r => r.json()).then(setGroupsList);
-    fetch(`https://nas.goodfilmshop.com/series?t=${ts}`).then(r => r.json()).then(setSeriesList);
-    fetch(`https://nas.goodfilmshop.com/models?t=${ts}`).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
+    const opts = { headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' } };
+    fetch(`https://nas.goodfilmshop.com/groups`, opts).then(r => r.json()).then(setGroupsList);
+    fetch(`https://nas.goodfilmshop.com/series`, opts).then(r => r.json()).then(setSeriesList);
+    fetch(`https://nas.goodfilmshop.com/models`, opts).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
       const numA = parseInt(a.name.match(/\d+/)?.[0] || 0);
       const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
       return numA - numB;
     })));
-    fetch(`https://nas.goodfilmshop.com/portfolio?t=${ts}`).then(r => r.json()).then(setPortfolioList);
-    fetch(`https://nas.goodfilmshop.com/downloads?t=${ts}`).then(r => r.json()).then(setDownloadsList);
-    fetch(`https://nas.goodfilmshop.com/banners?t=${ts}`).then(r => r.json()).then(setBannersList);
+    fetch(`https://nas.goodfilmshop.com/portfolio`, opts).then(r => r.json()).then(setPortfolioList);
+    fetch(`https://nas.goodfilmshop.com/downloads`, opts).then(r => r.json()).then(setDownloadsList);
+    fetch(`https://nas.goodfilmshop.com/banners`, opts).then(r => r.json()).then(setBannersList);
   };
 
   useEffect(() => {
