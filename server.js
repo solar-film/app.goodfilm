@@ -10,7 +10,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const server = express();
-const router = jsonServer.router('db.json');
+
+const dbPath = path.join(__dirname, 'database.json');
+const initialDbPath = path.join(__dirname, 'db.json');
+
+// Ensure persistent untracked database exists
+if (!fs.existsSync(dbPath) && fs.existsSync(initialDbPath)) {
+  fs.copyFileSync(initialDbPath, dbPath);
+}
+
+const router = jsonServer.router('database.json');
 const middlewares = jsonServer.defaults();
 
 // Setup storage
