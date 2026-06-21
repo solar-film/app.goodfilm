@@ -1024,10 +1024,12 @@ export default AdminPanel;
 // --- SAMPLE MANAGER ---
 function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDelete }) {
   const [formData, setFormData] = useState({
-    title: '', seriesId: '', modelId: '',
-    image1: '', image2: '', image3: '', image4: ''
+    title: '', seriesId: '', modelId: '', 
+    image1: '', image2: '', image3: '', image4: '',
+    existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: ''
   });
   const [status, setStatus] = useState('');
+  const [editId, setEditId] = useState(null);
 
   const sampleList = portfolioList.filter(p => p.type === 'sample');
 
@@ -1088,23 +1090,25 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.image1) {
+    if (!formData.image1 && !formData.existingImage1) {
       setStatus('❌ กรุณาอัพโหลดรูปภาพหลักอย่างน้อย 1 รูป');
       return;
     }
-    setStatus('⏳ กำลังอัพโหลดรูปภาพและบันทึกข้อมูล...');
+    setStatus('⏳ กำลังบันทึกข้อมูล...');
     try {
+      const payloadId = editId || Date.now().toString();
+      
       const [i1, i2, i3, i4] = await Promise.all([
-        uploadFile(formData.image1, 'sample-1'),
-        uploadFile(formData.image2, 'sample-2'),
-        uploadFile(formData.image3, 'sample-3'),
-        uploadFile(formData.image4, 'sample-4')
+        formData.image1 ? uploadFile(formData.image1, 'sample-1') : Promise.resolve(formData.existingImage1 || ''),
+        formData.image2 ? uploadFile(formData.image2, 'sample-2') : Promise.resolve(formData.existingImage2 || ''),
+        formData.image3 ? uploadFile(formData.image3, 'sample-3') : Promise.resolve(formData.existingImage3 || ''),
+        formData.image4 ? uploadFile(formData.image4, 'sample-4') : Promise.resolve(formData.existingImage4 || '')
       ]);
 
       const res = await fetch('https://nas.goodfilmshop.com/portfolio', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-          id: Date.now().toString(), 
+          id: payloadId, 
           type: 'sample',
           seriesId: formData.seriesId, 
           modelId: formData.modelId, 
@@ -1114,7 +1118,8 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
       });
       if (res.ok) {
         setStatus('✅ บันทึกข้อมูลสำเร็จ!');
-        setFormData({ ...formData, title: '', image1: '', image2: '', image3: '', image4: '' });
+        setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '' });
+        setEditId(null);
         e.target.reset();
         onRefresh();
         setTimeout(() => setStatus(''), 3000);
@@ -1125,6 +1130,26 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
       console.error(err);
       setStatus('❌ เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์');
     }
+  };
+
+  const handleEdit = (item) => {
+    setEditId(item.id);
+    setFormData({
+      title: item.title || '',
+      seriesId: item.seriesId || '',
+      modelId: item.modelId || '',
+      image1: null, image2: null, image3: null, image4: null,
+      existingImage1: item.image1 || '',
+      existingImage2: item.image2 || '',
+      existingImage3: item.image3 || '',
+      existingImage4: item.image4 || ''
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCancelEdit = () => {
+    setEditId(null);
+    setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '' });
   };
 
   return (
@@ -1155,27 +1180,40 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปหลัก (ต้องมี) <span style={{ color: 'red' }}>*</span></label>
-            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image1')} accept="image/*" required />
-            {formData.image1 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปแล้ว</div>}
+            {formData.existingImage1 && !formData.image1 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
+            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image1')} accept="image/*" required={!formData.existingImage1 && !formData.image1} />
+            {formData.image1 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปเพิ่มเติม 1 (ถ้ามี)</label>
+            {formData.existingImage2 && !formData.image2 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image2')} accept="image/*" />
-            {formData.image2 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปแล้ว</div>}
+            {formData.image2 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปเพิ่มเติม 2 (ถ้ามี)</label>
+            {formData.existingImage3 && !formData.image3 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image3')} accept="image/*" />
-            {formData.image3 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปแล้ว</div>}
+            {formData.image3 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>รูปเพิ่มเติม 3 (ถ้ามี)</label>
+            {formData.existingImage4 && !formData.image4 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image4')} accept="image/*" />
-            {formData.image4 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปแล้ว</div>}
+            {formData.image4 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary" style={{ padding: '0.8rem', fontSize: '1rem', marginTop: '1rem' }}>บันทึกรูปตัวอย่างสินค้า</button>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+          <button type="submit" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '1rem' }}>
+            {editId ? 'บันทึกการแก้ไข' : 'เพิ่มรูปตัวอย่างสินค้า'}
+          </button>
+          {editId && (
+            <button type="button" onClick={handleCancelEdit} style={{ padding: '0.8rem 2rem', fontSize: '1rem', backgroundColor: '#e0e0e0', color: '#333', border: 'none', borderRadius: '8px', cursor: 'pointer' }}>
+              ยกเลิกแก้ไข
+            </button>
+          )}
+        </div>
         {status && <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: status.includes('✅') ? '#d4edda' : '#f8d7da', color: status.includes('✅') ? '#155724' : '#721c24', borderRadius: '8px', fontWeight: 'bold' }}>{status}</div>}
       </form>
 
@@ -1186,7 +1224,8 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
             <div key={item.id} className="premium-card" style={{ overflow: 'hidden' }}>
               <div style={{ height: '150px', backgroundColor: '#f0f0f0', position: 'relative' }}>
                 <img src={"https://nas.goodfilmshop.com" + item.image1} alt="Main" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div style={{ position: 'absolute', top: '10px', right: '10px' }}>
+                <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex' }}>
+                  <button onClick={() => handleEdit(item)} style={{ backgroundColor: 'var(--primary-blue)', color: 'white', border: 'none', padding: '0.4rem', borderRadius: '50%', cursor: 'pointer', display: 'flex', marginRight: '0.5rem' }}><Edit2 size={16} /></button>
                   <button onClick={() => { if(window.confirm('คุณแน่ใจหรือไม่ที่จะลบรูปตัวอย่างนี้?')) onDelete(item.id); }} style={{ backgroundColor: 'red', color: 'white', border: 'none', padding: '0.4rem', borderRadius: '50%', cursor: 'pointer', display: 'flex' }}><X size={16} /></button>
                 </div>
               </div>
