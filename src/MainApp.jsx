@@ -217,14 +217,14 @@ function MainApp() {
   const loadData = () => {
     setLoadState('loading');
     const API_URL = `https://nas.goodfilmshop.com`;
-    const opts = { headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' } };
+    const ts = Date.now();
     Promise.all([
-      fetch(`${API_URL}/groups`, opts).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
-      fetch(`${API_URL}/series`, opts).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
-      fetch(`${API_URL}/models`, opts).then(res => { if (!res.ok) throw new Error('models'); return res.json(); }),
-      fetch(`${API_URL}/portfolio`, opts).then(res => { if (!res.ok) throw new Error('portfolio'); return res.json(); }),
-      fetch(`${API_URL}/downloads`, opts).then(res => { if (!res.ok) throw new Error('downloads'); return res.json(); }),
-      fetch(`${API_URL}/banners`, opts).then(res => { if (!res.ok) throw new Error('banners'); return res.json(); }),
+      fetch(`${API_URL}/groups?_=${ts}`).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
+      fetch(`${API_URL}/series?_=${ts}`).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
+      fetch(`${API_URL}/models?_=${ts}`).then(res => { if (!res.ok) throw new Error('models'); return res.json(); }),
+      fetch(`${API_URL}/portfolio?_=${ts}`).then(res => { if (!res.ok) throw new Error('portfolio'); return res.json(); }),
+      fetch(`${API_URL}/downloads?_=${ts}`).then(res => { if (!res.ok) throw new Error('downloads'); return res.json(); }),
+      fetch(`${API_URL}/banners?_=${ts}`).then(res => { if (!res.ok) throw new Error('banners'); return res.json(); }),
     ])
       .then(([g, s, m, p, d, b]) => {
         setGroups(g);
