@@ -387,7 +387,15 @@ function MainApp() {
                                           </div>
                                         </div>
                                       ) : (
-                                        <div style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '0.5rem' }}>ไม่มีข้อมูลรุ่นย่อย</div>
+                                        <div style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '1.2rem', backgroundColor: 'white' }}>
+                                          <div style={{ marginBottom: '1rem' }}>ไม่มีข้อมูลสเปครุ่นย่อย</div>
+                                          <div 
+                                            onClick={(e) => { e.stopPropagation(); setSelectedSeries(s); }}
+                                            style={{ padding: '0.8rem', textAlign: 'center', color: 'var(--primary-blue)', border: '2px solid var(--primary-blue)', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}
+                                          >
+                                            คลิกเพื่อดูรายละเอียด
+                                          </div>
+                                        </div>
                                       )}
                                     </div>
                                   </div>
