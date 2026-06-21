@@ -365,14 +365,12 @@ function MainApp() {
                                     3M
                                   </div>
                                   <div style={{ flex: 1 }}>
-                                  <h4 style={{ color: 'var(--primary-blue)', fontSize: '1.05rem', marginBottom: '0.2rem', fontWeight: 'bold' }}>{s.title}</h4>
-                                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.4', margin: 0 }}>{s.desc}</p>
+                                    <h4 style={{ color: 'var(--primary-blue)', fontSize: '1.05rem', marginBottom: '0.2rem', fontWeight: 'bold' }}>{s.title}</h4>
+                                    <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.4', margin: 0 }}>{s.desc}</p>
                                   </div>
-                                  {seriesModels.length > 0 && (
-                                  <div style={{ transform: isSeriesExpanded ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}>
+                                  <div style={{ transform: (seriesModels.length > 0 && isSeriesExpanded) ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}>
                                     <ChevronRight size={20} color="#ccc" />
                                   </div>
-                                  )}
                                 </div>
                                 
                                 {/* Expanded Models List */}
