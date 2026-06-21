@@ -1026,7 +1026,8 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
   const [formData, setFormData] = useState({
     title: '', seriesId: '', modelId: '', 
     image1: '', image2: '', image3: '', image4: '',
-    existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: ''
+    existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '',
+    label1: 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร', label2: 'ภาพจำลองความเข้ม มองจากภายในอาคาร'
   });
   const [status, setStatus] = useState('');
   const [editId, setEditId] = useState(null);
@@ -1090,10 +1091,6 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.image1 && !formData.existingImage1) {
-      setStatus('❌ กรุณาอัพโหลดรูปภาพหลักอย่างน้อย 1 รูป');
-      return;
-    }
     setStatus('⏳ กำลังบันทึกข้อมูล...');
     try {
       const payloadId = editId || Date.now().toString();
@@ -1116,12 +1113,14 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
           seriesId: formData.seriesId, 
           modelId: formData.modelId, 
           title: formData.title,
+          label1: formData.label1,
+          label2: formData.label2,
           image1: i1, image2: i2, image3: i3, image4: i4
         })
       });
       if (res.ok) {
         setStatus('✅ บันทึกข้อมูลสำเร็จ!');
-        setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '' });
+        setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '', label1: 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร', label2: 'ภาพจำลองความเข้ม มองจากภายในอาคาร' });
         setEditId(null);
         e.target.reset();
         onRefresh();
@@ -1145,14 +1144,16 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
       existingImage1: item.image1 || '',
       existingImage2: item.image2 || '',
       existingImage3: item.image3 || '',
-      existingImage4: item.image4 || ''
+      existingImage4: item.image4 || '',
+      label1: item.label1 || 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร',
+      label2: item.label2 || 'ภาพจำลองความเข้ม มองจากภายในอาคาร'
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleCancelEdit = () => {
     setEditId(null);
-    setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '' });
+    setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '', label1: 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร', label2: 'ภาพจำลองความเข้ม มองจากภายในอาคาร' });
   };
 
   return (
@@ -1182,13 +1183,17 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพจำลองความเข้ม มองจากภายนอกอาคาร <span style={{ color: 'red' }}>*</span></label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>คำบรรยายรูปแรก</label>
+            <input type="text" className="form-control" value={formData.label1} onChange={e => setFormData({...formData, label1: e.target.value})} style={{ marginBottom: '1rem' }} />
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ไฟล์รูปแรก</label>
             {formData.existingImage1 && !formData.image1 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
-            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image1')} accept="image/*" required={!formData.existingImage1 && !formData.image1} />
+            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image1')} accept="image/*" />
             {formData.image1 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
           </div>
           <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ภาพจำลองความเข้ม มองจากภายในอาคาร <span style={{ color: 'red' }}>*</span></label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>คำบรรยายรูปที่สอง</label>
+            <input type="text" className="form-control" value={formData.label2} onChange={e => setFormData({...formData, label2: e.target.value})} style={{ marginBottom: '1rem' }} />
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ไฟล์รูปที่สอง</label>
             {formData.existingImage2 && !formData.image2 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
             <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image2')} accept="image/*" />
             {formData.image2 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
