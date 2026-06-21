@@ -118,63 +118,59 @@ const BannerCarousel = ({ bannersList, navigate, getFullUrl }) => {
 
 const SectionHeader = ({ icon: Icon, title, subtitle }) => {
   return (
-    <div style={{ marginBottom: '1.5rem', marginTop: '1.5rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+    <div style={{ marginBottom: '1.5rem', marginTop: '2rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
         
-        {/* Rounded Square Badge */}
+        {/* Rounded Square Badge with shadow */}
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center', 
-          width: '48px', 
-          height: '48px', 
+          width: '56px', 
+          height: '56px', 
           backgroundColor: 'var(--primary-blue)', 
-          borderRadius: '12px', 
-          flexShrink: 0
-        }}>
-          <Icon size={24} color="white" strokeWidth={2.5} />
-        </div>
-
-        {/* Decorative Diagonal Lines */}
-        <div style={{ 
-          display: 'flex', 
-          gap: '4px', 
-          alignItems: 'center',
+          borderRadius: '14px', 
           flexShrink: 0,
-          opacity: 0.3
+          boxShadow: '0 4px 12px rgba(0, 45, 114, 0.25)'
         }}>
-          <div style={{ width: '2px', height: '32px', backgroundColor: 'var(--primary-blue)', transform: 'rotate(20deg)' }}></div>
-          <div style={{ width: '2px', height: '32px', backgroundColor: 'var(--primary-blue)', transform: 'rotate(20deg)' }}></div>
+          <Icon size={28} color="white" strokeWidth={2} />
         </div>
 
-        {/* Title Text */}
-        <div>
+        {/* Decorative Diagonal Slashes */}
+        <svg width="16" height="40" viewBox="0 0 16 40" style={{ flexShrink: 0, opacity: 0.2 }}>
+          <line x1="4" y1="36" x2="8" y2="4" stroke="var(--primary-blue)" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="10" y1="36" x2="14" y2="4" stroke="var(--primary-blue)" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+
+        {/* Title + Red Underline */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h3 style={{ 
             color: 'var(--primary-blue)', 
-            fontSize: '1.5rem', 
+            fontSize: '1.8rem', 
             fontWeight: '900', 
             margin: 0,
-            lineHeight: 1.2,
-            letterSpacing: '-0.02em'
+            lineHeight: 1.15,
+            letterSpacing: '-0.01em',
+            fontFamily: "'Noto Sans Thai', 'Inter', sans-serif"
           }}>
             {title}
           </h3>
           <div style={{ 
-            width: '50px', 
-            height: '3px', 
+            width: '80px', 
+            height: '4px', 
             backgroundColor: 'var(--primary-red)',
             borderRadius: '2px',
-            marginTop: '4px'
+            marginTop: '6px'
           }}></div>
         </div>
 
       </div>
       
-      {/* Subtitle if any */}
+      {/* Subtitle */}
       {subtitle && (
-        <div style={{ marginTop: '0.5rem', paddingLeft: '8px' }}>
+        <div style={{ marginTop: '0.6rem', paddingLeft: '0px' }}>
           {typeof subtitle === 'string' ? (
-            <p style={{ color: '#777', fontSize: '0.9rem', margin: 0 }}>{subtitle}</p>
+            <p style={{ color: '#666', fontSize: '0.9rem', margin: 0, lineHeight: 1.5 }}>{subtitle}</p>
           ) : subtitle}
         </div>
       )}
