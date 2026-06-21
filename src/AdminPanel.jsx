@@ -33,16 +33,17 @@ function AdminPanel() {
   const [bannersList, setBannersList] = useState([]);
   
   const loadData = () => {
-    fetch(`https://nas.goodfilmshop.com/groups`).then(r => r.json()).then(setGroupsList);
-    fetch(`https://nas.goodfilmshop.com/series`).then(r => r.json()).then(setSeriesList);
-    fetch(`https://nas.goodfilmshop.com/models`).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
+    const ts = Date.now();
+    fetch(`https://nas.goodfilmshop.com/groups?t=${ts}`).then(r => r.json()).then(setGroupsList);
+    fetch(`https://nas.goodfilmshop.com/series?t=${ts}`).then(r => r.json()).then(setSeriesList);
+    fetch(`https://nas.goodfilmshop.com/models?t=${ts}`).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
       const numA = parseInt(a.name.match(/\d+/)?.[0] || 0);
       const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
       return numA - numB;
     })));
-    fetch(`https://nas.goodfilmshop.com/portfolio`).then(r => r.json()).then(setPortfolioList);
-    fetch(`https://nas.goodfilmshop.com/downloads`).then(r => r.json()).then(setDownloadsList);
-    fetch(`https://nas.goodfilmshop.com/banners`).then(r => r.json()).then(setBannersList);
+    fetch(`https://nas.goodfilmshop.com/portfolio?t=${ts}`).then(r => r.json()).then(setPortfolioList);
+    fetch(`https://nas.goodfilmshop.com/downloads?t=${ts}`).then(r => r.json()).then(setDownloadsList);
+    fetch(`https://nas.goodfilmshop.com/banners?t=${ts}`).then(r => r.json()).then(setBannersList);
   };
 
   useEffect(() => {

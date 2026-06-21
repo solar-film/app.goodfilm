@@ -217,13 +217,14 @@ function MainApp() {
   const loadData = () => {
     setLoadState('loading');
     const API_URL = `https://nas.goodfilmshop.com`;
+    const ts = Date.now();
     Promise.all([
-      fetch(`${API_URL}/groups`).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
-      fetch(`${API_URL}/series`).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
-      fetch(`${API_URL}/models`).then(res => { if (!res.ok) throw new Error('models'); return res.json(); }),
-      fetch(`${API_URL}/portfolio`).then(res => { if (!res.ok) throw new Error('portfolio'); return res.json(); }),
-      fetch(`${API_URL}/downloads`).then(res => { if (!res.ok) throw new Error('downloads'); return res.json(); }),
-      fetch(`${API_URL}/banners`).then(res => { if (!res.ok) throw new Error('banners'); return res.json(); }),
+      fetch(`${API_URL}/groups?t=${ts}`).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
+      fetch(`${API_URL}/series?t=${ts}`).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
+      fetch(`${API_URL}/models?t=${ts}`).then(res => { if (!res.ok) throw new Error('models'); return res.json(); }),
+      fetch(`${API_URL}/portfolio?t=${ts}`).then(res => { if (!res.ok) throw new Error('portfolio'); return res.json(); }),
+      fetch(`${API_URL}/downloads?t=${ts}`).then(res => { if (!res.ok) throw new Error('downloads'); return res.json(); }),
+      fetch(`${API_URL}/banners?t=${ts}`).then(res => { if (!res.ok) throw new Error('banners'); return res.json(); }),
     ])
       .then(([g, s, m, p, d, b]) => {
         setGroups(g);
