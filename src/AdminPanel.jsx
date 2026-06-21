@@ -414,6 +414,7 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
       body: JSON.stringify({ ...newSeries, id: 's-' + Date.now().toString(), referenceFile: '' })
     });
     setNewSeries({ title: '', desc: '', longDesc: '', groupId: 'g1' });
+    e.target.reset();
     onRefresh();
   };
 
@@ -424,6 +425,7 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
       body: JSON.stringify({ id: 'm-' + Date.now().toString(), seriesId: newModel.seriesId, name: newModel.name, shgc: newModel.shgc, vlt: newModel.vlt, vlr: newModel.vlr, reflectance: newModel.vlr, uv: newModel.uv, ir: newModel.ir, tser: newModel.tser, thickness: newModel.thickness })
     });
     setNewModel(p => ({ ...p, name: '', shgc: '', vlt: '', vlr: '', uv: '', ir: '', tser: '', thickness: '' }));
+    e.target.reset();
     onRefresh();
   };
 
