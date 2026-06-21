@@ -150,7 +150,7 @@ const SectionHeader = ({ icon: Icon, title, subtitle }) => {
             fontWeight: '900', 
             margin: 0,
             lineHeight: 1.15,
-            letterSpacing: '-0.01em',
+            letterSpacing: '0.05em',
             fontFamily: "'Noto Sans Thai', 'Inter', sans-serif"
           }}>
             {title}
