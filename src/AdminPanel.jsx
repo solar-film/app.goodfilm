@@ -644,7 +644,11 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
   };
   
   const [editingId, setEditingId] = useState(null);
-  const [editData, setEditData] = useState({ title: '', seriesId: '', category: '' });
+  const [editData, setEditData] = useState({ title: '', seriesId: '', category: 'catalog' });
+  
+  const [filterTitle, setFilterTitle] = useState('');
+  const [filterSeries, setFilterSeries] = useState('');
+  const [filterCategory, setFilterCategory] = useState('');
 
   const handleEditSave = async (id) => {
     try {
@@ -715,6 +719,13 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
     }
   };
 
+  const filteredDownloads = downloadsList.filter(item => {
+    const matchTitle = filterTitle === '' || item.title.toLowerCase().includes(filterTitle.toLowerCase());
+    const matchSeries = filterSeries === '' || item.seriesId === filterSeries;
+    const matchCategory = filterCategory === '' || item.category === filterCategory;
+    return matchTitle && matchSeries && matchCategory;
+  });
+
   return (
     <div className="admin-grid">
       <div className="card" style={{ padding: '1.5rem', alignSelf: 'start' }}>
@@ -756,6 +767,31 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
 
       <div className="card" style={{ padding: '1.5rem', overflowX: 'auto' }}>
         <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>รายการไฟล์ทั้งหมด</h3>
+        {/* Filters */}
+        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+          <div style={{ flex: 1, minWidth: '200px' }}>
+            <label style={{ display: 'block', marginBottom: '0.3rem', fontSize: '0.85rem', fontWeight: 'bold' }}>ชื่อเอกสาร</label>
+            <input type="text" className="form-control" placeholder="ค้นหาชื่อเอกสาร..." value={filterTitle} onChange={e => setFilterTitle(e.target.value)} />
+          </div>
+          <div style={{ flex: 1, minWidth: '200px' }}>
+            <label style={{ display: 'block', marginBottom: '0.3rem', fontSize: '0.85rem', fontWeight: 'bold' }}>แสดงในรุ่นฟิล์ม</label>
+            <select className="form-control" value={filterSeries} onChange={e => setFilterSeries(e.target.value)}>
+              <option value="">-- ทั้งหมด --</option>
+              {seriesList?.map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
+            </select>
+          </div>
+          <div style={{ flex: 1, minWidth: '200px' }}>
+            <label style={{ display: 'block', marginBottom: '0.3rem', fontSize: '0.85rem', fontWeight: 'bold' }}>หมวดหมู่</label>
+            <select className="form-control" value={filterCategory} onChange={e => setFilterCategory(e.target.value)}>
+              <option value="">-- ทั้งหมด --</option>
+              <option value="catalog">แคตตาล็อก</option>
+              <option value="spec">Data Sheet</option>
+              <option value="test_report">Test Report</option>
+              <option value="other">อื่นๆ</option>
+            </select>
+          </div>
+        </div>
+
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
           <thead>
             <tr style={{ borderBottom: '2px solid #eee', textAlign: 'left' }}>
@@ -767,7 +803,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
             </tr>
           </thead>
           <tbody>
-            {downloadsList.map(item => (
+            {filteredDownloads.map(item => (
               <tr key={item.id} style={{ borderBottom: '1px solid #eee' }}>
                 <td style={{ padding: '0.5rem' }}>
                   <a href={getFullUrl(item.file)} target="_blank" rel="noreferrer" style={{ color: 'var(--primary-blue)', fontWeight: 'bold' }}>{item.ext}</a>
