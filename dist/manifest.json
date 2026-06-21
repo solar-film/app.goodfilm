@@ -1,0 +1,15 @@
+{
+  "short_name": "GOODFILM",
+  "name": "GOODFILM",
+  "icons": [
+    {
+      "src": "/logo512-v2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#002d72",
+  "background_color": "#ffffff"
+}
