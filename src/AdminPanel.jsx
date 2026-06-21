@@ -366,6 +366,17 @@ function CatalogManager({ groupsList, seriesList, modelsList, onRefresh, onDelet
   const [editingModelId, setEditingModelId] = useState(null);
   const [editModelData, setEditModelData] = useState({ name: '', shgc: '', vlt: '', vlr: '', uv: '', ir: '', tser: '', thickness: '' });
 
+  const [filterGroup, setFilterGroup] = useState('');
+  const [searchSeries, setSearchSeries] = useState('');
+
+  const filteredSeriesList = seriesList.filter(s => {
+    const matchGroup = filterGroup === '' || s.groupId === filterGroup;
+    const matchSearch = searchSeries === '' || 
+      s.title.toLowerCase().includes(searchSeries.toLowerCase()) || 
+      s.desc.toLowerCase().includes(searchSeries.toLowerCase());
+    return matchGroup && matchSearch;
+  });
+
   const handleEditClick = (series) => {
     setEditingSeriesId(series.id);
     setEditSeriesData({ title: series.title, desc: series.desc, longDesc: series.longDesc || '', groupId: series.groupId || 'g1' });
@@ -472,8 +483,24 @@ function CatalogManager({ groupsList, seriesList, modelsList, onRefresh, onDelet
         
         <div>
           <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>รายการรุ่นฟิล์ม (Series)</h3>
+        <hr style={{ margin: '2rem 0', border: 'none', borderTop: '1px solid #ddd' }} />
+        
+        <div style={{ backgroundColor: '#f8f9fa', padding: '1.5rem', borderRadius: '8px', marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', border: '1px solid #eee' }}>
+          <div style={{ flex: 1, minWidth: '200px' }}>
+            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>🔍 ค้นหาชื่อรุ่นฟิล์ม</label>
+            <input type="text" className="form-control" placeholder="พิมพ์ชื่อรุ่น หรือคำอธิบาย..." value={searchSeries} onChange={e => setSearchSeries(e.target.value)} />
+          </div>
+          <div style={{ flex: 1, minWidth: '200px' }}>
+            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>📁 กรองตามกลุ่มผลิตภัณฑ์</label>
+            <select className="form-control" value={filterGroup} onChange={e => setFilterGroup(e.target.value)}>
+              <option value="">-- แสดงทุกกลุ่มผลิตภัณฑ์ --</option>
+              {groupsList?.map(g => <option key={g.id} value={g.id}>{g.title}</option>)}
+            </select>
+          </div>
+        </div>
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {seriesList.map(series => {
+          {filteredSeriesList.map(series => {
             const isEditing = editingSeriesId === series.id;
             return (
               <div key={series.id} className="premium-card" style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
@@ -567,7 +594,7 @@ function CatalogManager({ groupsList, seriesList, modelsList, onRefresh, onDelet
         <div>
           <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>รายการสเปคโมเดลย่อย (Models)</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {seriesList.map(series => {
+          {filteredSeriesList.map(series => {
             const models = modelsList.filter(m => m.seriesId === series.id);
             if (models.length === 0) return null;
             return (
