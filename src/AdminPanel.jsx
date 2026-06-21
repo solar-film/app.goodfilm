@@ -386,6 +386,7 @@ function CatalogManager({ groupsList, seriesList, modelsList, onRefresh, onDelet
 
   const [filterGroup, setFilterGroup] = useState('');
   const [searchSeries, setSearchSeries] = useState('');
+  const [searchModel, setSearchModel] = useState('');
 
   const filteredSeriesList = seriesList.filter(s => {
     const matchGroup = filterGroup === '' || s.groupId === filterGroup;
@@ -610,10 +611,16 @@ function CatalogManager({ groupsList, seriesList, modelsList, onRefresh, onDelet
         </div>
         
         <div>
-          <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>รายการสเปคโมเดลย่อย (Models)</h3>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+            <h3 style={{ margin: 0, color: 'var(--primary-blue)' }}>รายการสเปคโมเดลย่อย (Models)</h3>
+          </div>
+          <div style={{ backgroundColor: '#f8f9fa', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid #eee' }}>
+            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>🔍 ค้นหาชื่อรุ่น (Model)</label>
+            <input type="text" className="form-control" placeholder="พิมพ์ชื่อรุ่น เช่น PR 70 EX..." value={searchModel} onChange={e => setSearchModel(e.target.value)} />
+          </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {filteredSeriesList.map(series => {
-            const models = modelsList.filter(m => m.seriesId === series.id);
+            const models = modelsList.filter(m => m.seriesId === series.id && (searchModel === '' || (m.name && m.name.toLowerCase().includes(searchModel.toLowerCase()))));
             if (models.length === 0) return null;
             return (
               <div key={series.id} className="premium-card" style={{ padding: '1rem' }}>
