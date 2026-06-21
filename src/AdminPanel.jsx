@@ -25,6 +25,7 @@ function AdminPanel() {
   }, []);
   
   // Data State
+  const [groupsList, setGroupsList] = useState([]);
   const [seriesList, setSeriesList] = useState([]);
   const [modelsList, setModelsList] = useState([]);
   const [portfolioList, setPortfolioList] = useState([]);
@@ -32,6 +33,7 @@ function AdminPanel() {
   const [bannersList, setBannersList] = useState([]);
   
   const loadData = () => {
+    fetch(`https://nas.goodfilmshop.com/groups`).then(r => r.json()).then(setGroupsList);
     fetch(`https://nas.goodfilmshop.com/series`).then(r => r.json()).then(setSeriesList);
     fetch(`https://nas.goodfilmshop.com/models`).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
       const numA = parseInt(a.name.match(/\d+/)?.[0] || 0);
@@ -126,6 +128,7 @@ function AdminPanel() {
 
         {activeTab === 'catalog' && (
           <CatalogManager 
+            groupsList={groupsList}
             seriesList={seriesList} 
             modelsList={modelsList} 
             onRefresh={loadData} 
@@ -353,19 +356,19 @@ function PortfolioManager({ seriesList, modelsList, portfolioList, onRefresh, on
 }
 
 // --- CATALOG MANAGER ---
-function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
+function CatalogManager({ groupsList, seriesList, modelsList, onRefresh, onDelete }) {
   const [newSeries, setNewSeries] = useState({ title: '', desc: '', longDesc: '', groupId: 'g1' });
   const [newModel, setNewModel] = useState({ seriesId: '', name: '', shgc: '', vlt: '', vlr: '', uv: '', ir: '', tser: '', thickness: '' });
   
   const [editingSeriesId, setEditingSeriesId] = useState(null);
-  const [editSeriesData, setEditSeriesData] = useState({ title: '', desc: '', longDesc: '' });
+  const [editSeriesData, setEditSeriesData] = useState({ title: '', desc: '', longDesc: '', groupId: '' });
 
   const [editingModelId, setEditingModelId] = useState(null);
   const [editModelData, setEditModelData] = useState({ name: '', shgc: '', vlt: '', vlr: '', uv: '', ir: '', tser: '', thickness: '' });
 
   const handleEditClick = (series) => {
     setEditingSeriesId(series.id);
-    setEditSeriesData({ title: series.title, desc: series.desc, longDesc: series.longDesc || '' });
+    setEditSeriesData({ title: series.title, desc: series.desc, longDesc: series.longDesc || '', groupId: series.groupId || 'g1' });
   };
 
   const handleSaveEditSeries = async () => {
@@ -444,6 +447,12 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
                 <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>ชื่อ Series</label>
                 <input type="text" value={newSeries.title} onChange={e => setNewSeries({...newSeries, title: e.target.value})} required className="form-control" />
               </div>
+              <div style={{ flex: 1 }}>
+                <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>กลุ่มผลิตภัณฑ์</label>
+                <select value={newSeries.groupId} onChange={e => setNewSeries({...newSeries, groupId: e.target.value})} required className="form-control">
+                  {groupsList?.map(g => <option key={g.id} value={g.id}>{g.title}</option>)}
+                </select>
+              </div>
               <div style={{ flex: 2 }}>
                 <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>คำอธิบายสั้นๆ</label>
                 <input type="text" value={newSeries.desc} onChange={e => setNewSeries({...newSeries, desc: e.target.value})} required className="form-control" />
@@ -472,6 +481,9 @@ function CatalogManager({ seriesList, modelsList, onRefresh, onDelete }) {
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     <input type="text" value={editSeriesData.title} onChange={e => setEditSeriesData({...editSeriesData, title: e.target.value})} className="form-control" placeholder="ชื่อ Series" />
                     <input type="text" value={editSeriesData.desc} onChange={e => setEditSeriesData({...editSeriesData, desc: e.target.value})} className="form-control" placeholder="คำอธิบายสั้นๆ" />
+                    <select value={editSeriesData.groupId} onChange={e => setEditSeriesData({...editSeriesData, groupId: e.target.value})} className="form-control" style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid var(--border-color)' }}>
+                      {groupsList?.map(g => <option key={g.id} value={g.id}>{g.title}</option>)}
+                    </select>
                     <div style={{ backgroundColor: 'white' }}>
                       <ReactQuill theme="snow" value={editSeriesData.longDesc || ''} onChange={(val) => setEditSeriesData({...editSeriesData, longDesc: val})} style={{ minHeight: '200px' }} placeholder="คำอธิบายแบบยาว" />
                     </div>
