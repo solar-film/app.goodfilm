@@ -941,7 +941,7 @@ function MainApp() {
               </div>
 
               {/* Download Icon (Clickable Link) */}
-              {(doc.category === 'other' || doc.category === 'test_report') ? (
+              {doc.category === 'test_report' ? (
                 <div onClick={() => setDownloadPasswordPrompt({ isOpen: true, doc: doc, password: '', error: '' })} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0 }}>
                   <Download size={24} strokeWidth={2.5} />
                 </div>
