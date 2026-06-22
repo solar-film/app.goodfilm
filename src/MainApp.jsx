@@ -347,9 +347,6 @@ function MainApp() {
         </div>
         {/* Product Groups (Accordion) */}
         <div className="product-groups">
-          <div className="section-header" style={{ marginBottom: '1.2rem' }}>
-            <h2 style={{ fontSize: '1.35rem', color: 'var(--primary-blue)', fontWeight: 'bold' }}>กลุ่มผลิตภัณฑ์ฟิล์ม 3M</h2>
-          </div>
 
         {loadState === 'loading' && (
           <div style={{ textAlign: 'center', padding: '3rem 1rem', color: 'var(--text-muted)' }}>
@@ -376,8 +373,18 @@ function MainApp() {
 
         {loadState === 'ready' && (
         <div className="groups-accordion" style={{ padding: '1rem 0' }}>
-          {groups.map((group) => {
-            const searchLower = searchQuery.toLowerCase();
+          {[
+            { id: '3m', title: 'กลุ่มผลิตภัณฑ์ฟิล์ม 3M', filter: g => !['g6', 'g7', 'g8'].includes(g.id) },
+            { id: 'bostik', title: 'ผลิตภัณฑ์ Bostik', filter: g => ['g6', 'g7', 'g8'].includes(g.id) }
+          ].map(section => (
+            <div key={section.id}>
+              {searchQuery === '' && groups.filter(section.filter).length > 0 && (
+                <div className="section-title" style={{ marginTop: section.id === 'bostik' ? '2.5rem' : '0', marginBottom: '1.2rem' }}>
+                  <h2 style={{ fontSize: '1.35rem', color: 'var(--primary-blue)', fontWeight: 'bold' }}>{section.title}</h2>
+                </div>
+              )}
+              {groups.filter(section.filter).map((group) => {
+                const searchLower = searchQuery.toLowerCase();
             const groupSeries = series.filter(s => s.groupId === group.id && (
               searchQuery === '' || 
               s.title.toLowerCase().includes(searchLower) || 
@@ -424,7 +431,7 @@ function MainApp() {
                                   style={{ padding: '1rem', display: 'flex', gap: '1rem', alignItems: 'center', cursor: 'pointer', backgroundColor: isSeriesExpanded ? '#fff' : 'transparent' }}
                                 >
                                   <div style={{ backgroundColor: 'white', border: '1px solid #E0E0E0', color: 'var(--primary-red)', width: '45px', height: '45px', borderRadius: '8px', display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold', fontSize: '1rem', flexShrink: 0 }}>
-                                    3M
+                                    {section.id === '3m' ? '3M' : 'BS'}
                                   </div>
                                   <div style={{ flex: 1 }}>
                                     <h4 style={{ color: 'var(--primary-blue)', fontSize: '1.05rem', marginBottom: '0.2rem', fontWeight: 'bold' }}>{s.title}</h4>
@@ -473,6 +480,8 @@ function MainApp() {
               </div>
             );
           })}
+          </div>
+          ))}
         </div>
         )}
       </div>
@@ -698,8 +707,8 @@ function MainApp() {
                   <table className="specs-table-real" style={{ width: '100%', minWidth: '500px', borderCollapse: 'collapse', textAlign: 'center', fontSize: '0.85rem' }}>
                     <thead>
                       <tr style={{ backgroundColor: 'var(--primary-blue)', color: 'white' }}>
-                        <th style={{ padding: '0.75rem', borderRadius: '8px 0 0 0', width: '50px' }}>เทียบ</th>
-                        <th style={{ padding: '0.75rem' }}>รุ่น</th>
+                        {selectedSeries.groupId === 'g1' && <th style={{ padding: '0.75rem', borderRadius: '8px 0 0 0', width: '50px' }}>เทียบ</th>}
+                        <th style={{ padding: '0.75rem', borderRadius: selectedSeries.groupId === 'g1' ? '0' : '8px 0 0 0' }}>รุ่น</th>
                         {hasSHGC && <th style={{ padding: '0.75rem' }}>SHGC</th>}
                         {hasVLT && <th style={{ padding: '0.75rem' }}>VLT</th>}
                         {hasVLR && <th style={{ padding: '0.75rem' }}>VLR</th>}
@@ -712,14 +721,14 @@ function MainApp() {
                     <tbody>
                       {seriesModels.map((m, idx) => (
                         <tr key={m.id} style={{ backgroundColor: idx % 2 === 0 ? 'var(--bg-light)' : 'white', borderBottom: '1px solid var(--border-color)' }}>
-                          <td style={{ padding: '0.75rem' }}>
+                          {selectedSeries.groupId === 'g1' && <td style={{ padding: '0.75rem' }}>
                             <input 
                               type="checkbox" 
                               checked={compareList.some(c => c.id === m.id)}
                               onChange={() => handleToggleCompare(m)}
                               style={{ transform: 'scale(1.2)', cursor: 'pointer' }}
                             />
-                          </td>
+                          </td>}
                           <td style={{ padding: '0.75rem', fontWeight: '600' }}>{m.name}</td>
                           {hasSHGC && <td style={{ padding: '0.75rem' }}>{m.shgc && String(m.shgc).trim() !== '-' ? m.shgc : '-'}</td>}
                           {hasVLT && <td style={{ padding: '0.75rem' }}>{m.vlt && String(m.vlt).trim() !== '-' ? m.vlt : '-'}</td>}
@@ -1666,7 +1675,7 @@ function MainApp() {
                 
                 {isCompareDropdownOpen && (
                   <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', width: '100%', maxWidth: '300px', backgroundColor: 'white', border: '1px solid #ccc', borderRadius: '8px', marginTop: '4px', zIndex: 10002, maxHeight: '250px', overflowY: 'auto', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', textAlign: 'left' }}>
-                    {series.map(s => {
+                    {series.filter(s => s.groupId === 'g1').map(s => {
                       const seriesModels = models.filter(m => m.seriesId === s.id);
                       if (seriesModels.length === 0) return null;
                       return (
