@@ -106,7 +106,7 @@ export default function PortfolioManager({ seriesList, modelsList, portfolioList
   };
 
   // Processing portfolio list
-  let processedList = [...portfolioList];
+  let processedList = portfolioList.filter(p => p.type !== 'sample');
   
   if (filterSeries) {
     processedList = processedList.filter(p => p.seriesId === filterSeries);
