@@ -681,6 +681,7 @@ function MainApp() {
           )}
 
           {seriesModels.length > 0 && (() => {
+            const isFilmSeries = !['g6', 'g7', 'g8'].includes(selectedSeries.groupId);
             const hasSHGC = seriesModels.some(m => m.shgc && String(m.shgc).trim() !== '-');
             const hasVLT = seriesModels.some(m => m.vlt && String(m.vlt).trim() !== '-');
             const hasVLR = seriesModels.some(m => (m.vlr && String(m.vlr).trim() !== '-') || (m.reflectance && String(m.reflectance).trim() !== '-'));
@@ -699,10 +700,12 @@ function MainApp() {
             
             return (
               <div style={{ margin: '1rem -1.5rem 2rem -1.5rem', padding: '0 1.5rem' }}>
-                <SectionHeader 
-                  icon={Layers} 
-                  title="สเปคฟิล์ม" 
-                />
+                {isFilmSeries && (
+                  <SectionHeader 
+                    icon={Layers} 
+                    title="สเปคฟิล์ม" 
+                  />
+                )}
                 <div style={{ overflowX: 'auto', paddingBottom: '0.5rem' }}>
                   <table className="specs-table-real" style={{ width: '100%', minWidth: '500px', borderCollapse: 'collapse', textAlign: 'center', fontSize: '0.85rem' }}>
                     <thead>
@@ -779,18 +782,20 @@ function MainApp() {
                   </div>
                 )}
                 
-                <div style={{ marginTop: '1rem', padding: '1.2rem', backgroundColor: '#f5f7fa', borderRadius: '12px', fontSize: '0.85rem', color: '#555', border: '1px solid #eaeaea' }}>
-                  <h4 style={{ margin: '0 0 0.8rem 0', color: 'var(--primary-blue)', fontSize: '0.95rem' }}>คำอธิบายค่าคุณสมบัติฟิล์ม</h4>
-                  <ul style={{ margin: 0, paddingLeft: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    {hasSHGC && <li><strong>SHGC (ค่าสัมประสิทธิ์การส่งผ่านความร้อน):</strong> ยิ่งต่ำ ยิ่งกันความร้อนได้ดี</li>}
-                    {hasVLT && <li><strong>VLT (% แสงส่องผ่าน):</strong> ยิ่งสูง ฟิล์มยิ่งสว่าง มองเห็นได้ชัดเจน</li>}
-                    {hasVLR && <li><strong>VLR (% แสงสะท้อน):</strong> ยิ่งสูง กระจกยิ่งสะท้อนแสงมาก</li>}
-                    {hasUV && <li><strong>UV (ป้องกันรังสีอัลตราไวโอเลต):</strong> ยิ่งสูง ยิ่งป้องกันรังสียูวี ปกป้องผิวและเฟอร์นิเจอร์</li>}
-                    {hasIR && <li><strong>IR (ป้องกันรังสีอินฟราเรด):</strong> ยิ่งสูง ยิ่งกันรังสีความร้อนอินฟราเรดได้ดี</li>}
-                    {hasTSER && <li><strong>TSER (ลดพลังงานความร้อนรวม):</strong> ยิ่งสูง ยิ่งกันความร้อนรวมจากแสงอาทิตย์ได้ดี</li>}
-                    {hasThickness && <li><strong>ความหนา:</strong> หน่วยเป็น Mil (1 Mil = 0.0254 มม.)</li>}
-                  </ul>
-                </div>
+                {isFilmSeries && (hasSHGC || hasVLT || hasVLR || hasUV || hasIR || hasTSER || hasThickness) && (
+                  <div style={{ marginTop: '1rem', padding: '1.2rem', backgroundColor: '#f5f7fa', borderRadius: '12px', fontSize: '0.85rem', color: '#555', border: '1px solid #eaeaea' }}>
+                    <h4 style={{ margin: '0 0 0.8rem 0', color: 'var(--primary-blue)', fontSize: '0.95rem' }}>คำอธิบายค่าคุณสมบัติฟิล์ม</h4>
+                    <ul style={{ margin: 0, paddingLeft: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                      {hasSHGC && <li><strong>SHGC (ค่าสัมประสิทธิ์การส่งผ่านความร้อน):</strong> ยิ่งต่ำ ยิ่งกันความร้อนได้ดี</li>}
+                      {hasVLT && <li><strong>VLT (% แสงส่องผ่าน):</strong> ยิ่งสูง ฟิล์มยิ่งสว่าง มองเห็นได้ชัดเจน</li>}
+                      {hasVLR && <li><strong>VLR (% แสงสะท้อน):</strong> ยิ่งสูง กระจกยิ่งสะท้อนแสงมาก</li>}
+                      {hasUV && <li><strong>UV (ป้องกันรังสีอัลตราไวโอเลต):</strong> ยิ่งสูง ยิ่งป้องกันรังสียูวี ปกป้องผิวและเฟอร์นิเจอร์</li>}
+                      {hasIR && <li><strong>IR (ป้องกันรังสีอินฟราเรด):</strong> ยิ่งสูง ยิ่งกันรังสีความร้อนอินฟราเรดได้ดี</li>}
+                      {hasTSER && <li><strong>TSER (ลดพลังงานความร้อนรวม):</strong> ยิ่งสูง ยิ่งกันความร้อนรวมจากแสงอาทิตย์ได้ดี</li>}
+                      {hasThickness && <li><strong>ความหนา:</strong> หน่วยเป็น Mil (1 Mil = 0.0254 มม.)</li>}
+                    </ul>
+                  </div>
+                )}
               </div>
             );
           })()}
