@@ -9,6 +9,10 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
   const [newSeries, setNewSeries] = useState({ title: '', desc: '', longDesc: '', groupId: defaultGroupId });
   const [newModel, setNewModel] = useState({ seriesId: '', name: '', shgc: '', vlt: '', vlr: '', uv: '', ir: '', tser: '', thickness: '' });
   
+  
+  const [editingHeadersSeriesId, setEditingHeadersSeriesId] = useState(null);
+  const [editHeadersData, setEditHeadersData] = useState({ shgc: 'SHGC', vlt: 'VLT', vlr: 'VLR', uv: 'UV', ir: 'IR', tser: 'TSER', thickness: 'หนา' });
+
   const [editingSeriesId, setEditingSeriesId] = useState(null);
   const [editSeriesData, setEditSeriesData] = useState({ title: '', desc: '', longDesc: '', groupId: '' });
 
@@ -30,6 +34,17 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
   const handleEditClick = (series) => {
     setEditingSeriesId(series.id);
     setEditSeriesData({ title: series.title, desc: series.desc, longDesc: series.longDesc || '', groupId: series.groupId || 'g1' });
+  };
+
+  
+  const handleSaveHeaders = async () => {
+    const targetSeries = seriesList.find(s => s.id === editingHeadersSeriesId);
+    await fetch(`https://nas.goodfilmshop.com/series/${editingHeadersSeriesId}`, {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...targetSeries, headers: editHeadersData })
+    });
+    setEditingHeadersSeriesId(null);
+    onRefresh();
   };
 
   const handleSaveEditSeries = async () => {

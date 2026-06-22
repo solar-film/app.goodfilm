@@ -707,15 +707,15 @@ function MainApp() {
                   <table className="specs-table-real" style={{ width: '100%', minWidth: '500px', borderCollapse: 'collapse', textAlign: 'center', fontSize: '0.85rem' }}>
                     <thead>
                       <tr style={{ backgroundColor: 'var(--primary-blue)', color: 'white' }}>
-                        {selectedSeries.groupId === 'g1' && <th style={{ padding: '0.75rem', borderRadius: '8px 0 0 0', width: '50px' }}>เทียบ</th>}
-                        <th style={{ padding: '0.75rem', borderRadius: selectedSeries.groupId === 'g1' ? '0' : '8px 0 0 0' }}>รุ่น</th>
-                        {hasSHGC && <th style={{ padding: '0.75rem' }}>SHGC</th>}
-                        {hasVLT && <th style={{ padding: '0.75rem' }}>VLT</th>}
-                        {hasVLR && <th style={{ padding: '0.75rem' }}>VLR</th>}
-                        {hasUV && <th style={{ padding: '0.75rem' }}>UV</th>}
-                        {hasIR && <th style={{ padding: '0.75rem' }}>IR</th>}
-                        {hasTSER && <th style={{ padding: '0.75rem' }}>TSER</th>}
-                        {hasThickness && <th style={{ padding: '0.75rem', borderRadius: '0 8px 0 0' }}>หนา</th>}
+                                                {selectedSeries.groupId === 'g1' && <th style={{ padding: '0.75rem', borderRadius: '8px 0 0 0', width: '50px' }}>เปรียบเทียบ</th>}
+                        <th style={{ padding: '0.75rem', borderRadius: selectedSeries.groupId === 'g1' ? '0' : '8px 0 0 0' }}>ชื่อรุ่น</th>
+                        {hasSHGC && <th style={{ padding: '0.75rem' }}>{selectedSeries.headers?.shgc || 'SHGC'}</th>}
+                        {hasVLT && <th style={{ padding: '0.75rem' }}>{selectedSeries.headers?.vlt || 'VLT'}</th>}
+                        {hasVLR && <th style={{ padding: '0.75rem' }}>{selectedSeries.headers?.vlr || 'VLR'}</th>}
+                        {hasUV && <th style={{ padding: '0.75rem' }}>{selectedSeries.headers?.uv || 'UV'}</th>}
+                        {hasIR && <th style={{ padding: '0.75rem' }}>{selectedSeries.headers?.ir || 'IR'}</th>}
+                        {hasTSER && <th style={{ padding: '0.75rem' }}>{selectedSeries.headers?.tser || 'TSER'}</th>}
+                        {hasThickness && <th style={{ padding: '0.75rem', borderRadius: '0 8px 0 0' }}>{selectedSeries.headers?.thickness || 'หนา'}</th>}
                       </tr>
                     </thead>
                     <tbody>
