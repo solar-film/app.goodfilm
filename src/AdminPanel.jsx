@@ -204,6 +204,8 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
   });
   const [file, setFile] = useState(null);
   const [status, setStatus] = useState('');
+  const [recoveryStatus, setRecoveryStatus] = useState('');
+  const [isRecovering, setIsRecovering] = useState(false);
   
   const getCategoryLabel = (cat) => {
     switch (cat) {
@@ -251,32 +253,17 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
     try {
       const data = new FormData();
       data.append('category', formData.category);
+      data.append('title', formData.title);
+      data.append('seriesId', formData.seriesId || '');
       data.append('file', file);
       
-      const uploadRes = await fetch(`https://nas.goodfilmshop.com/upload-download`, {
+      const uploadRes = await fetch(`https://nas.goodfilmshop.com/upload-download-and-register`, {
         method: 'POST', body: data
       });
       
       if (!uploadRes.ok) throw new Error('Upload failed');
-      const uploadData = await uploadRes.json();
       
-      const ext = file.name.split('.').pop().toUpperCase();
-      const fileSize = (file.size / (1024 * 1024)).toFixed(1) + ' MB';
-
-      const res = await fetch(`https://nas.goodfilmshop.com/downloads`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          id: Date.now().toString(),
-          seriesId: formData.seriesId || '',
-          title: formData.title,
-          category: formData.category,
-          ext: ext,
-          info: `${ext}  ${fileSize}`,
-          file: uploadData.url
-        })
-      });
-      
-      if (res.ok) {
+      if (uploadRes.ok) {
         setStatus('✅ บันทึกสำเร็จ!');
         setFormData({ title: '', category: 'catalog', seriesId: '' });
         setFile(null);
@@ -289,6 +276,37 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
     } catch (err) {
       console.error(err);
       setStatus('❌ เกิดข้อผิดพลาด');
+    }
+  };
+
+  const handleRecoverTestReports = async () => {
+    setIsRecovering(true);
+    setRecoveryStatus('กำลังตรวจหาไฟล์ Test Report บน NAS...');
+    try {
+      const previewRes = await fetch(`https://nas.goodfilmshop.com/maintenance/orphan-downloads?category=test_report&_=${Date.now()}`);
+      if (!previewRes.ok) throw new Error('Preview failed');
+      const preview = await previewRes.json();
+      if (preview.count === 0) {
+        setRecoveryStatus('ไม่พบไฟล์ Test Report ที่ตกหล่นในโฟลเดอร์ NAS');
+        return;
+      }
+
+      const shouldRecover = window.confirm(`พบไฟล์ Test Report ที่ยังอยู่บน NAS แต่ไม่อยู่ในรายการ ${preview.count} ไฟล์ ต้องการกู้กลับทั้งหมดหรือไม่?`);
+      if (!shouldRecover) {
+        setRecoveryStatus('ยกเลิกการกู้คืนแล้ว');
+        return;
+      }
+
+      const recoverRes = await fetch('https://nas.goodfilmshop.com/maintenance/recover-downloads?category=test_report', { method: 'POST' });
+      if (!recoverRes.ok) throw new Error('Recovery failed');
+      const result = await recoverRes.json();
+      setRecoveryStatus(`กู้รายการ Test Report กลับมาแล้ว ${result.count} ไฟล์`);
+      onRefresh();
+    } catch (error) {
+      console.error(error);
+      setRecoveryStatus('กู้รายการไม่สำเร็จ กรุณาตรวจสอบการเชื่อมต่อกับ NAS');
+    } finally {
+      setIsRecovering(false);
     }
   };
 
@@ -340,6 +358,12 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
 
       <div className="card" style={{ padding: '1.5rem', overflowX: 'auto' }}>
         <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>รายการไฟล์ทั้งหมด</h3>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem' }}>
+          <button type="button" className="btn btn-outline" onClick={handleRecoverTestReports} disabled={isRecovering}>
+            {isRecovering ? 'กำลังตรวจสอบ...' : 'กู้ไฟล์ Test Report จาก NAS'}
+          </button>
+        </div>
+        {recoveryStatus && <div style={{ marginBottom: '1rem', padding: '0.8rem', background: '#eef5ff', borderRadius: '8px', color: 'var(--primary-blue)' }}>{recoveryStatus}</div>}
         {/* Filters */}
         <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
           <div style={{ flex: 1, minWidth: '200px' }}>

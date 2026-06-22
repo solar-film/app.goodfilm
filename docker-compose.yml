@@ -13,6 +13,7 @@ services:
       - ./server.js:/app/server.js
       - ./dist:/app/dist
       - ./data:/app/data
+      - ./backups:/app/backups
 
   cloudflared:
     image: cloudflare/cloudflared:latest

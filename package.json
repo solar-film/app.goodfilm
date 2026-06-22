@@ -8,6 +8,7 @@
     "server": "node server.js",
     "build": "vite build",
     "lint": "eslint .",
+    "test:recovery": "node test/recovery.integration.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
