@@ -533,7 +533,7 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
     title: '', seriesId: '', modelId: '', 
     image1: '', image2: '', image3: '', image4: '',
     existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '',
-    label1: 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร', label2: 'ภาพจำลองความเข้ม มองจากภายในอาคาร'
+    label1: '', label2: ''
   });
   const [status, setStatus] = useState('');
   const [editId, setEditId] = useState(null);
@@ -626,7 +626,7 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
       });
       if (res.ok) {
         setStatus('✅ บันทึกข้อมูลสำเร็จ!');
-        setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '', label1: 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร', label2: 'ภาพจำลองความเข้ม มองจากภายในอาคาร' });
+        setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '', label1: '', label2: '' });
         setEditId(null);
         e.target.reset();
         onRefresh();
@@ -684,7 +684,7 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
         
         <div>
           <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>หัวข้อ / คำบรรยายสั้นๆ</label>
-          <input type="text" className="form-control" value={formData.title} onChange={e => setFormData({...formData, title: e.target.value})} placeholder="เช่น รูปตัวอย่างติดตั้งฟิล์มรุ่น..." required />
+          <input type="text" className="form-control" value={formData.title} onChange={e => setFormData({...formData, title: e.target.value})} placeholder="เช่น รูปตัวอย่างติดตั้งฟิล์มรุ่น..." />
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>

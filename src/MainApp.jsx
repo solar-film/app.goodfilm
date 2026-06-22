@@ -654,7 +654,7 @@ function MainApp() {
                     />
                     {sample.image1 && (
                       <div style={{ marginBottom: '1.5rem' }}>
-                        <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-dark)' }}>{sample.label1 || 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร'}</p>
+                        {sample.label1 !== '' && <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-dark)' }}>{sample.label1 || 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร'}</p>}
                         <img 
                           src={getFullUrl(sample.image1)} 
                           alt="มองจากภายนอกอาคาร" 
@@ -665,7 +665,7 @@ function MainApp() {
                     )}
                     {sample.image2 && (
                       <div>
-                        <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-dark)' }}>{sample.label2 || 'ภาพจำลองความเข้ม มองจากภายในอาคาร'}</p>
+                        {sample.label2 !== '' && <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-dark)' }}>{sample.label2 || 'ภาพจำลองความเข้ม มองจากภายในอาคาร'}</p>}
                         <img 
                           src={getFullUrl(sample.image2)} 
                           alt="มองจากภายในอาคาร" 
