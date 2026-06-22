@@ -854,18 +854,18 @@
 
 /* Quill Editor Content Resets */
 .ql-editor {
-  line-height: 1.6;
+  line-height: 1.5;
 }
 .ql-editor p {
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
 }
 .ql-editor ul {
   padding-left: 2rem !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
 }
 .ql-editor ol {
   padding-left: 2rem !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
 }
 .ql-editor ul > li {
   list-style-type: disc !important;
