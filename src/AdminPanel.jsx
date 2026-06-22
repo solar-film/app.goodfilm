@@ -88,46 +88,46 @@ function AdminPanel() {
       <div className="container" style={{ maxWidth: '1400px', marginTop: '2rem', padding: '0 1rem', paddingBottom: '3rem' }}>
         
         {/* Tabs */}
-        <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '1rem', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '2rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '1rem', flexWrap: 'wrap' }}>
           <button 
             className={`btn ${activeTab === 'portfolio' ? 'btn-primary' : 'btn-outline'}`}
             onClick={() => setActiveTab('portfolio')}
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
           >
             <ImageIcon size={18} /> จัดการรูปผลงาน
           </button>
           <button 
             className={`btn ${activeTab === 'catalog_3m' ? 'btn-primary' : 'btn-outline'}`}
             onClick={() => setActiveTab('catalog_3m')}
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
           >
             <FileText size={18} /> จัดการสเปค 3M
           </button>
           <button 
             className={`btn ${activeTab === 'catalog_bostik' ? 'btn-primary' : 'btn-outline'}`}
             onClick={() => setActiveTab('catalog_bostik')}
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
           >
             <FileText size={18} /> จัดการสเปค Bostik
           </button>
           <button 
             className={`btn ${activeTab === 'downloads' ? 'btn-primary' : 'btn-outline'}`}
             onClick={() => setActiveTab('downloads')}
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
           >
             <Download size={18} /> จัดการไฟล์ดาวน์โหลด
           </button>
           <button 
             className={`btn ${activeTab === 'banners' ? 'btn-primary' : 'btn-outline'}`}
             onClick={() => setActiveTab('banners')}
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
           >
             <ImageIcon size={18} /> จัดการแบนเนอร์
           </button>
           <button 
             className={`btn ${activeTab === 'samples' ? 'btn-primary' : 'btn-outline'}`}
             onClick={() => setActiveTab('samples')}
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
           >
             <ImageIcon size={18} /> จัดการรูปตัวอย่างสินค้า
           </button>
