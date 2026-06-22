@@ -299,7 +299,16 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
             if (models.length === 0) return null;
             return (
               <div key={series.id} className="premium-card" style={{ padding: '1rem' }}>
-                <h4 style={{ marginBottom: '0.5rem', borderBottom: '1px solid #ddd', paddingBottom: '0.5rem' }}>{series.title}</h4>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', borderBottom: '1px solid #ddd', paddingBottom: '0.5rem' }}>
+                  <h4 style={{ margin: 0 }}>{series.title}</h4>
+                  <button onClick={() => { 
+                    setEditingHeadersSeriesId(series.id); 
+                    setEditHeadersData(series.headers || { shgc: 'SHGC', vlt: 'VLT', vlr: 'VLR', uv: 'UV', ir: 'IR', tser: 'TSER', thickness: 'หนา' });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }} className="btn btn-outline" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)', padding: '0.2rem 0.5rem', fontSize: '0.8rem' }}>
+                    ✏️ แก้ไขหัวตาราง
+                  </button>
+                </div>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
                   <thead>
                     <tr style={{ textAlign: 'left', borderBottom: '1px solid #eee' }}>
