@@ -43,7 +43,7 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
       setEditingSeriesId(null);
       onRefresh();
     } catch (err) {
-      alert('α╣äα╕íα╣êα╕¬α╕▓α╕íα╕▓α╕úα╕ûα╕Üα╕▒α╕Öα╕ùα╕╢α╕üα╣äα╕öα╣ë');
+      alert('ไม่สามารถบันทึกได้');
     }
   };
 
@@ -63,7 +63,7 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
       setEditingModelId(null);
       onRefresh();
     } catch (err) {
-      alert('α╣äα╕íα╣êα╕¬α╕▓α╕íα╕▓α╕úα╕ûα╕Üα╕▒α╕Öα╕ùα╕╢α╕üα╣äα╕öα╣ë');
+      alert('ไม่สามารถบันทึกได้');
     }
   };
   
@@ -101,49 +101,49 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
       {/* Series Section */}
       <section className="admin-grid">
         <div className="premium-card" style={{ padding: '1.5rem', alignSelf: 'start' }}>
-          <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>α╣Çα╕₧α╕┤α╣êα╕íα╕úα╕╕α╣êα╕Öα╕ƒα╕┤α╕Ñα╣îα╕í (Series)</h3>
+          <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>เพิ่มรุ่นฟิล์ม (Series)</h3>
           <form onSubmit={handleAddSeries} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <div style={{ flex: 1 }}>
-                <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>α╕èα╕╖α╣êα╕¡ Series</label>
+                <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>ชื่อ Series</label>
                 <input type="text" value={newSeries.title} onChange={e => setNewSeries({...newSeries, title: e.target.value})} required className="form-control" />
               </div>
               <div style={{ flex: 1 }}>
-                <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>α╕üα╕Ñα╕╕α╣êα╕íα╕£α╕Ñα╕┤α╕òα╕áα╕▒α╕ôα╕æα╣î</label>
+                <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>กลุ่มผลิตภัณฑ์</label>
                 <select value={newSeries.groupId} onChange={e => setNewSeries({...newSeries, groupId: e.target.value})} required className="form-control">
                   {availableGroups?.map(g => <option key={g.id} value={g.id}>{g.title}</option>)}
                 </select>
               </div>
               <div style={{ flex: 2 }}>
-                <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>α╕äα╕│α╕¡α╕ÿα╕┤α╕Üα╕▓α╕óα╕¬α╕▒α╣ëα╕Öα╣å</label>
+                <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>คำอธิบายสั้นๆ</label>
                 <input type="text" value={newSeries.desc} onChange={e => setNewSeries({...newSeries, desc: e.target.value})} required className="form-control" />
               </div>
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>α╕äα╕│α╕¡α╕ÿα╕┤α╕Üα╕▓α╕óα╣üα╕Üα╕Üα╕óα╕▓α╕º (α╕úα╕¡α╕çα╕úα╕▒α╕Ü HTML)</label>
+              <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>คำอธิบายแบบยาว (รองรับ HTML)</label>
               <div style={{ backgroundColor: 'white', borderRadius: '4px', marginTop: '0.2rem' }}>
-                <ReactQuill theme="snow" value={newSeries.longDesc || ''} onChange={(val) => setNewSeries({...newSeries, longDesc: val})} style={{ minHeight: '150px' }} placeholder="α╕¬α╕▓α╕íα╕▓α╕úα╕ûα╕₧α╕┤α╕íα╕₧α╣îα╕éα╣ëα╕¡α╕äα╕ºα╕▓α╕íα╕ÿα╕úα╕úα╕íα╕öα╕▓ α╕½α╕úα╕╖α╕¡α╕êα╕▒α╕öα╕úα╕╣α╕¢α╣üα╕Üα╕Üα╕òα╕▒α╕ºα╕½α╕Öα╕▓ α╕òα╕▒α╕ºα╣Çα╕¡α╕╡α╕óα╕ç α╕»α╕Ñα╕» α╣äα╕öα╣ëα╣Çα╕½α╕íα╕╖α╕¡α╕Ö Word" />
+                <ReactQuill theme="snow" value={newSeries.longDesc || ''} onChange={(val) => setNewSeries({...newSeries, longDesc: val})} style={{ minHeight: '150px' }} placeholder="สามารถพิมพ์ข้อความธรรมดา หรือจัดรูปแบบตัวหนา ตัวเอียง ฯลฯ ได้เหมือน Word" />
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <button type="submit" className="btn btn-primary" style={{ padding: '0.6rem 1.5rem', minWidth: '120px' }}>+ α╣Çα╕₧α╕┤α╣êα╕í Series</button>
+              <button type="submit" className="btn btn-primary" style={{ padding: '0.6rem 1.5rem', minWidth: '120px' }}>+ เพิ่ม Series</button>
             </div>
           </form>
         </div>
         
         <div>
-          <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>α╕úα╕▓α╕óα╕üα╕▓α╕úα╕úα╕╕α╣êα╕Öα╕ƒα╕┤α╕Ñα╣îα╕í (Series)</h3>
+          <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>รายการรุ่นฟิล์ม (Series)</h3>
         <hr style={{ margin: '2rem 0', border: 'none', borderTop: '1px solid #ddd' }} />
         
         <div style={{ backgroundColor: '#f8f9fa', padding: '1.5rem', borderRadius: '8px', marginBottom: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', border: '1px solid #eee' }}>
           <div style={{ flex: 1, minWidth: '200px' }}>
-            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>≡ƒöì α╕äα╣ëα╕Öα╕½α╕▓α╕èα╕╖α╣êα╕¡α╕úα╕╕α╣êα╕Öα╕ƒα╕┤α╕Ñα╣îα╕í</label>
-            <input type="text" className="form-control" placeholder="α╕₧α╕┤α╕íα╕₧α╣îα╕èα╕╖α╣êα╕¡α╕úα╕╕α╣êα╕Ö α╕½α╕úα╕╖α╕¡α╕äα╕│α╕¡α╕ÿα╕┤α╕Üα╕▓α╕ó..." value={searchSeries} onChange={e => setSearchSeries(e.target.value)} />
+            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>🔍 ค้นหาชื่อรุ่นฟิล์ม</label>
+            <input type="text" className="form-control" placeholder="พิมพ์ชื่อรุ่น หรือคำอธิบาย..." value={searchSeries} onChange={e => setSearchSeries(e.target.value)} />
           </div>
           <div style={{ flex: 1, minWidth: '200px' }}>
-            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>≡ƒôü α╕üα╕úα╕¡α╕çα╕òα╕▓α╕íα╕üα╕Ñα╕╕α╣êα╕íα╕£α╕Ñα╕┤α╕òα╕áα╕▒α╕ôα╕æα╣î</label>
+            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>📁 กรองตามกลุ่มผลิตภัณฑ์</label>
             <select className="form-control" value={filterGroup} onChange={e => setFilterGroup(e.target.value)}>
-              <option value="">-- α╣üα╕¬α╕öα╕çα╕ùα╕╕α╕üα╕üα╕Ñα╕╕α╣êα╕íα╕£α╕Ñα╕┤α╕òα╕áα╕▒α╕ôα╕æα╣î --</option>
+              <option value="">-- แสดงทุกกลุ่มผลิตภัณฑ์ --</option>
               {availableGroups?.map(g => <option key={g.id} value={g.id}>{g.title}</option>)}
             </select>
           </div>
@@ -156,13 +156,13 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
               <div key={series.id} className="premium-card" style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
                 {isEditing ? (
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <input type="text" value={editSeriesData.title} onChange={e => setEditSeriesData({...editSeriesData, title: e.target.value})} className="form-control" placeholder="α╕èα╕╖α╣êα╕¡ Series" />
-                    <input type="text" value={editSeriesData.desc} onChange={e => setEditSeriesData({...editSeriesData, desc: e.target.value})} className="form-control" placeholder="α╕äα╕│α╕¡α╕ÿα╕┤α╕Üα╕▓α╕óα╕¬α╕▒α╣ëα╕Öα╣å" />
+                    <input type="text" value={editSeriesData.title} onChange={e => setEditSeriesData({...editSeriesData, title: e.target.value})} className="form-control" placeholder="ชื่อ Series" />
+                    <input type="text" value={editSeriesData.desc} onChange={e => setEditSeriesData({...editSeriesData, desc: e.target.value})} className="form-control" placeholder="คำอธิบายสั้นๆ" />
                     <select value={editSeriesData.groupId} onChange={e => setEditSeriesData({...editSeriesData, groupId: e.target.value})} className="form-control" style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid var(--border-color)' }}>
                       {availableGroups?.map(g => <option key={g.id} value={g.id}>{g.title}</option>)}
                     </select>
                     <div style={{ backgroundColor: 'white' }}>
-                      <ReactQuill theme="snow" value={editSeriesData.longDesc || ''} onChange={(val) => setEditSeriesData({...editSeriesData, longDesc: val})} style={{ minHeight: '200px' }} placeholder="α╕äα╕│α╕¡α╕ÿα╕┤α╕Üα╕▓α╕óα╣üα╕Üα╕Üα╕óα╕▓α╕º" />
+                      <ReactQuill theme="snow" value={editSeriesData.longDesc || ''} onChange={(val) => setEditSeriesData({...editSeriesData, longDesc: val})} style={{ minHeight: '200px' }} placeholder="คำอธิบายแบบยาว" />
                     </div>
                   </div>
                 ) : (
@@ -175,13 +175,13 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                   {isEditing ? (
                     <>
-                      <button onClick={handleSaveEditSeries} className="btn btn-primary" style={{ padding: '0.4rem 0.8rem' }}>α╕Üα╕▒α╕Öα╕ùα╕╢α╕ü</button>
-                      <button onClick={() => setEditingSeriesId(null)} className="btn btn-outline" style={{ padding: '0.4rem 0.8rem' }}>α╕óα╕üα╣Çα╕Ñα╕┤α╕ü</button>
+                      <button onClick={handleSaveEditSeries} className="btn btn-primary" style={{ padding: '0.4rem 0.8rem' }}>บันทึก</button>
+                      <button onClick={() => setEditingSeriesId(null)} className="btn btn-outline" style={{ padding: '0.4rem 0.8rem' }}>ยกเลิก</button>
                     </>
                   ) : (
                     <>
-                      <button onClick={() => handleEditClick(series)} className="btn btn-outline" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)', padding: '0.4rem 0.8rem' }}>α╣üα╕üα╣ëα╣äα╕é</button>
-                      <button onClick={() => onDelete('series', series.id)} className="btn btn-outline" style={{ borderColor: 'red', color: 'red', padding: '0.4rem 0.8rem' }}>α╕Ñα╕Ü</button>
+                      <button onClick={() => handleEditClick(series)} className="btn btn-outline" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)', padding: '0.4rem 0.8rem' }}>แก้ไข</button>
+                      <button onClick={() => onDelete('series', series.id)} className="btn btn-outline" style={{ borderColor: 'red', color: 'red', padding: '0.4rem 0.8rem' }}>ลบ</button>
                     </>
                   )}
                 </div>
@@ -195,59 +195,59 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
       {/* Models Section */}
       <section className="admin-grid">
         <div className="premium-card" style={{ padding: '1.5rem', alignSelf: 'start' }}>
-          <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>α╣Çα╕₧α╕┤α╣êα╕íα╕¬α╣Çα╕¢α╕äα╣éα╕íα╣Çα╕öα╕Ñ</h3>
+          <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>เพิ่มสเปคโมเดล</h3>
           <form onSubmit={handleAddModel} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
             <div style={{ gridColumn: 'span 2' }}>
-              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: '#333', marginBottom: '0.4rem', display: 'block' }}>α╣Çα╕₧α╕┤α╣êα╕íα╣âα╕Ö Series</label>
+              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: '#333', marginBottom: '0.4rem', display: 'block' }}>เพิ่มใน Series</label>
               <select value={newModel.seriesId} onChange={e => setNewModel({...newModel, seriesId: e.target.value})} className="form-control" style={{ width: '100%' }}>
                 {seriesList.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
               </select>
             </div>
             <div style={{ gridColumn: 'span 2' }}>
-              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: '#333', marginBottom: '0.4rem', display: 'block' }}>α╕èα╕╖α╣êα╕¡α╕úα╕╕α╣êα╕Ö (Model)</label>
-              <input type="text" value={newModel.name} onChange={e => setNewModel({...newModel, name: e.target.value})} required className="form-control" placeholder="α╣Çα╕èα╣êα╕Ö PR 70 EX" style={{ width: '100%' }} />
+              <label style={{ fontSize: '0.85rem', fontWeight: '600', color: '#333', marginBottom: '0.4rem', display: 'block' }}>ชื่อรุ่น (Model)</label>
+              <input type="text" value={newModel.name} onChange={e => setNewModel({...newModel, name: e.target.value})} required className="form-control" placeholder="เช่น PR 70 EX" style={{ width: '100%' }} />
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>α╕äα╣êα╕▓ SHGC</label>
+              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>ค่า SHGC</label>
               <input type="text" value={newModel.shgc} onChange={e => setNewModel({...newModel, shgc: e.target.value})} className="form-control" placeholder="0.38" style={{ width: '100%' }} />
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>α╣üα╕¬α╕çα╕£α╣êα╕▓α╕Ö (VLT)</label>
+              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>แสงผ่าน (VLT)</label>
               <input type="text" value={newModel.vlt} onChange={e => setNewModel({...newModel, vlt: e.target.value})} className="form-control" placeholder="6%" style={{ width: '100%' }} />
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>α╕¬α╕░α╕ùα╣ëα╕¡α╕Ö (VLR)</label>
+              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>สะท้อน (VLR)</label>
               <input type="text" value={newModel.vlr} onChange={e => setNewModel({...newModel, vlr: e.target.value})} className="form-control" placeholder="8%" style={{ width: '100%' }} />
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>α╕üα╕▒α╕Ö UV</label>
+              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>กัน UV</label>
               <input type="text" value={newModel.uv} onChange={e => setNewModel({...newModel, uv: e.target.value})} className="form-control" placeholder="99%" style={{ width: '100%' }} />
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>α╕üα╕▒α╕Öα╕úα╣ëα╕¡α╕Ö (IR)</label>
+              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>กันร้อน (IR)</label>
               <input type="text" value={newModel.ir} onChange={e => setNewModel({...newModel, ir: e.target.value})} className="form-control" placeholder="97%" style={{ width: '100%' }} />
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>α╕Ñα╕öα╕úα╣ëα╕¡α╕Ö (TSER)</label>
+              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>ลดร้อน (TSER)</label>
               <input type="text" value={newModel.tser} onChange={e => setNewModel({...newModel, tser: e.target.value})} className="form-control" placeholder="60%" style={{ width: '100%' }} />
             </div>
             <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>α╕äα╕ºα╕▓α╕íα╕½α╕Öα╕▓</label>
+              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>ความหนา</label>
               <input type="text" value={newModel.thickness} onChange={e => setNewModel({...newModel, thickness: e.target.value})} className="form-control" placeholder="2 mil" style={{ width: '100%' }} />
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.7rem', fontWeight: 'bold', borderRadius: '8px' }}>+ α╣Çα╕₧α╕┤α╣êα╕íα╣éα╕íα╣Çα╕öα╕Ñ</button>
+              <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.7rem', fontWeight: 'bold', borderRadius: '8px' }}>+ เพิ่มโมเดล</button>
             </div>
           </form>
         </div>
         
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-            <h3 style={{ margin: 0, color: 'var(--primary-blue)' }}>α╕úα╕▓α╕óα╕üα╕▓α╕úα╕¬α╣Çα╕¢α╕äα╣éα╕íα╣Çα╕öα╕Ñα╕óα╣êα╕¡α╕ó (Models)</h3>
+            <h3 style={{ margin: 0, color: 'var(--primary-blue)' }}>รายการสเปคโมเดลย่อย (Models)</h3>
           </div>
           <div style={{ backgroundColor: '#f8f9fa', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid #eee' }}>
-            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>≡ƒöì α╕äα╣ëα╕Öα╕½α╕▓α╕èα╕╖α╣êα╕¡α╕úα╕╕α╣êα╕Ö (Model)</label>
-            <input type="text" className="form-control" placeholder="α╕₧α╕┤α╕íα╕₧α╣îα╕èα╕╖α╣êα╕¡α╕úα╕╕α╣êα╕Ö α╣Çα╕èα╣êα╕Ö PR 70 EX..." value={searchModel} onChange={e => setSearchModel(e.target.value)} />
+            <label style={{ fontSize: '0.8rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem', color: '#555' }}>🔍 ค้นหาชื่อรุ่น (Model)</label>
+            <input type="text" className="form-control" placeholder="พิมพ์ชื่อรุ่น เช่น PR 70 EX..." value={searchModel} onChange={e => setSearchModel(e.target.value)} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {filteredSeriesList.map(series => {
@@ -259,15 +259,15 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
                   <thead>
                     <tr style={{ textAlign: 'left', borderBottom: '1px solid #eee' }}>
-                      <th style={{ padding: '0.5rem' }}>α╕úα╕╕α╣êα╕Ö</th>
+                      <th style={{ padding: '0.5rem' }}>รุ่น</th>
                       <th style={{ padding: '0.5rem' }}>SHGC</th>
                       <th style={{ padding: '0.5rem' }}>VLT</th>
                       <th style={{ padding: '0.5rem' }}>VLR</th>
                       <th style={{ padding: '0.5rem' }}>UV</th>
                       <th style={{ padding: '0.5rem' }}>IR</th>
                       <th style={{ padding: '0.5rem' }}>TSER</th>
-                      <th style={{ padding: '0.5rem' }}>α╕½α╕Öα╕▓</th>
-                      <th style={{ padding: '0.5rem' }}>α╕êα╕▒α╕öα╕üα╕▓α╕ú</th>
+                      <th style={{ padding: '0.5rem' }}>หนา</th>
+                      <th style={{ padding: '0.5rem' }}>จัดการ</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -286,8 +286,8 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
                               <td style={{ padding: '0.5rem' }}><input type="text" value={editModelData.tser} onChange={e => setEditModelData({...editModelData, tser: e.target.value})} style={{...inputStyle, width: '40px'}} /></td>
                               <td style={{ padding: '0.5rem' }}><input type="text" value={editModelData.thickness} onChange={e => setEditModelData({...editModelData, thickness: e.target.value})} style={{...inputStyle, width: '60px'}} /></td>
                               <td style={{ padding: '0.5rem', display: 'flex', gap: '0.5rem' }}>
-                                <button onClick={handleSaveEditModel} style={{ color: 'var(--primary-blue)', border: 'none', background: 'none', cursor: 'pointer' }}>α╕Üα╕▒α╕Öα╕ùα╕╢α╕ü</button>
-                                <button onClick={() => setEditingModelId(null)} style={{ color: 'var(--text-muted)', border: 'none', background: 'none', cursor: 'pointer' }}>α╕óα╕üα╣Çα╕Ñα╕┤α╕ü</button>
+                                <button onClick={handleSaveEditModel} style={{ color: 'var(--primary-blue)', border: 'none', background: 'none', cursor: 'pointer' }}>บันทึก</button>
+                                <button onClick={() => setEditingModelId(null)} style={{ color: 'var(--text-muted)', border: 'none', background: 'none', cursor: 'pointer' }}>ยกเลิก</button>
                               </td>
                             </>
                           ) : (
@@ -301,8 +301,8 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
                               <td style={{ padding: '0.5rem' }}>{m.tser || '-'}</td>
                               <td style={{ padding: '0.5rem' }}>{m.thickness || '-'}</td>
                               <td style={{ padding: '0.5rem', display: 'flex', gap: '0.5rem' }}>
-                                <button onClick={() => handleEditModelClick(m)} style={{ color: 'var(--primary-blue)', border: 'none', background: 'none', cursor: 'pointer' }}>α╣üα╕üα╣ëα╣äα╕é</button>
-                                <button onClick={() => onDelete('models', m.id)} style={{ color: 'red', border: 'none', background: 'none', cursor: 'pointer' }}>α╕Ñα╕Ü</button>
+                                <button onClick={() => handleEditModelClick(m)} style={{ color: 'var(--primary-blue)', border: 'none', background: 'none', cursor: 'pointer' }}>แก้ไข</button>
+                                <button onClick={() => onDelete('models', m.id)} style={{ color: 'red', border: 'none', background: 'none', cursor: 'pointer' }}>ลบ</button>
                               </td>
                             </>
                           )}
