@@ -168,8 +168,9 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
           {filteredSeriesList.map(series => {
             const isEditing = editingSeriesId === series.id;
             return (
-              <div key={series.id} className="premium-card" style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-                {isEditing ? (
+              <div key={series.id} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div className="premium-card" style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
+                  {isEditing ? (
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     <input type="text" value={editSeriesData.title} onChange={e => setEditSeriesData({...editSeriesData, title: e.target.value})} className="form-control" placeholder="ชื่อ Series" />
                     <input type="text" value={editSeriesData.desc} onChange={e => setEditSeriesData({...editSeriesData, desc: e.target.value})} className="form-control" placeholder="คำอธิบายสั้นๆ" />
@@ -196,11 +197,31 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
                   ) : (
                     <>
                       <button onClick={() => handleEditClick(series)} className="btn btn-outline" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)', padding: '0.4rem 0.8rem' }}>แก้ไข</button>
+                      <button onClick={() => { setEditingHeadersSeriesId(series.id); setEditHeadersData(series.headers || { shgc: 'SHGC', vlt: 'VLT', vlr: 'VLR', uv: 'UV', ir: 'IR', tser: 'TSER', thickness: 'หนา' }); }} className="btn btn-outline" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)', padding: '0.4rem 0.8rem' }}>แก้ไขหัวตาราง</button>
                       <button onClick={() => onDelete('series', series.id)} className="btn btn-outline" style={{ borderColor: 'red', color: 'red', padding: '0.4rem 0.8rem' }}>ลบ</button>
                     </>
                   )}
                 </div>
               </div>
+              {editingHeadersSeriesId === series.id && (
+                <div style={{ padding: '1rem', backgroundColor: '#fff', border: '1px solid var(--primary-blue)', borderRadius: '8px' }}>
+                  <h4 style={{ margin: '0 0 1rem 0', fontSize: '1rem', color: 'var(--primary-blue)' }}>แก้ไขหัวตาราง - {series.title}</h4>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
+                    <div><label style={{ fontSize: '0.8rem', fontWeight: '500' }}>ค่า SHGC</label><input type="text" value={editHeadersData.shgc} onChange={e => setEditHeadersData({...editHeadersData, shgc: e.target.value})} className="form-control" /></div>
+                    <div><label style={{ fontSize: '0.8rem', fontWeight: '500' }}>แสงผ่าน (VLT)</label><input type="text" value={editHeadersData.vlt} onChange={e => setEditHeadersData({...editHeadersData, vlt: e.target.value})} className="form-control" /></div>
+                    <div><label style={{ fontSize: '0.8rem', fontWeight: '500' }}>สะท้อน (VLR)</label><input type="text" value={editHeadersData.vlr} onChange={e => setEditHeadersData({...editHeadersData, vlr: e.target.value})} className="form-control" /></div>
+                    <div><label style={{ fontSize: '0.8rem', fontWeight: '500' }}>กัน UV</label><input type="text" value={editHeadersData.uv} onChange={e => setEditHeadersData({...editHeadersData, uv: e.target.value})} className="form-control" /></div>
+                    <div><label style={{ fontSize: '0.8rem', fontWeight: '500' }}>กันร้อน (IR)</label><input type="text" value={editHeadersData.ir} onChange={e => setEditHeadersData({...editHeadersData, ir: e.target.value})} className="form-control" /></div>
+                    <div><label style={{ fontSize: '0.8rem', fontWeight: '500' }}>ลดร้อน (TSER)</label><input type="text" value={editHeadersData.tser} onChange={e => setEditHeadersData({...editHeadersData, tser: e.target.value})} className="form-control" /></div>
+                    <div><label style={{ fontSize: '0.8rem', fontWeight: '500' }}>ความหนา</label><input type="text" value={editHeadersData.thickness} onChange={e => setEditHeadersData({...editHeadersData, thickness: e.target.value})} className="form-control" /></div>
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <button onClick={handleSaveHeaders} className="btn btn-primary" style={{ padding: '0.4rem 0.8rem' }}>บันทึก</button>
+                    <button onClick={() => setEditingHeadersSeriesId(null)} className="btn btn-outline" style={{ padding: '0.4rem 0.8rem' }}>ยกเลิก</button>
+                  </div>
+                </div>
+              )}
+            </div>
             );
           })}
         </div>
@@ -222,34 +243,42 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
               <label style={{ fontSize: '0.85rem', fontWeight: '600', color: '#333', marginBottom: '0.4rem', display: 'block' }}>ชื่อรุ่น (Model)</label>
               <input type="text" value={newModel.name} onChange={e => setNewModel({...newModel, name: e.target.value})} required className="form-control" placeholder="เช่น PR 70 EX" style={{ width: '100%' }} />
             </div>
-            <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>ค่า SHGC</label>
-              <input type="text" value={newModel.shgc} onChange={e => setNewModel({...newModel, shgc: e.target.value})} className="form-control" placeholder="0.38" style={{ width: '100%' }} />
-            </div>
-            <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>แสงผ่าน (VLT)</label>
-              <input type="text" value={newModel.vlt} onChange={e => setNewModel({...newModel, vlt: e.target.value})} className="form-control" placeholder="6%" style={{ width: '100%' }} />
-            </div>
-            <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>สะท้อน (VLR)</label>
-              <input type="text" value={newModel.vlr} onChange={e => setNewModel({...newModel, vlr: e.target.value})} className="form-control" placeholder="8%" style={{ width: '100%' }} />
-            </div>
-            <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>กัน UV</label>
-              <input type="text" value={newModel.uv} onChange={e => setNewModel({...newModel, uv: e.target.value})} className="form-control" placeholder="99%" style={{ width: '100%' }} />
-            </div>
-            <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>กันร้อน (IR)</label>
-              <input type="text" value={newModel.ir} onChange={e => setNewModel({...newModel, ir: e.target.value})} className="form-control" placeholder="97%" style={{ width: '100%' }} />
-            </div>
-            <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>ลดร้อน (TSER)</label>
-              <input type="text" value={newModel.tser} onChange={e => setNewModel({...newModel, tser: e.target.value})} className="form-control" placeholder="60%" style={{ width: '100%' }} />
-            </div>
-            <div>
-              <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>ความหนา</label>
-              <input type="text" value={newModel.thickness} onChange={e => setNewModel({...newModel, thickness: e.target.value})} className="form-control" placeholder="2 mil" style={{ width: '100%' }} />
-            </div>
+            {(() => {
+              const selectedSeriesForNewModel = seriesList.find(s => s.id === newModel.seriesId) || {};
+              const h = selectedSeriesForNewModel.headers || {};
+              return (
+                <>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>{h.shgc || 'ค่า SHGC'}</label>
+                    <input type="text" value={newModel.shgc} onChange={e => setNewModel({...newModel, shgc: e.target.value})} className="form-control" placeholder="0.38" style={{ width: '100%' }} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>{h.vlt || 'แสงผ่าน (VLT)'}</label>
+                    <input type="text" value={newModel.vlt} onChange={e => setNewModel({...newModel, vlt: e.target.value})} className="form-control" placeholder="6%" style={{ width: '100%' }} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>{h.vlr || 'สะท้อน (VLR)'}</label>
+                    <input type="text" value={newModel.vlr} onChange={e => setNewModel({...newModel, vlr: e.target.value})} className="form-control" placeholder="8%" style={{ width: '100%' }} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>{h.uv || 'กัน UV'}</label>
+                    <input type="text" value={newModel.uv} onChange={e => setNewModel({...newModel, uv: e.target.value})} className="form-control" placeholder="99%" style={{ width: '100%' }} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>{h.ir || 'กันร้อน (IR)'}</label>
+                    <input type="text" value={newModel.ir} onChange={e => setNewModel({...newModel, ir: e.target.value})} className="form-control" placeholder="97%" style={{ width: '100%' }} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>{h.tser || 'ลดร้อน (TSER)'}</label>
+                    <input type="text" value={newModel.tser} onChange={e => setNewModel({...newModel, tser: e.target.value})} className="form-control" placeholder="60%" style={{ width: '100%' }} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '0.8rem', color: '#555', marginBottom: '0.4rem', display: 'block' }}>{h.thickness || 'ความหนา'}</label>
+                    <input type="text" value={newModel.thickness} onChange={e => setNewModel({...newModel, thickness: e.target.value})} className="form-control" placeholder="2 mil" style={{ width: '100%' }} />
+                  </div>
+                </>
+              );
+            })()}
             <div style={{ display: 'flex', alignItems: 'flex-end' }}>
               <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.7rem', fontWeight: 'bold', borderRadius: '8px' }}>+ เพิ่มโมเดล</button>
             </div>
@@ -275,13 +304,13 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
                   <thead>
                     <tr style={{ textAlign: 'left', borderBottom: '1px solid #eee' }}>
                       <th style={{ padding: '0.5rem' }}>รุ่น</th>
-                      <th style={{ padding: '0.5rem' }}>SHGC</th>
-                      <th style={{ padding: '0.5rem' }}>VLT</th>
-                      <th style={{ padding: '0.5rem' }}>VLR</th>
-                      <th style={{ padding: '0.5rem' }}>UV</th>
-                      <th style={{ padding: '0.5rem' }}>IR</th>
-                      <th style={{ padding: '0.5rem' }}>TSER</th>
-                      <th style={{ padding: '0.5rem' }}>หนา</th>
+                      <th style={{ padding: '0.5rem' }}>{series.headers?.shgc || 'SHGC'}</th>
+                      <th style={{ padding: '0.5rem' }}>{series.headers?.vlt || 'VLT'}</th>
+                      <th style={{ padding: '0.5rem' }}>{series.headers?.vlr || 'VLR'}</th>
+                      <th style={{ padding: '0.5rem' }}>{series.headers?.uv || 'UV'}</th>
+                      <th style={{ padding: '0.5rem' }}>{series.headers?.ir || 'IR'}</th>
+                      <th style={{ padding: '0.5rem' }}>{series.headers?.tser || 'TSER'}</th>
+                      <th style={{ padding: '0.5rem' }}>{series.headers?.thickness || 'หนา'}</th>
                       <th style={{ padding: '0.5rem' }}>จัดการ</th>
                     </tr>
                   </thead>
