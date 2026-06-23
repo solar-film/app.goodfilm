@@ -1485,7 +1485,7 @@ function MainApp() {
         </div>
         <div className={`nav-item ${currentTab === 'works' && !selectedSeries ? 'active' : ''}`} onClick={() => { setCurrentTab('works'); setSelectedSeries(null); }}>
           <Briefcase size={24} />
-          <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>รุ่นฟิล์ม</span>
+          <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>รุ่นสินค้า</span>
         </div>
         <div className={`nav-item ${showCompareModal ? 'active' : ''}`} onClick={() => setShowCompareModal(true)}>
           <GitCompare size={24} />
