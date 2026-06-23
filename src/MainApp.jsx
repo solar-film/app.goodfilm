@@ -684,7 +684,7 @@ function MainApp() {
           )}
 
           {seriesModels.length > 0 && (() => {
-            const isFilmSeries = !['g6', 'g7', 'g8'].includes(selectedSeries.groupId);
+            const isFilmSeries = ['g1', 'g2'].includes(selectedSeries.groupId);
             const showFilmPropertyExplanation = ['g1', 'g2'].includes(selectedSeries.groupId);
             const hasSHGC = seriesModels.some(m => m.shgc && String(m.shgc).trim() !== '-');
             const hasVLT = seriesModels.some(m => m.vlt && String(m.vlt).trim() !== '-');
