@@ -1203,27 +1203,34 @@ function MainApp() {
 
 .gfs-contact-list {
   display: grid;
-  gap: 10px;
+  gap: 6px;
 }
 
 .gfs-contact-row {
-  padding: 14px 16px;
-  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
   background: #eef3f8;
   border: 1px solid #dbe7f3;
 }
 
 .gfs-label {
-  font-size: 13px;
+  font-size: 12px;
   color: #667085;
-  margin-bottom: 4px;
+  margin: 0;
   font-weight: 600;
+  line-height: 1.45;
 }
 
 .gfs-value {
   font-size: 14px;
   color: #1f2937;
   font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .gfs-value a {
