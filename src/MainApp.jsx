@@ -236,13 +236,25 @@ function MainApp() {
   const [downloadPasswordPrompt, setDownloadPasswordPrompt] = useState({ isOpen: false, doc: null, password: '', error: '' });
   const [compareList, setCompareList] = useState([]);
 
-  // Force download via Blob to bypass iOS PWA inline PDF viewer trapping
+  // Mobile browsers often render only the first page of a blob PDF inside an iframe.
+  // Open the original PDF URL in the device viewer instead, without modifying the file.
   const handleForceDownload = async (e, url, filename, forceBypassPreview = false) => {
     e?.preventDefault();
     
     // If it's an image, preview it directly in the app instead of downloading
     if (!forceBypassPreview && url.match(/\.(jpeg|jpg|gif|png|webp)(\?.*)?$/i)) {
       setExpandedImage(url);
+      return;
+    }
+
+    if (isMobile && /\.pdf(?:[?#]|$)/i.test(url)) {
+      const link = document.createElement('a');
+      link.href = getFullUrl(url);
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       return;
     }
 
