@@ -591,6 +591,7 @@ function MainApp() {
     const seriesModels = models.filter(m => m.seriesId === selectedSeries.id);
     const seriesSamples = portfolio.filter(p => p.seriesId === selectedSeries.id && p.type === 'sample');
     const seriesPortfolio = portfolio.filter(p => p.seriesId === selectedSeries.id && p.type !== 'sample');
+    const showFilmSampleHeading = ['g1', 'g2'].includes(selectedSeries.groupId);
 
     const handleShare = async () => {
       if (navigator.share) {
@@ -637,21 +638,23 @@ function MainApp() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 {seriesSamples.map((sample) => (
                   <div key={sample.id}>
-                    <SectionHeader 
-                      icon={Image} 
-                      title="ตัวอย่างสีและความเข้มฟิล์ม" 
-                      subtitle={
-                        <>
-                          {sample.title}
-                          {sample.modelId && (
-                            <span style={{ color: 'var(--primary-red)', fontWeight: 'bold', marginLeft: '0.5rem' }}>
-                              <span style={{ color: '#ccc', marginRight: '0.5rem', fontWeight: 'normal' }}>|</span>
-                              {models.find(m => m.id === sample.modelId)?.name}
-                            </span>
-                          )}
-                        </>
-                      } 
-                    />
+                    {showFilmSampleHeading && (
+                      <SectionHeader
+                        icon={Image}
+                        title="ตัวอย่างสีและความเข้มฟิล์ม"
+                        subtitle={
+                          <>
+                            {sample.title}
+                            {sample.modelId && (
+                              <span style={{ color: 'var(--primary-red)', fontWeight: 'bold', marginLeft: '0.5rem' }}>
+                                <span style={{ color: '#ccc', marginRight: '0.5rem', fontWeight: 'normal' }}>|</span>
+                                {models.find(m => m.id === sample.modelId)?.name}
+                              </span>
+                            )}
+                          </>
+                        }
+                      />
+                    )}
                     {sample.image1 && (
                       <div style={{ marginBottom: '1.5rem' }}>
                         {sample.label1 !== '' && <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-dark)' }}>{sample.label1 || 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร'}</p>}
