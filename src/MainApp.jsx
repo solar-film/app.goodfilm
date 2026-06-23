@@ -621,7 +621,7 @@ function MainApp() {
         <div className="detail-content" style={{ padding: '0 1.5rem', paddingBottom: '2rem' }}>
           <h1 className="detail-title" style={{ color: 'var(--primary-blue)', fontSize: '1.8rem', fontWeight: '900' }}>{selectedSeries.title}</h1>
           {selectedSeries.longDesc && selectedSeries.longDesc !== '<p><br></p>' ? (
-            <div className="detail-desc ql-editor" dangerouslySetInnerHTML={{ __html: selectedSeries.longDesc }} style={{ marginTop: '0.5rem', marginBottom: '1.5rem', padding: 0 }} />
+            <div className="detail-desc rich-text-content" dangerouslySetInnerHTML={{ __html: selectedSeries.longDesc }} style={{ marginTop: '0.5rem', marginBottom: '1.5rem', padding: 0 }} />
           ) : (
             <p className="detail-desc" style={{ marginTop: '0.5rem', marginBottom: '1.5rem', fontSize: '0.9rem', lineHeight: '1.5' }}>{selectedSeries.desc}</p>
           )}

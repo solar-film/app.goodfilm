@@ -137,7 +137,7 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
             <div>
               <label style={{ fontSize: '0.8rem', fontWeight: '500' }}>คำอธิบายแบบยาว (รองรับ HTML)</label>
               <div style={{ backgroundColor: 'white', borderRadius: '4px', marginTop: '0.2rem' }}>
-                <ReactQuill theme="snow" value={newSeries.longDesc || ''} onChange={(val) => setNewSeries({...newSeries, longDesc: val})} style={{ minHeight: '150px' }} placeholder="สามารถพิมพ์ข้อความธรรมดา หรือจัดรูปแบบตัวหนา ตัวเอียง ฯลฯ ได้เหมือน Word" />
+                <ReactQuill className="rich-text-editor" theme="snow" value={newSeries.longDesc || ''} onChange={(val) => setNewSeries({...newSeries, longDesc: val})} style={{ minHeight: '150px' }} placeholder="สามารถพิมพ์ข้อความธรรมดา หรือจัดรูปแบบตัวหนา ตัวเอียง ฯลฯ ได้เหมือน Word" />
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -178,7 +178,7 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
                       {availableGroups?.map(g => <option key={g.id} value={g.id}>{g.title}</option>)}
                     </select>
                     <div style={{ backgroundColor: 'white' }}>
-                      <ReactQuill theme="snow" value={editSeriesData.longDesc || ''} onChange={(val) => setEditSeriesData({...editSeriesData, longDesc: val})} style={{ minHeight: '200px' }} placeholder="คำอธิบายแบบยาว" />
+                      <ReactQuill className="rich-text-editor" theme="snow" value={editSeriesData.longDesc || ''} onChange={(val) => setEditSeriesData({...editSeriesData, longDesc: val})} style={{ minHeight: '200px' }} placeholder="คำอธิบายแบบยาว" />
                     </div>
                   </div>
                 ) : (
