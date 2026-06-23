@@ -682,6 +682,7 @@ function MainApp() {
 
           {seriesModels.length > 0 && (() => {
             const isFilmSeries = !['g6', 'g7', 'g8'].includes(selectedSeries.groupId);
+            const showFilmPropertyExplanation = ['g1', 'g2'].includes(selectedSeries.groupId);
             const hasSHGC = seriesModels.some(m => m.shgc && String(m.shgc).trim() !== '-');
             const hasVLT = seriesModels.some(m => m.vlt && String(m.vlt).trim() !== '-');
             const hasVLR = seriesModels.some(m => (m.vlr && String(m.vlr).trim() !== '-') || (m.reflectance && String(m.reflectance).trim() !== '-'));
@@ -782,7 +783,7 @@ function MainApp() {
                   </div>
                 )}
                 
-                {isFilmSeries && (hasSHGC || hasVLT || hasVLR || hasUV || hasIR || hasTSER || hasThickness) && (
+                {showFilmPropertyExplanation && (hasSHGC || hasVLT || hasVLR || hasUV || hasIR || hasTSER || hasThickness) && (
                   <div style={{ marginTop: '1rem', padding: '1.2rem', backgroundColor: '#f5f7fa', borderRadius: '12px', fontSize: '0.85rem', color: '#555', border: '1px solid #eaeaea' }}>
                     <h4 style={{ margin: '0 0 0.8rem 0', color: 'var(--primary-blue)', fontSize: '0.95rem' }}>คำอธิบายค่าคุณสมบัติฟิล์ม</h4>
                     <ul style={{ margin: 0, paddingLeft: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
