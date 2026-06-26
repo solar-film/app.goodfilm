@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare, BookOpen, Columns, Layers, PlayCircle } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { apiFetch, assetUrl } from './apiConfig';
 import './App.css';
 
@@ -181,6 +181,7 @@ const SectionHeader = ({ icon: Icon, title, subtitle }) => {
 
 function MainApp() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [showWelcome, setShowWelcome] = useState(true);
   const [groups, setGroups] = useState([]);
   const [series, setSeries] = useState([]);
@@ -204,6 +205,15 @@ function MainApp() {
   const [expandedImageFile, setExpandedImageFile] = useState(null);
   const [pdfActionModal, setPdfActionModal] = useState({ isOpen: false, url: '', filename: '', file: null, loading: false });
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  useEffect(() => {
+    if (location.state?.tab) {
+      setCurrentTab(location.state.tab);
+      if (location.state.showCompare) {
+        setShowCompareModal(true);
+      }
+    }
+  }, [location.state]);
 
   useEffect(() => {
     if (expandedImage) {
@@ -506,6 +516,93 @@ function MainApp() {
       </div>
       </div>
       </div>
+      </div>
+    </div>
+  );
+
+  const renderBostik = () => (
+    <div className="mobile-view" style={{ backgroundColor: '#fafafa', minHeight: '100vh', paddingBottom: '80px' }}>
+      {/* Header */}
+      <div style={{ display: 'flex', alignItems: 'center', padding: '1.5rem 1.5rem 1rem', backgroundColor: '#fff', position: 'sticky', top: 0, zIndex: 10 }}>
+        <ArrowLeft size={28} color="#1a2b4c" onClick={() => setCurrentTab('home')} style={{ cursor: 'pointer' }} strokeWidth={2.5} />
+        <h2 style={{ flex: 1, textAlign: 'center', fontSize: '1.25rem', fontWeight: 'bold', color: '#1a2b4c', margin: 0, marginRight: '28px' }}>ผลิตภัณฑ์ Bostik</h2>
+      </div>
+
+      <div style={{ padding: '1rem' }}>
+        <button 
+          onClick={() => navigate('/bostik-presentation')} 
+          style={{ width: '100%', padding: '0.8rem', fontSize: '1rem', backgroundColor: 'var(--primary-red)', color: 'white', border: 'none', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', boxShadow: '0 4px 12px rgba(227, 24, 55, 0.3)', marginBottom: '1.5rem' }}
+        >
+          <PlayCircle size={20} /> ดูพรีเซนเทชั่นและวิดีโอทดสอบ
+        </button>
+
+        {groups.filter(g => ['g6', 'g7', 'g8'].includes(g.id)).map((group) => {
+          const groupSeries = series.filter(s => s.groupId === group.id);
+          if (groupSeries.length === 0) return null;
+          
+          return (
+            <div key={group.id} style={{ marginBottom: '1rem', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-soft)', border: '1px solid var(--border-color)' }}>
+              <div style={{ padding: '0.9rem 1.2rem', backgroundColor: 'var(--light-blue)' }}>
+                <h3 style={{ fontSize: '1.15rem', color: 'var(--primary-blue)', fontWeight: 'bold', margin: 0 }}>{group.title}</h3>
+              </div>
+              <div style={{ padding: '0 1.5rem 1.5rem 1.5rem' }}>
+                <div style={{ marginTop: '1rem' }}>
+                  {groupSeries.map((s) => {
+                    const seriesModels = models.filter(m => m.seriesId === s.id);
+                    return (
+                      <div key={s.id} style={{ marginBottom: '0.6rem', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '10px', overflow: 'hidden', backgroundColor: '#f8f9fa' }}>
+                        <div 
+                          onClick={(e) => { 
+                            e.stopPropagation(); 
+                            if (seriesModels.length === 0) {
+                              setSelectedSeries(s);
+                            } else {
+                              setExpandedSeriesId(expandedSeriesId === s.id ? null : s.id);
+                            }
+                          }}
+                          style={{ padding: '0.9rem 1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
+                        >
+                          <div>
+                            <div style={{ fontWeight: 'bold', fontSize: '1.05rem', color: 'var(--text-main)' }}>{s.title}</div>
+                            {s.desc && <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '2px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{s.desc}</div>}
+                          </div>
+                          {seriesModels.length > 0 && (
+                            <ChevronRight size={20} color="#999" style={{ transform: expandedSeriesId === s.id ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+                          )}
+                        </div>
+                        
+                        {/* Models List */}
+                        {expandedSeriesId === s.id && seriesModels.length > 0 && (
+                          <div style={{ padding: '0 1.2rem 1rem 1.2rem', backgroundColor: 'white' }}>
+                            <div style={{ height: '1px', backgroundColor: '#eee', marginBottom: '0.8rem' }}></div>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.5rem' }}>
+                              {seriesModels.map(m => (
+                                <div 
+                                  key={m.id} 
+                                  onClick={(e) => { e.stopPropagation(); setSelectedSeries({...s, initialModelId: m.id}); }}
+                                  style={{ padding: '0.7rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px solid #f0f0f0', cursor: 'pointer' }}
+                                >
+                                  <span style={{ fontWeight: '600', color: 'var(--primary-blue)', fontSize: '0.95rem' }}>{m.name}</span>
+                                  {m.price && m.price !== '-' && <span style={{ fontSize: '0.85rem', color: 'var(--primary-red)', fontWeight: 'bold' }}>{m.price}</span>}
+                                </div>
+                              ))}
+                            </div>
+                            <div 
+                              onClick={(e) => { e.stopPropagation(); setSelectedSeries(s); }}
+                              style={{ marginTop: '0.8rem', textAlign: 'center', padding: '0.6rem', fontSize: '0.9rem', color: 'var(--primary-blue)', fontWeight: 'bold', cursor: 'pointer', backgroundColor: 'var(--light-blue)', borderRadius: '8px' }}
+                            >
+                              ดูรายละเอียดทั้งหมด
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -1510,8 +1607,8 @@ function MainApp() {
               <div className="sidebar-item" onClick={() => { setIsSidebarOpen(false); setCurrentTab('contact'); setSelectedSeries(null); }} style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '20px', cursor: 'pointer', borderRadius: '12px', marginBottom: '0.5rem', transition: 'all 0.2s ease', backgroundColor: currentTab === 'contact' ? 'var(--light-blue)' : 'transparent', color: currentTab === 'contact' ? 'var(--primary-blue)' : 'var(--text-main)' }}>
                 <Phone size={22} color={currentTab === 'contact' ? 'var(--primary-blue)' : '#666'} /> <span style={{ fontWeight: '600', fontSize: '1.05rem' }}>ติดต่อเรา</span>
               </div>
-              <div className="sidebar-item" onClick={() => { setIsSidebarOpen(false); navigate('/bostik-presentation'); }} style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '20px', cursor: 'pointer', borderRadius: '12px', marginBottom: '0.5rem', transition: 'all 0.2s ease', backgroundColor: 'transparent', color: 'var(--text-main)' }}>
-                <Shield size={22} color="#666" /> <span style={{ fontWeight: '600', fontSize: '1.05rem' }}>Bostik</span>
+              <div className="sidebar-item" onClick={() => { setIsSidebarOpen(false); setCurrentTab('bostik'); setSelectedSeries(null); }} style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '20px', cursor: 'pointer', borderRadius: '12px', marginBottom: '0.5rem', transition: 'all 0.2s ease', backgroundColor: currentTab === 'bostik' ? 'var(--light-blue)' : 'transparent', color: currentTab === 'bostik' ? 'var(--primary-blue)' : 'var(--text-main)' }}>
+                <Shield size={22} color={currentTab === 'bostik' ? 'var(--primary-blue)' : '#666'} /> <span style={{ fontWeight: '600', fontSize: '1.05rem' }}>Bostik</span>
               </div>
             </div>
             <div style={{ padding: '1.5rem', borderTop: '1px solid #f0f0f0', textAlign: 'center' }}>
@@ -1535,7 +1632,7 @@ function MainApp() {
             pointerEvents: 'none' 
           }} 
         />
-        {selectedSeries ? renderDetail() : (currentTab === 'home' || currentTab === 'search') ? renderHome() : currentTab === 'download' ? renderDownload() : currentTab === 'contact' ? renderContact() : renderWorks()}
+        {selectedSeries ? renderDetail() : currentTab === 'bostik' ? renderBostik() : (currentTab === 'home' || currentTab === 'search') ? renderHome() : currentTab === 'download' ? renderDownload() : currentTab === 'contact' ? renderContact() : renderWorks()}
       </div>
 
       <nav className="bottom-nav">
@@ -1555,7 +1652,7 @@ function MainApp() {
           <GitCompare size={24} />
           <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>เทียบสเปค</span>
         </div>
-        <div className="nav-item" onClick={() => navigate('/bostik-presentation')}>
+        <div className={`nav-item ${currentTab === 'bostik' && !selectedSeries ? 'active' : ''}`} onClick={() => { setCurrentTab('bostik'); setSelectedSeries(null); }}>
           <Shield size={24} />
           <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>Bostik</span>
         </div>
