@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Trash2 } from 'lucide-react';
+import { useState } from 'react';
+import { adminFetch, assetUrl } from './apiConfig';
 
 export default function PortfolioManager({ seriesList, modelsList, portfolioList, onRefresh, onDelete }) {
   const [formData, setFormData] = useState({
@@ -51,7 +51,7 @@ export default function PortfolioManager({ seriesList, modelsList, portfolioList
         if (!(imgBlob instanceof Blob)) return imgBlob;
         const formDataObj = new FormData();
         formDataObj.append('file', imgBlob, prefix + '.jpg');
-        const res = await fetch('https://nas.goodfilmshop.com/upload-portfolio', { method: 'POST', body: formDataObj });
+        const res = await adminFetch('/upload-portfolio', { method: 'POST', body: formDataObj });
         return (await res.json()).url;
       };
 
@@ -75,10 +75,10 @@ export default function PortfolioManager({ seriesList, modelsList, portfolioList
       };
 
       const isEdit = !!formData.id;
-      const url = isEdit ? 'https://nas.goodfilmshop.com/portfolio/' + formData.id : 'https://nas.goodfilmshop.com/portfolio';
+      const url = isEdit ? `/portfolio/${formData.id}` : '/portfolio';
       const method = isEdit ? 'PUT' : 'POST';
 
-      const res = await fetch(url, {
+      const res = await adminFetch(url, {
         method, headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
@@ -91,7 +91,7 @@ export default function PortfolioManager({ seriesList, modelsList, portfolioList
       } else {
         setStatus('❌ บันทึกไม่สำเร็จ');
       }
-    } catch (err) {
+    } catch {
       setStatus('❌ ติดต่อเซิร์ฟเวอร์ไม่ได้');
     }
   };
@@ -124,7 +124,7 @@ export default function PortfolioManager({ seriesList, modelsList, portfolioList
     return mA.localeCompare(mB);
   });
 
-  const getFullUrl = (url) => url ? (url.startsWith('http') ? url : 'https://nas.goodfilmshop.com' + url) : '';
+  const getFullUrl = assetUrl;
 
   return (
     <div className="admin-grid" style={{ gridTemplateColumns: '1fr', gap: '2rem' }}>
@@ -156,12 +156,12 @@ export default function PortfolioManager({ seriesList, modelsList, portfolioList
           <div style={{ display: 'flex', gap: '0.5rem' }}>
             <div style={{ flex: 1 }}>
               <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '0.85rem' }}>ภาพก่อนติด</label>
-              <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, 'beforeImage')} required={!formData.id && !formData.beforeImage} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
+              <input type="file" accept="image/jpeg,image/png,image/webp" onChange={(e) => handleImageUpload(e, 'beforeImage')} required={!formData.id && !formData.beforeImage} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
               {formData.id && formData.beforeImage && !(formData.beforeImage instanceof Blob) && <div style={{marginTop: '0.2rem', fontSize: '0.75rem', color: 'green'}}>มีรูปปัจจุบันแล้ว</div>}
             </div>
             <div style={{ flex: 1 }}>
               <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '0.85rem' }}>ภาพหลังติด</label>
-              <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, 'afterImage')} required={!formData.id && !formData.afterImage} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
+              <input type="file" accept="image/jpeg,image/png,image/webp" onChange={(e) => handleImageUpload(e, 'afterImage')} required={!formData.id && !formData.afterImage} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
               {formData.id && formData.afterImage && !(formData.afterImage instanceof Blob) && <div style={{marginTop: '0.2rem', fontSize: '0.75rem', color: 'green'}}>มีรูปปัจจุบันแล้ว</div>}
             </div>
           </div>
@@ -179,19 +179,19 @@ export default function PortfolioManager({ seriesList, modelsList, portfolioList
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '0.85rem' }}>รูปอื่นๆ เพิ่มเติม (สูงสุด 4 รูป)</label>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem' }}>
               <div>
-                <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, 'image1')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
+                <input type="file" accept="image/jpeg,image/png,image/webp" onChange={(e) => handleImageUpload(e, 'image1')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
                 {formData.id && formData.image1 && !(formData.image1 instanceof Blob) && <div style={{fontSize: '0.75rem', color: 'green'}}>มีรูปแล้ว</div>}
               </div>
               <div>
-                <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, 'image2')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
+                <input type="file" accept="image/jpeg,image/png,image/webp" onChange={(e) => handleImageUpload(e, 'image2')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
                 {formData.id && formData.image2 && !(formData.image2 instanceof Blob) && <div style={{fontSize: '0.75rem', color: 'green'}}>มีรูปแล้ว</div>}
               </div>
               <div>
-                <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, 'image3')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
+                <input type="file" accept="image/jpeg,image/png,image/webp" onChange={(e) => handleImageUpload(e, 'image3')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
                 {formData.id && formData.image3 && !(formData.image3 instanceof Blob) && <div style={{fontSize: '0.75rem', color: 'green'}}>มีรูปแล้ว</div>}
               </div>
               <div>
-                <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, 'image4')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
+                <input type="file" accept="image/jpeg,image/png,image/webp" onChange={(e) => handleImageUpload(e, 'image4')} className="form-control" style={{fontSize: '0.75rem', padding: '0.4rem'}} />
                 {formData.id && formData.image4 && !(formData.image4 instanceof Blob) && <div style={{fontSize: '0.75rem', color: 'green'}}>มีรูปแล้ว</div>}
               </div>
             </div>

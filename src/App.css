@@ -936,3 +936,11 @@
 .admin-grid { display: grid; gap: 2rem; } 
 @media (min-width: 992px) { .admin-grid { grid-template-columns: 1fr 2fr; } } 
 @media (max-width: 991px) { .admin-grid { grid-template-columns: 1fr; } }
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

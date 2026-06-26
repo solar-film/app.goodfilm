@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Trash2, Edit2, Check, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill-new';
 import 'react-quill-new/dist/quill.snow.css';
+import { adminFetch } from './apiConfig';
 
 function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, onRefresh, onDelete }) {
   const availableGroups = allowedGroupIds ? groupsList.filter(g => allowedGroupIds.includes(g.id)) : groupsList;
@@ -39,7 +39,7 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
   
   const handleSaveHeaders = async () => {
     const targetSeries = seriesList.find(s => s.id === editingHeadersSeriesId);
-    await fetch(`https://nas.goodfilmshop.com/series/${editingHeadersSeriesId}`, {
+    await adminFetch(`/series/${editingHeadersSeriesId}`, {
       method: 'PUT', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...targetSeries, headers: editHeadersData })
     });
@@ -50,14 +50,14 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
   const handleSaveEditSeries = async () => {
     try {
       const currentSeries = seriesList.find(s => s.id === editingSeriesId);
-      await fetch(`https://nas.goodfilmshop.com/series/${editingSeriesId}`, {
+      await adminFetch(`/series/${editingSeriesId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...currentSeries, ...editSeriesData })
       });
       setEditingSeriesId(null);
       onRefresh();
-    } catch (err) {
+    } catch {
       alert('ไม่สามารถบันทึกได้');
     }
   };
@@ -70,25 +70,25 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
   const handleSaveEditModel = async () => {
     try {
       const currentModel = modelsList.find(m => m.id === editingModelId);
-      await fetch(`https://nas.goodfilmshop.com/models/${editingModelId}`, {
+      await adminFetch(`/models/${editingModelId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...currentModel, name: editModelData.name, shgc: editModelData.shgc, vlt: editModelData.vlt, vlr: editModelData.vlr, reflectance: editModelData.vlr, uv: editModelData.uv, ir: editModelData.ir, tser: editModelData.tser, thickness: editModelData.thickness })
       });
       setEditingModelId(null);
       onRefresh();
-    } catch (err) {
+    } catch {
       alert('ไม่สามารถบันทึกได้');
     }
   };
   
   useEffect(() => {
     if (seriesList.length > 0 && !newModel.seriesId) setNewModel(p => ({ ...p, seriesId: seriesList[0].id }));
-  }, [seriesList]);
+  }, [seriesList, newModel.seriesId]);
 
   const handleAddSeries = async (e) => {
     e.preventDefault();
-    await fetch(`https://nas.goodfilmshop.com/series`, {
+    await adminFetch('/series', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...newSeries, id: 's-' + Date.now().toString(), referenceFile: '' })
     });
@@ -99,7 +99,7 @@ function CatalogManager({ allowedGroupIds, groupsList, seriesList, modelsList, o
 
   const handleAddModel = async (e) => {
     e.preventDefault();
-    await fetch(`https://nas.goodfilmshop.com/models`, {
+    await adminFetch('/models', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: 'm-' + Date.now().toString(), seriesId: newModel.seriesId, name: newModel.name, shgc: newModel.shgc, vlt: newModel.vlt, vlr: newModel.vlr, reflectance: newModel.vlr, uv: newModel.uv, ir: newModel.ir, tser: newModel.tser, thickness: newModel.thickness })
     });

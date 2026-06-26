@@ -1,24 +1,72 @@
 import PortfolioManager from './PortfolioManager';
 import CatalogManager from './CatalogManager';
-import React, { useState, useEffect } from 'react';
+import VideoManager from './VideoManager';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Trash2, FileText, Image as ImageIcon, Download, Edit2, Check, X } from 'lucide-react';
-import ReactQuill from 'react-quill-new';
+import { Trash2, FileText, Image as ImageIcon, Download, Edit2, Check, X, PlayCircle } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
 import './App.css';
+import { getDownloadBrand, getProductBrandLabel, getSeriesBrand, PRODUCT_BRANDS } from './downloadBrands';
+import { adminFetch, apiFetch, assetUrl } from './apiConfig';
+import { getSampleImages, SAMPLE_IMAGE_SLOTS } from './sampleImages';
 
-const getFullUrl = (path) => {
-  if (!path) return path;
-  if (path.startsWith('/')) {
-    return `https://nas.goodfilmshop.com${path}`;
-  }
-  return path;
-};
+const getFullUrl = assetUrl;
+
+function AdminLogin({ onSuccess }) {
+  const [password, setPassword] = useState('');
+  const [status, setStatus] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+    setStatus('เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์');
+    try {
+      const response = await apiFetch('/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      });
+      if (!response.ok) {
+        setStatus(response.status === 429 ? 'ลองใหม่ภายหลัง เนื่องจากกรอกรหัสผิดหลายครั้ง' : 'รหัสผ่านไม่ถูกต้อง');
+        return;
+      }
+      setPassword('');
+      onSuccess();
+    } catch {
+      setStatus('เชื่อมต่อระบบไม่ได้ กรุณาลองใหม่');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', background: 'var(--bg-light)', padding: '1rem' }}>
+      <form onSubmit={handleLogin} className="premium-card" style={{ width: '100%', maxWidth: '420px', padding: '2rem' }}>
+        <h1 style={{ color: 'var(--primary-blue)', fontSize: '1.6rem', marginBottom: '0.5rem' }}>เข้าสู่ระบบจัดการข้อมูล</h1>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>กรอกรหัสผ่านผู้ดูแลเพื่อจัดการข้อมูลและไฟล์</p>
+        <label htmlFor="admin-password" style={{ display: 'block', fontWeight: '700', marginBottom: '0.5rem' }}>รหัสผ่าน</label>
+        <input
+          id="admin-password"
+          type="password"
+          className="form-control"
+          value={password}
+          onChange={event => setPassword(event.target.value)}
+          autoComplete="current-password"
+          required
+        />
+        {status && <p role="alert" style={{ color: 'var(--primary-red)', marginTop: '0.75rem' }}>{status}</p>}
+        <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.8rem', fontSize: '1rem' }} disabled={submitting}>{submitting ? 'กำลังเข้าสู่ระบบ...' : 'เข้าสู่ระบบ'}</button>
+      </form>
+    </div>
+  );
+}
 
 function AdminPanel() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('portfolio'); // 'portfolio' | 'catalog' | 'downloads' | 'banners'
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [authState, setAuthState] = useState('loading');
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -33,24 +81,62 @@ function AdminPanel() {
   const [portfolioList, setPortfolioList] = useState([]);
   const [downloadsList, setDownloadsList] = useState([]);
   const [bannersList, setBannersList] = useState([]);
+  const [videosList, setVideosList] = useState([]);
   
-  const loadData = () => {
+  const loadData = useCallback(async () => {
     const ts = Date.now();
-    fetch(`https://nas.goodfilmshop.com/groups?_=${ts}`).then(r => r.json()).then(setGroupsList);
-    fetch(`https://nas.goodfilmshop.com/series?_=${ts}`).then(r => r.json()).then(setSeriesList);
-    fetch(`https://nas.goodfilmshop.com/models?_=${ts}`).then(r => r.json()).then(m => setModelsList(m.sort((a, b) => {
+    const responses = await Promise.all([
+      adminFetch(`/groups?_=${ts}`),
+      adminFetch(`/series?_=${ts}`),
+      adminFetch(`/models?_=${ts}`),
+      adminFetch(`/portfolio?_=${ts}`),
+      adminFetch(`/downloads?_=${ts}`),
+      adminFetch(`/banners?_=${ts}`),
+      adminFetch(`/videos?_=${ts}`)
+    ]);
+    if (responses.some(response => response.status === 401)) {
+      setAuthState('anonymous');
+      return;
+    }
+    if (responses.some(response => !response.ok)) throw new Error('Could not load admin data');
+    const [groups, series, models, portfolio, downloads, banners, videos] = await Promise.all(responses.map(response => response.json()));
+    setGroupsList(groups);
+    setSeriesList(series);
+    setModelsList(models.sort((a, b) => {
       const numA = parseInt(a.name.match(/\d+/)?.[0] || 0);
       const numB = parseInt(b.name.match(/\d+/)?.[0] || 0);
       return numA - numB;
-    })));
-    fetch(`https://nas.goodfilmshop.com/portfolio?_=${ts}`).then(r => r.json()).then(setPortfolioList);
-    fetch(`https://nas.goodfilmshop.com/downloads?_=${ts}`).then(r => r.json()).then(setDownloadsList);
-    fetch(`https://nas.goodfilmshop.com/banners?_=${ts}`).then(r => r.json()).then(setBannersList);
-  };
+    }));
+    setPortfolioList(portfolio);
+    setDownloadsList(downloads);
+    setBannersList(banners);
+    setVideosList(videos);
+  }, []);
 
   useEffect(() => {
-    loadData();
+    apiFetch('/auth/status')
+      .then(response => response.json())
+      .then(result => setAuthState(result.authenticated ? 'authenticated' : 'anonymous'))
+      .catch(() => setAuthState('anonymous'));
   }, []);
+
+  useEffect(() => {
+    if (authState === 'authenticated') loadData().catch(() => setAuthState('anonymous'));
+  }, [authState, loadData]);
+
+  useEffect(() => {
+    const handleUnauthorized = () => setAuthState('anonymous');
+    window.addEventListener('goodfilm:admin-unauthorized', handleUnauthorized);
+    return () => window.removeEventListener('goodfilm:admin-unauthorized', handleUnauthorized);
+  }, []);
+
+  if (authState === 'loading') {
+    return <div style={{ minHeight: '100vh', display: 'grid', placeItems: 'center' }}>กำลังตรวจสอบสิทธิ์...</div>;
+  }
+
+  if (authState !== 'authenticated') {
+    return <AdminLogin onSuccess={() => setAuthState('authenticated')} />;
+  }
 
   if (isMobile) {
     return (
@@ -65,7 +151,8 @@ function AdminPanel() {
   const handleDelete = async (endpoint, id) => {
     if (!window.confirm('คุณแน่ใจหรือไม่ที่จะลบรายการนี้?')) return;
     try {
-      await fetch(`https://nas.goodfilmshop.com/${endpoint}/${id}`, { method: 'DELETE' });
+      const response = await adminFetch(`/${endpoint}/${id}`, { method: 'DELETE' });
+      if (!response.ok) throw new Error('Delete failed');
       loadData();
     } catch (error) {
       console.error(error);
@@ -81,7 +168,16 @@ function AdminPanel() {
             <span>&larr; กลับหน้าแรก</span>
           </div>
           <h2 style={{ color: 'var(--primary-blue)', margin: 0, fontSize: '1.2rem' }}>ระบบจัดการหลังบ้าน (CMS)</h2>
-          <div style={{ width: '100px' }}></div>
+          <button
+            type="button"
+            className="btn btn-outline"
+            onClick={async () => {
+              await apiFetch('/auth/logout', { method: 'POST' });
+              setAuthState('anonymous');
+            }}
+          >
+            ออกจากระบบ
+          </button>
         </div>
       </header>
 
@@ -131,6 +227,13 @@ function AdminPanel() {
           >
             <ImageIcon size={18} /> จัดการรูปตัวอย่างสินค้า
           </button>
+          <button 
+            className={`btn ${activeTab === 'videos' ? 'btn-primary' : 'btn-outline'}`}
+            onClick={() => setActiveTab('videos')}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
+          >
+            <PlayCircle size={18} /> จัดการวิดีโอ YouTube
+          </button>
         </div>
 
         {activeTab === 'portfolio' && (
@@ -143,9 +246,18 @@ function AdminPanel() {
           />
         )}
 
+        {activeTab === 'videos' && (
+          <VideoManager 
+            seriesList={seriesList} 
+            videosList={videosList} 
+            onRefresh={loadData} 
+            onDelete={(id) => handleDelete('videos', id)} 
+          />
+        )}
+
         {activeTab === 'catalog_3m' && (
           <CatalogManager 
-            allowedGroupIds={['g1', 'g2', 'g3', 'g4', 'g5']}
+            allowedGroupIds={['g1', 'g2', 'g3', 'g4', 'g5', 'g9']}
             groupsList={groupsList}
             seriesList={seriesList} 
             modelsList={modelsList} 
@@ -200,7 +312,7 @@ function AdminPanel() {
 // --- CATALOG MANAGER ---
 function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
   const [formData, setFormData] = useState({
-    title: '', category: 'catalog', seriesId: ''
+    title: '', brand: PRODUCT_BRANDS.THREE_M, category: 'catalog', seriesId: ''
   });
   const [file, setFile] = useState(null);
   const [status, setStatus] = useState('');
@@ -212,24 +324,26 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
       case 'catalog': return 'แคตตาล็อก';
       case 'spec': return 'Data Sheet';
       case 'test_report': return 'Test Report';
+      case 'reference': return 'เอกสารอ้างอิง';
       case 'other': return 'อื่นๆ';
       default: return 'เอกสาร';
     }
   };
   
   const [editingId, setEditingId] = useState(null);
-  const [editData, setEditData] = useState({ title: '', seriesId: '', category: 'catalog' });
+  const [editData, setEditData] = useState({ title: '', brand: PRODUCT_BRANDS.THREE_M, seriesId: '', category: 'catalog' });
   
   const [filterTitle, setFilterTitle] = useState('');
+  const [filterBrand, setFilterBrand] = useState('');
   const [filterSeries, setFilterSeries] = useState('');
   const [filterCategory, setFilterCategory] = useState('');
 
   const handleEditSave = async (id) => {
     try {
-      const res = await fetch(`https://nas.goodfilmshop.com/downloads/${id}`, {
+      const res = await adminFetch(`/downloads/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: editData.title, seriesId: editData.seriesId, category: editData.category })
+        body: JSON.stringify({ title: editData.title, brand: editData.brand, seriesId: editData.seriesId, category: editData.category })
       });
       if (res.ok) {
         setEditingId(null);
@@ -252,12 +366,13 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
     setStatus('กำลังอัปโหลด...');
     try {
       const data = new FormData();
+      data.append('brand', formData.brand);
       data.append('category', formData.category);
       data.append('title', formData.title);
       data.append('seriesId', formData.seriesId || '');
       data.append('file', file);
       
-      const uploadRes = await fetch(`https://nas.goodfilmshop.com/upload-download-and-register`, {
+      const uploadRes = await adminFetch('/upload-download-and-register', {
         method: 'POST', body: data
       });
       
@@ -265,7 +380,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
       
       if (uploadRes.ok) {
         setStatus('✅ บันทึกสำเร็จ!');
-        setFormData({ title: '', category: 'catalog', seriesId: '' });
+        setFormData({ title: '', brand: PRODUCT_BRANDS.THREE_M, category: 'catalog', seriesId: '' });
         setFile(null);
         e.target.reset();
         onRefresh();
@@ -283,7 +398,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
     setIsRecovering(true);
     setRecoveryStatus('กำลังตรวจหาไฟล์ Test Report บน NAS...');
     try {
-      const previewRes = await fetch(`https://nas.goodfilmshop.com/maintenance/orphan-downloads?category=test_report&_=${Date.now()}`);
+      const previewRes = await adminFetch(`/maintenance/orphan-downloads?category=test_report&_=${Date.now()}`);
       if (!previewRes.ok) throw new Error('Preview failed');
       const preview = await previewRes.json();
       if (preview.count === 0) {
@@ -297,7 +412,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
         return;
       }
 
-      const recoverRes = await fetch('https://nas.goodfilmshop.com/maintenance/recover-downloads?category=test_report', { method: 'POST' });
+      const recoverRes = await adminFetch('/maintenance/recover-downloads?category=test_report', { method: 'POST' });
       if (!recoverRes.ok) throw new Error('Recovery failed');
       const result = await recoverRes.json();
       setRecoveryStatus(`กู้รายการ Test Report กลับมาแล้ว ${result.count} ไฟล์`);
@@ -312,9 +427,10 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
 
   const filteredDownloads = downloadsList.filter(item => {
     const matchTitle = filterTitle === '' || item.title.toLowerCase().includes(filterTitle.toLowerCase());
+    const matchBrand = filterBrand === '' || getDownloadBrand(item, seriesList) === filterBrand;
     const matchSeries = filterSeries === '' || item.seriesId === filterSeries;
     const matchCategory = filterCategory === '' || item.category === filterCategory;
-    return matchTitle && matchSeries && matchCategory;
+    return matchTitle && matchBrand && matchSeries && matchCategory;
   });
 
   return (
@@ -329,20 +445,41 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
           </div>
 
           <div>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>กลุ่มผลิตภัณฑ์</label>
+            <select
+              className="form-control"
+              value={formData.brand}
+              onChange={e => {
+                const brand = e.target.value;
+                const selectedSeries = seriesList.find(s => s.id === formData.seriesId);
+                setFormData({
+                  ...formData,
+                  brand,
+                  seriesId: selectedSeries && getSeriesBrand(selectedSeries) !== brand ? '' : formData.seriesId
+                });
+              }}
+            >
+              <option value={PRODUCT_BRANDS.THREE_M}>ฟิล์ม 3M</option>
+              <option value={PRODUCT_BRANDS.BOSTIK}>ผลิตภัณฑ์ Bostik</option>
+            </select>
+          </div>
+
+          <div>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>หมวดหมู่</label>
             <select className="form-control" value={formData.category} onChange={e => setFormData({...formData, category: e.target.value})}>
               <option value="catalog">แคตตาล็อก</option>
               <option value="spec">Data Sheet</option>
               <option value="test_report">Test Report</option>
+              <option value="reference">เอกสารอ้างอิง</option>
               <option value="other">อื่นๆ</option>
             </select>
           </div>
 
           <div>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>นำไปแสดงในรุ่นฟิล์ม (ตัวเลือกเสริม)</label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>นำไปแสดงในรุ่นสินค้า (ตัวเลือกเสริม)</label>
             <select className="form-control" value={formData.seriesId} onChange={e => setFormData({...formData, seriesId: e.target.value})}>
               <option value="">-- ไม่ระบุ (แสดงทุกรุ่น หรือ ตามชื่อไฟล์) --</option>
-              {seriesList?.map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
+              {seriesList?.filter(s => getSeriesBrand(s) === formData.brand).map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
             </select>
           </div>
 
@@ -371,6 +508,14 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
             <input type="text" className="form-control" placeholder="ค้นหาชื่อเอกสาร..." value={filterTitle} onChange={e => setFilterTitle(e.target.value)} />
           </div>
           <div style={{ flex: 1, minWidth: '200px' }}>
+            <label style={{ display: 'block', marginBottom: '0.3rem', fontSize: '0.85rem', fontWeight: 'bold' }}>กลุ่มผลิตภัณฑ์</label>
+            <select className="form-control" value={filterBrand} onChange={e => setFilterBrand(e.target.value)}>
+              <option value="">-- ทั้งหมด --</option>
+              <option value={PRODUCT_BRANDS.THREE_M}>ฟิล์ม 3M</option>
+              <option value={PRODUCT_BRANDS.BOSTIK}>ผลิตภัณฑ์ Bostik</option>
+            </select>
+          </div>
+          <div style={{ flex: 1, minWidth: '200px' }}>
             <label style={{ display: 'block', marginBottom: '0.3rem', fontSize: '0.85rem', fontWeight: 'bold' }}>แสดงในรุ่นฟิล์ม</label>
             <select className="form-control" value={filterSeries} onChange={e => setFilterSeries(e.target.value)}>
               <option value="">-- ทั้งหมด --</option>
@@ -384,6 +529,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
               <option value="catalog">แคตตาล็อก</option>
               <option value="spec">Data Sheet</option>
               <option value="test_report">Test Report</option>
+              <option value="reference">เอกสารอ้างอิง</option>
               <option value="other">อื่นๆ</option>
             </select>
           </div>
@@ -394,6 +540,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
             <tr style={{ borderBottom: '2px solid #eee', textAlign: 'left' }}>
               <th style={{ padding: '0.5rem' }}>ไฟล์</th>
               <th style={{ padding: '0.5rem' }}>ชื่อเอกสาร</th>
+              <th style={{ padding: '0.5rem' }}>กลุ่มผลิตภัณฑ์</th>
               <th style={{ padding: '0.5rem' }}>แสดงในรุ่นฟิล์ม</th>
               <th style={{ padding: '0.5rem' }}>หมวดหมู่</th>
               <th style={{ padding: '0.5rem', textAlign: 'right' }}>จัดการ</th>
@@ -421,9 +568,32 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
                 </td>
                 <td style={{ padding: '0.5rem' }}>
                   {editingId === item.id ? (
+                    <select
+                      className="form-control"
+                      value={editData.brand}
+                      onChange={e => {
+                        const brand = e.target.value;
+                        const selectedSeries = seriesList.find(s => s.id === editData.seriesId);
+                        setEditData({
+                          ...editData,
+                          brand,
+                          seriesId: selectedSeries && getSeriesBrand(selectedSeries) !== brand ? '' : editData.seriesId
+                        });
+                      }}
+                      style={{ padding: '0.3rem', width: '150px' }}
+                    >
+                      <option value={PRODUCT_BRANDS.THREE_M}>ฟิล์ม 3M</option>
+                      <option value={PRODUCT_BRANDS.BOSTIK}>ผลิตภัณฑ์ Bostik</option>
+                    </select>
+                  ) : (
+                    getProductBrandLabel(getDownloadBrand(item, seriesList))
+                  )}
+                </td>
+                <td style={{ padding: '0.5rem' }}>
+                  {editingId === item.id ? (
                     <select className="form-control" value={editData.seriesId} onChange={e => setEditData({...editData, seriesId: e.target.value})} style={{ padding: '0.3rem', width: '150px' }}>
                       <option value="">- ไม่ระบุ -</option>
-                      {seriesList?.map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
+                      {seriesList?.filter(s => getSeriesBrand(s) === editData.brand).map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
                     </select>
                   ) : (
                     item.seriesId ? seriesList?.find(s => s.id === item.seriesId)?.title || '-' : '-'
@@ -435,6 +605,7 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
                       <option value="catalog">แคตตาล็อก</option>
                       <option value="spec">Data Sheet</option>
                       <option value="test_report">Test Report</option>
+                      <option value="reference">เอกสารอ้างอิง</option>
                       <option value="other">อื่นๆ</option>
                     </select>
                   ) : (
@@ -449,14 +620,14 @@ function DownloadManager({ seriesList, downloadsList, onRefresh, onDelete }) {
                     </>
                   ) : (
                     <>
-                      <button onClick={() => { setEditingId(item.id); setEditData({ title: item.title, seriesId: item.seriesId || '', category: item.category || 'catalog' }); }} style={{ color: 'var(--primary-blue)', border: 'none', background: 'none', cursor: 'pointer', marginRight: '0.5rem' }} title="แก้ไข"><Edit2 size={18}/></button>
+                      <button onClick={() => { setEditingId(item.id); setEditData({ title: item.title, brand: getDownloadBrand(item, seriesList), seriesId: item.seriesId || '', category: item.category || 'catalog' }); }} style={{ color: 'var(--primary-blue)', border: 'none', background: 'none', cursor: 'pointer', marginRight: '0.5rem' }} title="แก้ไข"><Edit2 size={18}/></button>
                       <button onClick={() => onDelete(item.id)} style={{ color: 'red', border: 'none', background: 'none', cursor: 'pointer' }} title="ลบ"><Trash2 size={18}/></button>
                     </>
                   )}
                 </td>
               </tr>
             ))}
-            {downloadsList.length === 0 && <tr><td colSpan="5" style={{ padding: '1rem', textAlign: 'center' }}>ไม่มีข้อมูล</td></tr>}
+            {filteredDownloads.length === 0 && <tr><td colSpan="6" style={{ padding: '1rem', textAlign: 'center' }}>ไม่มีข้อมูล</td></tr>}
           </tbody>
         </table>
       </div>
@@ -481,13 +652,13 @@ function BannerManager({ bannersList, onRefresh, onDelete }) {
       const data = new FormData();
       data.append('file', file);
       
-      const uploadRes = await fetch(`https://nas.goodfilmshop.com/upload-banner`, {
+      const uploadRes = await adminFetch('/upload-banner', {
         method: 'POST', body: data
       });
       if (!uploadRes.ok) throw new Error('Upload failed');
       const uploadData = await uploadRes.json();
 
-      const res = await fetch(`https://nas.goodfilmshop.com/banners`, {
+      const res = await adminFetch('/banners', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           id: Date.now().toString(),
@@ -506,7 +677,7 @@ function BannerManager({ bannersList, onRefresh, onDelete }) {
       } else {
         setStatus('❌ บันทึกไม่สำเร็จ');
       }
-    } catch (err) {
+    } catch {
       setStatus('❌ เกิดข้อผิดพลาดในการอัปโหลด');
     }
   };
@@ -518,7 +689,7 @@ function BannerManager({ bannersList, onRefresh, onDelete }) {
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>ไฟล์รูปภาพ (แนะนำสัดส่วนแนวนอน)</label>
-            <input type="file" className="form-control" onChange={e => setFile(e.target.files[0])} required accept="image/*" />
+            <input type="file" className="form-control" onChange={e => setFile(e.target.files[0])} required accept="image/jpeg,image/png,image/webp" />
           </div>
           <div>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>ลิงก์เมื่อกดแบนเนอร์ (ไม่บังคับ)</label>
@@ -552,34 +723,47 @@ function BannerManager({ bannersList, onRefresh, onDelete }) {
 
 export default AdminPanel;
 // --- SAMPLE MANAGER ---
+const getSampleExistingImageKey = (imageKey) => `existing${imageKey.charAt(0).toUpperCase()}${imageKey.slice(1)}`;
+
+const createEmptySampleForm = (seriesId = '') => ({
+  title: '', seriesId, modelId: '',
+  image1: null, image2: null, image3: null, image4: null,
+  existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '',
+  label1: '', label2: '', label3: '', label4: ''
+});
+
+const hasOwnValue = (item, key) => Object.prototype.hasOwnProperty.call(item, key);
+
+const isPendingSample = (item) => {
+  const title = String(item?.title || '');
+  const id = String(item?.id || '');
+  return !item?.seriesId
+    || Boolean(item?.recoveredFrom)
+    || id.startsWith('recovered-')
+    || title.startsWith('Recovered sample pending review');
+};
+
 function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDelete }) {
-  const [formData, setFormData] = useState({
-    title: '', seriesId: '', modelId: '', 
-    image1: '', image2: '', image3: '', image4: '',
-    existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '',
-    label1: '', label2: ''
-  });
+  const [formData, setFormData] = useState(() => createEmptySampleForm());
   const [status, setStatus] = useState('');
   const [editId, setEditId] = useState(null);
+  const [sampleFilter, setSampleFilter] = useState('published');
 
   const sampleList = portfolioList.filter(p => p.type === 'sample');
+  const publishedSamples = sampleList.filter(item => !isPendingSample(item));
+  const pendingSamples = sampleList.filter(isPendingSample);
+  const visibleSampleList = sampleFilter === 'all'
+    ? sampleList
+    : sampleFilter === 'pending'
+      ? pendingSamples
+      : publishedSamples;
+  const visibleImageCount = visibleSampleList.reduce((total, item) => total + getSampleImages(item).length, 0);
 
   useEffect(() => {
-    if (seriesList.length > 0 && !formData.seriesId) {
-      setFormData(prev => ({ ...prev, seriesId: seriesList[0].id }));
+    if (formData.modelId && !modelsList.some(m => m.seriesId === formData.seriesId && m.id === formData.modelId)) {
+      setFormData(prev => ({ ...prev, modelId: '' }));
     }
-  }, [seriesList]);
-
-  useEffect(() => {
-    if (formData.seriesId) {
-      const seriesModels = modelsList.filter(m => m.seriesId === formData.seriesId);
-      if (seriesModels.length > 0 && (!formData.modelId || !seriesModels.find(m => m.id === formData.modelId))) {
-        setFormData(prev => ({ ...prev, modelId: seriesModels[0].id }));
-      } else if (seriesModels.length === 0) {
-        setFormData(prev => ({ ...prev, modelId: '' }));
-      }
-    }
-  }, [formData.seriesId, modelsList]);
+  }, [formData.seriesId, formData.modelId, modelsList]);
 
   const handleImageUpload = (e, fieldName) => {
     const file = e.target.files[0];
@@ -608,55 +792,45 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
     reader.readAsDataURL(file);
   };
 
-  const uploadFile = async (blob, prefix) => {
-    if (!blob) return '';
-    const data = new FormData();
-    data.append('category', 'portfolio');
-    data.append('file', new File([blob], prefix + '-' + Date.now() + '.jpg', { type: 'image/jpeg' }));
-    const res = await fetch('https://nas.goodfilmshop.com/upload-download', { method: 'POST', body: data });
-    if (!res.ok) throw new Error('Upload failed');
-    const json = await res.json();
-    return json.url || json.file;
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('⏳ กำลังบันทึกข้อมูล...');
     try {
       const payloadId = editId || Date.now().toString();
-      
-      const [i1, i2, i3, i4] = await Promise.all([
-        formData.image1 ? uploadFile(formData.image1, 'sample-1') : Promise.resolve(formData.existingImage1 || ''),
-        formData.image2 ? uploadFile(formData.image2, 'sample-2') : Promise.resolve(formData.existingImage2 || ''),
-        formData.image3 ? uploadFile(formData.image3, 'sample-3') : Promise.resolve(formData.existingImage3 || ''),
-        formData.image4 ? uploadFile(formData.image4, 'sample-4') : Promise.resolve(formData.existingImage4 || '')
-      ]);
+      if (!formData.image1 && !formData.existingImage1) {
+        setStatus('❌ กรุณาเลือกรูปแรกก่อนบันทึก');
+        return;
+      }
+      const metadata = {
+        id: payloadId,
+        seriesId: formData.seriesId,
+        modelId: formData.modelId,
+        title: formData.title
+      };
+      for (const { imageKey, labelKey } of SAMPLE_IMAGE_SLOTS) {
+        metadata[labelKey] = formData[labelKey];
+        metadata[getSampleExistingImageKey(imageKey)] = formData[getSampleExistingImageKey(imageKey)] || '';
+      }
 
-      const method = editId ? 'PUT' : 'POST';
-      const url = editId ? `https://nas.goodfilmshop.com/portfolio/${editId}` : 'https://nas.goodfilmshop.com/portfolio';
+      const payload = new FormData();
+      Object.entries(metadata).forEach(([key, value]) => payload.append(key, value));
+      for (const { imageKey } of SAMPLE_IMAGE_SLOTS) {
+        if (formData[imageKey]) {
+          payload.append(imageKey, new File([formData[imageKey]], `${imageKey}-${payloadId}.jpg`, { type: 'image/jpeg' }));
+        }
+      }
 
-      const res = await fetch(url, {
-        method: method, headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          id: payloadId, 
-          type: 'sample',
-          seriesId: formData.seriesId, 
-          modelId: formData.modelId, 
-          title: formData.title,
-          label1: formData.label1,
-          label2: formData.label2,
-          image1: i1, image2: i2, image3: i3, image4: i4
-        })
-      });
+      const res = await adminFetch('/upload-sample-and-register', { method: 'POST', body: payload });
       if (res.ok) {
         setStatus('✅ บันทึกข้อมูลสำเร็จ!');
-        setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '', label1: '', label2: '' });
+        setFormData(createEmptySampleForm(formData.seriesId));
         setEditId(null);
         e.target.reset();
         onRefresh();
         setTimeout(() => setStatus(''), 3000);
       } else {
-        setStatus('❌ เกิดข้อผิดพลาดในการบันทึกข้อมูล');
+        const errorPayload = await res.json().catch(() => ({}));
+        setStatus(`❌ ${errorPayload.error || 'เกิดข้อผิดพลาดในการบันทึกข้อมูล'}`);
       }
     } catch (err) {
       console.error(err);
@@ -675,15 +849,17 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
       existingImage2: item.image2 || '',
       existingImage3: item.image3 || '',
       existingImage4: item.image4 || '',
-      label1: item.label1 || 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร',
-      label2: item.label2 || 'ภาพจำลองความเข้ม มองจากภายในอาคาร'
+      label1: hasOwnValue(item, 'label1') ? (item.label1 || '') : SAMPLE_IMAGE_SLOTS[0].defaultLabel,
+      label2: hasOwnValue(item, 'label2') ? (item.label2 || '') : SAMPLE_IMAGE_SLOTS[1].defaultLabel,
+      label3: hasOwnValue(item, 'label3') ? (item.label3 || '') : '',
+      label4: hasOwnValue(item, 'label4') ? (item.label4 || '') : ''
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleCancelEdit = () => {
     setEditId(null);
-    setFormData({ title: '', seriesId: formData.seriesId, modelId: '', image1: '', image2: '', image3: '', image4: '', existingImage1: '', existingImage2: '', existingImage3: '', existingImage4: '', label1: 'ภาพจำลองความเข้ม มองจากภายนอกอาคาร', label2: 'ภาพจำลองความเข้ม มองจากภายในอาคาร' });
+    setFormData(createEmptySampleForm(formData.seriesId));
   };
 
   return (
@@ -693,7 +869,8 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <div style={{ flex: '1 1 300px' }}>
             <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ซีรีส์ฟิล์ม</label>
-            <select className="form-control" value={formData.seriesId} onChange={e => setFormData({...formData, seriesId: e.target.value})} required>
+            <select className="form-control" value={formData.seriesId} onChange={e => setFormData({...formData, seriesId: e.target.value, modelId: ''})}>
+              <option value="">-- รอตรวจสอบ / ยังไม่ระบุซีรีส์ --</option>
               {seriesList.map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
             </select>
           </div>
@@ -711,23 +888,22 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
           <input type="text" className="form-control" value={formData.title} onChange={e => setFormData({...formData, title: e.target.value})} placeholder="เช่น รูปตัวอย่างติดตั้งฟิล์มรุ่น..." />
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
-          <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>คำบรรยายรูปแรก</label>
-            <input type="text" className="form-control" value={formData.label1} onChange={e => setFormData({...formData, label1: e.target.value})} style={{ marginBottom: '1rem' }} />
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ไฟล์รูปแรก</label>
-            {formData.existingImage1 && !formData.image1 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
-            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image1')} accept="image/*" />
-            {formData.image1 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
-          </div>
-          <div style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>คำบรรยายรูปที่สอง</label>
-            <input type="text" className="form-control" value={formData.label2} onChange={e => setFormData({...formData, label2: e.target.value})} style={{ marginBottom: '1rem' }} />
-            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ไฟล์รูปที่สอง</label>
-            {formData.existingImage2 && !formData.image2 && <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัพโหลดเพื่อเปลี่ยน)</div>}
-            <input type="file" className="form-control" onChange={e => handleImageUpload(e, 'image2')} accept="image/*" />
-            {formData.image2 && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
-          </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+          {SAMPLE_IMAGE_SLOTS.map(({ imageKey, labelKey, name }) => {
+            const existingImageKey = `existing${imageKey.charAt(0).toUpperCase()}${imageKey.slice(1)}`;
+            return (
+              <div key={imageKey} style={{ padding: '1rem', border: '1px dashed #ccc', borderRadius: '8px', backgroundColor: 'white' }}>
+                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>คำบรรยาย{name}</label>
+                <input type="text" className="form-control" value={formData[labelKey]} onChange={e => setFormData({...formData, [labelKey]: e.target.value})} style={{ marginBottom: '1rem' }} />
+                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>ไฟล์{name}{imageKey === 'image1' ? ' *' : ''}</label>
+                {formData[existingImageKey] && !formData[imageKey] && (
+                  <div style={{ marginBottom: '0.5rem', fontSize: '0.85rem', color: '#0056b3' }}>✅ มีรูปเดิมแล้ว (อัปโหลดเพื่อเปลี่ยน)</div>
+                )}
+                <input type="file" className="form-control" onChange={e => handleImageUpload(e, imageKey)} accept="image/jpeg,image/png,image/webp" required={imageKey === 'image1' && !formData.existingImage1} />
+                {formData[imageKey] && <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'green' }}>✅ เลือกรูปใหม่แล้ว</div>}
+              </div>
+            );
+          })}
         </div>
 
         <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
@@ -744,28 +920,50 @@ function SampleManager({ seriesList, modelsList, portfolioList, onRefresh, onDel
       </form>
 
       <div>
-        <h3 style={{ marginBottom: '1rem', color: 'var(--primary-blue)' }}>รายการรูปตัวอย่างสินค้าทั้งหมด</h3>
+        <h3 style={{ marginBottom: '0.35rem', color: 'var(--primary-blue)' }}>รายการรูปตัวอย่างสินค้าทั้งหมด</h3>
+        <p style={{ margin: '0 0 1rem', color: '#667085' }}>
+          {visibleSampleList.length} รายการ • {visibleImageCount} รูป
+        </p>
+        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+          <button type="button" className={`btn ${sampleFilter === 'published' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setSampleFilter('published')} style={{ padding: '0.45rem 0.9rem', fontSize: '0.85rem' }}>
+            ใช้งานจริง ({publishedSamples.length})
+          </button>
+          <button type="button" className={`btn ${sampleFilter === 'pending' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setSampleFilter('pending')} style={{ padding: '0.45rem 0.9rem', fontSize: '0.85rem' }}>
+            รอตรวจสอบ ({pendingSamples.length})
+          </button>
+          <button type="button" className={`btn ${sampleFilter === 'all' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setSampleFilter('all')} style={{ padding: '0.45rem 0.9rem', fontSize: '0.85rem' }}>
+            ทั้งหมด ({sampleList.length})
+          </button>
+        </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1.5rem' }}>
-          {sampleList.map(item => (
+          {visibleSampleList.map(item => {
+            const itemImages = getSampleImages(item);
+            const itemIsPending = isPendingSample(item);
+            return (
             <div key={item.id} className="premium-card" style={{ overflow: 'hidden' }}>
-              <div style={{ height: '150px', backgroundColor: '#f0f0f0', position: 'relative' }}>
-                <img src={"https://nas.goodfilmshop.com" + item.image1} alt="Main" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{ minHeight: '150px', backgroundColor: '#f0f0f0', position: 'relative', display: 'grid', gridTemplateColumns: itemImages.length > 1 ? 'repeat(2, 1fr)' : '1fr' }}>
+                {itemImages.map(({ imageKey, src, label }) => (
+                  <img key={imageKey} src={assetUrl(src)} alt={label || `${item.title} ${imageKey}`} style={{ width: '100%', height: '150px', objectFit: 'cover' }} />
+                ))}
                 <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex' }}>
                   <button onClick={() => handleEdit(item)} style={{ backgroundColor: 'var(--primary-blue)', color: 'white', border: 'none', padding: '0.4rem', borderRadius: '50%', cursor: 'pointer', display: 'flex', marginRight: '0.5rem' }}><Edit2 size={16} /></button>
-                  <button onClick={() => { if(window.confirm('คุณแน่ใจหรือไม่ที่จะลบรูปตัวอย่างนี้?')) onDelete(item.id); }} style={{ backgroundColor: 'red', color: 'white', border: 'none', padding: '0.4rem', borderRadius: '50%', cursor: 'pointer', display: 'flex' }}><X size={16} /></button>
+                  <button onClick={() => onDelete(item.id)} style={{ backgroundColor: 'red', color: 'white', border: 'none', padding: '0.4rem', borderRadius: '50%', cursor: 'pointer', display: 'flex' }}><X size={16} /></button>
                 </div>
               </div>
               <div style={{ padding: '1rem' }}>
-                <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '1rem' }}>{item.title}</h4>
+                {itemIsPending && <div style={{ display: 'inline-block', marginBottom: '0.5rem', padding: '0.18rem 0.45rem', borderRadius: '999px', backgroundColor: '#fff3cd', color: '#856404', fontSize: '0.72rem', fontWeight: 'bold' }}>รอตรวจสอบ</div>}
+                <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '1rem' }}>{item.title || '(ไม่มีหัวข้อ)'}</h4>
                 <div style={{ fontSize: '0.8rem', color: '#666', marginBottom: '0.5rem' }}>
-                  <span style={{ fontWeight: 'bold' }}>ซีรีส์:</span> {seriesList.find(s => s.id === item.seriesId)?.title}
+                  <span style={{ fontWeight: 'bold' }}>ซีรีส์:</span> {seriesList.find(s => s.id === item.seriesId)?.title || 'ยังไม่ระบุ'}
                   {item.modelId && <><br/><span style={{ fontWeight: 'bold' }}>รุ่น:</span> {modelsList.find(m => m.id === item.modelId)?.name}</>}
+                  <br/><span style={{ fontWeight: 'bold' }}>รูป:</span> {itemImages.length} รูป
+                  {item.recoveredFrom && <><br/><span style={{ fontWeight: 'bold' }}>กู้คืนจาก:</span> {item.recoveredFrom}</>}
                 </div>
               </div>
             </div>
-          ))}
+          );})}
         </div>
-        {sampleList.length === 0 && <p style={{ color: '#666', textAlign: 'center', padding: '2rem' }}>ยังไม่มีข้อมูลรูปตัวอย่างสินค้า</p>}
+        {visibleSampleList.length === 0 && <p style={{ color: '#666', textAlign: 'center', padding: '2rem' }}>ยังไม่มีข้อมูลรูปตัวอย่างสินค้าในมุมมองนี้</p>}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare, BookOpen, Columns, Layers } from 'lucide-react';
+import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare, BookOpen, Columns, Layers, PlayCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { apiFetch, assetUrl } from './apiConfig';
 import './App.css';
 
 const BeforeAfterSlider = ({ beforeImage, afterImage, beforeLabel, afterLabel }) => {
@@ -187,6 +188,7 @@ function MainApp() {
   const [portfolio, setPortfolio] = useState([]);
   const [downloadsList, setDownloadsList] = useState([]);
   const [bannersList, setBannersList] = useState([]);
+  const [videosList, setVideosList] = useState([]);
   
   const [currentTab, setCurrentTab] = useState('home'); // home, works, search, fav, profile
   const [searchQuery, setSearchQuery] = useState('');
@@ -281,26 +283,22 @@ function MainApp() {
   };
 
   const getFullUrl = (path) => {
-    if (!path) return path;
-    if (path.startsWith('/')) {
-      return `https://nas.goodfilmshop.com${path}`;
-    }
-    return path;
+    return assetUrl(path);
   };
 
   const loadData = () => {
     setLoadState('loading');
-    const API_URL = `https://nas.goodfilmshop.com`;
     const ts = Date.now();
     Promise.all([
-      fetch(`${API_URL}/groups?_=${ts}`).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
-      fetch(`${API_URL}/series?_=${ts}`).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
-      fetch(`${API_URL}/models?_=${ts}`).then(res => { if (!res.ok) throw new Error('models'); return res.json(); }),
-      fetch(`${API_URL}/portfolio?_=${ts}`).then(res => { if (!res.ok) throw new Error('portfolio'); return res.json(); }),
-      fetch(`${API_URL}/downloads?_=${ts}`).then(res => { if (!res.ok) throw new Error('downloads'); return res.json(); }),
-      fetch(`${API_URL}/banners?_=${ts}`).then(res => { if (!res.ok) throw new Error('banners'); return res.json(); }),
+      apiFetch(`/groups?_=${ts}`).then(res => { if (!res.ok) throw new Error('groups'); return res.json(); }),
+      apiFetch(`/series?_=${ts}`).then(res => { if (!res.ok) throw new Error('series'); return res.json(); }),
+      apiFetch(`/models?_=${ts}`).then(res => { if (!res.ok) throw new Error('models'); return res.json(); }),
+      apiFetch(`/portfolio?_=${ts}`).then(res => { if (!res.ok) throw new Error('portfolio'); return res.json(); }),
+      apiFetch(`/downloads?_=${ts}`).then(res => { if (!res.ok) throw new Error('downloads'); return res.json(); }),
+      apiFetch(`/banners?_=${ts}`).then(res => { if (!res.ok) throw new Error('banners'); return res.json(); }),
+      apiFetch(`/videos?_=${ts}`).then(res => { if (!res.ok) throw new Error('videos'); return res.json(); }),
     ])
-      .then(([g, s, m, p, d, b]) => {
+      .then(([g, s, m, p, d, b, v]) => {
         setGroups(g);
         setSeries(s);
         setModels(m.sort((a, b) => {
@@ -313,6 +311,7 @@ function MainApp() {
         setPortfolio(p);
         setDownloadsList(d);
         setBannersList(b || []);
+        setVideosList(v || []);
         setLoadState('ready');
         
         const urlParams = new URLSearchParams(window.location.search);
@@ -646,7 +645,7 @@ function MainApp() {
           </div>
           
           {seriesSamples.length > 0 && (
-            <div style={{ marginBottom: '2rem' }}>
+            <div style={{ marginBottom: '3.5rem' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 {seriesSamples.map((sample) => (
                   <div key={sample.id}>
@@ -815,6 +814,40 @@ function MainApp() {
               </div>
             );
           })()}
+          {/* Recommended Videos */}
+          {(() => {
+            const relatedVideos = videosList.filter(v => v.seriesId === selectedSeries.id);
+            if (relatedVideos.length === 0) return null;
+            return (
+              <div style={{ marginBottom: '3.5rem' }}>
+                <SectionHeader 
+                  icon={PlayCircle} 
+                  title="วิดีโอแนะนำ" 
+                />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
+                  {relatedVideos.map(video => (
+                    <div key={video.id} className="premium-card" style={{ overflow: 'hidden', borderRadius: '12px' }}>
+                      <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%', backgroundColor: '#000' }}>
+                        <iframe
+                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          src={`https://www.youtube.com/embed/${video.youtubeId}?origin=${window.location.origin}`}
+                          title={video.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                      <div style={{ padding: '1rem' }}>
+                        <h4 style={{ margin: 0, fontSize: '1rem', color: '#1a1a1a', fontWeight: '600' }}>{video.title}</h4>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
+
           {/* Related Downloads */}
           {(() => {
             const seriesBaseName = selectedSeries.title.replace(/\s*\(.*?\)\s*/g, '').trim().toLowerCase();
@@ -824,7 +857,7 @@ function MainApp() {
             );
             if (relatedDownloads.length === 0) return null;
             return (
-              <div style={{ marginBottom: '2rem' }}>
+              <div style={{ marginBottom: '3.5rem' }}>
                 <SectionHeader 
                   icon={Download} 
                   title="ไฟล์ที่เกี่ยวข้อง" 

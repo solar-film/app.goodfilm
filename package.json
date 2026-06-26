@@ -9,20 +9,29 @@
     "build": "vite build",
     "lint": "eslint .",
     "test:recovery": "node test/recovery.integration.mjs",
+    "test:security": "node test/security.integration.mjs",
+    "test": "node --test test/device-detection.mjs test/download-brands.mjs test/sample-images.mjs && npm run test:recovery && npm run test:security",
+    "sync:production-snapshot": "node scripts/sync-production-snapshot.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
     "cors": "^2.8.6",
+    "dompurify": "^3.4.11",
     "express": "^5.2.1",
     "form-data": "^4.0.6",
+    "helmet": "^8.2.0",
     "json-server": "^0.17.4",
     "lucide-react": "^1.18.0",
-    "multer": "^2.1.1",
+    "multer": "^2.2.0",
     "node-fetch": "^3.3.2",
+    "pdfjs-dist": "5.4.296",
+    "quill": "2.0.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-quill-new": "^3.8.3",
-    "react-router-dom": "^7.17.0"
+    "react-pdf": "^10.4.1",
+    "react-quill-new": "^3.7.0",
+    "react-router-dom": "^7.17.0",
+    "sanitize-html": "^2.17.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

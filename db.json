@@ -13,7 +13,8 @@
       "category": "catalog",
       "ext": "PNG",
       "info": "PNG  4.6 MB",
-      "file": "/download/e-catalog/1781517077695-3M-Ceramic-(CA).png"
+      "file": "/download/e-catalog/1781517077695-3M-Ceramic-(CA).png",
+      "seriesId": "ca"
     },
     {
       "id": "1781518701083",
@@ -21,7 +22,8 @@
       "category": "catalog",
       "ext": "PNG",
       "info": "PNG  1.0 MB",
-      "file": "/download/e-catalog/1781518559343-3M-PRex.png"
+      "file": "/download/e-catalog/1781518559343-3M-PRex.png",
+      "seriesId": "prex"
     },
     {
       "id": "1781518740988",
@@ -29,7 +31,8 @@
       "category": "catalog",
       "ext": "PNG",
       "info": "PNG  4.0 MB",
-      "file": "/download/e-catalog/1781518599119-3M-PR.png"
+      "file": "/download/e-catalog/1781518599119-3M-PR.png",
+      "seriesId": "pr"
     },
     {
       "id": "1781518772889",
@@ -37,7 +40,8 @@
       "category": "catalog",
       "ext": "JPG",
       "info": "JPG  0.3 MB",
-      "file": "/download/e-catalog/1781518631168-3M-Night-Vision-Series-(NV).jpg"
+      "file": "/download/e-catalog/1781518631168-3M-Night-Vision-Series-(NV).jpg",
+      "seriesId": "nv"
     },
     {
       "id": "1781518788989",
@@ -45,15 +49,8 @@
       "category": "catalog",
       "ext": "JPG",
       "info": "JPG  0.3 MB",
-      "file": "/download/e-catalog/1781518647280-3M-Ceramic-(CM-IR).jpg"
-    },
-    {
-      "id": "1781518808876",
-      "title": "Ceramic-X (X)",
-      "category": "catalog",
-      "ext": "PNG",
-      "info": "PNG  9.9 MB",
-      "file": "/download/e-catalog/1781518666796-3M-Ceramic-X.png"
+      "file": "/download/e-catalog/1781518647280-3M-Ceramic-(CM-IR).jpg",
+      "seriesId": "cmir"
     },
     {
       "id": "1781518857994",
@@ -61,7 +58,8 @@
       "category": "catalog",
       "ext": "PNG",
       "info": "PNG  3.7 MB",
-      "file": "/download/e-catalog/1781518716167-3M-CMIR_BC.png"
+      "file": "/download/e-catalog/1781518716167-3M-CMIR_BC.png",
+      "seriesId": "bc"
     },
     {
       "id": "1781519041176",
@@ -69,7 +67,8 @@
       "category": "catalog",
       "ext": "JPG",
       "info": "JPG  0.2 MB",
-      "file": "/download/e-catalog/1781518899466-แคตตาลอคฟิล์มฝ้า_3M.jpg"
+      "file": "/download/e-catalog/1781518899466-แคตตาลอคฟิล์มฝ้า_3M.jpg",
+      "seriesId": "7725"
     },
     {
       "id": "1781519100619",
@@ -77,7 +76,554 @@
       "category": "catalog",
       "ext": "JPG",
       "info": "JPG  0.2 MB",
-      "file": "/download/e-catalog/1781518958895-แคตตาลอคฟิล์มฝ้า_3M2.jpg"
+      "file": "/download/e-catalog/1781518958895-แคตตาลอคฟิล์มฝ้า_3M2.jpg",
+      "seriesId": "5525"
+    },
+    {
+      "id": "1781587855471",
+      "title": "CompanyProfile_GOODFILM 2026",
+      "category": "other",
+      "ext": "PDF",
+      "info": "PDF  58.7 MB",
+      "file": "/download/other/1781587993606-CompanyProfile_GFS_2026.pdf"
+    },
+    {
+      "id": "1781588851213",
+      "title": "Technical Data Sheet  5525 Series",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1781588852034-3M-5525SE-Scotchacal.pdf",
+      "seriesId": "5525"
+    },
+    {
+      "id": "1781588867770",
+      "title": "\tTechnical Data Sheet 7725 Series",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.4 MB",
+      "file": "/download/data_sheet/1781588868571-3M-7725SE-CRYSTAL-Tech-Data-Sheet.pdf",
+      "seriesId": "7725"
+    },
+    {
+      "id": "1781589515247",
+      "title": "Technical Data Sheet PR20 Series",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781589516056-Prestige-20_v2.pdf",
+      "seriesId": "pr"
+    },
+    {
+      "id": "1781589527069",
+      "title": "Technical Data Sheet PR40 Series",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781589527876-Prestige-40_v2.pdf",
+      "seriesId": "pr"
+    },
+    {
+      "id": "1781589536460",
+      "title": "Technical Data Sheet PR50 Series",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781589537269-Prestige-50_v2.pdf",
+      "seriesId": "pr"
+    },
+    {
+      "id": "1781589546222",
+      "title": "Technical Data Sheet PR70 Series",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.2 MB",
+      "file": "/download/data_sheet/1781589547031-3m-prestige-70-en.pdf",
+      "seriesId": "pr"
+    },
+    {
+      "id": "1781599509453",
+      "seriesId": "prex",
+      "title": "Technical Data Sheet PRex Series",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  1.2 MB",
+      "file": "/download/data_sheet/1781599509938-3M-Prestige-Exterior-Sun-Control.pdf"
+    },
+    {
+      "id": "1781604042466",
+      "seriesId": "x",
+      "title": "Ceramic-X Series (X)",
+      "category": "catalog",
+      "ext": "PNG",
+      "info": "PNG  9.9 MB",
+      "file": "/download/e-catalog/1781604040522-3M-Ceramic-X.png"
+    },
+    {
+      "id": "1781749982676",
+      "seriesId": "cmir",
+      "title": "Technical Data Sheet CM IR5",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781749982564-Ceramic-IR-5-07162019.pdf"
+    },
+    {
+      "id": "1781749997568",
+      "seriesId": "cmir",
+      "title": "Technical Data Sheet CM IR15",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781749997448-Ceramic-IR-15-07162019.pdf"
+    },
+    {
+      "id": "1781750022773",
+      "seriesId": "cmir",
+      "title": "Technical Data Sheet CM IR25",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781750022660-Ceramic-IR-25-07162019.pdf"
+    },
+    {
+      "id": "1781750043860",
+      "seriesId": "cmir",
+      "title": "Technical Data Sheet CM IR35",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781750043747-Ceramic-IR-35-07162019.pdf"
+    },
+    {
+      "id": "1781750064094",
+      "seriesId": "cmir",
+      "title": "Technical Data Sheet CM IR50",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781750063983-Ceramic-IR-50-07162019.pdf"
+    },
+    {
+      "id": "1781750080348",
+      "seriesId": "cmir",
+      "title": "Technical Data Sheet CM IR70",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781750080235-Ceramic-IR-70-07162019.pdf"
+    },
+    {
+      "id": "1781791508913",
+      "seriesId": "upr",
+      "title": "Ultra Prestige Series PR S50",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  4.4 MB",
+      "file": "/download/e-catalog/1781791652746-3M-ฟิล์มนิรภัย_02.jpg"
+    },
+    {
+      "id": "1781791596416",
+      "seriesId": "unv",
+      "title": "Ultra Night Vision Series NV S25",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  4.4 MB",
+      "file": "/download/e-catalog/1781791740305-3M-ฟิล์มนิรภัย_02.jpg"
+    },
+    {
+      "id": "1781791657163",
+      "seriesId": "usafety",
+      "title": "Ultra Safety Series S800",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  5.7 MB",
+      "file": "/download/e-catalog/1781791800450-3M-ฟิล์มนิรภัย.jpg"
+    },
+    {
+      "id": "1781791698197",
+      "seriesId": "safety",
+      "title": "Safety Series",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  5.7 MB",
+      "file": "/download/e-catalog/1781791841607-3M-ฟิล์มนิรภัย2.jpg"
+    },
+    {
+      "id": "1781791729293",
+      "seriesId": "sas",
+      "title": "Solar & Safety Series",
+      "category": "catalog",
+      "ext": "JPG",
+      "info": "JPG  4.4 MB",
+      "file": "/download/e-catalog/1781791873180-3M-ฟิล์มนิรภัย.jpg"
+    },
+    {
+      "id": "1781832612765",
+      "seriesId": "usafety",
+      "title": "Technical Data Sheet Ultra S800",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  2.4 MB",
+      "file": "/download/data_sheet/1781832612409-3M_ULTRA-S800.pdf"
+    },
+    {
+      "id": "1781833103271",
+      "seriesId": "unv",
+      "title": "Technical Data Sheet NV S25",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  2.2 MB",
+      "file": "/download/data_sheet/1781833102961-3M_ULTRA-NV-S25.pdf"
+    },
+    {
+      "id": "1781834677377",
+      "seriesId": "safety",
+      "title": "Technical Data Sheet S40",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  1.0 MB",
+      "file": "/download/data_sheet/1781834677182-Technical-Data-Sheet.pdf"
+    },
+    {
+      "id": "1781835545807",
+      "seriesId": "bc",
+      "title": "Technical Data Sheet BC10",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781835691901-3M_Technical-data-sheets-BC10.pdf"
+    },
+    {
+      "id": "1781835560631",
+      "seriesId": "bc",
+      "title": "Technical Data Sheet BC20",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1781835706724-3M_Technical-data-sheets-BC20.pdf"
+    },
+    {
+      "id": "1782006955482",
+      "seriesId": "nv",
+      "title": "Technical Data Sheet NV15",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.2 MB",
+      "file": "/download/data_sheet/1782007104529-Night-Vision-15-TDS-RevB.pdf"
+    },
+    {
+      "id": "1782006972389",
+      "seriesId": "nv",
+      "title": "Technical Data Sheet NV25",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/data_sheet/1782007121410-Night-Vision-25-TDS-RevB.pdf"
+    },
+    {
+      "id": "1782006988184",
+      "seriesId": "nv",
+      "title": "Technical Data Sheet NV35",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.2 MB",
+      "file": "/download/data_sheet/1782007137223-Night-Vision-35-TDS-RevB.pdf"
+    },
+    {
+      "id": "1782007273810",
+      "seriesId": "ca",
+      "title": "Technical Data Sheet CA",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  1.5 MB",
+      "file": "/download/data_sheet/1782007422703-Technical-Data-Sheet-CA.pdf"
+    },
+    {
+      "id": "1782008260591",
+      "seriesId": "upr",
+      "title": "Technical Data Sheet Ultra PR S50",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1782008409648-3M-film-window-film-manual.pdf"
+    },
+    {
+      "id": "1782017534054",
+      "seriesId": "safety",
+      "title": "Technical Data Sheet S70",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  1.0 MB",
+      "file": "/download/data_sheet/1782017683134-5-Datasheet-S70.pdf"
+    },
+    {
+      "id": "1782190720936",
+      "seriesId": "bostik-a326",
+      "title": "Technical Data Sheet Bostik A326",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1782190720839-A326_Spec-Sheet.pdf"
+    },
+    {
+      "id": "1782190767264",
+      "seriesId": "bostik-a330",
+      "title": "Technical Data Sheet Bostik A330",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1782190767263-A330_Spec-Sheet.pdf"
+    },
+    {
+      "id": "1782191013516",
+      "seriesId": "bostik-a330",
+      "title": "A330_Green Building Certificate",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/test_report/1782191013464-A330_Green-Building-Certificate.pdf"
+    },
+    {
+      "id": "1782191050778",
+      "seriesId": "bostik-a330",
+      "title": "Test Report Bostik A330",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.5 MB",
+      "file": "/download/test_report/1782191050691-A330_Test-Report-C25.pdf"
+    },
+    {
+      "id": "1782191219152",
+      "seriesId": "bostik-s301",
+      "title": "Technical Data Sheet Bostik S301",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1782191219121-S301_Spec-Sheet.pdf"
+    },
+    {
+      "id": "1782191269865",
+      "seriesId": "bostik-s548",
+      "title": "Technical Data Sheet Bostik S548",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1782191269831-S548_Spec-Sheet.pdf"
+    },
+    {
+      "id": "1782191297012",
+      "seriesId": "bostik-s548",
+      "title": "Test Report Bostik S548",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.5 MB",
+      "file": "/download/test_report/1782191296963-S548_Test-Report-C25.pdf"
+    },
+    {
+      "id": "1782191337721",
+      "seriesId": "bostik-s546",
+      "title": "Technical Data Sheet Bostik S546",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1782191337697-S546_Spec-Sheet.pdf"
+    },
+    {
+      "id": "1782191374661",
+      "seriesId": "bostik-s546",
+      "title": "Test Report Bostik S5546",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.9 MB",
+      "file": "/download/test_report/1782191374553-S546_Test-Report-C25.pdf"
+    },
+    {
+      "id": "1782191877404",
+      "seriesId": "bostik-smartflex",
+      "title": "SmartFlex (MS)_Leaflet",
+      "category": "other",
+      "ext": "PDF",
+      "info": "PDF  0.5 MB",
+      "file": "/download/other/1782191877347-SmartFlex-(MS)_Leaflet.pdf"
+    },
+    {
+      "id": "1782191918066",
+      "seriesId": "bostik-smartflex",
+      "title": "Test Report Smart Flex (MS)",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.2 MB",
+      "file": "/download/data_sheet/1782191918005-SmartFlex-(MS)_Spec-Sheet.pdf"
+    },
+    {
+      "id": "1782191954615",
+      "seriesId": "bostik-smartflex",
+      "title": "Test Report Smart Flex (MS)",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  26.8 MB",
+      "file": "/download/test_report/1782191953750-SmartFlex-(MS)_Test-Report.pdf"
+    },
+    {
+      "id": "1782196178247",
+      "seriesId": "bostik-fp404",
+      "title": "Technical Data Sheet Bostik FP404",
+      "category": "spec",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/data_sheet/1782196178236-F404_Spec-Sheet.pdf"
+    },
+    {
+      "id": "1782207420755",
+      "seriesId": "bostik-fp404",
+      "title": "F404_Awading License GEV",
+      "category": "other",
+      "ext": "PDF",
+      "info": "PDF  0.5 MB",
+      "file": "/download/other/1782207420752-F404_Awading-License-GEV.pdf"
+    },
+    {
+      "id": "1782207437026",
+      "seriesId": "bostik-fp404",
+      "title": "F404_Emission Classification for Building Material",
+      "category": "other",
+      "ext": "PDF",
+      "info": "PDF  0.1 MB",
+      "file": "/download/other/1782207437024-F404_Emission-Classification-for-Building-Material.pdf"
+    },
+    {
+      "id": "1782207458760",
+      "seriesId": "bostik-fp404",
+      "title": "F404_Environmental Product Declaration",
+      "category": "other",
+      "ext": "PDF",
+      "info": "PDF  15.8 MB",
+      "file": "/download/other/1782207458043-F404_Environmental-Product-Declaration.pdf"
+    },
+    {
+      "id": "1782207472325",
+      "seriesId": "bostik-fp404",
+      "title": "F404_Laboratory for Acoustics",
+      "category": "other",
+      "ext": "PDF",
+      "info": "PDF  3.1 MB",
+      "file": "/download/other/1782207472244-F404_Laboratory-for-Acoustics.pdf"
+    },
+    {
+      "id": "1782207534581",
+      "seriesId": "bostik-fp404",
+      "title": "F404_UL-EU Certificate",
+      "category": "other",
+      "ext": "PDF",
+      "info": "PDF  1.4 MB",
+      "file": "/download/other/1782207534431-F404_UL-EU-Certificate.pdf"
+    },
+    {
+      "id": "1782219460329",
+      "seriesId": "bostik-s548",
+      "title": "เอกสารรับรองผลิตภัณฑ์ที่อยู่ในมาตรฐานของแสนสิริ Bostik S548",
+      "category": "reference",
+      "ext": "PDF",
+      "info": "PDF  0.2 MB",
+      "file": "/download/other/1782219460308-QCP_2569_007.pdf"
+    },
+    {
+      "id": "1782219493692",
+      "seriesId": "bostik-s546",
+      "title": "เอกสารรับรองผลิตภัณฑ์ที่อยู่ในมาตรฐานของแสนสิริ Bostik S546",
+      "category": "reference",
+      "ext": "PDF",
+      "info": "PDF  0.2 MB",
+      "file": "/download/other/1782219493676-QCP_2569_007.pdf"
+    },
+    {
+      "id": "1782219983992",
+      "seriesId": "bostik-fp404",
+      "title": "เอกสารอ้างอิง ผลิตภัณฑ์ Bostik ของบจก.ศุภาลัย",
+      "category": "reference",
+      "ext": "JPG",
+      "info": "JPG  0.2 MB",
+      "file": "/download/other/1782219983977-เอกสารอ้างอิง-บจก.ศุภาลัย.jpg"
+    },
+    {
+      "id": "1782220563738",
+      "seriesId": "bostik-smartflex",
+      "title": "เอกสารอ้างอิง ผลิตภัณฑ์ Bostik ของ MRT",
+      "category": "reference",
+      "ext": "JPG",
+      "info": "JPG  0.1 MB",
+      "file": "/download/e-catalog/1782220563300-MRT.jpg"
+    },
+    {
+      "id": "1782272807969-0",
+      "title": "Case Study PTT",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.4 MB",
+      "file": "/download/test_report/1782117041315-Case-Study-PTT.pdf",
+      "seriesId": "",
+      "recoveredAt": "2026-06-24T03:46:47.970Z"
+    },
+    {
+      "id": "1782272807969-1",
+      "title": "Patum Vegetable Oil Jan22,2026",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  1.9 MB",
+      "file": "/download/test_report/1782117051842-Patum-Vegetable-Oil-Jan22,2026.pdf",
+      "seriesId": "",
+      "recoveredAt": "2026-06-24T03:46:47.970Z"
+    },
+    {
+      "id": "1782272807969-2",
+      "title": "Sample of Film testing for customer June202019",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.8 MB",
+      "file": "/download/test_report/1782117061415-Sample-of-Film-testing-for-customer-June202019.pdf",
+      "seriesId": "",
+      "recoveredAt": "2026-06-24T03:46:47.970Z"
+    },
+    {
+      "id": "1782272807969-3",
+      "title": "TEST REPORT BC20 NV25 Mon Logoistic April25,2019",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.4 MB",
+      "file": "/download/test_report/1782117071385-TEST-REPORT_BC20_NV25_Mon-Logoistic-April25,2019.pdf",
+      "seriesId": "",
+      "recoveredAt": "2026-06-24T03:46:47.970Z"
+    },
+    {
+      "id": "1782272807969-4",
+      "title": "Test result Bangchak project April23, 2025",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  2.4 MB",
+      "file": "/download/test_report/1782117079349-Test-result-Bangchak-project-April23,-2025.pdf",
+      "seriesId": "",
+      "recoveredAt": "2026-06-24T03:46:47.970Z"
+    },
+    {
+      "id": "1782272807969-5",
+      "title": "Test result Private House at Rama III road Jun23, 2023",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  1.8 MB",
+      "file": "/download/test_report/1782117088344-Test-result-Private-House-at-Rama-III-road-Jun23,-2023.pdf",
+      "seriesId": "",
+      "recoveredAt": "2026-06-24T03:46:47.970Z"
+    },
+    {
+      "id": "1782272807969-6",
+      "title": "สำเนาสัญญาการใช้ฉลากประหยัดพลังงานประสทธิภาพสูงปี 61 บริษัท 3 เอ็ม ประเทศไทย จำกัด",
+      "category": "test_report",
+      "ext": "PDF",
+      "info": "PDF  0.3 MB",
+      "file": "/download/test_report/1782187970499-สำเนาสัญญาการใช้ฉลากประหยัดพลังงานประสทธิภาพสูงปี-61_บริษัท-3-เอ็ม-ประเทศไทย-จำกัด.pdf",
+      "seriesId": "",
+      "recoveredAt": "2026-06-24T03:46:47.970Z"
     }
   ],
   "groups": [
@@ -92,105 +638,345 @@
     {
       "id": "g3",
       "title": "ฟิล์มฝ้า 3M"
+    },
+    {
+      "id": "g4",
+      "title": "3M™ DI-NOC™"
+    },
+    {
+      "id": "g5",
+      "title": "3M™ FASARA™"
+    },
+    {
+      "id": "g6",
+      "title": "ผลิตภัณฑ์ยาแนว"
+    },
+    {
+      "id": "g7",
+      "title": "ผลิตภัณฑ์โฟม"
+    },
+    {
+      "id": "g8",
+      "title": "อุปกรณ์"
+    },
+    {
+      "id": "g9",
+      "title": "3M™ DICHROIC™"
     }
   ],
   "series": [
     {
       "id": "prex",
       "groupId": "g1",
-      "title": "Prestige Exterior Series",
-      "desc": "ฟิล์มนาโนเทคโนโลยีใสเรียงซ้อนกว่า 200 ชั้น สำหรับติดตั้งภายนอก กันความร้อนสูงถึง 62%",
-      "referenceFile": ""
+      "title": "Prestige Exterior Series (PRex)",
+      "desc": "ฟิล์มกรองแสงอาคารพรีเมียม ไม่รบกวนสัญญาณ พัฒนาด้วยนาโนเทคโนโลยีแบบ Multi-layer Optical Film เรียงซ้อนมากกว่า 200 ชั้น สำหรับติดตั้งภายนอกโดยเฉพาะ",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มกรองแสงอาคารติดตั้งภายนอก&nbsp;ลดร้อนสูง&nbsp;ภาพลักษณ์พรีเมียม</strong></p><p>3M&nbsp;Prestige&nbsp;Exterior&nbsp;Series&nbsp;(PRex)&nbsp;เป็นฟิล์มกรองแสงอาคารสำหรับติดตั้งภายนอกกระจก&nbsp;เหมาะสำหรับอาคารที่ต้องการลดความร้อนจากแสงแดด&nbsp;ลดแสงจ้า&nbsp;ป้องกันรังสี&nbsp;UV&nbsp;และรักษาภาพลักษณ์ของกระจกอาคารให้ดูเรียบหรูทันสมัย&nbsp;โดยเฉพาะอาคารที่ไม่สะดวกติดตั้งฟิล์มจากด้านใน&nbsp;หรือมีข้อจำกัดเรื่องการเข้าพื้นที่ภายในอาคาร</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนจากภายนอกได้ดี</strong></p><p>ช่วยลดพลังงานความร้อนจากแสงแดดก่อนผ่านเข้าสู่กระจก&nbsp;ทำให้พื้นที่ภายในอาคารเย็นสบายขึ้น&nbsp;และช่วยลดภาระการทำงานของเครื่องปรับอากาศ</p><p>🏢&nbsp;<strong>ออกแบบสำหรับติดตั้งภายนอกอาคาร</strong></p><p>เหมาะกับอาคารสูง&nbsp;อาคารสำนักงาน&nbsp;โชว์รูม&nbsp;โรงแรม&nbsp;คอนโด&nbsp;และอาคารที่ไม่สะดวกเข้าติดตั้งจากภายใน</p><p>✨&nbsp;<strong>ภาพลักษณ์กระจกดูพรีเมียม</strong></p><p>โทนฟิล์มเรียบ&nbsp;สุภาพ&nbsp;ไม่สะท้อนจัด&nbsp;ช่วยให้อาคารดูทันสมัย&nbsp;สะอาดตา&nbsp;และยังคงความสวยงามของ&nbsp;façade&nbsp;อาคาร</p><p>👁️&nbsp;<strong>ลดแสงจ้า&nbsp;เพิ่มความสบายตา</strong></p><p>ช่วยลดแสงแดดและแสงสะท้อนที่รบกวนการใช้งานภายใน&nbsp;เหมาะกับห้องทำงาน&nbsp;ห้องประชุม&nbsp;พื้นที่รับรอง&nbsp;และพื้นที่ที่มีแดดส่องแรง</p><p>🌿&nbsp;<strong>ป้องกันรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายในอาคาร</p><p>📶&nbsp;<strong>ฟิล์มไม่มีโลหะ&nbsp;ไม่รบกวนสัญญาณ</strong></p><p>เหมาะกับอาคารยุคใหม่ที่มีการใช้งาน&nbsp;Wi-Fi,&nbsp;โทรศัพท์มือถือ&nbsp;และอุปกรณ์สื่อสารภายในอาคาร</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;อาคารสำนักงานใหญ่</li><li>อาคารสูง&nbsp;/&nbsp;อาคารกระจก&nbsp;Curtain&nbsp;Wall</li><li>โรงแรม&nbsp;/&nbsp;รีสอร์ต&nbsp;/&nbsp;โครงการพรีเมียม</li><li>คอนโดมิเนียม&nbsp;/&nbsp;อาคารพักอาศัยแนวสูง</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;อาคารพาณิชย์</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;อาคารบริการ</li><li>อาคารที่ไม่สะดวกเข้าติดตั้งจากด้านใน</li><li>กระจกด้านทิศตะวันตกหรือพื้นที่ที่โดนแดดแรง</li></ul><p></p><h3><strong>แนะนำการเลือกรุ่น</strong></h3><ul><li>PR&nbsp;70&nbsp;EX\t|&nbsp;โปร่งสว่าง&nbsp;มองออกชัด&nbsp;ลดร้อนได้ดี\tอาคารที่ต้องการแสงธรรมชาติสูง&nbsp;ล็อบบี้&nbsp;โชว์รูม&nbsp;พื้นที่รับรอง</li><li>PR&nbsp;50&nbsp;EX\t|&nbsp;สมดุลระหว่างความสว่างและการลดร้อน\tสำนักงาน&nbsp;ห้องประชุม&nbsp;ห้องทำงาน&nbsp;และพื้นที่ใช้งานทั่วไป</li><li>PR&nbsp;40&nbsp;EX\t|&nbsp;ลดร้อนได้สูงขึ้น&nbsp;โทนเข้มขึ้นเล็กน้อย\tกระจกด้านแดดแรง&nbsp;พื้นที่ที่ต้องการลดแสงจ้ามากขึ้น</li><li>PR&nbsp;20&nbsp;EX\t|&nbsp;เข้มที่สุดในกลุ่ม&nbsp;ลดร้อนและลดแสงจ้าได้สูงสุด\tกระจกด้านทิศตะวันตก&nbsp;ห้องที่แดดจัด&nbsp;หรือพื้นที่ต้องการความเป็นส่วนตัวมากขึ้น</li></ul><p></p><p><strong>3M&nbsp;Prestige&nbsp;Exterior&nbsp;Series&nbsp;(PRex)&nbsp;เหมาะสำหรับอาคารที่ต้องการลดความร้อนจากภายนอก&nbsp;ควบคุมแสงแดด&nbsp;ลดแสงจ้า&nbsp;และคงภาพลักษณ์อาคารให้ดูพรีเมียม</strong>&nbsp;โดยเฉพาะอาคารกระจก&nbsp;อาคารสูง&nbsp;โชว์รูม&nbsp;โรงแรม&nbsp;คอนโด&nbsp;และสำนักงานที่ไม่สะดวกติดตั้งฟิล์มจากด้านใน</p><h3></h3><h3>หมายเหตุ</h3><p>ฟิล์มกลุ่ม&nbsp;PRex&nbsp;เป็นฟิล์มสำหรับติดตั้งภายนอก&nbsp;ควรประเมินสภาพกระจก&nbsp;ทิศทางแดด&nbsp;ความสูงอาคาร&nbsp;วิธีเข้าพื้นที่&nbsp;และความปลอดภัยในการติดตั้งก่อนเสนอราคา&nbsp;เพื่อให้ได้รุ่นที่เหมาะสมและติดตั้งได้ตามมาตรฐานงานอาคาร</p>"
     },
     {
       "id": "pr",
       "groupId": "g1",
       "title": "Prestige Series (PR)",
-      "desc": "ฟิล์มใสระดับพรีเมียม กันความร้อนสูงมาก ไม่สะท้อนแสง",
-      "referenceFile": ""
+      "desc": "ฟิล์มกรองแสงอาคารพรีเมียม ใส หรู เย็นสบาย และไม่รบกวนสัญญาณ พัฒนาด้วยนาโนเทคโนโลยีแบบ Multi-layer Optical Film เรียงซ้อนมากกว่า 200 ชั้น",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มกรองแสงอาคารพรีเมียม&nbsp;ลดร้อนสูง&nbsp;กระจกยังสว่างสวย</strong></p><p>3M&nbsp;Prestige&nbsp;Series&nbsp;(PR)&nbsp;เป็นฟิล์มกรองแสงอาคารระดับพรีเมียม&nbsp;สำหรับติดตั้งภายในกระจก&nbsp;ช่วยลดความร้อนจากแสงแดด&nbsp;ลดแสงจ้า&nbsp;ป้องกันรังสี&nbsp;UV&nbsp;และยังคงทัศนวิสัยที่ชัดเจน&nbsp;เหมาะสำหรับอาคารที่ต้องการความสบายภายใน&nbsp;พร้อมภาพลักษณ์กระจกที่ดูเรียบหรู&nbsp;สว่าง&nbsp;และไม่สะท้อนจัด</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนจากแสงแดดได้ดี</strong></p><p>ช่วยลดความร้อนสะสมบริเวณกระจก&nbsp;ทำให้พื้นที่ภายในอาคารเย็นสบายขึ้น&nbsp;และช่วยลดภาระการทำงานของเครื่องปรับอากาศ</p><p>✨&nbsp;<strong>กระจกดูสว่าง&nbsp;สวย&nbsp;และพรีเมียม</strong></p><p>เหมาะกับอาคารที่ต้องการคงความโปร่ง&nbsp;โล่ง&nbsp;สบายตา&nbsp;ไม่ต้องการฟิล์มที่มืดหรือสะท้อนแสงมากเกินไป</p><p>👁️&nbsp;<strong>มองออกชัด&nbsp;ทัศนวิสัยดี</strong></p><p>ช่วยให้มองวิวภายนอกได้สบาย&nbsp;เหมาะกับห้องพักอาศัย&nbsp;ห้องทำงาน&nbsp;ห้องประชุม&nbsp;โชว์รูม&nbsp;และพื้นที่ที่ต้องการแสงธรรมชาติ</p><p>🌿&nbsp;<strong>ป้องกันรังสี&nbsp;UV&nbsp;สูง</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้นไม้&nbsp;และวัสดุตกแต่งภายใน</p><p>📶&nbsp;<strong>ไม่มีโลหะ&nbsp;ไม่รบกวนสัญญาณ</strong></p><p>ฟิล์มกลุ่ม&nbsp;Prestige&nbsp;เป็นเทคโนโลยี&nbsp;Multi-layer&nbsp;Optical&nbsp;Film&nbsp;ไม่มีโลหะ&nbsp;จึงไม่รบกวนสัญญาณโทรศัพท์มือถือ&nbsp;Wi-Fi&nbsp;หรืออุปกรณ์สื่อสารภายในอาคาร</p><p>🏢&nbsp;<strong>เหมาะกับงานอาคารที่ต้องการภาพลักษณ์ระดับสูง</strong></p><p>ให้ลุคกระจกที่ดูสะอาด&nbsp;ทันสมัย&nbsp;และเป็นมืออาชีพ&nbsp;เหมาะกับบ้าน&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;โรงแรม&nbsp;และโครงการพรีเมียม</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>บ้านพักอาศัย&nbsp;/&nbsp;บ้านเดี่ยว&nbsp;/&nbsp;ทาวน์โฮม</li><li>คอนโดมิเนียม&nbsp;/&nbsp;ห้องพักอาศัย</li><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>ห้องผู้บริหาร&nbsp;/&nbsp;ห้องประชุม</li><li>โรงแรม&nbsp;/&nbsp;รีสอร์ต&nbsp;/&nbsp;โครงการพรีเมียม</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;พื้นที่ต้อนรับลูกค้า</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;พื้นที่พักคอย</li><li>อาคารที่ต้องการลดร้อน&nbsp;แต่ยังต้องการความสว่างและวิวภายนอก</li></ul><h3></h3><h3>แนะนำการเลือกรุ่น</h3><ul><li>PR70\t&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;โปร่งสว่างที่สุด&nbsp;มองวิวชัด&nbsp;ให้แสงธรรมชาติสูง\tล็อบบี้&nbsp;โชว์รูม&nbsp;ห้องรับแขก&nbsp;พื้นที่ที่ต้องการความสว่าง</li><li>PR50\t&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;สมดุลระหว่างความสว่างและการลดร้อน\tสำนักงาน&nbsp;ห้องประชุม&nbsp;บ้าน&nbsp;คอนโด&nbsp;และพื้นที่ใช้งานทั่วไป</li><li>PR40\t&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;ลดร้อนได้สูงขึ้น&nbsp;ลดแสงจ้าได้ดีขึ้น\tกระจกด้านแดดแรง&nbsp;ห้องทำงาน&nbsp;ห้องประชุม&nbsp;หรือห้องที่มีแดดบ่าย</li><li>PR20\t&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;เข้มที่สุดในกลุ่ม&nbsp;ลดแสงจ้าและเพิ่มความเป็นส่วนตัวมากที่สุด\tพื้นที่แดดจัด&nbsp;กระจกด้านทิศตะวันตก&nbsp;หรือพื้นที่ที่ต้องการลดแสงมาก</li></ul><p></p><p><strong>3M&nbsp;Prestige&nbsp;Series&nbsp;(PR)&nbsp;เหมาะสำหรับอาคารที่ต้องการฟิล์มกรองแสงพรีเมียม&nbsp;ลดความร้อนสูง&nbsp;แต่ยังคงความสว่าง&nbsp;ความชัดเจน&nbsp;และภาพลักษณ์กระจกที่ดูหรูหรา</strong>&nbsp;เหมาะกับบ้าน&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;โรงแรม&nbsp;โชว์รูม&nbsp;และพื้นที่ที่ต้องการความสบายโดยไม่ทำให้อาคารดูมืดหรือสะท้อนจัด</p><h3></h3><h3>หมายเหตุ</h3><p>หากต้องการห้องสว่างและวิวชัด&nbsp;ควรเลือก&nbsp;PR70&nbsp;หรือ&nbsp;PR50&nbsp;แต่ถ้าพื้นที่โดนแดดแรง&nbsp;ต้องการลดแสงจ้าและเพิ่มความเป็นส่วนตัวมากขึ้น&nbsp;ควรเลือก&nbsp;PR40&nbsp;หรือ&nbsp;PR20&nbsp;โดยควรประเมินทิศทางแดด&nbsp;ชนิดกระจก&nbsp;และความต้องการด้านภาพลักษณ์อาคารก่อนติดตั้ง</p>"
     },
     {
       "id": "nv",
       "groupId": "g1",
       "title": "Night Vision Series (NV)",
       "desc": "ฟิล์มกันความร้อนที่ช่วยลดแสงจ้า และให้ทัศนวิสัยชัดเจนในเวลากลางคืน",
-      "referenceFile": ""
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มกรองแสงอาคารสีธรรมชาติ&nbsp;ลดร้อนสูง&nbsp;มองวิวกลางคืนชัด</strong></p><p>3M&nbsp;Night&nbsp;Vision&nbsp;Series&nbsp;(NV)&nbsp;เป็นฟิล์มกรองแสงอาคารโทนสีธรรมชาติ&nbsp;เหมาะสำหรับอาคารที่ต้องการลดความร้อน&nbsp;ลดแสงจ้า&nbsp;เพิ่มความเป็นส่วนตัวในช่วงกลางวัน&nbsp;และยังคงทัศนวิสัยที่ดีเมื่อมองจากภายในออกไปภายนอก&nbsp;โดยเฉพาะช่วงกลางคืนที่ต้องการมองเห็นวิวได้ชัดกว่าฟิล์มสะท้อนแสงทั่วไป</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนจากแสงแดดได้ดี</strong></p><p>ช่วยลดความร้อนที่ผ่านกระจกเข้าสู่ภายในอาคาร&nbsp;ทำให้พื้นที่ใช้งานเย็นสบายขึ้น&nbsp;และช่วยลดภาระการทำงานของเครื่องปรับอากาศ</p><p>👁️&nbsp;<strong>ลดแสงจ้า&nbsp;เพิ่มความสบายตา</strong></p><p>เหมาะกับห้องทำงาน&nbsp;ห้องประชุม&nbsp;ห้องเรียน&nbsp;ห้องนั่งเล่น&nbsp;และพื้นที่ที่มีแสงแดดส่องโดยตรง&nbsp;ช่วยลดแสงรบกวนสายตาในช่วงกลางวัน</p><p>🌙&nbsp;<strong>มองวิวกลางคืนได้ดีกว่าฟิล์มสะท้อนแสงทั่วไป</strong></p><p>ฟิล์มมีค่าการสะท้อนแสงภายในต่ำ&nbsp;จึงช่วยให้มองออกไปด้านนอกในช่วงกลางคืนได้สบายขึ้น&nbsp;เหมาะกับคอนโด&nbsp;อาคารสูง&nbsp;โรงแรม&nbsp;และพื้นที่ที่ต้องการชมวิว</p><p>🏢&nbsp;<strong>เพิ่มความเป็นส่วนตัวช่วงกลางวัน</strong></p><p>โทนฟิล์มเข้มและมีการสะท้อนแสงภายนอก&nbsp;ช่วยลดการมองเห็นจากด้านนอกในช่วงกลางวัน&nbsp;โดยเฉพาะเมื่อภายนอกมีแสงมากกว่าภายใน</p><p>🌿&nbsp;<strong>ช่วยป้องกันรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายใน</p><p>💼&nbsp;<strong>ลุคอาคารเข้ม&nbsp;สุภาพ&nbsp;และเป็นมืออาชีพ</strong></p><p>ช่วยปรับภาพลักษณ์กระจกให้ดูเรียบ&nbsp;ทันสมัย&nbsp;เหมาะกับอาคารสำนักงาน&nbsp;อาคารพาณิชย์&nbsp;โชว์รูม&nbsp;คอนโด&nbsp;และโรงแรม</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>คอนโดมิเนียม&nbsp;/&nbsp;อาคารพักอาศัยแนวสูง</li><li>โรงแรม&nbsp;/&nbsp;ห้องพักวิวเมือง&nbsp;/&nbsp;ห้องพักวิวทะเล</li><li>ห้องประชุม&nbsp;/&nbsp;ห้องผู้บริหาร</li><li>ร้านค้า&nbsp;/&nbsp;โชว์รูม&nbsp;/&nbsp;อาคารพาณิชย์</li><li>บ้านพักอาศัยที่ต้องการลดร้อนและเพิ่มความเป็นส่วนตัว</li><li>กระจกด้านทิศตะวันตกหรือพื้นที่ที่โดนแดดแรง</li><li>อาคารที่ต้องการมองวิวกลางคืนจากภายใน</li></ul><p></p><h3>แนะนำการเลือกรุ่น</h3><ul><li>NV15\t&nbsp;&nbsp;|&nbsp;&nbsp;เข้มที่สุด&nbsp;ลดร้อนและลดแสงจ้าได้สูง&nbsp;เพิ่มความเป็นส่วนตัวมาก\tห้องที่แดดแรงมาก&nbsp;กระจกด้านทิศตะวันตก&nbsp;หรือพื้นที่ที่ต้องการความเป็นส่วนตัวสูง</li><li>NV25\t&nbsp;&nbsp;|&nbsp;&nbsp;สมดุลระหว่างลดร้อน&nbsp;ความเป็นส่วนตัว&nbsp;และการมองวิว\tสำนักงาน&nbsp;ห้องประชุม&nbsp;คอนโด&nbsp;บ้านพักอาศัย&nbsp;และพื้นที่ใช้งานทั่วไป</li><li>NV35\t&nbsp;&nbsp;|&nbsp;&nbsp;สว่างกว่า&nbsp;มองออกสบายกว่า&nbsp;แต่ยังช่วยลดร้อนได้ดี\tห้องทำงาน&nbsp;พื้นที่รับรอง&nbsp;ห้องนั่งเล่น&nbsp;หรือพื้นที่ที่ต้องการแสงธรรมชาติมากขึ้น</li></ul><p></p><p><strong>3M&nbsp;Night&nbsp;Vision&nbsp;Series&nbsp;(NV)&nbsp;เหมาะสำหรับอาคารที่ต้องการลดร้อน&nbsp;ลดแสงจ้า&nbsp;เพิ่มความเป็นส่วนตัวช่วงกลางวัน&nbsp;และยังมองวิวกลางคืนได้ดี</strong>&nbsp;เหมาะกับอาคารสำนักงาน&nbsp;คอนโด&nbsp;โรงแรม&nbsp;บ้านพักอาศัย&nbsp;โชว์รูม&nbsp;และพื้นที่กระจกที่โดนแดดแรง&nbsp;แต่ยังต้องการทัศนวิสัยที่สบายตาจากภายใน</p><h3></h3><h3>หมายเหตุ</h3><p>ฟิล์ม&nbsp;Night&nbsp;Vision&nbsp;Series&nbsp;มีโทนเข้มและช่วยเพิ่มความเป็นส่วนตัวได้ดีในช่วงกลางวัน&nbsp;แต่ในเวลากลางคืน&nbsp;หากภายในอาคารสว่างกว่าภายนอก&nbsp;อาจมองเห็นจากภายนอกได้มากขึ้น&nbsp;แนะนำเลือกความเข้มตามทิศทางแดด&nbsp;ระดับความเป็นส่วนตัว&nbsp;และความต้องการมองวิวของแต่ละพื้นที่</p>"
     },
     {
       "id": "cmir",
       "groupId": "g1",
       "title": "Ceramic IR Series (CMIR)",
       "desc": "ฟิล์มเซรามิคกันความร้อนสูง เข้มภายนอก สว่างภายใน (ยอดนิยม)",
-      "referenceFile": ""
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มเซรามิค&nbsp;IR&nbsp;ลดร้อนสูง&nbsp;แสงสะท้อนต่ำ&nbsp;สำหรับอาคารที่ต้องการความสบายและความพรีเมียม</strong></p><p>3M&nbsp;Ceramic&nbsp;IR&nbsp;Series&nbsp;(CMIR)&nbsp;เป็นฟิล์มกรองแสงอาคารโทนเทาอมฟ้า&nbsp;/&nbsp;ดำอมฟ้า&nbsp;ที่ออกแบบมาเพื่อช่วยลดความร้อนจากแสงแดด&nbsp;โดยเน้นการป้องกันรังสีอินฟราเรด&nbsp;พร้อมลดแสงจ้าและช่วยให้พื้นที่ภายในอาคารเย็นสบายขึ้น&nbsp;เหมาะสำหรับบ้าน&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;ร้านค้า&nbsp;โชว์รูม&nbsp;และพื้นที่ที่ต้องการฟิล์มลดร้อนประสิทธิภาพสูง&nbsp;โดยไม่ต้องการฟิล์มสะท้อนแสงจัด</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนจากแสงแดดได้ดีมาก</strong></p><p>ช่วยลดความร้อนที่ผ่านกระจกเข้าสู่อาคาร&nbsp;เหมาะกับพื้นที่ที่โดนแดดแรงหรือกระจกบานใหญ่</p><p>🔥&nbsp;<strong>ป้องกันรังสีอินฟราเรดสูง</strong></p><p>เน้นการลดความร้อนจากรังสีอินฟราเรด&nbsp;ซึ่งเป็นหนึ่งในสาเหตุหลักที่ทำให้พื้นที่ใกล้กระจกร้อนสะสม</p><p>👁️&nbsp;<strong>ลดแสงจ้า&nbsp;เพิ่มความสบายตา</strong></p><p>ช่วยลดแสงสะท้อนและแสงจ้า&nbsp;เหมาะกับห้องทำงาน&nbsp;ห้องประชุม&nbsp;ห้องเรียน&nbsp;ห้องนั่งเล่น&nbsp;และพื้นที่ที่ใช้สายตาต่อเนื่อง</p><p>🏢&nbsp;<strong>แสงสะท้อนต่ำ&nbsp;ภาพลักษณ์สุภาพ</strong></p><p>ให้ลุคกระจกเรียบ&nbsp;ทันสมัย&nbsp;ไม่เงาสะท้อนมาก&nbsp;เหมาะกับอาคารที่ต้องการภาพลักษณ์พรีเมียมและเป็นมืออาชีพ</p><p>🌿&nbsp;<strong>ช่วยป้องกันรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายใน</p><p>📶&nbsp;<strong>เทคโนโลยีเซรามิค&nbsp;ไม่เน้นความเงาแบบฟิล์มปรอท</strong></p><p>เหมาะกับงานอาคารที่ต้องการประสิทธิภาพการลดร้อนสูง&nbsp;แต่ยังต้องการกระจกที่ดูเรียบ&nbsp;สะอาด&nbsp;และไม่สะท้อนจัด</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>บ้านพักอาศัย&nbsp;/&nbsp;บ้านเดี่ยว&nbsp;/&nbsp;ทาวน์โฮม</li><li>คอนโดมิเนียม&nbsp;/&nbsp;ห้องพักอาศัย</li><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>ห้องประชุม&nbsp;/&nbsp;ห้องผู้บริหาร</li><li>ร้านค้า&nbsp;/&nbsp;โชว์รูม&nbsp;/&nbsp;พื้นที่ต้อนรับลูกค้า</li><li>โรงเรียน&nbsp;/&nbsp;ห้องเรียน&nbsp;/&nbsp;ห้องกิจกรรม</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;พื้นที่พักคอย</li><li>กระจกด้านทิศตะวันตกหรือพื้นที่ที่โดนแดดแรง</li></ul><h3></h3><h3>แนะนำการเลือกรุ่น</h3><ul><li>CM-IR&nbsp;5&nbsp;|&nbsp;เข้มที่สุด&nbsp;ลดแสงจ้าและเพิ่มความเป็นส่วนตัวสูงสุด&nbsp;ห้องที่แดดแรงมาก&nbsp;กระจกด้านแดดบ่าย&nbsp;หรือพื้นที่ต้องการความเป็นส่วนตัวสูง</li><li>CM-IR&nbsp;15&nbsp;|&nbsp;ลดร้อนสูง&nbsp;โทนเข้ม&nbsp;ใช้งานจริงได้ดี&nbsp;ห้องทำงาน&nbsp;ห้องประชุม&nbsp;บ้าน&nbsp;คอนโด&nbsp;และสำนักงานที่โดนแดด</li><li>CM-IR&nbsp;25&nbsp;|&nbsp;สมดุลระหว่างลดร้อน&nbsp;ความเข้ม&nbsp;และทัศนวิสัย&nbsp;สำนักงานทั่วไป&nbsp;ห้องนั่งเล่น&nbsp;ห้องเรียน&nbsp;และพื้นที่ใช้งานประจำวัน</li><li>CM-IR&nbsp;35&nbsp;|&nbsp;สว่างขึ้น&nbsp;มองออกสบายขึ้น&nbsp;แต่ยังลดร้อนได้ดี&nbsp;ออฟฟิศ&nbsp;ร้านค้า&nbsp;พื้นที่รับรอง&nbsp;และห้องที่ต้องการแสงธรรมชาติ</li><li>CM-IR&nbsp;50&nbsp;|&nbsp;โปร่งสว่าง&nbsp;เหมาะกับพื้นที่ที่ไม่ต้องการฟิล์มเข้มมาก&nbsp;โชว์รูม&nbsp;ล็อบบี้&nbsp;ห้องรับแขก&nbsp;และพื้นที่ต้อนรับลูกค้า</li><li>CM-IR&nbsp;70&nbsp;|&nbsp;โปร่งมาก&nbsp;คงความใสของกระจกเดิมได้ดี&nbsp;พื้นที่ที่ต้องการแสงธรรมชาติสูง&nbsp;วิวชัด&nbsp;และภาพลักษณ์กระจกใส</li></ul><p></p><p><strong>3M&nbsp;Ceramic&nbsp;IR&nbsp;Series&nbsp;(CMIR)&nbsp;เหมาะสำหรับอาคารที่ต้องการฟิล์มเซรามิคประสิทธิภาพสูง&nbsp;เน้นลดร้อน&nbsp;กันรังสีอินฟราเรด&nbsp;ลดแสงจ้า&nbsp;และคงภาพลักษณ์กระจกให้ดูเรียบพรีเมียม</strong>&nbsp;เหมาะกับบ้าน&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;ร้านค้า&nbsp;โชว์รูม&nbsp;และพื้นที่กระจกที่โดนแดดแรง&nbsp;แต่ไม่ต้องการฟิล์มเงาสะท้อนจัด</p><h3></h3><h3>หมายเหตุ</h3><p>หากต้องการลดแสงจ้าและเพิ่มความเป็นส่วนตัวมาก&nbsp;ควรเลือก&nbsp;CM-IR&nbsp;5,&nbsp;CM-IR&nbsp;15&nbsp;หรือ&nbsp;CM-IR&nbsp;25&nbsp;แต่ถ้าต้องการให้พื้นที่ยังสว่างและมองวิวได้ชัด&nbsp;ควรเลือก&nbsp;CM-IR&nbsp;35,&nbsp;CM-IR&nbsp;50&nbsp;หรือ&nbsp;CM-IR&nbsp;70&nbsp;โดยควรประเมินทิศทางแดด&nbsp;ชนิดกระจก&nbsp;และความต้องการด้านภาพลักษณ์อาคารก่อนติดตั้ง</p>"
     },
     {
       "id": "ca",
       "groupId": "g1",
       "title": "Ceramic Arch Interior(CA)",
       "desc": "ฟิล์มเซรามิคสำหรับอาคารโดยเฉพาะ สว่างชัดเจน ไม่รบกวนสัญญาณ",
-      "referenceFile": ""
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มเซรามิคอาคาร&nbsp;ลดร้อนดี&nbsp;แสงสะท้อนต่ำ&nbsp;เหมาะกับพื้นที่ที่ต้องการความสบายและภาพลักษณ์สุภาพ</strong></p><p>3M&nbsp;Ceramic&nbsp;Architectural&nbsp;Series&nbsp;(CA)&nbsp;เป็นฟิล์มกรองแสงอาคารเทคโนโลยีเซรามิค&nbsp;เหมาะสำหรับบ้าน&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;ร้านค้า&nbsp;และพื้นที่เชิงพาณิชย์ที่ต้องการลดความร้อน&nbsp;ลดแสงจ้า&nbsp;และช่วยให้พื้นที่ภายในเย็นสบายขึ้น&nbsp;โดยยังคงลุคกระจกที่ดูเรียบ&nbsp;สะอาด&nbsp;และไม่สะท้อนจัดเหมือนฟิล์มปรอท</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนจากแสงแดดได้ดี</strong></p><p>ช่วยลดความร้อนที่ผ่านกระจกเข้าสู่ภายในอาคาร&nbsp;ทำให้พื้นที่ใช้งานเย็นสบายขึ้น&nbsp;และช่วยลดภาระการทำงานของเครื่องปรับอากาศ</p><p>👁️&nbsp;<strong>ลดแสงจ้า&nbsp;เพิ่มความสบายตา</strong></p><p>เหมาะกับห้องทำงาน&nbsp;ห้องประชุม&nbsp;ห้องนั่งเล่น&nbsp;ห้องเรียน&nbsp;หรือพื้นที่ที่มีแสงแดดส่องโดยตรง&nbsp;ช่วยลดแสงรบกวนสายตาในช่วงกลางวัน</p><p>🏢&nbsp;<strong>แสงสะท้อนต่ำ&nbsp;ภาพลักษณ์สุภาพ</strong></p><p>โทนฟิล์มดูเรียบ&nbsp;ไม่เงาสะท้อนมาก&nbsp;เหมาะกับอาคารที่ต้องการความเป็นมืออาชีพ&nbsp;ดูสะอาดตา&nbsp;และไม่ต้องการลุคกระจกเงาจัด</p><p>🌿&nbsp;<strong>ช่วยป้องกันรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้นไม้&nbsp;พื้นไวนิล&nbsp;และวัสดุตกแต่งภายใน</p><p>📶&nbsp;<strong>เทคโนโลยีเซรามิค&nbsp;ใช้งานอาคารได้มั่นใจ</strong></p><p>เหมาะกับงานอาคารที่ต้องการประสิทธิภาพการลดร้อน&nbsp;โดยยังคงความสบายในการมองผ่านกระจก&nbsp;และไม่เน้นความเงาสะท้อนแบบฟิล์มปรอท</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>บ้านพักอาศัย&nbsp;/&nbsp;บ้านเดี่ยว&nbsp;/&nbsp;ทาวน์โฮม</li><li>คอนโดมิเนียม&nbsp;/&nbsp;ห้องพักอาศัย</li><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>ห้องประชุม&nbsp;/&nbsp;ห้องทำงาน</li><li>โรงเรียน&nbsp;/&nbsp;ห้องเรียน&nbsp;/&nbsp;ห้องกิจกรรม</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;พื้นที่พักคอย</li><li>ร้านค้า&nbsp;/&nbsp;โชว์รูม&nbsp;/&nbsp;พื้นที่ต้อนรับลูกค้า</li><li>อาคารที่ต้องการลดร้อน&nbsp;แต่ยังต้องการแสงธรรมชาติ</li></ul><h3></h3><h3>แนะนำการเลือกรุ่น</h3><ul><li>CA15\t&nbsp;&nbsp;|&nbsp;&nbsp;เข้มที่สุดในกลุ่ม&nbsp;ลดแสงจ้าและเพิ่มความเป็นส่วนตัวได้ดี\tพื้นที่แดดแรง&nbsp;ห้องที่ต้องการลดแสงมาก&nbsp;หรือกระจกด้านทิศตะวันตก</li><li>CA25&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;ลดร้อนดี&nbsp;ให้ความเป็นส่วนตัวมากขึ้น&nbsp;แต่ไม่มืดเกินไป\tห้องทำงาน&nbsp;ห้องประชุม&nbsp;บ้าน&nbsp;และคอนโดที่โดนแดด</li><li>CA35&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;สมดุลระหว่างลดร้อน&nbsp;ความสว่าง&nbsp;และความเป็นส่วนตัว\tสำนักงานทั่วไป&nbsp;ห้องนั่งเล่น&nbsp;ห้องเรียน&nbsp;และพื้นที่ใช้งานประจำวัน</li><li>CA45&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;สว่างขึ้น&nbsp;มองออกสบาย&nbsp;เหมาะกับพื้นที่ใช้งานทั่วไป\tออฟฟิศ&nbsp;ร้านค้า&nbsp;พื้นที่รับรอง&nbsp;และห้องที่ต้องการแสงธรรมชาติ</li><li>CA60\t&nbsp;&nbsp;|&nbsp;&nbsp;โปร่งสว่าง&nbsp;ลดร้อนแบบนุ่มนวล\tโชว์รูม&nbsp;ล็อบบี้&nbsp;ห้องรับแขก&nbsp;หรือพื้นที่ที่ต้องการความโปร่ง</li><li>CA80\t&nbsp;&nbsp;|&nbsp;&nbsp;โปร่งมาก&nbsp;คงความใสของกระจกเดิมได้ดี\tพื้นที่ที่ต้องการแสงธรรมชาติสูง&nbsp;วิวชัด&nbsp;และไม่ต้องการให้กระจกดูเข้ม</li></ul><p></p><p><strong>3M&nbsp;Ceramic&nbsp;Architectural&nbsp;Series&nbsp;(CA)&nbsp;เหมาะสำหรับอาคารที่ต้องการฟิล์มเซรามิคลดร้อน&nbsp;แสงสะท้อนต่ำ&nbsp;และยังคงบรรยากาศภายในให้สว่างสบาย</strong>&nbsp;เหมาะกับบ้าน&nbsp;คอนโด&nbsp;สำนักงาน&nbsp;ร้านค้า&nbsp;โชว์รูม&nbsp;และพื้นที่ที่ต้องการลดความร้อนโดยไม่อยากให้กระจกดูเงาหรือเข้มจัดเกินไป</p><h3></h3><h3>หมายเหตุ</h3><p>หากต้องการลดแสงจ้าและเพิ่มความเป็นส่วนตัวมาก&nbsp;ควรเลือก&nbsp;CA15&nbsp;หรือ&nbsp;CA25&nbsp;แต่ถ้าต้องการให้ห้องยังสว่างและมองวิวได้ชัด&nbsp;ควรเลือก&nbsp;CA45,&nbsp;CA60&nbsp;หรือ&nbsp;CA80&nbsp;โดยควรประเมินทิศทางแดด&nbsp;ชนิดกระจก&nbsp;และความต้องการด้านภาพลักษณ์อาคารก่อนติดตั้ง</p>"
     },
     {
       "id": "x",
       "groupId": "g1",
-      "title": "Ceramic-X (X)",
-      "desc": "ฟิล์มเซรามิคคุณภาพสูง คุ้มค่า ทนทานยาวนาน",
-      "referenceFile": ""
+      "title": "Ceramic-X Series (X)",
+      "desc": "ฟิล์มกรองแสงอาคารเซรามิก ช่วยลดความร้อน ลดแสงจ้า และลดรังสี UV พร้อมคงทัศนวิสัยภายนอกให้มองชัด ไม่ทำให้กระจกสะท้อนจัด",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มเซรามิคสีเข้ม&nbsp;ลดร้อนสูง&nbsp;สำหรับอาคารที่ต้องการความเป็นส่วนตัวและความสบายภายใน</strong></p><p>3M&nbsp;Ceramic-X&nbsp;Series&nbsp;เป็นฟิล์มกรองแสงอาคารโทนเข้ม&nbsp;เทคโนโลยีเซรามิค&nbsp;เหมาะสำหรับอาคารที่ต้องการลดความร้อน&nbsp;ลดแสงจ้า&nbsp;เพิ่มความเป็นส่วนตัว&nbsp;และช่วยให้อุณหภูมิภายในพื้นที่สบายขึ้น&nbsp;โดยยังคงภาพลักษณ์กระจกอาคารให้ดูเรียบ&nbsp;ทันสมัย&nbsp;และพรีเมียม</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนจากแสงแดดได้ดีมาก</strong></p><p>ช่วยลดความร้อนที่ผ่านกระจกเข้าสู่อาคาร&nbsp;เหมาะกับพื้นที่ที่โดนแดดแรง&nbsp;กระจกบานใหญ่&nbsp;หรืออาคารที่ต้องการลดภาระเครื่องปรับอากาศ</p><p>👁️&nbsp;<strong>ลดแสงจ้า&nbsp;เพิ่มความสบายตา</strong></p><p>ช่วยลดแสงสะท้อนและแสงจ้าที่รบกวนการทำงาน&nbsp;เหมาะกับห้องทำงาน&nbsp;ห้องประชุม&nbsp;ห้องเรียน&nbsp;และพื้นที่ที่ต้องใช้สายตาเป็นเวลานาน</p><p>🏢&nbsp;<strong>เพิ่มความเป็นส่วนตัวช่วงกลางวัน</strong></p><p>ฟิล์มโทนเข้มช่วยลดการมองเห็นจากภายนอกในช่วงกลางวัน&nbsp;เหมาะกับสำนักงาน&nbsp;บ้าน&nbsp;คอนโด&nbsp;และอาคารที่ต้องการความเป็นส่วนตัวมากขึ้น</p><p>🌿&nbsp;<strong>ป้องกันรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายในอาคาร</p><p>💼&nbsp;<strong>ลุคกระจกเข้ม&nbsp;เรียบ&nbsp;และทันสมัย</strong></p><p>ช่วยปรับภาพลักษณ์อาคารให้ดูเข้ม&nbsp;สุขุม&nbsp;และเป็นมืออาชีพ&nbsp;เหมาะกับงานบ้านพักอาศัย&nbsp;อาคารสำนักงาน&nbsp;โชว์รูม&nbsp;และอาคารพาณิชย์</p><p>📶&nbsp;<strong>เทคโนโลยีเซรามิค&nbsp;ใช้งานกับอาคารได้มั่นใจ</strong></p><p>ฟิล์มเซรามิคเหมาะกับงานที่ต้องการประสิทธิภาพการลดความร้อน&nbsp;โดยไม่เน้นความเงาสะท้อนแบบฟิล์มปรอท</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>บ้านพักอาศัย&nbsp;/&nbsp;บ้านเดี่ยว&nbsp;/&nbsp;ทาวน์โฮม</li><li>คอนโดมิเนียม&nbsp;/&nbsp;ห้องพักอาศัย</li><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>ห้องประชุม&nbsp;/&nbsp;ห้องทำงาน</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;อาคารพาณิชย์</li><li>ห้องที่โดนแดดแรงหรือแดดบ่าย</li><li>กระจกด้านทิศตะวันตกหรือทิศใต้</li><li>พื้นที่ที่ต้องการเพิ่มความเป็นส่วนตัวในช่วงกลางวัน</li></ul><p></p><h3>แนะนำการเลือกรุ่น</h3><ul><li>Ceramic-X&nbsp;5\t|&nbsp;เข้มที่สุด&nbsp;ลดแสงจ้าและเพิ่มความเป็นส่วนตัวสูงสุด\tพื้นที่แดดแรงมาก&nbsp;ห้องที่ต้องการความเป็นส่วนตัวสูง&nbsp;หรือกระจกด้านแดดบ่าย</li><li>Ceramic-X&nbsp;15\t|&nbsp;ลดร้อนได้ดีมาก&nbsp;สมดุลระหว่างความเข้มและการใช้งานจริง\tห้องทำงาน&nbsp;ห้องประชุม&nbsp;บ้านพักอาศัย&nbsp;และสำนักงานทั่วไป</li><li>Ceramic-X&nbsp;35\t|&nbsp;สว่างกว่า&nbsp;มองออกสบายกว่า&nbsp;แต่ยังช่วยลดร้อนได้ดี\tพื้นที่ที่ต้องการแสงธรรมชาติ&nbsp;เช่น&nbsp;ห้องรับแขก&nbsp;โชว์รูม&nbsp;หรือพื้นที่ต้อนรับ</li></ul><p></p><p><strong>3M&nbsp;Ceramic-X&nbsp;Series&nbsp;เหมาะสำหรับอาคารที่ต้องการฟิล์มเซรามิคโทนเข้ม&nbsp;ลดความร้อน&nbsp;ลดแสงจ้า&nbsp;และเพิ่มความเป็นส่วนตัวในช่วงกลางวัน</strong>&nbsp;โดยเฉพาะบ้าน&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;ห้องประชุม&nbsp;และพื้นที่กระจกที่โดนแดดแรง&nbsp;แต่ไม่ต้องการฟิล์มเงาสะท้อนมากเกินไป</p><p></p><h3><strong>หมายเหตุ</strong></h3><p>ฟิล์ม&nbsp;Ceramic-X&nbsp;Series&nbsp;มีโทนเข้ม&nbsp;โดยเฉพาะรุ่น&nbsp;X5&nbsp;และ&nbsp;X15&nbsp;จึงเหมาะกับพื้นที่ที่ต้องการลดแสงและเพิ่มความเป็นส่วนตัว&nbsp;หากต้องการความโปร่งหรือแสงธรรมชาติมากขึ้น&nbsp;แนะนำพิจารณารุ่น&nbsp;X35&nbsp;หรือกลุ่ม&nbsp;Ceramic&nbsp;Series&nbsp;ที่มีค่าความสว่างสูงกว่า</p>"
     },
     {
       "id": "bc",
       "groupId": "g1",
       "title": "Reflective Series (BC)",
-      "desc": "ฟิล์มปรอทสะท้อนแสง กันความร้อนดีเยี่ยม เพิ่มความเป็นส่วนตัว",
-      "referenceFile": ""
+      "desc": "ฟิล์มปรอทสะท้อนแสง กันความร้อนดีเยี่ยม เพิ่มความเป็นส่วนตัว ",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มสะท้อนแสง&nbsp;ลดร้อนสูง&nbsp;สำหรับอาคารที่ปะทะแดดแรง</strong></p><p>3M&nbsp;Reflective&nbsp;Series&nbsp;(BC)&nbsp;เป็นฟิล์มกรองแสงอาคารโทนสะท้อนแสง&nbsp;เหมาะสำหรับพื้นที่ที่ต้องการลดความร้อน&nbsp;ลดแสงจ้า&nbsp;และเพิ่มความเป็นส่วนตัวในช่วงกลางวัน&nbsp;ช่วยให้อาคารเย็นสบายขึ้น&nbsp;ลดภาระการทำงานของเครื่องปรับอากาศ&nbsp;และช่วยปรับภาพลักษณ์กระจกให้ดูเข้ม&nbsp;เรียบ&nbsp;และทันสมัยมากขึ้น</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนได้สูง</strong></p><p>ช่วยลดความร้อนจากแสงแดดที่ผ่านกระจก&nbsp;เหมาะกับอาคารที่โดนแดดจัดหรือแดดส่องต่อเนื่องหลายชั่วโมง</p><p>👁️&nbsp;<strong>ลดแสงจ้าได้ดี</strong></p><p>ช่วยลดแสงสะท้อนและแสงจ้าที่รบกวนสายตา&nbsp;เหมาะกับห้องทำงาน&nbsp;ห้องประชุม&nbsp;โถงกระจก&nbsp;และพื้นที่ที่ต้องใช้สายตาเป็นเวลานาน</p><p>🏢&nbsp;<strong>เพิ่มความเป็นส่วนตัวช่วงกลางวัน</strong></p><p>โทนฟิล์มสะท้อนแสงช่วยลดการมองเห็นจากภายนอกในช่วงกลางวัน&nbsp;โดยเฉพาะเมื่อด้านนอกมีแสงมากกว่าด้านใน</p><p>🌿&nbsp;<strong>ช่วยลดรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายในอาคาร</p><p>💼&nbsp;<strong>เหมาะกับงานอาคารเชิงพาณิชย์</strong></p><p>ช่วยให้กระจกอาคารดูเป็นระเบียบ&nbsp;มีมิติ&nbsp;และดูเป็นมืออาชีพ&nbsp;เหมาะกับสำนักงาน&nbsp;ร้านค้า&nbsp;โชว์รูม&nbsp;และอาคารที่ต้องการลุคเข้มแบบ&nbsp;corporate</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>อาคารพาณิชย์&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;โชว์รูม</li><li>ห้องประชุม&nbsp;/&nbsp;ห้องทำงานที่โดนแดดแรง</li><li>กระจกด้านทิศตะวันตกหรือทิศใต้</li><li>โรงงาน&nbsp;/&nbsp;อาคารที่มีพื้นที่กระจกขนาดใหญ่</li><li>อาคารที่ต้องการเพิ่มความเป็นส่วนตัวในช่วงกลางวัน</li><li>พื้นที่ที่ต้องการลดแสงจ้าแบบเห็นผลชัดเจน</li></ul><p></p><h3>แนะนำการเลือกรุ่น</h3><ul><li>BC10\t&nbsp;&nbsp;|&nbsp;เข้มกว่า&nbsp;สะท้อนมากกว่า&nbsp;ลดร้อนและลดแสงจ้าได้สูง\tพื้นที่แดดแรงมาก&nbsp;กระจกด้านตะวันตก&nbsp;ห้องที่ต้องการความเป็นส่วนตัวสูง</li><li>BC20\t&nbsp;&nbsp;|&nbsp;สว่างกว่า&nbsp;BC10&nbsp;เล็กน้อย&nbsp;แต่ยังลดร้อนได้ดี\tสำนักงานทั่วไป&nbsp;ร้านค้า&nbsp;โชว์รูม&nbsp;หรือพื้นที่ที่ต้องการสมดุลระหว่างลดร้อนและแสงธรรมชาติ</li></ul><p></p><p><strong>3M&nbsp;Reflective&nbsp;Series&nbsp;(BC)&nbsp;เหมาะสำหรับอาคารที่ต้องการลดความร้อนและลดแสงจ้าอย่างชัดเจน&nbsp;พร้อมเพิ่มความเป็นส่วนตัวในช่วงกลางวัน</strong>&nbsp;โดยเฉพาะพื้นที่กระจกที่โดนแดดแรง&nbsp;เช่น&nbsp;อาคารสำนักงาน&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;อาคารพาณิชย์&nbsp;และกระจกด้านทิศตะวันตก</p><h3></h3><h3>หมายเหตุ</h3><p>ฟิล์ม&nbsp;Reflective&nbsp;Series&nbsp;มีโทนสะท้อนแสงและให้ความเป็นส่วนตัวได้ดีในช่วงกลางวัน&nbsp;แต่ในเวลากลางคืน&nbsp;หากภายในอาคารสว่างกว่าภายนอก&nbsp;อาจมองเห็นจากภายนอกได้มากขึ้น&nbsp;แนะนำประเมินทิศทางแดด&nbsp;แสงภายนอก&nbsp;และความต้องการด้านภาพลักษณ์อาคารก่อนเลือกติดตั้ง</p>"
     },
     {
       "id": "upr",
       "groupId": "g2",
       "title": "Ultra Prestige Series",
-      "desc": "ฟิล์มนิรภัยผสานฟิล์มกรองแสงใส กันความร้อนสูง ลดเศษกระจกแตก",
-      "referenceFile": ""
+      "desc": "ฟิล์มนิรภัยใสพรีเมียม ลดร้อน สำหรับอาคารที่ต้องการความปลอดภัยและภาพลักษณ์ระดับสูง",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มนิรภัยใสพรีเมียม&nbsp;ลดร้อน&nbsp;สำหรับอาคารที่ต้องการความปลอดภัยและภาพลักษณ์ระดับสูง</strong></p><p>3M&nbsp;Ultra&nbsp;Prestige&nbsp;Series&nbsp;เป็นฟิล์มสำหรับกระจกอาคารที่ผสานคุณสมบัติของฟิล์มนิรภัยและฟิล์มกรองแสงพรีเมียมไว้ในรุ่นเดียว&nbsp;ช่วยเพิ่มความปลอดภัยให้กระจก&nbsp;ลดการแตกกระจายของเศษกระจก&nbsp;ลดความร้อนจากแสงแดด&nbsp;และยังคงความสว่าง&nbsp;โปร่งใส&nbsp;รวมถึงทัศนวิสัยที่ดีจากภายในอาคาร</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>🛡️&nbsp;<strong>เพิ่มความปลอดภัยให้กระจก</strong></p><p>ช่วยยึดเศษกระจกเมื่อเกิดการแตกร้าว&nbsp;ลดการกระจายตัวของเศษกระจก&nbsp;และช่วยลดความเสี่ยงต่อการบาดเจ็บของผู้ใช้งานภายในอาคาร</p><p>☀️&nbsp;<strong>ช่วยลดความร้อนจากแสงแดด</strong></p><p>ช่วยลดความร้อนสะสมบริเวณกระจก&nbsp;ทำให้พื้นที่ภายในอาคารเย็นสบายขึ้น&nbsp;และช่วยลดภาระการทำงานของเครื่องปรับอากาศ</p><p>👁️&nbsp;<strong>มองออกชัด&nbsp;ไม่ทำให้อาคารดูทึบ</strong></p><p>เหมาะกับอาคารที่ต้องการคงความโปร่ง&nbsp;ความสว่าง&nbsp;และวิวภายนอก&nbsp;โดยไม่ต้องการฟิล์มที่มีโทนเข้มมาก</p><p>🏢&nbsp;<strong>ภาพลักษณ์พรีเมียมสำหรับอาคาร</strong></p><p>ช่วยให้กระจกอาคารดูเรียบ&nbsp;สะอาด&nbsp;และทันสมัย&nbsp;เหมาะกับอาคารสำนักงาน&nbsp;โรงแรม&nbsp;โชว์รูม&nbsp;คอนโด&nbsp;และพื้นที่ที่ต้องการความหรูหราแบบมืออาชีพ</p><p>🌿&nbsp;<strong>ช่วยลดรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายในอาคาร</p><p>🔐&nbsp;<strong>เสริมการป้องกันเชิงอาคาร</strong></p><p>ช่วยเพิ่มชั้นป้องกันให้กระจก&nbsp;ลดความเสี่ยงจากแรงกระแทก&nbsp;อุบัติเหตุ&nbsp;และช่วยชะลอการบุกรุกจากภายนอกได้ในระดับหนึ่ง</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;สำนักงานใหญ่</li><li>ห้องผู้บริหาร&nbsp;/&nbsp;ห้องประชุม</li><li>โรงแรม&nbsp;/&nbsp;รีสอร์ต&nbsp;/&nbsp;โครงการพรีเมียม</li><li>คอนโดมิเนียม&nbsp;/&nbsp;พื้นที่ส่วนกลาง</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;ศูนย์สุขภาพ</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;พื้นที่ต้อนรับลูกค้า</li><li>อาคารราชการ&nbsp;/&nbsp;หน่วยงานที่ต้องการความปลอดภัย</li><li>อาคารที่ต้องการฟิล์มนิรภัย&nbsp;แต่ไม่ต้องการให้กระจกมืดเกินไป</li></ul><p></p><p><strong>3M&nbsp;Ultra&nbsp;Prestige&nbsp;Series&nbsp;เหมาะสำหรับอาคารที่ต้องการฟิล์มนิรภัยแบบพรีเมียม&nbsp;ช่วยลดร้อน&nbsp;เพิ่มความปลอดภัย&nbsp;และยังคงความใสสว่างของกระจก</strong>&nbsp;เหมาะกับพื้นที่ที่ต้องการทั้งประสิทธิภาพ&nbsp;ความปลอดภัย&nbsp;และภาพลักษณ์ที่ดูดี&nbsp;เช่น&nbsp;อาคารสำนักงาน&nbsp;โรงแรม&nbsp;โชว์รูม&nbsp;คอนโด&nbsp;โรงพยาบาล&nbsp;และอาคารโครงการระดับพรีเมียม</p><h3></h3><h3>หมายเหตุ</h3><p>Ultra&nbsp;Prestige&nbsp;Series&nbsp;เหมาะสำหรับลูกค้าที่ต้องการความสมดุลระหว่างความปลอดภัย&nbsp;การลดความร้อน&nbsp;และทัศนวิสัยที่ชัดเจน&nbsp;หากต้องการฟิล์มโทนเข้มและเพิ่มความเป็นส่วนตัวมากขึ้น&nbsp;แนะนำพิจารณากลุ่ม&nbsp;Ultra&nbsp;Night&nbsp;Vision&nbsp;Series&nbsp;เพิ่มเติม</p>"
     },
     {
       "id": "unv",
       "groupId": "g2",
       "title": "Ultra Night Vision Series",
-      "desc": "ฟิล์มนิรภัยผสานฟิล์มกรองแสง ลดแสงจ้า ทัศนวิสัยชัดเจนยามค่ำคืน",
-      "referenceFile": ""
+      "desc": "ฟิล์มนิรภัยลดร้อน สีเข้ม สำหรับอาคารที่ต้องการทั้งความปลอดภัยและความเป็นส่วนตัว",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มนิรภัยลดร้อน&nbsp;สีเข้ม&nbsp;สำหรับอาคารที่ต้องการทั้งความปลอดภัยและความเป็นส่วนตัว</strong></p><p>3M&nbsp;Ultra&nbsp;Night&nbsp;Vision&nbsp;Series&nbsp;เป็นฟิล์มสำหรับกระจกอาคารที่ผสานคุณสมบัติของฟิล์มกรองแสงและฟิล์มนิรภัยไว้ในรุ่นเดียว&nbsp;ช่วยลดความร้อน&nbsp;ลดแสงจ้า&nbsp;เพิ่มความเป็นส่วนตัว&nbsp;และช่วยยึดเกาะเศษกระจกเมื่อเกิดการแตกร้าว&nbsp;เหมาะสำหรับอาคารที่ต้องการเพิ่มความปลอดภัย&nbsp;พร้อมควบคุมแสงแดดและภาพลักษณ์ของอาคารให้ดูเรียบหรูมากขึ้น</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>🛡️&nbsp;<strong>เพิ่มความปลอดภัยให้กระจก</strong></p><p>ช่วยยึดเศษกระจกเมื่อเกิดการแตกร้าว&nbsp;ลดการแตกกระจายของเศษกระจก&nbsp;และช่วยลดความเสี่ยงต่อการบาดเจ็บของผู้ใช้งานภายในอาคาร</p><p>☀️&nbsp;<strong>ลดความร้อนจากแสงแดด</strong></p><p>ช่วยลดความร้อนสะสมบริเวณกระจก&nbsp;ทำให้พื้นที่ภายในอาคารใช้งานได้สบายขึ้น&nbsp;และช่วยลดภาระการทำงานของเครื่องปรับอากาศ</p><p>👁️&nbsp;<strong>ลดแสงจ้าได้ดี</strong></p><p>เหมาะกับพื้นที่ที่มีแดดแรง&nbsp;หรือมีแสงสะท้อนรบกวนสายตา&nbsp;เช่น&nbsp;ห้องทำงาน&nbsp;ห้องประชุม&nbsp;ห้องเรียน&nbsp;และพื้นที่กระจกด้านทิศตะวันตก</p><p>🌙&nbsp;<strong>เพิ่มความเป็นส่วนตัว</strong></p><p>โทนฟิล์มเข้มช่วยลดการมองเห็นจากภายนอกในช่วงกลางวัน&nbsp;เหมาะกับอาคารที่ต้องการความเป็นส่วนตัวมากกว่าฟิล์มใสทั่วไป</p><p>🏢&nbsp;<strong>เสริมภาพลักษณ์อาคารให้ดูเข้ม&nbsp;เรียบ&nbsp;และพรีเมียม</strong></p><p>ช่วยให้กระจกอาคารดูทันสมัยขึ้น&nbsp;เหมาะกับสำนักงาน&nbsp;โชว์รูม&nbsp;อาคารพาณิชย์&nbsp;และพื้นที่ที่ต้องการลุคมืออาชีพ</p><p>🌿&nbsp;<strong>ช่วยลดรังสี&nbsp;UV</strong></p><p>ช่วยลดผลกระทบจากรังสีอัลตราไวโอเลต&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายในอาคาร</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>ห้องประชุม&nbsp;/&nbsp;ห้องผู้บริหาร</li><li>โรงเรียน&nbsp;/&nbsp;ห้องเรียน&nbsp;/&nbsp;อาคารกิจกรรม</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;พื้นที่พักคอย</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;หน้าร้านกระจก</li><li>คอนโดมิเนียม&nbsp;/&nbsp;พื้นที่ส่วนกลาง</li><li>อาคารราชการ&nbsp;/&nbsp;อาคารที่ต้องการมาตรฐานความปลอดภัย</li><li>พื้นที่กระจกที่โดนแดดแรงและต้องการลดแสงจ้า</li></ul><p></p><p><strong>3M&nbsp;Ultra&nbsp;Night&nbsp;Vision&nbsp;Series&nbsp;เหมาะสำหรับอาคารที่ต้องการฟิล์มแบบครบเครื่อง&nbsp;ทั้งลดร้อน&nbsp;ลดแสงจ้า&nbsp;เพิ่มความเป็นส่วนตัว&nbsp;และเพิ่มความปลอดภัยให้กระจก</strong>&nbsp;โดยเฉพาะพื้นที่ที่โดนแดดแรง&nbsp;มีผู้ใช้งานจำนวนมาก&nbsp;หรือต้องการภาพลักษณ์กระจกอาคารที่เข้ม&nbsp;เรียบ&nbsp;และดูพรีเมียม</p><h3></h3><h3>หมายเหตุ</h3><p>ฟิล์มรุ่นนี้มีโทนเข้ม&nbsp;จึงเหมาะกับพื้นที่ที่ต้องการลดแสงและเพิ่มความเป็นส่วนตัว&nbsp;หากต้องการคงความสว่างของกระจกมากกว่า&nbsp;แนะนำพิจารณากลุ่ม&nbsp;Ultra&nbsp;Prestige&nbsp;Series&nbsp;หรือ&nbsp;Safety&nbsp;Series&nbsp;เพิ่มเติม</p>"
     },
     {
       "id": "usafety",
       "groupId": "g2",
       "title": "Ultra Safety Series",
-      "desc": "ฟิล์มนิรภัยใสพิเศษ โครงสร้าง Micro-Layered เหนียวและยืดหยุ่นสูง",
-      "referenceFile": ""
+      "desc": "ฟิล์มนิรภัยใสระดับสูงสำหรับอาคาร เพิ่มความแข็งแรงให้กระจก โดยไม่เปลี่ยนภาพลักษณ์เดิม",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มนิรภัยใสระดับสูงสำหรับอาคาร&nbsp;เพิ่มความแข็งแรงให้กระจก&nbsp;โดยไม่เปลี่ยนภาพลักษณ์เดิม</strong></p><p>3M&nbsp;Ultra&nbsp;Safety&nbsp;Series&nbsp;เป็นฟิล์มนิรภัยอาคารระดับสูง&nbsp;สำหรับติดตั้งบนกระจกเพื่อช่วยเพิ่มการยึดเกาะของกระจก&nbsp;ลดการแตกกระจายของเศษกระจก&nbsp;และช่วยลดความเสี่ยงจากอุบัติเหตุหรือแรงกระแทก&nbsp;เหมาะสำหรับอาคารที่ต้องการมาตรฐานความปลอดภัยสูง&nbsp;โดยยังคงความใส&nbsp;ความสว่าง&nbsp;และทัศนวิสัยเดิมของกระจกไว้ได้ดี</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>🛡️&nbsp;<strong>เสริมความปลอดภัยให้กระจกระดับสูง</strong></p><p>ช่วยยึดเศษกระจกเมื่อเกิดการแตกร้าว&nbsp;ลดการกระจายตัวของเศษกระจก&nbsp;และช่วยลดความเสี่ยงต่อการบาดเจ็บของผู้ใช้งานภายในอาคาร</p><p>🏢&nbsp;<strong>เหมาะกับอาคารที่ต้องการมาตรฐานความปลอดภัยสูง</strong></p><p>เหมาะสำหรับอาคารสำนักงาน&nbsp;โรงเรียน&nbsp;โรงพยาบาล&nbsp;อาคารราชการ&nbsp;อาคารสาธารณะ&nbsp;โชว์รูม&nbsp;และพื้นที่ที่มีผู้ใช้งานจำนวนมาก</p><p>🔐&nbsp;<strong>ช่วยชะลอการบุกรุกจากภายนอก</strong></p><p>เพิ่มชั้นป้องกันให้กระจก&nbsp;ช่วยถ่วงเวลาและลดความเสี่ยงจากการทุบกระจกเพื่อบุกรุกหรือโจรกรรม</p><p>👁️&nbsp;<strong>ฟิล์มใส&nbsp;ไม่ทำให้พื้นที่มืด</strong></p><p>เป็นฟิล์มนิรภัยโทนใส&nbsp;เหมาะกับอาคารที่ต้องการคงความโปร่ง&nbsp;โล่ง&nbsp;สว่าง&nbsp;และรักษาภาพลักษณ์เดิมของกระจก</p><p>🌿&nbsp;<strong>ช่วยลดรังสี&nbsp;UV</strong></p><p>ช่วยป้องกันรังสีอัลตราไวโอเลต&nbsp;ลดผลกระทบต่อเฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;พื้น&nbsp;และวัสดุตกแต่งภายในอาคาร</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;อาคารสำนักงานใหญ่</li><li>โรงเรียน&nbsp;/&nbsp;มหาวิทยาลัย&nbsp;/&nbsp;สถาบันการศึกษา</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;ศูนย์สุขภาพ</li><li>อาคารราชการ&nbsp;/&nbsp;หน่วยงานรัฐ</li><li>ธนาคาร&nbsp;/&nbsp;สถาบันการเงิน</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้าหน้ากระจก</li><li>คอนโดมิเนียม&nbsp;/&nbsp;พื้นที่ส่วนกลาง</li><li>โรงงาน&nbsp;/&nbsp;อาคารอุตสาหกรรม</li><li>อาคารที่ต้องการลดความเสี่ยงจากกระจกแตกกระจาย</li></ul><p></p><p><strong>3M&nbsp;Ultra&nbsp;Safety&nbsp;Series&nbsp;เหมาะสำหรับอาคารที่ต้องการเพิ่มความปลอดภัยของกระจกในระดับสูง&nbsp;โดยยังคงความใส&nbsp;ความสว่าง&nbsp;และภาพลักษณ์เดิมของอาคาร</strong>&nbsp;เหมาะอย่างยิ่งสำหรับอาคารที่มีผู้ใช้งานจำนวนมาก&nbsp;หรือพื้นที่ที่ต้องการลดความเสี่ยงจากกระจกแตก&nbsp;เช่น&nbsp;สำนักงาน&nbsp;โรงเรียน&nbsp;โรงพยาบาล&nbsp;อาคารราชการ&nbsp;โชว์รูม&nbsp;ธนาคาร&nbsp;และพื้นที่สาธารณะ</p><h3></h3><h3>หมายเหตุ</h3><p>Ultra&nbsp;Safety&nbsp;Series&nbsp;เป็นฟิล์มนิรภัยใส&nbsp;จุดเด่นหลักคือความปลอดภัยของกระจก&nbsp;ไม่ใช่ฟิล์มลดความร้อนสูง&nbsp;หากต้องการทั้งความปลอดภัยและการลดความร้อน&nbsp;แนะนำพิจารณากลุ่ม&nbsp;Ultra&nbsp;Prestige&nbsp;Series&nbsp;หรือ&nbsp;Ultra&nbsp;Night&nbsp;Vision&nbsp;Series&nbsp;เพิ่มเติม</p>"
     },
     {
       "id": "safety",
       "groupId": "g2",
       "title": "Safety Series",
-      "desc": "ฟิล์มนิรภัยใสมาตรฐาน ป้องกันกระจกแตกกระจาย",
-      "referenceFile": ""
+      "desc": "ฟิล์มนิรภัยอาคารแบบใส เพิ่มความปลอดภัยให้กระจก โดยยังคงความสว่างของพื้นที่",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มนิรภัยอาคารแบบใส&nbsp;เพิ่มความปลอดภัยให้กระจก&nbsp;โดยยังคงความสว่างของพื้นที่</strong></p><p>3M&nbsp;Safety&nbsp;Series&nbsp;เป็นฟิล์มนิรภัยสำหรับติดตั้งบนกระจกอาคาร&nbsp;ช่วยเพิ่มการยึดเกาะของกระจกเมื่อเกิดการแตกร้าว&nbsp;ลดการกระจายตัวของเศษกระจก&nbsp;และช่วยลดความเสี่ยงจากอุบัติเหตุภายในอาคาร&nbsp;เหมาะสำหรับพื้นที่ที่ต้องการเสริมความปลอดภัย&nbsp;โดยไม่ต้องการเปลี่ยนสีหรือภาพลักษณ์ของกระจกมากเกินไป</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>🛡️&nbsp;<strong>ช่วยยึดเศษกระจกเมื่อเกิดการแตกร้าว</strong></p><p>เมื่อกระจกแตก&nbsp;ฟิล์มจะช่วยยึดเศษกระจกไว้&nbsp;ลดโอกาสการกระจายตัวของเศษกระจก&nbsp;และช่วยลดความเสี่ยงต่อการบาดเจ็บ</p><p>🏢&nbsp;<strong>เหมาะสำหรับอาคารที่มีผู้ใช้งานจำนวนมาก</strong></p><p>เหมาะกับอาคารสำนักงาน&nbsp;โรงเรียน&nbsp;โรงพยาบาล&nbsp;อาคารราชการ&nbsp;คอนโด&nbsp;โชว์รูม&nbsp;และพื้นที่สาธารณะที่ต้องให้ความสำคัญกับความปลอดภัย</p><p>☀️&nbsp;<strong>คงความสว่างของกระจกเดิม</strong></p><p>เป็นฟิล์มนิรภัยโทนใส&nbsp;แสงผ่านได้สูง&nbsp;เหมาะกับอาคารที่ต้องการรักษาทัศนวิสัย&nbsp;ความโปร่ง&nbsp;และภาพลักษณ์เดิมของกระจก</p><p>🌿&nbsp;<strong>ช่วยลดรังสี&nbsp;UV</strong></p><p>ช่วยป้องกันรังสีอัลตราไวโอเลต&nbsp;ลดผลกระทบต่อวัสดุตกแต่ง&nbsp;เฟอร์นิเจอร์&nbsp;ผ้าม่าน&nbsp;และพื้นผิวภายในอาคาร</p><p>🔐&nbsp;<strong>เสริมความปลอดภัยเชิงอาคาร</strong></p><p>ช่วยเพิ่มชั้นป้องกันให้กระจก&nbsp;ลดความเสี่ยงจากแรงกระแทก&nbsp;อุบัติเหตุ&nbsp;กระจกแตกเอง&nbsp;และช่วยชะลอการบุกรุกจากภายนอกได้ในระดับหนึ่ง</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>โรงเรียน&nbsp;/&nbsp;มหาวิทยาลัย&nbsp;/&nbsp;สถาบันการศึกษา</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;ศูนย์สุขภาพ</li><li>อาคารราชการ&nbsp;/&nbsp;รัฐวิสาหกิจ</li><li>คอนโดมิเนียม&nbsp;/&nbsp;อาคารพักอาศัย</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;หน้าร้านกระจก</li><li>โรงงาน&nbsp;/&nbsp;อาคารอุตสาหกรรม</li><li>พื้นที่ส่วนกลางที่มีผู้ใช้งานจำนวนมาก</li></ul><p></p><p><strong>3M&nbsp;Safety&nbsp;Series&nbsp;เหมาะสำหรับอาคารที่ต้องการเพิ่มความปลอดภัยให้กระจก&nbsp;โดยยังคงความใส&nbsp;ความสว่าง&nbsp;และภาพลักษณ์เดิมของอาคาร</strong>&nbsp;เหมาะกับพื้นที่ที่มีคนใช้งานจำนวนมาก&nbsp;หรือพื้นที่ที่ต้องการลดความเสี่ยงจากกระจกแตกกระจาย&nbsp;เช่น&nbsp;อาคารสำนักงาน&nbsp;โรงเรียน&nbsp;โรงพยาบาล&nbsp;อาคารราชการ&nbsp;คอนโด&nbsp;โชว์รูม&nbsp;และโรงงาน</p><h3></h3><h3>หมายเหตุ</h3><p>Safety&nbsp;Series&nbsp;เป็นฟิล์มนิรภัยโทนใส&nbsp;จุดเด่นหลักคือการเพิ่มความปลอดภัยของกระจก&nbsp;ไม่ใช่ฟิล์มลดความร้อนสูง&nbsp;หากต้องการทั้งลดร้อนและเพิ่มความปลอดภัย&nbsp;แนะนำพิจารณากลุ่ม&nbsp;Solar&nbsp;&amp;&nbsp;Safety&nbsp;Series&nbsp;หรือ&nbsp;Ultra&nbsp;Series&nbsp;เพิ่มเติม</p>"
     },
     {
       "id": "sas",
       "groupId": "g2",
       "title": "Solar & Safety Series",
-      "desc": "ฟิล์มนิรภัยผสานฟิล์มกรองแสง ลดความร้อนและปกป้องจากอุบัติเหตุ",
-      "referenceFile": ""
+      "desc": "ฟิล์มกรองแสงอาคารที่รวม “การลดร้อน” และ “ความปลอดภัยของกระจก” ไว้ในรุ่นเดียว",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มกรองแสงอาคารที่รวม&nbsp;“การลดร้อน”&nbsp;และ&nbsp;“ความปลอดภัยของกระจก”&nbsp;ไว้ในรุ่นเดียว</strong></p><p>3M&nbsp;Solar&nbsp;&amp;&nbsp;Safety&nbsp;Series&nbsp;เป็นฟิล์มสำหรับงานอาคารที่ช่วยลดความร้อนจากแสงแดด&nbsp;ลดแสงจ้า&nbsp;เพิ่มความเป็นส่วนตัว&nbsp;และช่วยยึดเกาะเศษกระจกเมื่อเกิดการแตกร้าว&nbsp;เหมาะสำหรับอาคารที่ต้องการทั้งความสบายภายในพื้นที่และมาตรฐานความปลอดภัยที่มากกว่าฟิล์มกรองแสงทั่วไป</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>☀️&nbsp;<strong>ลดความร้อนจากแสงแดด</strong></p><p>ช่วยลดความร้อนสะสมภายในอาคาร&nbsp;ทำให้พื้นที่ใช้งานเย็นสบายขึ้น&nbsp;และช่วยลดภาระการทำงานของเครื่องปรับอากาศ</p><p>🛡️&nbsp;<strong>เพิ่มความปลอดภัยให้กระจก</strong></p><p>ฟิล์มมีความหนา&nbsp;4&nbsp;Mil&nbsp;ช่วยเสริมการยึดเกาะของกระจก&nbsp;เมื่อกระจกแตก&nbsp;ฟิล์มจะช่วยยึดเศษกระจกไว้&nbsp;ลดการกระจายตัวของเศษกระจก</p><p>👁️&nbsp;<strong>ลดแสงจ้า&nbsp;เพิ่มความสบายตา</strong></p><p>ช่วยลดแสงสะท้อนและแสงจ้าที่รบกวนการทำงาน&nbsp;เหมาะกับพื้นที่สำนักงาน&nbsp;ห้องประชุม&nbsp;ห้องเรียน&nbsp;และพื้นที่ที่มีแสงแดดส่องโดยตรง</p><p>🏢&nbsp;<strong>เพิ่มความเป็นส่วนตัวให้อาคาร</strong></p><p>มีหลายระดับความเข้มให้เลือก&nbsp;ตั้งแต่รุ่นเข้มมากเพื่อความเป็นส่วนตัว&nbsp;ไปจนถึงรุ่นใสที่ยังคงทัศนวิสัยเดิมของกระจก</p><p>🌿&nbsp;<strong>ช่วยถนอมวัสดุภายในอาคาร</strong></p><p>ช่วยลดรังสี&nbsp;UV&nbsp;ซึ่งเป็นหนึ่งในสาเหตุของการซีดจางของเฟอร์นิเจอร์&nbsp;พื้น&nbsp;ผ้าม่าน&nbsp;และวัสดุตกแต่งภายใน</p><h3></h3><h3>แนะนำเหมาะกับอาคารประเภท</h3><ul><li>อาคารสำนักงาน&nbsp;/&nbsp;ออฟฟิศ</li><li>โรงเรียน&nbsp;/&nbsp;สถาบันการศึกษา</li><li>โรงพยาบาล&nbsp;/&nbsp;คลินิก</li><li>อาคารราชการ&nbsp;/&nbsp;รัฐวิสาหกิจ</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;หน้าร้านกระจก</li><li>คอนโดมิเนียม&nbsp;/&nbsp;พื้นที่ส่วนกลาง</li><li>โรงงาน&nbsp;/&nbsp;อาคารที่ต้องการเพิ่มความปลอดภัยของกระจก</li></ul><p></p><p><strong>3M&nbsp;Solar&nbsp;&amp;&nbsp;Safety&nbsp;Series&nbsp;เหมาะสำหรับอาคารที่ต้องการลดร้อน&nbsp;ลดแสงจ้า&nbsp;เพิ่มความเป็นส่วนตัว&nbsp;และเพิ่มความปลอดภัยให้กระจกในเวลาเดียวกัน</strong>&nbsp;โดยเฉพาะพื้นที่ที่มีคนใช้งานจำนวนมาก&nbsp;หรือต้องการลดความเสี่ยงจากกระจกแตกกระจาย&nbsp;เช่น&nbsp;อาคารสำนักงาน&nbsp;โรงเรียน&nbsp;โรงพยาบาล&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;และอาคารโครงการต่าง&nbsp;ๆ</p><h3></h3><h3>หมายเหตุ</h3><p>ค่าทางเทคนิคอาจแตกต่างตามชนิดกระจก&nbsp;สภาพพื้นที่&nbsp;ทิศทางแดด&nbsp;และรูปแบบการติดตั้ง&nbsp;แนะนำให้สำรวจหน้างานและประเมินชนิดกระจกก่อนเลือกฟิล์ม&nbsp;เพื่อให้ได้รุ่นที่เหมาะสมกับอาคารมากที่สุด</p>"
     },
     {
       "id": "7725",
       "groupId": "g3",
       "title": "3M Scotchcal 7725 Series",
       "desc": "ฟิล์มไวนิลฝ้าเกรดพรีเมียม (Dusted/Frosted Crystal) อายุการใช้งานภายใน 10 ปี ภายนอก 3-5 ปี",
-      "referenceFile": ""
+      "referenceFile": "",
+      "longDesc": "<p>ฟิล์มคุณภาพสูงสำหรับงานตัดสติกเกอร์&nbsp;(Plotter&nbsp;Film)&nbsp;ที่มีความทนทานและให้สีสันที่แม่นยำ&nbsp;ออกแบบมาเพื่อการใช้งานกราฟิกที่ต้องการคุณภาพสูงสุด&nbsp;เหมาะสำหรับงานป้ายโฆษณา&nbsp;งานกราฟิกติดกระจก&nbsp;หรือพื้นผิวเรียบที่มีความละเอียดสูง</p><p><strong>ความทนทานสูง:&nbsp;</strong>ทนต่อสภาพอากาศและแรงดึงได้ดีเยี่ยม</p><p><strong>สีสันคมชัด:&nbsp;</strong>ให้ความเงางามและสม่ำเสมอของเนื้อสีตลอดอายุการใช้งาน</p><p><strong>การใช้งานตัด:</strong>&nbsp;เหมาะสำหรับการตัดด้วยเครื่องพล็อตเตอร์&nbsp;(Plotter)&nbsp;ช่วยให้เก็บรายละเอียดงานดีไซน์ที่ซับซ้อนได้อย่างแม่นยำ</p><h2>อายุการใช้งาน&nbsp;/&nbsp;การรับประกัน</h2><p><strong>Scotchcal™&nbsp;7725SE&nbsp;รับประกัน&nbsp;10&nbsp;ปี&nbsp;สำหรับการติดตั้งภายในอาคาร&nbsp;และ&nbsp;3–5&nbsp;ปี&nbsp;สำหรับติดตั้งภายนอกอาคาร</strong></p><h3><strong>แนะนำเหมาะกับ</strong></h3><p><strong>อาคารสำนักงาน&nbsp;/&nbsp;ห้องประชุม&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;โรงแรม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;โชว์รูม&nbsp;/&nbsp;กระจกกั้นห้อง&nbsp;/&nbsp;ประตูบานเลื่อน&nbsp;/&nbsp;พื้นที่ที่ต้องการความเป็นส่วนตัวแต่ยังดูพรีเมียม</strong></p><p></p><blockquote>*หมายเหตุสำคัญ:&nbsp;อายุการใช้งานจริงขึ้นอยู่กับหน้างาน&nbsp;ทิศแดด&nbsp;สภาพกระจก&nbsp;วิธีติดตั้ง&nbsp;การทำความสะอาด&nbsp;และสภาพแวดล้อม</blockquote>",
+      "headers": {
+        "shgc": "รุ่น",
+        "vlt": "ลักษณะฟิล์ม",
+        "vlr": "แนะนำ",
+        "uv": "การรับประกัน",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "หนา"
+      }
     },
     {
       "id": "5525",
       "groupId": "g3",
       "title": "3M Scotchcal 5525 Series",
       "desc": "ฟิล์มไวนิลฝ้า (Haze/Sandblast) อายุการใช้งานภายใน 5 ปี ภายนอก 2-3 ปี",
+      "referenceFile": "",
+      "longDesc": "<p><strong>ฟิล์มฝ้าตกแต่งกระจก&nbsp;/&nbsp;ฟิล์มลายฝ้า&nbsp;สำหรับงานกราฟิกบนกระจก</strong></p><p><strong>3M&nbsp;Scotchcal™&nbsp;5525</strong>&nbsp;เป็นฟิล์มตกแต่งกระจกที่ให้ลุคคล้ายกระจกพ่นทรายหรือกระจกกัดลาย&nbsp;ช่วยเพิ่มความเป็นส่วนตัว&nbsp;แต่ยังให้แสงธรรมชาติผ่านได้&nbsp;เหมาะกับงานกระจกสำนักงาน&nbsp;ห้องประชุม&nbsp;ร้านค้า&nbsp;โชว์รูม&nbsp;คลินิก&nbsp;และงานตกแต่งที่ต้องการความเรียบหรูแบบมืออาชีพ&nbsp;รุ่นนี้ใช้สำหรับสร้างดีไซน์บนกระจก&nbsp;งานกราฟิกกระจก&nbsp;และพื้นผิวเรียบใส&nbsp;ทั้งงานภายในและภายนอกอาคารได้&nbsp;</p><h3><strong>คุณสมบัติเด่น</strong></h3><ul><li><strong>พรางสายตาได้ดี</strong>&nbsp;เพิ่ม&nbsp;Privacy&nbsp;โดยไม่ทำให้พื้นที่ทึบ</li><li><strong>แสงธรรมชาติยังผ่านได้</strong>&nbsp;ห้องดูโปร่ง&nbsp;สว่าง&nbsp;ไม่อึดอัด</li><li><strong>ลุคกระจกพ่นทราย&nbsp;/&nbsp;กระจกกัดลาย</strong>&nbsp;ดูเรียบหรูและสะอาดตา</li><li><strong>เหมาะกับงานตัดโลโก้&nbsp;/&nbsp;ลายกราฟิก&nbsp;/&nbsp;ลายเส้นบนกระจก</strong>&nbsp;เพราะมีไลเนอร์ใส&nbsp;ช่วยให้งานตัดรูปทรง&nbsp;โลโก้&nbsp;และงานพิมพ์ทำได้ง่ายขึ้น&nbsp;</li><li><strong>ผลิตจากโพลีเอสเตอร์ที่ยืดหยุ่นและทนทาน</strong>&nbsp;พร้อมกาวแบบ&nbsp;Pressure-Sensitive&nbsp;Adhesive&nbsp;สำหรับยึดติดบนพื้นผิวกระจก&nbsp;</li></ul><h3><strong>แนะนำเหมาะกับ</strong></h3><p>ออฟฟิศ&nbsp;/&nbsp;ห้องประชุม&nbsp;/&nbsp;กระจกกั้นห้อง&nbsp;/&nbsp;ประตูบานเลื่อน&nbsp;/&nbsp;คลินิก&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;โชว์รูม&nbsp;/&nbsp;งานโลโก้บนกระจก&nbsp;/&nbsp;งานตกแต่งกระจกที่ต้องการความเป็นส่วนตัวและดีไซน์แบรนด์</p><h3><strong>ข้อความสรุป</strong></h3><blockquote><strong>3M&nbsp;Scotchcal™&nbsp;5525&nbsp;Series</strong>&nbsp;ฟิล์มฝ้าตกแต่งกระจกสำหรับงานดีไซน์และงานกราฟิก&nbsp;ช่วยเพิ่มความเป็นส่วนตัวโดยยังคงแสงธรรมชาติ&nbsp;ให้ลุคกระจกพ่นทรายหรือกระจกกัดลาย&nbsp;เหมาะกับออฟฟิศ&nbsp;ห้องประชุม&nbsp;ร้านค้า&nbsp;โชว์รูม&nbsp;และพื้นที่เชิงพาณิชย์ที่ต้องการภาพลักษณ์เรียบหรูระดับมืออาชีพ</blockquote><p></p><p>*หมายเหตุสำคัญ:&nbsp;อายุการใช้งานจริงขึ้นอยู่กับหน้างาน&nbsp;ทิศแดด&nbsp;สภาพกระจก&nbsp;วิธีติดตั้ง&nbsp;การทำความสะอาด&nbsp;และสภาพแวดล้อม</p>",
+      "headers": {
+        "shgc": "รุ่น",
+        "vlt": "ลักษณะฟิล์ม",
+        "vlr": "แนะนำ",
+        "uv": "การรับประกัน",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "หนา"
+      }
+    },
+    {
+      "title": "PWF-500",
+      "desc": "ฟิล์มไวท์บอร์ดสำหรับฉายโปรเจกเตอร์ เปลี่ยนผนังภายในให้เป็นพื้นที่เขียนไอเดียและนำเสนอผลงานได้ในตัวเดียว พื้นผิวด้านช่วยลดแสงสะท้อน เหมาะกับห้องประชุม ออฟฟิศ โรงเรียน ห้องเรียน และพื้นที่ทำงานร่วมกัน",
+      "longDesc": "<p><strong>PWF-500</strong>&nbsp;คือ&nbsp;<strong>3M™&nbsp;DI-NOC™&nbsp;Projection&nbsp;Screen&nbsp;Whiteboard&nbsp;Film</strong>&nbsp;ฟิล์มตกแต่งภายในที่ทำหน้าที่ได้ทั้ง&nbsp;<strong>ไวท์บอร์ดเขียน–ลบได้</strong>&nbsp;และ&nbsp;<strong>พื้นผิวสำหรับฉายโปรเจกเตอร์</strong>&nbsp;เหมาะกับพื้นที่ทำงาน&nbsp;ห้องประชุม&nbsp;ห้องเรียน&nbsp;และพื้นที่&nbsp;Collaboration&nbsp;ที่ต้องการใช้ผนังให้เกิดประโยชน์สูงสุด&nbsp;✨</p><p>&nbsp;รุ่นนี้เป็นเวอร์ชันพื้นผิวด้าน&nbsp;ช่วยลดแสงสะท้อนจากโปรเจกเตอร์&nbsp;และใช้กาว&nbsp;Pressure-sensitive&nbsp;สำหรับติดตั้งบนพื้นผิวภายในหลายประเภท&nbsp;</p><h3>ข้อความสำหรับใส่หน้า&nbsp;App&nbsp;/&nbsp;Website</h3><p><strong>3M™&nbsp;DI-NOC™&nbsp;PWF-500</strong></p><p>&nbsp;ฟิล์มไวท์บอร์ดสำหรับฉายโปรเจกเตอร์&nbsp;เปลี่ยนผนังภายในให้เป็นพื้นที่เขียนไอเดียและนำเสนอผลงานได้ในตัวเดียว&nbsp;พื้นผิวด้านช่วยลดแสงสะท้อน&nbsp;เหมาะกับห้องประชุม&nbsp;ออฟฟิศ&nbsp;โรงเรียน&nbsp;ห้องเรียน&nbsp;และพื้นที่ทำงานร่วมกัน</p><p><strong>คุณสมบัติเด่น</strong></p><p>&nbsp;🖊️&nbsp;<strong>เขียน–ลบได้</strong>&nbsp;ใช้งานเป็นไวท์บอร์ดสำหรับพื้นที่ประชุมและ&nbsp;Brainstorm</p><p>&nbsp;🎥&nbsp;<strong>รองรับการฉายโปรเจกเตอร์</strong>&nbsp;พื้นผิวด้านช่วยลดแสงสะท้อน</p><p>&nbsp;🏢&nbsp;<strong>เหมาะกับงานภายใน</strong>&nbsp;เช่น&nbsp;ผนังเรียบ&nbsp;แผ่นโลหะ&nbsp;หรือพื้นผิวแข็งเรียบ</p><p>&nbsp;⚡&nbsp;<strong>ติดตั้งง่าย</strong>&nbsp;ด้วยเทคโนโลยีกาว&nbsp;3M™&nbsp;Comply™&nbsp;ช่วยลดฟองอากาศ</p><p>&nbsp;📐&nbsp;<strong>ขนาดม้วน</strong>&nbsp;ประมาณ&nbsp;1220&nbsp;มม.&nbsp;x&nbsp;30&nbsp;ม.&nbsp;ตามข้อมูลทางเทคนิคของ&nbsp;3M&nbsp;</p><p><strong>แนะนำเหมาะกับ</strong></p><p>&nbsp;✅&nbsp;ห้องประชุม&nbsp;/&nbsp;Co-working&nbsp;Space</p><p>&nbsp;✅&nbsp;โรงเรียน&nbsp;/&nbsp;ห้องเรียน&nbsp;/&nbsp;Training&nbsp;Room</p><p>&nbsp;✅&nbsp;ออฟฟิศ&nbsp;/&nbsp;ห้อง&nbsp;Brainstorm</p><p>&nbsp;✅&nbsp;พื้นที่นำเสนอสินค้า&nbsp;/&nbsp;Showroom</p><p>&nbsp;✅&nbsp;ผนังภายในที่ต้องการฟังก์ชันไวท์บอร์ด&nbsp;+&nbsp;จอฉายภาพในตัว</p><p><strong>หมายเหตุสำคัญ</strong></p><p>&nbsp;PWF-500&nbsp;เหมาะสำหรับ&nbsp;<strong>งานภายในเท่านั้น</strong>&nbsp;และแนะนำติดตั้งบนพื้นผิวเรียบ&nbsp;แข็ง&nbsp;และไม่เป็นรูพรุน&nbsp;หากต้องการใช้งานบนกระจก&nbsp;3M&nbsp;ระบุให้ใช้&nbsp;<strong>3M™&nbsp;FASARA™&nbsp;Whiteboard&nbsp;Film&nbsp;WH-111-G</strong>&nbsp;แทน</p>",
+      "groupId": "g4",
+      "id": "s-1782012558390",
+      "referenceFile": ""
+    },
+    {
+      "title": "SH2FGSB",
+      "desc": "SH2FGSB คือ 3M™ FASARA™ Glass Finishes รุ่น Sabrina ฟิล์มตกแต่งกระจกแบบ ไล่ระดับ / Gradation สำหรับเพิ่มความเป็นส่วนตัวให้กระจก โดยยังคงแสงธรรมชาติและความโปร่งของพื้นที่ เหมาะกับงานกระจกภายในออฟฟิศ ห้องประชุม โรงแรม คลินิก โชว์รูม และพื้นที่เชิงพาณิชย์ที่ต้องการความเรียบหรูแบบ Soft Privacy ",
+      "longDesc": "<p><strong>SH2FGSB</strong>&nbsp;คือ&nbsp;<strong>3M™&nbsp;FASARA™&nbsp;Glass&nbsp;Finishes&nbsp;รุ่น&nbsp;Sabrina</strong>&nbsp;ฟิล์มตกแต่งกระจกแบบ&nbsp;<strong>ไล่ระดับ&nbsp;/&nbsp;Gradation</strong>&nbsp;สำหรับเพิ่มความเป็นส่วนตัวให้กระจก&nbsp;โดยยังคงแสงธรรมชาติและความโปร่งของพื้นที่&nbsp;เหมาะกับงานกระจกภายในออฟฟิศ&nbsp;ห้องประชุม&nbsp;โรงแรม&nbsp;คลินิก&nbsp;โชว์รูม&nbsp;และพื้นที่เชิงพาณิชย์ที่ต้องการความเรียบหรูแบบ&nbsp;Soft&nbsp;Privacy&nbsp;</p><p><strong>3M™&nbsp;FASARA™&nbsp;SH2FGSB&nbsp;–&nbsp;Sabrina</strong></p><p>&nbsp;ฟิล์มตกแต่งกระจกแบบไล่ระดับ&nbsp;ช่วยเพิ่มความเป็นส่วนตัวให้พื้นที่โดยไม่ทำให้ห้องดูทึบ&nbsp;เหมาะกับกระจกสำนักงาน&nbsp;ห้องประชุม&nbsp;พาร์ทิชันกระจก&nbsp;ประตูบานกระจก&nbsp;และพื้นที่ที่ต้องการแบ่งโซนให้ดูพรีเมียม&nbsp;สะอาดตา&nbsp;และมีความโปร่งสบาย</p><p><strong>คุณสมบัติเด่น</strong></p><p>&nbsp;🌫️&nbsp;<strong>ลายไล่ระดับ&nbsp;Sabrina</strong>&nbsp;เพิ่ม&nbsp;Privacy&nbsp;แบบนุ่มนวล&nbsp;ไม่แข็งทื่อ</p><p>&nbsp;🏢&nbsp;<strong>เหมาะกับกระจกภายในอาคาร</strong>&nbsp;ใช้ได้ดีกับห้องประชุม&nbsp;ออฟฟิศ&nbsp;โรงแรม&nbsp;คลินิก&nbsp;และโชว์รูม</p><p>&nbsp;☀️&nbsp;<strong>ยังคงแสงธรรมชาติ</strong>&nbsp;ช่วยให้พื้นที่ไม่มืดทึบ&nbsp;และดูโปร่งกว่าใช้ฟิล์มทึบเต็มบาน</p><p>&nbsp;🛡️&nbsp;<strong>ป้องกันรังสี&nbsp;UV&nbsp;อย่างน้อย&nbsp;99%</strong>&nbsp;ช่วยลดการซีดจางของเฟอร์นิเจอร์และวัสดุตกแต่งภายใน&nbsp;</p><p>&nbsp;🔥&nbsp;<strong>มาตรฐาน&nbsp;Class&nbsp;A&nbsp;ตาม&nbsp;ASTM&nbsp;E84</strong>&nbsp;สำหรับการใช้งานภายใน&nbsp;ตามข้อมูลเทคนิคของ&nbsp;3M&nbsp;</p><p><strong>ค่าสเปกสำคัญ</strong></p><p>&nbsp;<strong>รุ่น:</strong>&nbsp;SH2FGSB&nbsp;/&nbsp;Sabrina</p><p>&nbsp;<strong>กลุ่มลาย:</strong>&nbsp;Gradation&nbsp;/&nbsp;ฟิล์มไล่ระดับ</p><p>&nbsp;<strong>ความหนา&nbsp;Film&nbsp;+&nbsp;Adhesive:</strong>&nbsp;ประมาณ&nbsp;<strong>90&nbsp;microns</strong></p><p>&nbsp;<strong>Visible&nbsp;Light&nbsp;Transmittance:</strong>&nbsp;ประมาณ&nbsp;<strong>83%</strong></p><p>&nbsp;<strong>Shading&nbsp;Coefficient:</strong>&nbsp;ประมาณ&nbsp;<strong>0.93</strong></p><p>&nbsp;<strong>UV&nbsp;Transmittance:</strong>&nbsp;<strong>0%</strong>&nbsp;ตามตาราง&nbsp;Technical&nbsp;Data&nbsp;ของ&nbsp;3M&nbsp;</p><p><strong>แนะนำเหมาะกับ</strong></p><p>&nbsp;✅&nbsp;ห้องประชุม&nbsp;/&nbsp;Meeting&nbsp;Room</p><p>&nbsp;✅&nbsp;กระจกกั้นสำนักงาน&nbsp;/&nbsp;Office&nbsp;Partition</p><p>&nbsp;✅&nbsp;คลินิก&nbsp;/&nbsp;ห้องให้คำปรึกษา&nbsp;/&nbsp;พื้นที่บริการลูกค้า</p><p>&nbsp;✅&nbsp;โรงแรม&nbsp;/&nbsp;Lobby&nbsp;/&nbsp;Corridor&nbsp;Glass</p><p>&nbsp;✅&nbsp;ร้านค้า&nbsp;/&nbsp;โชว์รูม&nbsp;/&nbsp;Co-working&nbsp;Space</p><p><strong>หมายเหตุสำคัญ</strong></p><p>&nbsp;SH2FGSB&nbsp;เหมาะกับงานกระจกภายในที่ต้องการ&nbsp;<strong>ความเป็นส่วนตัวเฉพาะบางช่วงของบานกระจก</strong>&nbsp;ไม่ใช่ฟิล์มทึบทั้งบาน&nbsp;จึงเหมาะมากกับงานดีไซน์ที่ต้องการ&nbsp;“บังสายตาแบบมีชั้นเชิง”&nbsp;หรือพูดแบบหน้างานคือ&nbsp;<strong>บังพอดี&nbsp;ไม่บังจนห้องอึดอัด</strong></p>",
+      "groupId": "g5",
+      "id": "s-1782012590073",
+      "referenceFile": ""
+    },
+    {
+      "title": "WH-111",
+      "desc": " ฟิล์มไวท์บอร์ดผิวเงาสำหรับงานตกแต่งภายใน เปลี่ยนผนังหรือพื้นผิวเรียบให้เป็นพื้นที่เขียนไอเดีย ประชุม วางแผนงาน และลบทำความสะอาดได้ง่าย เหมาะสำหรับออฟฟิศ ห้องประชุม โรงเรียน ห้องเทรนนิ่ง และพื้นที่ทำงานร่วมกัน",
+      "longDesc": "<p><strong>WH-111</strong>&nbsp;คือ&nbsp;<strong>3M™&nbsp;DI-NOC™&nbsp;Whiteboard&nbsp;Film</strong>&nbsp;ฟิล์มตกแต่งชนิดไวท์บอร์ด&nbsp;<strong>ผิวเงา&nbsp;(Glossy)</strong>&nbsp;สำหรับเปลี่ยนผนังหรือพื้นผิวภายในให้กลายเป็นพื้นที่เขียน–ลบได้&nbsp;เหมาะกับห้องประชุม&nbsp;ออฟฟิศ&nbsp;ห้องเรียน&nbsp;Training&nbsp;Room&nbsp;และพื้นที่&nbsp;Brainstorm&nbsp;ที่ต้องการเพิ่มฟังก์ชันโดยไม่ต้องติดตั้งกระดานไวท์บอร์ดแบบเดิม&nbsp;🖊️✨&nbsp;3M&nbsp;ระบุว่า&nbsp;WH-111&nbsp;เป็นรุ่นไวท์บอร์ดแบบผิวเงา&nbsp;ส่วน&nbsp;<strong>PWF-500</strong>&nbsp;เป็นรุ่นผิวด้านสำหรับใช้งานร่วมกับโปรเจกเตอร์&nbsp;และ&nbsp;<strong>WH-111G&nbsp;/&nbsp;WH-111-G</strong>&nbsp;เป็นเวอร์ชันสำหรับงานกระจกในกลุ่ม&nbsp;FASARA™&nbsp;</p><p><strong>3M™&nbsp;DI-NOC™&nbsp;WH-111</strong></p><p>&nbsp;ฟิล์มไวท์บอร์ดผิวเงาสำหรับงานตกแต่งภายใน&nbsp;เปลี่ยนผนังหรือพื้นผิวเรียบให้เป็นพื้นที่เขียนไอเดีย&nbsp;ประชุม&nbsp;วางแผนงาน&nbsp;และลบทำความสะอาดได้ง่าย&nbsp;เหมาะสำหรับออฟฟิศ&nbsp;ห้องประชุม&nbsp;โรงเรียน&nbsp;ห้องเทรนนิ่ง&nbsp;และพื้นที่ทำงานร่วมกัน</p><p><strong>คุณสมบัติเด่น</strong></p><p>&nbsp;🖊️&nbsp;เขียน–ลบได้&nbsp;ใช้งานเป็นไวท์บอร์ดสำหรับประชุมและ&nbsp;Brainstorm</p><p>&nbsp;✨&nbsp;ผิวเงา&nbsp;ดูสะอาดพรีเมียม&nbsp;เหมาะกับพื้นที่องค์กรและห้องประชุม</p><p>&nbsp;🧽&nbsp;ทนต่อคราบและรอยขีดข่วน&nbsp;รองรับการใช้งานภายในระยะยาว</p><p>&nbsp;🏢&nbsp;ติดตั้งบนพื้นผิวเดิมได้&nbsp;ช่วยลดงานรื้อถอน&nbsp;ลดเวลาปรับปรุงพื้นที่</p><p>&nbsp;⚡&nbsp;กาว&nbsp;3M™&nbsp;Comply™&nbsp;ช่วยลดฟองอากาศ&nbsp;ทำให้งานติดตั้งเรียบเนียนขึ้น&nbsp;</p><p><strong>แนะนำเหมาะกับ</strong></p><p>&nbsp;✅&nbsp;ห้องประชุม&nbsp;/&nbsp;Boardroom</p><p>&nbsp;✅&nbsp;ออฟฟิศ&nbsp;/&nbsp;Co-working&nbsp;Space</p><p>&nbsp;✅&nbsp;ห้องเรียน&nbsp;/&nbsp;Training&nbsp;Room</p><p>&nbsp;✅&nbsp;พื้นที่&nbsp;Brainstorm&nbsp;/&nbsp;Creative&nbsp;Wall</p><p>&nbsp;✅&nbsp;ผนังภายในที่ต้องการเปลี่ยนเป็นไวท์บอร์ดขนาดใหญ่</p><p><strong>หมายเหตุสำคัญ</strong></p><p>&nbsp;ถ้าต้องการติดตั้งบน&nbsp;<strong>กระจก</strong>&nbsp;แนะนำพิจารณา&nbsp;<strong>3M™&nbsp;FASARA™&nbsp;Whiteboard&nbsp;Film&nbsp;WH-111-G</strong>&nbsp;เพราะเอกสารเทคนิคของ&nbsp;3M&nbsp;ระบุให้ใช้รุ่น&nbsp;WH-111-G&nbsp;สำหรับงานกระจกโดยเฉพาะ&nbsp;ส่วน&nbsp;WH-111&nbsp;เหมาะกับงานพื้นผิวภายในที่ต้องการไวท์บอร์ดผิวเงา</p>",
+      "groupId": "g4",
+      "id": "s-1782014724111",
+      "referenceFile": ""
+    },
+    {
+      "title": "FW-1122",
+      "desc": "FW-1122 คือ 3M™ DI-NOC™ Architectural Finishes รุ่น Fine Wood ลาย Walnut เป็นฟิล์มตกแต่งพื้นผิวลายไม้โทนกลาง ใช้สำหรับรีโนเวทงานภายใน เช่น ผนัง ประตู ตู้ เคาน์เตอร์ เฟอร์นิเจอร์ และงานบิลท์อิน โดย 3M ระบุว่าเป็นกลุ่ม Wood / Fine Wood, ใช้งาน Interior และมีโทนไม้ระดับ Medium Wood",
+      "longDesc": "<p><strong>FW-1122</strong>&nbsp;คือ&nbsp;<strong>3M™&nbsp;DI-NOC™&nbsp;Architectural&nbsp;Finishes&nbsp;รุ่น&nbsp;Fine&nbsp;Wood&nbsp;ลาย&nbsp;Walnut</strong>&nbsp;เป็นฟิล์มตกแต่งพื้นผิวลายไม้โทนกลาง&nbsp;ใช้สำหรับรีโนเวทงานภายใน&nbsp;เช่น&nbsp;ผนัง&nbsp;ประตู&nbsp;ตู้&nbsp;เคาน์เตอร์&nbsp;เฟอร์นิเจอร์&nbsp;และงานบิลท์อิน&nbsp;โดย&nbsp;3M&nbsp;ระบุว่าเป็นกลุ่ม&nbsp;<strong>Wood&nbsp;/&nbsp;Fine&nbsp;Wood</strong>,&nbsp;ใช้งาน&nbsp;<strong>Interior</strong>&nbsp;และมีโทนไม้ระดับ&nbsp;<strong>Medium&nbsp;Wood</strong>&nbsp;</p><p><strong>3M™&nbsp;DI-NOC™&nbsp;FW-1122</strong></p><p>&nbsp;ฟิล์มตกแต่งพื้นผิวลายไม้&nbsp;Walnut&nbsp;โทนอบอุ่น&nbsp;สำหรับงานตกแต่งภายในที่ต้องการบรรยากาศหรู&nbsp;สุขุม&nbsp;และเป็นธรรมชาติ&nbsp;เหมาะกับงานรีโนเวทผนัง&nbsp;ประตู&nbsp;ตู้&nbsp;เคาน์เตอร์&nbsp;เฟอร์นิเจอร์&nbsp;และพื้นที่เชิงพาณิชย์ที่ต้องการยกระดับภาพลักษณ์โดยไม่ต้องรื้อเปลี่ยนวัสดุเดิม</p><p><strong>คุณสมบัติเด่น</strong></p><p>&nbsp;🌳&nbsp;<strong>ลายไม้&nbsp;Walnut&nbsp;โทนกลาง</strong>&nbsp;ให้ความรู้สึกอบอุ่น&nbsp;พรีเมียม&nbsp;และใช้งานง่ายกับหลายสไตล์</p><p>&nbsp;🏢&nbsp;<strong>เหมาะกับงานภายใน</strong>&nbsp;เช่น&nbsp;ผนัง&nbsp;เสา&nbsp;ประตู&nbsp;ตู้&nbsp;เคาน์เตอร์&nbsp;และงานบิลท์อิน</p><p>&nbsp;⚡&nbsp;<strong>รีโนเวทได้รวดเร็ว</strong>&nbsp;ลดเวลารื้อถอน&nbsp;ลดฝุ่น&nbsp;ลดเสียง&nbsp;และลด&nbsp;Construction&nbsp;Downtime</p><p>&nbsp;🛠️&nbsp;<strong>ติดตั้งบนพื้นผิวเดิมได้</strong>&nbsp;ใช้กับพื้นผิวเรียบ&nbsp;แข็ง&nbsp;และไม่เป็นรูพรุน&nbsp;เช่น&nbsp;MDF&nbsp;เคลือบสี&nbsp;อะลูมิเนียม&nbsp;สแตนเลส&nbsp;กระจก&nbsp;และพลาสติกบางประเภท&nbsp;ตามเงื่อนไขการเตรียมผิวของ&nbsp;3M&nbsp;</p><p>&nbsp;✨&nbsp;<strong>กาว&nbsp;3M™&nbsp;Comply™</strong>&nbsp;ช่วยลดปัญหาฟองอากาศ&nbsp;ทำให้งานติดตั้งเรียบเนียนและเร็วขึ้น&nbsp;</p><p><strong>แนะนำเหมาะกับ</strong></p><p>&nbsp;✅&nbsp;ห้องประชุม&nbsp;/&nbsp;Office&nbsp;Interior</p><p>&nbsp;✅&nbsp;เคาน์เตอร์ต้อนรับ&nbsp;/&nbsp;Reception&nbsp;Counter</p><p>&nbsp;✅&nbsp;ตู้&nbsp;Built-in&nbsp;/&nbsp;Cabinet&nbsp;/&nbsp;Wardrobe</p><p>&nbsp;✅&nbsp;โรงแรม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;คาเฟ่&nbsp;/&nbsp;โชว์รูม</p><p>&nbsp;✅&nbsp;งานรีโนเวทที่ต้องการลายไม้พรีเมียม&nbsp;แต่ไม่อยากรื้อวัสดุเดิม</p><p><strong>หมายเหตุสำคัญ</strong></p><p>&nbsp;รุ่น&nbsp;FW-1122&nbsp;อยู่ในกลุ่ม&nbsp;<strong>DI-NOC™&nbsp;Architectural&nbsp;Finishes&nbsp;สำหรับงานภายใน</strong>&nbsp;โดย&nbsp;3M&nbsp;ระบุช่วงอุณหภูมิการติดตั้งที่&nbsp;<strong>12°C–38°C</strong>&nbsp;และเป็นงานติดตั้งแบบแห้ง&nbsp;ส่วนการรับประกันสำหรับงาน&nbsp;Interior&nbsp;อยู่ที่&nbsp;<strong>10&nbsp;ปี</strong>&nbsp;ตามเงื่อนไขของ&nbsp;3M</p>",
+      "groupId": "g4",
+      "id": "s-1782015515509",
+      "referenceFile": ""
+    },
+    {
+      "title": "ME-380",
+      "desc": "ฟิล์มตกแต่งพื้นผิวลายเส้นโลหะ Metallic Hairline สำหรับงานอินทีเรียที่ต้องการภาพลักษณ์เรียบหรู ทันสมัย และเป็นมืออาชีพ เหมาะกับการรีโนเวทผนัง ประตู ลิฟต์ เคาน์เตอร์ เฟอร์นิเจอร์ และพื้นที่เชิงพาณิชย์ โดยช่วยลดเวลารื้อถอน ลดฝุ่น ลดเสียง และลด Downtime หน้างาน",
+      "longDesc": "<p><strong>ME-380</strong>&nbsp;คือ&nbsp;<strong>3M™&nbsp;DI-NOC™&nbsp;Architectural&nbsp;Finishes&nbsp;รุ่น&nbsp;Metallic&nbsp;Hairline</strong>&nbsp;ฟิล์มตกแต่งพื้นผิวลายเส้นโลหะ&nbsp;สำหรับงานตกแต่งภายใน&nbsp;ขนาดม้วน&nbsp;<strong>1220&nbsp;มม.&nbsp;x&nbsp;50&nbsp;ม.</strong>&nbsp;ใช้รีโนเวทพื้นผิวเดิมให้ดูเหมือนวัสดุโลหะ&nbsp;โดยไม่ต้องรื้อเปลี่ยนวัสดุจริง&nbsp;เหมาะกับงานผนัง&nbsp;ประตู&nbsp;ลิฟต์&nbsp;เฟอร์นิเจอร์&nbsp;พาร์ทิชัน&nbsp;แผงตกแต่ง&nbsp;และฝ้าเพดาน&nbsp;</p><p><strong>3M™&nbsp;DI-NOC™&nbsp;ME-380</strong></p><p>&nbsp;ฟิล์มตกแต่งพื้นผิวลายเส้นโลหะ&nbsp;<strong>Metallic&nbsp;Hairline</strong>&nbsp;สำหรับงานอินทีเรียที่ต้องการภาพลักษณ์เรียบหรู&nbsp;ทันสมัย&nbsp;และเป็นมืออาชีพ&nbsp;เหมาะกับการรีโนเวทผนัง&nbsp;ประตู&nbsp;ลิฟต์&nbsp;เคาน์เตอร์&nbsp;เฟอร์นิเจอร์&nbsp;และพื้นที่เชิงพาณิชย์&nbsp;โดยช่วยลดเวลารื้อถอน&nbsp;ลดฝุ่น&nbsp;ลดเสียง&nbsp;และลด&nbsp;Downtime&nbsp;หน้างาน</p><p><strong>คุณสมบัติเด่น</strong></p><p>&nbsp;✨&nbsp;<strong>ลายเส้นโลหะ&nbsp;Hairline</strong>&nbsp;ให้ผิวสัมผัสและภาพลักษณ์คล้ายโลหะ&nbsp;ดูโมเดิร์นและพรีเมียม</p><p>&nbsp;🏢&nbsp;<strong>เหมาะกับงานภายใน</strong>&nbsp;ใช้กับผนัง&nbsp;เสา&nbsp;ประตู&nbsp;ตู้&nbsp;และพื้นผิวโค้ง&nbsp;3D&nbsp;ได้ตามเงื่อนไขการติดตั้ง</p><p>&nbsp;⚡&nbsp;<strong>รีโนเวทเร็วกว่า</strong>&nbsp;ลดค่าวัสดุ&nbsp;ค่าแรง&nbsp;เวลาหยุดงาน&nbsp;และของเสียจากงานก่อสร้าง</p><p>&nbsp;🧽&nbsp;<strong>ดูแลรักษาง่าย</strong>&nbsp;ทนต่อคราบ&nbsp;น้ำยาทำความสะอาด&nbsp;และสารฆ่าเชื้อทั่วไป</p><p>&nbsp;🛠️&nbsp;<strong>กาว&nbsp;3M™&nbsp;Comply™</strong>&nbsp;ช่วยลดฟองอากาศ&nbsp;ทำให้งานติดตั้งเรียบเนียนและรวดเร็วขึ้น&nbsp;</p><p><strong>แนะนำเหมาะกับ</strong></p><p>&nbsp;✅&nbsp;ผนังตกแต่งภายในออฟฟิศ</p><p>&nbsp;✅&nbsp;ประตูลิฟต์&nbsp;/&nbsp;ผนังลิฟต์&nbsp;/&nbsp;Lobby</p><p>&nbsp;✅&nbsp;เคาน์เตอร์ต้อนรับ&nbsp;/&nbsp;Reception&nbsp;Counter</p><p>&nbsp;✅&nbsp;ร้านค้า&nbsp;/&nbsp;โชว์รูม&nbsp;/&nbsp;โรงแรม&nbsp;/&nbsp;คาเฟ่</p><p>&nbsp;✅&nbsp;งานรีโนเวทที่ต้องการลุคโลหะ&nbsp;แต่ไม่อยากใช้งานสแตนเลสหรืออลูมิเนียมจริง</p><p><strong>หมายเหตุสำคัญ</strong></p><p>&nbsp;ME-380&nbsp;เป็นกลุ่ม&nbsp;<strong>Metal&nbsp;/&nbsp;Metallic&nbsp;Hairline</strong>&nbsp;และระบุการใช้งานเป็น&nbsp;<strong>Interior</strong>&nbsp;จึงควรใช้กับพื้นผิวภายในที่เรียบ&nbsp;แข็ง&nbsp;สะอาด&nbsp;และผ่านการเตรียมผิวอย่างถูกต้องก่อนติดตั้ง&nbsp;เพื่อให้ได้งานที่เรียบ&nbsp;สวย&nbsp;และทนทานในระยะยาว</p>",
+      "groupId": "g4",
+      "id": "s-1782016289914",
+      "referenceFile": ""
+    },
+    {
+      "id": "bostik-a326",
+      "groupId": "g6",
+      "title": "Bostik A326",
+      "desc": "อะคริลิคยาแนวอเนกประสงค์ชนิดน้ำ สำหรับอุดรอยต่อ ช่องว่าง และรอยแตกร้าวภายในอาคาร ใช้งานง่าย",
+      "longDesc": "<p>Bostik&nbsp;A326&nbsp;อะคริลิคอุดรอยต่อและรอยแตกร้าว&nbsp;อเนกประสงค์</p><p>อะคริลิคยาแนวอเนกประสงค์ชนิดน้ำ&nbsp;สำหรับอุดรอยต่อ&nbsp;ช่องว่าง&nbsp;และรอยแตกร้าวภายในอาคาร&nbsp;ใช้งานง่าย&nbsp;ทาสีทับได้&nbsp;ยึดเกาะดี&nbsp;เหมาะสำหรับงานเก็บรอยก่อนทาสีและงานซ่อมแซมทั่วไป</p><p></p><p><strong>รายละเอียดสินค้า:</strong></p><p>Bostik&nbsp;A326&nbsp;Fill&nbsp;A&nbsp;Gap&nbsp;Classic&nbsp;เป็นอะคริลิคยาแนวอเนกประสงค์ชนิดหนึ่งส่วนประกอบ&nbsp;สูตรน้ำ&nbsp;ใช้สำหรับอุดช่องว่าง&nbsp;รอยต่อ&nbsp;และรอยแตกร้าวที่มีการเคลื่อนไหวต่ำ&nbsp;เหมาะสำหรับงานภายในอาคาร&nbsp;งานตกแต่ง&nbsp;งานซ่อมแซม&nbsp;และงานเตรียมพื้นผิวก่อนทาสี</p><p>เนื้อกาวใช้งานง่าย&nbsp;ปาดแต่งได้สะดวก&nbsp;ให้การยึดเกาะที่ดีบนวัสดุก่อสร้างหลากหลายประเภท&nbsp;เช่น&nbsp;ผนังปูน&nbsp;ยิปซัม&nbsp;วงกบประตู-หน้าต่าง&nbsp;กระเบื้อง&nbsp;อิฐ&nbsp;คอนกรีต&nbsp;บัวพื้น&nbsp;และผนังกั้นเบา&nbsp;เมื่อแห้งสนิทสามารถทาสีอะคริลิคทับได้&nbsp;ช่วยให้งานเก็บรอยต่อเรียบร้อยและกลมกลืนกับพื้นผิว</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>อะคริลิคยาแนวอเนกประสงค์&nbsp;สูตรน้ำ</li><li>ยึดเกาะดี&nbsp;เหมาะกับรอยต่อและช่องว่างทั่วไป</li><li>สร้างผิวภายในประมาณ&nbsp;15&nbsp;นาที</li><li>สามารถทาสีทับได้ด้วยสีอะคริลิคหลังแห้งสนิท</li><li>แรงยึดเกาะสูง</li><li>เมื่อแห้งตัวแล้วมีคุณสมบัติทนน้ำได้ดี</li><li>เนื้อวัสดุไม่ย้อย&nbsp;ใช้งานง่าย</li><li>เหมาะสำหรับงานเก็บรอยต่อก่อนทาสี</li><li>เป็นสินค้ากลุ่มประหยัด&nbsp;ใช้งานคุ้มค่า</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>อุดรอยแตกร้าวบนแผ่นยิปซัม&nbsp;/&nbsp;Plasterboard</li><li>อุดรอยต่อรอบวงกบประตูและหน้าต่าง</li><li>อุดรอยต่อรอบกระเบื้องเซรามิก</li><li>อุดรอยต่อที่มีการเคลื่อนไหวต่ำ</li><li>อุดรอยแตกร้าวก่อนทาสี</li><li>อุดรอยแตกร้าวในงานอิฐและคอนกรีต</li><li>อุดรอยต่อระหว่างผนังกั้นเบา</li><li>อุดรอยต่อบัวพื้นและคิ้วตกแต่ง</li><li>งานซ่อมแซมและตกแต่งภายในทั่วไป</li></ul><p></p><p><strong>พื้นผิวที่เหมาะสม:</strong></p><ul><li>ผนังปูน</li><li>ยิปซัม&nbsp;/&nbsp;Plasterboard</li><li>อิฐ</li><li>คอนกรีต</li><li>กระเบื้องเซรามิก</li><li>วงกบประตู</li><li>วงกบหน้าต่าง</li><li>ผนังกั้นเบา</li><li>บัวพื้น&nbsp;/&nbsp;Skirting</li><li>คิ้วตกแต่ง&nbsp;/&nbsp;Architraves</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;Acrylic&nbsp;Gap&nbsp;Sealant&nbsp;and&nbsp;Filler</li><li>Chemical&nbsp;Type:&nbsp;Water&nbsp;Based&nbsp;Acrylic</li><li>ลักษณะเนื้อวัสดุ:&nbsp;Smooth&nbsp;Paste&nbsp;Like&nbsp;Consistency</li><li>สี:&nbsp;White&nbsp;/&nbsp;สีขาว</li><li>Specific&nbsp;Gravity:&nbsp;ประมาณ&nbsp;1.6</li><li>Service&nbsp;Temperature:&nbsp;-20°C&nbsp;ถึง&nbsp;+75°C</li><li>Application&nbsp;Temperature:&nbsp;+5°C&nbsp;ถึง&nbsp;+50°C</li><li>Tool&nbsp;Working&nbsp;Time:&nbsp;15&nbsp;นาที&nbsp;ที่&nbsp;20°C</li><li>Tack&nbsp;Free&nbsp;Time&nbsp;/&nbsp;Skin&nbsp;Time:&nbsp;15&nbsp;นาที</li><li>Full&nbsp;Cure:&nbsp;2–3&nbsp;วัน&nbsp;ขึ้นอยู่กับอุณหภูมิ</li><li>Max.&nbsp;Joint&nbsp;Movement:&nbsp;±5%</li><li>Max.&nbsp;Joint&nbsp;Width:&nbsp;สูงสุด&nbsp;25&nbsp;มม.&nbsp;ในบางพื้นที่เฉพาะจุด</li><li>Flammability:&nbsp;Non&nbsp;Flammable</li></ul><p></p><p><strong>บรรจุภัณฑ์:</strong></p><p>275&nbsp;ml&nbsp;Cartridge</p><p>25&nbsp;หลอด&nbsp;/&nbsp;กล่อง</p><p></p><p><strong>Coverage&nbsp;โดยประมาณ:</strong></p><p>ขึ้นอยู่กับสภาพพื้นผิวและขนาดรอยต่อ</p><p></p><p><strong>ตัวอย่างระยะการใช้งานโดยประมาณ:</strong></p><ul><li>รอยต่อลึก&nbsp;5&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;5&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;12.8&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;5&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;10&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;6.4&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;5&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;20&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;4.2&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;5&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;25&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;3.2&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;10&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;10&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;3.2&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;10&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;20&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;2.1&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;10&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;25&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;1.6&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;15&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;20&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;1.4&nbsp;เมตร</li><li>รอยต่อลึก&nbsp;15&nbsp;มม.&nbsp;/&nbsp;กว้าง&nbsp;25&nbsp;มม.&nbsp;ใช้ได้ประมาณ&nbsp;1.1&nbsp;เมตร</li></ul><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>พื้นผิวต้องสะอาด&nbsp;แห้ง&nbsp;และปราศจากฝุ่น&nbsp;คราบน้ำมัน&nbsp;หรือสิ่งสกปรก</li><li>ตัดปลายหลอดและใส่หัวฉีดตามขนาดรอยต่อที่ต้องการ</li><li>ใส่หลอดในปืนยิงกาว</li><li>ถือปืนยิงกาวทำมุมประมาณ&nbsp;45&nbsp;องศา&nbsp;แล้วบีบไกด้วยแรงสม่ำเสมอ</li><li>ยิงกาวไปตามแนวรอยแตกหรือช่องว่างด้วยความเร็วสม่ำเสมอ</li><li>ปาดแต่งผิวด้วยนิ้วชุบน้ำ&nbsp;เกรียงเปียก&nbsp;หรือผ้าชุบน้ำหมาด</li><li>รอให้แห้งสนิทก่อนทาสีทับ</li></ol><p></p><p><strong>ข้อจำกัดการใช้งาน:</strong></p><ul><li>ไม่แนะนำสำหรับงานใต้น้ำ</li><li>ไม่เหมาะสำหรับรอยต่อที่แช่น้ำหรือจมน้ำ</li><li>ไม่เหมาะกับพื้นที่ที่มีการเสียดสีหรือถูกกระแทกบ่อย</li><li>ไม่เหมาะกับพื้นผิวที่เปียกหรือชื้น</li><li>ไม่เหมาะกับรอยต่อที่มีการเคลื่อนไหวสูง</li><li>ไม่แนะนำสำหรับงานภายนอก&nbsp;หากคาดว่าจะมีฝนภายใน&nbsp;4&nbsp;ชั่วโมงหลังใช้งาน</li><li>ควรทดสอบความเข้ากันได้ของสีและพื้นผิวก่อนใช้งานจริง</li></ul><p></p><p><strong>การทาสีทับ:</strong></p><p>Bostik&nbsp;A326&nbsp;Fill&nbsp;A&nbsp;Gap&nbsp;Classic&nbsp;สามารถทาสีทับได้หลังจากแห้งสนิท&nbsp;โดยเหมาะกับสีอะคริลิค&nbsp;แนะนำให้ทดสอบความเข้ากันได้ของสีก่อนใช้งานจริง&nbsp;โดยเฉพาะสีที่มีตัวทำละลายสูง&nbsp;เช่น&nbsp;สีเคลือบเงา&nbsp;หรือสีรองพื้นที่มีน้ำมันสูง&nbsp;เพราะอาจทำให้พื้นผิวกาวเหนียวหรือเกิดปฏิกิริยาบางอย่างได้</p><p></p><p><strong>การทำความสะอาด:</strong></p><p>ในขณะที่วัสดุยังเปียก&nbsp;สามารถทำความสะอาดได้ด้วยน้ำหรือผ้าชุบน้ำหมาด&nbsp;หากวัสดุแห้งแล้วควรกำจัดออกด้วยวิธีกล</p><p></p><p><strong>การเก็บรักษา:</strong></p><p>เก็บในที่แห้งและเย็น&nbsp;หลีกเลี่ยงแสงแดดโดยตรง&nbsp;และเก็บให้ห่างจากสารออกซิไดซ์และกรด</p><p></p><p><strong>อายุการเก็บรักษา:</strong></p><p>24&nbsp;เดือน&nbsp;นับจากวันที่ผลิต&nbsp;เมื่อเก็บในบรรจุภัณฑ์เดิมที่ยังไม่เปิดใช้งาน&nbsp;และจัดเก็บอย่างเหมาะสม</p><p></p><p><strong>เหมาะสำหรับ:</strong></p><ul><li>ช่างทาสี</li><li>ช่างตกแต่งภายใน</li><li>ช่างซ่อมแซมบ้าน</li><li>ผู้รับเหมา</li><li>งานเก็บรอยต่อก่อนทาสี</li><li>งานอุดรอยแตกผนัง</li><li>งานบ้าน&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;และงานตกแต่งทั่วไป</li></ul>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "id": "bostik-a330",
+      "groupId": "g6",
+      "title": "Bostik A330",
+      "desc": "กาวยาแนวอะคริลิคคุณภาพสูงชนิด Acrylic Dispersion สำหรับงานอุดรอยต่อและช่องว่าง สำหรับงานภายในอาคาร",
+      "longDesc": "<p><em>Bostik&nbsp;A330&nbsp;อะคริลิคยาแนวอุดรอยต่อและช่องว่าง&nbsp;สำหรับงานภายใน</em></p><p>Bostik&nbsp;A330&nbsp;Fill&nbsp;A&nbsp;Gap&nbsp;Flex&nbsp;เป็นกาวยาแนวอะคริลิคคุณภาพสูงชนิด&nbsp;Acrylic&nbsp;Dispersion&nbsp;สำหรับงานอุดรอยต่อและช่องว่างภายในอาคาร&nbsp;หลังการใช้งาน&nbsp;ผลิตภัณฑ์จะบ่มตัวโดยการระเหยของน้ำและกลายเป็นวัสดุยืดหยุ่นแบบ&nbsp;Plasto-Elastic&nbsp;Rubber&nbsp;ช่วยปิดรอยต่อ&nbsp;รอยแตกร้าว&nbsp;และช่องว่างได้อย่างเรียบร้อย</p><p>เหมาะสำหรับงานยาแนวระหว่างบันได&nbsp;ผนัง&nbsp;เพดาน&nbsp;บัวพื้น&nbsp;ขอบหน้าต่าง&nbsp;วงกบไม้&nbsp;วงกบโลหะ&nbsp;คอนกรีต&nbsp;และอิฐ&nbsp;สามารถทาสีทับได้ทั้งสีน้ำและสีสังเคราะห์&nbsp;จึงเหมาะกับงานตกแต่งภายใน&nbsp;งานเก็บรอยต่อก่อนทาสี&nbsp;และงานซ่อมแซมรอยแตกร้าวทั่วไป</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>อะคริลิคยาแนวคุณภาพสูงสำหรับงานอุดรอยต่อและช่องว่าง</li><li>ทาสีทับได้ด้วยสีน้ำและสีสังเคราะห์</li><li>ยึดเกาะได้ดีโดยไม่ต้องใช้ไพรเมอร์บนพื้นผิวส่วนใหญ่</li><li>ใช้ได้กับพื้นผิวที่มีความชื้นเล็กน้อย</li><li>กลิ่นน้อย&nbsp;เหมาะกับงานภายในอาคาร</li><li>ใช้งานง่าย&nbsp;ปาดแต่งผิวและทำความสะอาดง่าย</li><li>ไม่กัดกร่อนโลหะ</li><li>เนื้อวัสดุไม่ย้อย</li><li>มีความยืดหยุ่น&nbsp;ช่วยลดโอกาสการแตกร้าวของรอยต่อ</li><li>เหมาะสำหรับงานตกแต่ง&nbsp;งานซ่อมแซม&nbsp;และงานเก็บรอยต่อก่อนทาสี</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>อุดรอยต่อระหว่างผนังและเพดาน</li><li>อุดรอยต่อระหว่างบันได&nbsp;ผนัง&nbsp;และบัวพื้น</li><li>อุดรอยต่อขอบหน้าต่างและขอบวงกบ</li><li>อุดรอยต่อวงกบไม้และวงกบโลหะ</li><li>อุดรอยแตกร้าวบนคอนกรีตและอิฐ</li><li>งานเก็บรอยต่อก่อนทาสี</li><li>งานซีลรอยต่อภายในอาคาร</li><li>งานตกแต่งภายในและงานซ่อมแซมทั่วไป</li></ul><p></p><p><strong>พื้นผิวที่เหมาะสม:</strong></p><ul><li>ผนังปูน</li><li>คอนกรีต</li><li>อิฐ</li><li>ยิปซัม</li><li>ไม้</li><li>โลหะ</li><li>วงกบไม้</li><li>วงกบโลหะ</li><li>บัวพื้น</li><li>ขอบหน้าต่าง</li><li>พื้นผิววัสดุก่อสร้างทั่วไปภายในอาคาร</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;Acrylic&nbsp;Sealant</li><li>Base:&nbsp;Acrylic&nbsp;Dispersion</li><li>Application&nbsp;Rate:&nbsp;2000&nbsp;g/min&nbsp;ที่หัวฉีด&nbsp;Ø3&nbsp;mm&nbsp;/&nbsp;4&nbsp;bar</li><li>Application&nbsp;Temperature:&nbsp;+5°C&nbsp;ถึง&nbsp;+40°C</li><li>Density:&nbsp;1.52&nbsp;g/ml</li><li>Elongation&nbsp;at&nbsp;Break:&nbsp;245%</li><li>Flow:&nbsp;น้อยกว่า&nbsp;0&nbsp;mm</li><li>Frost&nbsp;Resistance&nbsp;During&nbsp;Transportation:&nbsp;สูงสุด&nbsp;-15°C</li><li>Shore&nbsp;A&nbsp;Hardness:&nbsp;53</li><li>Skin&nbsp;Formation:&nbsp;ประมาณ&nbsp;3&nbsp;นาที&nbsp;ที่&nbsp;+23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Temperature&nbsp;Resistance:&nbsp;-20°C&nbsp;ถึง&nbsp;+75°C</li><li>Tensile&nbsp;Strength:&nbsp;0.69&nbsp;N/mm²</li></ul><p></p><p><strong>ผลทดสอบสำคัญ:</strong></p><ul><li>Staining&nbsp;&amp;&nbsp;Colour&nbsp;Change:&nbsp;ไม่เกิดคราบและไม่เกิดการเปลี่ยนสี</li><li>Rheological&nbsp;/&nbsp;Flow&nbsp;Properties:&nbsp;แนวตั้ง&nbsp;0&nbsp;mm&nbsp;sag&nbsp;และแนวนอนไม่เสียรูป</li><li>Tack-Free&nbsp;Time:&nbsp;ไม่เกิดการถ่ายเทของวัสดุไปยังฟิล์ม&nbsp;PE&nbsp;หลัง&nbsp;50&nbsp;นาที</li><li>Adhesion&nbsp;&amp;&nbsp;Cohesion&nbsp;Under&nbsp;Cyclic&nbsp;Movement&nbsp;Class&nbsp;25:&nbsp;ไม่สูญเสียการยึดเกาะบนอะลูมิเนียมและมอร์ตาร์</li><li>Effects&nbsp;of&nbsp;Heat&nbsp;Ageing:&nbsp;น้ำหนักลดเฉลี่ยประมาณ&nbsp;0.4%&nbsp;ไม่แตกร้าวและไม่เกิด&nbsp;Chalking</li><li>Accelerated&nbsp;Weathering:&nbsp;ไม่แตกร้าวหลังทดสอบ&nbsp;UV&nbsp;Exposure&nbsp;และ&nbsp;Bend&nbsp;Test</li><li>Adhesion-In-Peel:&nbsp;อะลูมิเนียมเฉลี่ย&nbsp;52.5&nbsp;N&nbsp;และมอร์ตาร์เฉลี่ย&nbsp;51.8&nbsp;N</li></ul><p></p><p><strong>มาตรฐาน&nbsp;/&nbsp;เอกสารอ้างอิง:</strong></p><ul><li>ASTM&nbsp;C920&nbsp;Class&nbsp;25</li><li>RoHS</li><li>Singapore&nbsp;Green&nbsp;Building&nbsp;Product&nbsp;Certificate</li><li>Sansiri&nbsp;Approved</li><li>TÜV&nbsp;SÜD&nbsp;Test&nbsp;Report&nbsp;C25</li></ul><p></p><p><strong>สีสินค้า:</strong></p><ul><li>White&nbsp;/&nbsp;สีขาว</li></ul><p></p><p><strong>บรรจุภัณฑ์:</strong></p><ul><li>280&nbsp;ml&nbsp;Cartridge&nbsp;/&nbsp;12&nbsp;หลอดต่อกล่อง</li><li>600&nbsp;ml&nbsp;Sausage&nbsp;/&nbsp;20&nbsp;ชิ้นต่อกล่อง</li></ul><p>หมายเหตุ:&nbsp;ขนาดบรรจุภัณฑ์อาจแตกต่างตามล็อตหรือ&nbsp;SKU&nbsp;ที่จำหน่าย&nbsp;ควรตรวจสอบสินค้าจริงก่อนเปิดขาย</p><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>พื้นผิวต้องแข็งแรง&nbsp;สะอาด&nbsp;ปราศจากฝุ่น&nbsp;คราบน้ำมัน&nbsp;คราบไขมัน&nbsp;และเศษวัสดุหลุดร่อน</li><li>ตัดปลายหลอดหรือไส้กรอก&nbsp;และใส่ในปืนยิงกาวให้เหมาะกับบรรจุภัณฑ์</li><li>ยิงกาวลงในรอยต่อให้ต่อเนื่องและเต็มแนว</li><li>ปาดแต่งผิวด้วยน้ำให้เรียบก่อนวัสดุเริ่มสร้างผิว</li><li>ปล่อยให้แห้งสนิทก่อนทาสีทับ</li><li>สำหรับพื้นผิวพรุนมาก&nbsp;เช่น&nbsp;ยิปซัม&nbsp;คอนกรีตมวลเบา&nbsp;หรือหินปูน&nbsp;แนะนำให้รองพื้นด้วยส่วนผสม&nbsp;Bostik&nbsp;A330&nbsp;1&nbsp;ส่วน&nbsp;ต่อน้ำ&nbsp;2&nbsp;ส่วน&nbsp;และควรทดสอบการยึดเกาะก่อนใช้งานจริง</li></ol><p></p><p><strong>คำแนะนำเรื่องขนาดรอยต่อ:</strong></p><ul><li>รอยต่อกว้างไม่เกิน&nbsp;10&nbsp;mm&nbsp;แนะนำอัตราส่วนความลึกต่อความกว้างประมาณ&nbsp;1:1&nbsp;โดยมีความกว้างและความลึกขั้นต่ำ&nbsp;5&nbsp;mm</li><li>รอยต่อกว้างมากกว่า&nbsp;10&nbsp;mm&nbsp;ความลึกควรคำนวณจากความกว้างหาร&nbsp;3&nbsp;แล้วบวก&nbsp;6&nbsp;mm</li></ul><p></p><p><strong>ข้อจำกัดการใช้งาน:</strong></p><ul><li>ไม่เหมาะสำหรับการแช่น้ำหรือโดนน้ำต่อเนื่อง</li><li>ไม่เหมาะกับพื้นผิว&nbsp;PE,&nbsp;PP,&nbsp;PC,&nbsp;PMMA,&nbsp;PTFE</li><li>ไม่เหมาะกับพลาสติกอ่อน&nbsp;นีโอพรีน&nbsp;และวัสดุบิทูมินัส</li><li>ไม่เหมาะสำหรับงานภายนอกที่มีฝนใกล้ตกหรือพื้นที่โดนน้ำโดยตรง</li><li>ไม่เหมาะกับรอยต่อที่มีการเคลื่อนไหวสูงเกินกว่าที่ผลิตภัณฑ์รองรับ</li><li>ควรทดสอบการยึดเกาะและความเข้ากันได้ของสีก่อนใช้งานจริง</li></ul><p></p><p><strong>การทาสีทับ:</strong></p><p>Bostik&nbsp;A330&nbsp;สามารถทาสีทับได้หลังจากแห้งสนิท&nbsp;เหมาะกับสีน้ำและสีสังเคราะห์&nbsp;อย่างไรก็ตาม&nbsp;ระหว่างการบ่มตัววัสดุอาจมีการหดตัว&nbsp;ซึ่งอาจทำให้สีบางประเภทแตกร้าวได้&nbsp;โดยเฉพาะสีที่มีปริมาณสารเติมแต่งสูง&nbsp;จึงควรทดสอบความเข้ากันได้ของสีก่อนใช้งานจริง</p><p></p><p>การทำความสะอาด:</p><p>เครื่องมือและวัสดุที่ยังไม่แห้งสามารถทำความสะอาดได้ด้วยน้ำหรือผ้าชุบน้ำหมาด&nbsp;หลังจากวัสดุแห้งแล้วควรกำจัดออกด้วยวิธีกล</p><p></p><p><strong>การเก็บรักษา:</strong></p><p>เก็บในที่แห้งและเย็น&nbsp;หลีกเลี่ยงแสงแดดโดยตรง&nbsp;และเก็บให้ห่างจากสารออกซิไดซ์และกรด</p><p></p><p><strong>อายุการเก็บรักษา:</strong></p><p>แนะนำให้ตรวจสอบจากฉลากสินค้าหรือเอกสารกำกับสินค้าแต่ละล็อตก่อนจำหน่าย</p><p></p><p><strong>เหมาะสำหรับ:</strong></p><ul><li>ช่างทาสี</li><li>ช่างตกแต่งภายใน</li><li>ช่างซ่อมแซมบ้าน</li><li>ผู้รับเหมา</li><li>งานเก็บรอยต่อก่อนทาสี</li><li>งานอุดรอยแตกร้าวภายในอาคาร</li><li>งานบ้านพักอาศัย&nbsp;คอนโด&nbsp;อาคารสำนักงาน&nbsp;และโครงการก่อสร้าง</li></ul>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "id": "bostik-s301",
+      "groupId": "g6",
+      "title": "Bostik S301",
+      "desc": "ซิลิโคนยาแนวอเนกประสงค์ชนิด Acetoxy Silicone สำหรับงานรอยต่อก่อสร้างและรอยต่อขยายตัว ยืดหยุ่นถาวร ทน UV ทนน้ำ ทนสภาพอากาศ",
+      "longDesc": "<p>ซิลิโคนยาแนวอเนกประสงค์ชนิด&nbsp;Acetoxy&nbsp;Silicone&nbsp;สำหรับงานรอยต่อก่อสร้างและรอยต่อขยายตัว&nbsp;ยืดหยุ่นถาวร&nbsp;ทน&nbsp;UV&nbsp;ทนน้ำ&nbsp;ทนสภาพอากาศ&nbsp;และยึดเกาะได้ดีกับกระจก&nbsp;ไม้ทาสี&nbsp;เซรามิก&nbsp;และพื้นผิวเคลือบ</p><p></p><p><strong>รายละเอียดสินค้า:</strong></p><p>Bostik&nbsp;S301&nbsp;Silicone&nbsp;Classic&nbsp;เป็นซิลิโคนยาแนวอเนกประสงค์ชนิด&nbsp;Acetoxy&nbsp;Silicone&nbsp;สำหรับงานซีลรอยต่อ&nbsp;งานก่อสร้าง&nbsp;และงานรอยต่อขยายตัวทั่วไป&nbsp;ตัวผลิตภัณฑ์บ่มตัวด้วยความชื้นในอากาศจนเกิดเป็นยางซิลิโคนที่มีความยืดหยุ่น&nbsp;ทนทาน&nbsp;และช่วยป้องกันการรั่วซึมของรอยต่อได้อย่างมีประสิทธิภาพ</p><p>เหมาะสำหรับงานยาแนวทั่วไป&nbsp;งานซีลกระจก&nbsp;งานซีลรอยต่อวัสดุก่อสร้าง&nbsp;และงานที่ต้องการซิลิโคนที่ทนต่อแสงแดด&nbsp;น้ำ&nbsp;และสภาพอากาศ&nbsp;โดยเฉพาะพื้นผิวกระจก&nbsp;ไม้ทาสี&nbsp;เซรามิก&nbsp;และพื้นผิวเคลือบ</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>ซิลิโคนยาแนวชนิด&nbsp;Acetoxy&nbsp;Silicone</li><li>ทน&nbsp;UV&nbsp;ทนน้ำ&nbsp;และทนสภาพอากาศ</li><li>ยึดเกาะได้ดีกับกระจก&nbsp;ไม้ทาสี&nbsp;เซรามิก&nbsp;และพื้นผิวเคลือบ</li><li>ยืดหยุ่นถาวร</li><li>สีคงทน&nbsp;ไม่ซีดง่าย</li><li>เหมาะสำหรับงานรอยต่อก่อสร้างและรอยต่อขยายตัว</li><li>ใช้งานง่าย&nbsp;ยิงง่าย&nbsp;ปาดแต่งผิวได้</li><li>เหมาะสำหรับงานซีลทั่วไปภายในและภายนอกอาคาร</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>งานซีลกระจกทั่วไป</li><li>งานยาแนวรอยต่อก่อสร้าง</li><li>งานยาแนวรอยต่อขยายตัว</li><li>งานซีลรอยต่อประตูและหน้าต่างบางประเภท</li><li>งานซีลรอยต่อบนพื้นผิวเซรามิก</li><li>งานซีลรอยต่อบนพื้นผิวเคลือบ</li><li>งานซ่อมแซมและยาแนวทั่วไป</li><li>งานที่ต้องการซิลิโคนทน&nbsp;UV&nbsp;น้ำ&nbsp;และสภาพอากาศ</li></ul><p></p><p><strong>พื้นผิวที่เหมาะสม:</strong></p><ul><li>กระจก</li><li>ไม้ทาสี</li><li>เซรามิก</li><li>พื้นผิวเคลือบ</li><li>พื้นผิวไม่พรุนส่วนใหญ่&nbsp;โดยควรทดสอบการยึดเกาะก่อนใช้งานจริง</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;Acetoxy&nbsp;Silicone&nbsp;Sealant</li><li>Base:&nbsp;Acetoxy&nbsp;Silicone</li><li>100%&nbsp;Modulus:&nbsp;0.43&nbsp;N/mm²</li><li>Application&nbsp;Temperature:&nbsp;+5°C&nbsp;ถึง&nbsp;+40°C</li><li>Curing&nbsp;Time:&nbsp;ประมาณ&nbsp;3.5&nbsp;มม.&nbsp;/&nbsp;24&nbsp;ชั่วโมง&nbsp;ที่&nbsp;+23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Density:&nbsp;0.97&nbsp;g/ml</li><li>Elongation&nbsp;at&nbsp;Break:&nbsp;500%</li><li>Movement&nbsp;Capability:&nbsp;±20%&nbsp;ตาม&nbsp;ASTM&nbsp;C719</li><li>Shore&nbsp;A&nbsp;Hardness:&nbsp;20</li><li>Tack&nbsp;Free&nbsp;Time:&nbsp;ประมาณ&nbsp;9&nbsp;นาที&nbsp;ที่&nbsp;+23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Temperature&nbsp;Resistance:&nbsp;-30°C&nbsp;ถึง&nbsp;+120°C</li><li>Tensile&nbsp;Strength:&nbsp;2.00&nbsp;N/mm²</li></ul><p></p><p><strong>สีสินค้า:</strong></p><ul><li>Clear&nbsp;/&nbsp;ใส</li><li>Black&nbsp;/&nbsp;ดำ</li><li>White&nbsp;/&nbsp;ขาว</li></ul><p></p><p><strong>บรรจุภัณฑ์:</strong></p><p>260&nbsp;ml&nbsp;Cartridge</p><p>25&nbsp;หลอด&nbsp;/&nbsp;กล่อง</p><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>พื้นผิวต้องแข็งแรง&nbsp;สะอาด&nbsp;แห้ง&nbsp;และปราศจากฝุ่น&nbsp;คราบน้ำมัน&nbsp;หรือคราบไขมัน</li><li>ตัดปลายหลอดซิลิโคนและใส่หัวฉีดตามขนาดรอยต่อที่ต้องการ</li><li>ใส่หลอดซิลิโคนในปืนยิงซิลิโคน</li><li>ยิงซิลิโคนลงในแนวรอยต่ออย่างต่อเนื่อง</li><li>ปาดแต่งผิวด้วยอุปกรณ์&nbsp;Finisher&nbsp;ให้เรียบก่อนซิลิโคนเริ่มสร้างผิว</li><li>ควรทดสอบการยึดเกาะก่อนใช้งานจริง&nbsp;โดยเฉพาะพื้นผิวเฉพาะทาง</li></ol><p></p><p><strong>คำแนะนำเรื่องขนาดรอยต่อ:</strong></p><ul><li>รอยต่อกว้างไม่เกิน&nbsp;10&nbsp;มม.&nbsp;แนะนำอัตราส่วนความลึกต่อความกว้างประมาณ&nbsp;1:1&nbsp;โดยมีความกว้างและความลึกขั้นต่ำ&nbsp;5&nbsp;มม.</li><li>รอยต่อกว้างมากกว่า&nbsp;10&nbsp;มม.&nbsp;ความลึกควรคำนวณจากความกว้างหาร&nbsp;3&nbsp;แล้วบวก&nbsp;6&nbsp;มม.</li></ul><p></p><p><strong>การเตรียมพื้นผิว:</strong></p><p>พื้นผิวต้องสะอาด&nbsp;แห้ง&nbsp;แข็งแรง&nbsp;และไม่มีคราบไขมัน&nbsp;ฝุ่น&nbsp;หรือสิ่งปนเปื้อน&nbsp;สามารถทำความสะอาดพื้นผิวด้วย&nbsp;Bostik&nbsp;Cleaner&nbsp;สำหรับพื้นผิวไม่พรุนส่วนใหญ่สามารถยึดเกาะได้ดีโดยไม่ต้องใช้&nbsp;Primer&nbsp;ส่วนพื้นผิวพรุนควรใช้&nbsp;Bostik&nbsp;Primer&nbsp;และควรทดสอบการยึดเกาะก่อนใช้งานจริงทุกครั้ง</p><p></p><p><strong>ข้อจำกัดการใช้งาน:</strong></p><ul><li>ไม่เหมาะกับพื้นผิว&nbsp;PE,&nbsp;PP,&nbsp;PC,&nbsp;PMMA,&nbsp;PTFE</li><li>ไม่เหมาะกับพลาสติกอ่อน&nbsp;นีโอพรีน&nbsp;และวัสดุบิทูมินัส</li><li>ไม่เหมาะสำหรับการใช้งานบนคอนกรีต&nbsp;หินอ่อน&nbsp;ตะกั่ว&nbsp;ทองแดง&nbsp;และเหล็กกัลวาไนซ์</li><li>ไม่สามารถทาสีทับได้</li><li>ไม่ควรใช้งานกับพื้นผิวที่มีเงื่อนไขพิเศษโดยไม่ทดสอบการยึดเกาะก่อน</li></ul><p></p><p><strong>การทาสีทับ:</strong></p><p>Bostik&nbsp;S301&nbsp;ไม่สามารถทาสีทับได้&nbsp;หากบริเวณใกล้เคียงต้องมีการทาสี&nbsp;ควรใช้เทปกาวปิดขอบรอยต่อก่อนยิงซิลิโคน&nbsp;เพื่อป้องกันซิลิโคนปนเปื้อนบนพื้นผิวที่จะทาสี</p><p></p><p><strong>การทำความสะอาด:</strong></p><ul><li>ซิลิโคนที่ยังไม่แห้งและเครื่องมือสามารถทำความสะอาดได้ด้วย&nbsp;Bostik&nbsp;Cleaner</li><li>ซิลิโคนที่แห้งแล้วสามารถกำจัดออกได้ด้วยวิธีกลเท่านั้น</li><li>มือสามารถทำความสะอาดด้วย&nbsp;Bostik&nbsp;Wipes</li></ul><p></p><p><strong>การเก็บรักษา:</strong></p><p>เก็บในบรรจุภัณฑ์เดิมที่ยังไม่เปิดใช้งาน&nbsp;ที่อุณหภูมิ&nbsp;+5°C&nbsp;ถึง&nbsp;+25°C&nbsp;และเก็บในที่แห้ง</p><p></p><p><strong>อายุการเก็บรักษา:</strong></p><p>18&nbsp;เดือน&nbsp;นับจากวันที่ผลิต&nbsp;เมื่อเก็บในสภาพแวดล้อมที่เหมาะสม</p><p></p><p><strong>เหมาะสำหรับ:</strong></p><ul><li>ช่างซิลิโคน</li><li>ช่างกระจก</li><li>ช่างติดตั้งทั่วไป</li><li>ผู้รับเหมา</li><li>งานซ่อมแซมบ้าน</li><li>งานยาแนวทั่วไป</li><li>งานก่อสร้างที่ต้องการซิลิโคนอเนกประสงค์</li></ul>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "id": "bostik-s548",
+      "groupId": "g6",
+      "title": "Bostik S548",
+      "desc": "ซิลิโคนยาแนวชนิด Neutral Silicone สำหรับงานซีลกระจก ประตู หน้าต่าง และงาน Weatherseal ภายนอกอาคาร ยืดหยุ่นถาวร ทน UV ทนสภาพอากาศ และไม่กัดกร่อนพื้นผิวโลหะ",
+      "longDesc": "<p><em>Bostik&nbsp;S548&nbsp;ซิลิโคนยาแนวกระจกและงานซีลภายนอกอาคาร&nbsp;ชนิด&nbsp;Neutral&nbsp;Silicone</em></p><p>ซิลิโคนยาแนวชนิด&nbsp;Neutral&nbsp;Silicone&nbsp;สำหรับงานซีลกระจก&nbsp;ประตู&nbsp;หน้าต่าง&nbsp;และงาน&nbsp;Weatherseal&nbsp;ภายนอกอาคาร&nbsp;ยืดหยุ่นถาวร&nbsp;ทน&nbsp;UV&nbsp;ทนสภาพอากาศ&nbsp;และไม่กัดกร่อนพื้นผิวโลหะ</p><p></p><p><strong>รายละเอียดสินค้า:</strong></p><p>Bostik&nbsp;S548&nbsp;Glass&nbsp;‘N’&nbsp;Seal&nbsp;Weatherseal&nbsp;เป็นซิลิโคนยาแนวชนิด&nbsp;Neutral&nbsp;Curing&nbsp;แบบส่วนประกอบเดียว&nbsp;พร้อมใช้งาน&nbsp;เหมาะสำหรับงาน&nbsp;Weatherseal&nbsp;และงาน&nbsp;Glazing&nbsp;โดยเฉพาะ&nbsp;ใช้สำหรับซีลรอยต่อกระจก&nbsp;กรอบประตู-หน้าต่าง&nbsp;อะลูมิเนียม&nbsp;ฟาซาด&nbsp;ผนังภายนอก&nbsp;และงานก่อสร้างที่ต้องการการป้องกันน้ำ&nbsp;ฝุ่น&nbsp;ลม&nbsp;และสภาพอากาศ</p><p>ตัวซิลิโคนบ่มตัวด้วยความชื้นในอากาศ&nbsp;กลายเป็นยางซิลิโคนที่มีความยืดหยุ่นถาวร&nbsp;ให้การยึดเกาะที่ดีกับกระจก&nbsp;โลหะ&nbsp;และวัสดุก่อสร้างหลายประเภท&nbsp;พร้อมคุณสมบัติทนต่อ&nbsp;UV&nbsp;ทนน้ำ&nbsp;และทนสภาพอากาศ&nbsp;เหมาะกับงานภายนอกอาคาร&nbsp;งานกระจก&nbsp;และงานอะลูมิเนียมที่ต้องการความทนทานระยะยาว</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>ซิลิโคนชนิด&nbsp;Neutral&nbsp;Cure&nbsp;ไม่กัดกร่อนพื้นผิวโลหะ</li><li>เหมาะสำหรับงาน&nbsp;Weatherseal&nbsp;และ&nbsp;Window&nbsp;Sealing</li><li>ใช้งานง่าย&nbsp;ยิงง่าย</li><li>เนื้อซิลิโคนไม่ย้อย&nbsp;เหมาะกับงานแนวตั้ง</li><li>ทน&nbsp;UV&nbsp;และทนสภาพอากาศ</li><li>ยึดเกาะได้ดีกับกระจก&nbsp;เซรามิก&nbsp;เหล็ก&nbsp;อะลูมิเนียม&nbsp;และวัสดุก่อสร้างทั่วไป</li><li>ยืดหยุ่นถาวร</li><li>เหมาะสำหรับงานภายในและภายนอกอาคาร</li><li>ผ่านการทดสอบ&nbsp;Adhesion&nbsp;&amp;&nbsp;Cohesion&nbsp;Under&nbsp;Cyclic&nbsp;Movement&nbsp;Class&nbsp;25</li><li>ผลทดสอบไม่พบการแตกร้าวหลังการเร่งสภาวะอากาศและการทดสอบดัดงอ</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>งานซีลกระจก</li><li>งานซีลกรอบประตูและหน้าต่าง</li><li>งาน&nbsp;Weatherseal&nbsp;ภายนอกอาคาร</li><li>งาน&nbsp;Curtain&nbsp;Wall&nbsp;Weather&nbsp;Seal</li><li>งาน&nbsp;Sunlight&nbsp;Room&nbsp;/&nbsp;Sun-roof</li><li>งานซีลแผ่นอะลูมิเนียม</li><li>งานซีลแผ่นอะลูมิเนียมคอมโพสิต</li><li>งานรอยต่อก่อสร้างทั่วไป</li><li>งานซีลรอยต่อที่ต้องการความยืดหยุ่นและทนสภาพอากาศ</li></ul><p></p><p><strong>พื้นผิวที่เหมาะสม:</strong></p><ul><li>กระจก</li><li>อะลูมิเนียม</li><li>เหล็ก</li><li>เซรามิก</li><li>โลหะทั่วไป</li><li>วัสดุก่อสร้างหลายประเภท</li><li>พื้นผิวไม่พรุนส่วนใหญ่&nbsp;โดยควรทดสอบการยึดเกาะก่อนใช้งานจริง</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;Neutral&nbsp;Silicone&nbsp;Sealant</li><li>Base:&nbsp;Neutral&nbsp;Silicone</li><li>100%&nbsp;Modulus:&nbsp;0.60&nbsp;N/mm²</li><li>Application&nbsp;Temperature:&nbsp;+5°C&nbsp;ถึง&nbsp;+40°C</li><li>Curing&nbsp;Time:&nbsp;ประมาณ&nbsp;2.5&nbsp;มม.&nbsp;/&nbsp;24&nbsp;ชั่วโมง&nbsp;ที่&nbsp;+23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Density:&nbsp;1.5&nbsp;g/ml</li><li>Movement&nbsp;Capability:&nbsp;±25%&nbsp;ตาม&nbsp;ASTM&nbsp;C719</li><li>Shore&nbsp;A&nbsp;Hardness:&nbsp;30</li><li>Elongation&nbsp;at&nbsp;Break:&nbsp;580%</li><li>Tack&nbsp;Free&nbsp;Time:&nbsp;ประมาณ&nbsp;15&nbsp;นาที&nbsp;ที่&nbsp;+23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Temperature&nbsp;Resistance:&nbsp;-30°C&nbsp;ถึง&nbsp;+120°C</li><li>Tensile&nbsp;Strength:&nbsp;1.70&nbsp;N/mm²</li></ul><p></p><p><strong>ผลทดสอบสำคัญ:</strong></p><ul><li>Staining&nbsp;&amp;&nbsp;Colour&nbsp;Change:&nbsp;ไม่เกิดคราบ&nbsp;และไม่เกิดการเปลี่ยนสี</li><li>Rheological&nbsp;/&nbsp;Flow&nbsp;Properties:&nbsp;แนวตั้ง&nbsp;0&nbsp;มม.&nbsp;ไม่ย้อย&nbsp;และแนวนอนไม่เสียรูป</li><li>Tack-Free&nbsp;Time:&nbsp;ไม่เกิดการถ่ายเทของซิลิโคนไปยังฟิล์ม&nbsp;PE&nbsp;หลัง&nbsp;50&nbsp;นาที</li><li>Adhesion&nbsp;&amp;&nbsp;Cohesion&nbsp;Under&nbsp;Cyclic&nbsp;Movement&nbsp;Class&nbsp;25:&nbsp;ไม่สูญเสียการยึดเกาะบนอะลูมิเนียมและกระจก</li><li>Effects&nbsp;of&nbsp;Heat&nbsp;Ageing:&nbsp;น้ำหนักลดเฉลี่ยประมาณ&nbsp;0.3%&nbsp;ไม่แตกร้าวและไม่เกิด&nbsp;Chalking</li><li>Accelerated&nbsp;Weathering:&nbsp;ไม่แตกร้าวหลังทดสอบ&nbsp;UV&nbsp;Exposure&nbsp;และ&nbsp;Bend&nbsp;Test</li><li>Adhesion-In-Peel:&nbsp;อะลูมิเนียมเฉลี่ย&nbsp;104.9&nbsp;N&nbsp;และกระจกเฉลี่ย&nbsp;115.2&nbsp;N</li></ul><p></p><p><strong>สีสินค้า:</strong></p><ul><li>Clear&nbsp;/&nbsp;ใส</li><li>Black&nbsp;/&nbsp;ดำ</li><li>White&nbsp;/&nbsp;ขาว</li><li>Grey&nbsp;/&nbsp;เทา</li></ul><p></p><p><strong>บรรจุภัณฑ์:</strong></p><p>260&nbsp;ml&nbsp;Cartridge</p><p>25&nbsp;หลอด&nbsp;/&nbsp;กล่อง</p><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>พื้นผิวต้องแข็งแรง&nbsp;สะอาด&nbsp;แห้ง&nbsp;และปราศจากฝุ่น&nbsp;คราบน้ำมัน&nbsp;หรือคราบไขมัน</li><li>ตัดปลายหลอดซิลิโคนและใส่หัวฉีดตามขนาดรอยต่อที่ต้องการ</li><li>ใส่หลอดซิลิโคนในปืนยิงซิลิโคน</li><li>ยิงซิลิโคนลงในแนวรอยต่ออย่างต่อเนื่อง</li><li>ปาดแต่งผิวด้วยอุปกรณ์&nbsp;Finisher&nbsp;ให้เรียบก่อนซิลิโคนเริ่มสร้างผิว</li><li>ควรทดสอบการยึดเกาะก่อนใช้งานจริง&nbsp;โดยเฉพาะพื้นผิวเฉพาะทางหรือพื้นที่ที่ต้องการประสิทธิภาพสูง</li></ol><p></p><p><strong>คำแนะนำเรื่องขนาดรอยต่อ:</strong></p><ul><li>รอยต่อกว้างไม่เกิน&nbsp;10&nbsp;มม.&nbsp;แนะนำอัตราส่วนความลึกต่อความกว้างประมาณ&nbsp;1:1&nbsp;โดยมีความกว้างและความลึกขั้นต่ำ&nbsp;5&nbsp;มม.</li><li>รอยต่อกว้างมากกว่า&nbsp;10&nbsp;มม.&nbsp;ความลึกควรคำนวณจากความกว้างหาร&nbsp;3&nbsp;แล้วบวก&nbsp;6&nbsp;มม.</li></ul><p></p><p><strong>การเตรียมพื้นผิว:</strong></p><p>พื้นผิวต้องสะอาด&nbsp;แห้ง&nbsp;และไม่มีคราบไขมัน&nbsp;ฝุ่น&nbsp;หรือสิ่งปนเปื้อน&nbsp;สำหรับพื้นผิวไม่พรุนส่วนใหญ่สามารถยึดเกาะได้ดีโดยไม่ต้องใช้&nbsp;Primer&nbsp;แต่สำหรับพื้นผิวพรุนควรใช้&nbsp;Bostik&nbsp;Universal&nbsp;Primer&nbsp;และควรทดสอบการยึดเกาะก่อนใช้งานจริงทุกครั้ง</p><p></p><p><strong>ข้อจำกัดการใช้งาน:</strong></p><ul><li>ไม่เหมาะสำหรับตู้ปลาและตู้เลี้ยงสัตว์</li><li>อาจเกิดการเปลี่ยนสีได้ในพื้นที่มืดหรือเมื่อสัมผัสสารเคมีบางชนิด</li><li>ไม่เหมาะกับพื้นผิว&nbsp;PE,&nbsp;PP,&nbsp;PC,&nbsp;PMMA,&nbsp;PTFE</li><li>ไม่เหมาะกับพลาสติกอ่อน&nbsp;นีโอพรีน&nbsp;และวัสดุบิทูมินัส</li><li>ไม่สามารถทาสีทับได้</li><li>ไม่ควรใช้งานโดยไม่ทดสอบการยึดเกาะในพื้นที่ที่มีเงื่อนไขพิเศษ</li></ul><p></p><p><strong>การทาสีทับ:</strong></p><p>Bostik&nbsp;S548&nbsp;ไม่สามารถทาสีทับได้&nbsp;หากบริเวณใกล้เคียงต้องมีการทาสี&nbsp;ควรใช้เทปกาวปิดขอบรอยต่อก่อนยิงซิลิโคน&nbsp;เพื่อป้องกันซิลิโคนปนเปื้อนบนพื้นผิวที่จะทาสี</p><p></p><p><strong>การทำความสะอาด:</strong></p><ul><li>เครื่องมือควรทำความสะอาดหลังใช้งาน</li><li>มือสามารถทำความสะอาดด้วย&nbsp;Bostik&nbsp;Wipes&nbsp;หรือน้ำและสบู่</li><li>ซิลิโคนที่แห้งแล้วสามารถกำจัดออกได้ด้วยวิธีกลเท่านั้น</li></ul><p></p><p><strong>การเก็บรักษา:</strong></p><p>เก็บในบรรจุภัณฑ์เดิมที่ยังไม่เปิดใช้งาน&nbsp;ที่อุณหภูมิ&nbsp;+5°C&nbsp;ถึง&nbsp;+25°C&nbsp;และเก็บในที่แห้ง</p><p></p><p><strong>อายุการเก็บรักษา:</strong></p><p>12&nbsp;เดือน&nbsp;นับจากวันที่ผลิต&nbsp;เมื่อเก็บในสภาพแวดล้อมที่เหมาะสม</p><p></p><p><strong>เหมาะสำหรับ:</strong></p><ul><li>ช่างกระจก</li><li>ช่างอะลูมิเนียม</li><li>ช่างฟาซาด</li><li>ผู้รับเหมา</li><li>งานติดตั้งประตู-หน้าต่าง</li><li>งานซีลรอยต่อภายนอกอาคาร</li><li>งาน&nbsp;Curtain&nbsp;Wall&nbsp;และงาน&nbsp;Glazing</li><li>งานโครงการที่ต้องการซิลิโคนทนสภาพอากาศ</li></ul>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "id": "bostik-s546",
+      "groupId": "g6",
+      "title": "Bostik S546",
+      "desc": "ซิลิโคนยาแนวชนิด Neutral Silicone สำหรับงานห้องน้ำและห้องครัว ยืดหยุ่นถาวร ทน UV และสภาพอากาศ พร้อมคุณสมบัติต้านทานเชื้อรา ห้องน้ำและห้องครัว ชนิด Neutral Silicone",
+      "longDesc": "<p><em>Bostik&nbsp;S546&nbsp;ซิลิโคนยาแนวห้องน้ำและห้องครัว&nbsp;ชนิด&nbsp;Neutral&nbsp;Silicone</em></p><p>ซิลิโคนยาแนวชนิด&nbsp;Neutral&nbsp;Silicone&nbsp;สำหรับงานห้องน้ำและห้องครัว&nbsp;ยืดหยุ่นถาวร&nbsp;ทน&nbsp;UV&nbsp;และสภาพอากาศ&nbsp;พร้อมคุณสมบัติต้านทานเชื้อรา&nbsp;เหมาะสำหรับงานซีลรอยต่อบริเวณสุขภัณฑ์&nbsp;เคาน์เตอร์&nbsp;อ่างล้างหน้า&nbsp;อ่างล้างจาน&nbsp;และพื้นที่เปียกชื้น</p><p></p><p><strong>รายละเอียดสินค้า:</strong></p><p>Bostik&nbsp;S546&nbsp;Bathroom&nbsp;&amp;&nbsp;Kitchen&nbsp;Silicone&nbsp;Classic&nbsp;เป็นซิลิโคนยาแนวชนิด&nbsp;Neutral&nbsp;Silicone&nbsp;สำหรับงานสุขภัณฑ์&nbsp;ห้องน้ำ&nbsp;และห้องครัวโดยเฉพาะ&nbsp;ตัวผลิตภัณฑ์บ่มตัวด้วยความชื้นในอากาศจนเกิดเป็นยางซิลิโคนที่มีความยืดหยุ่น&nbsp;ทนทาน&nbsp;และช่วยซีลรอยต่อได้อย่างมีประสิทธิภาพ</p><p>เหมาะสำหรับงาน&nbsp;Top&nbsp;Sealing&nbsp;ในพื้นที่ที่ต้องการความสะอาด&nbsp;ความเรียบร้อย&nbsp;และทนต่อความชื้น&nbsp;เช่น&nbsp;เคาน์เตอร์ครัว&nbsp;อ่างล้างจาน&nbsp;อ่างล้างหน้า&nbsp;โถสุขภัณฑ์&nbsp;กระเบื้อง&nbsp;ผนัง&nbsp;และรอยต่อบริเวณห้องน้ำหรือห้องครัว</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>ซิลิโคนชนิด&nbsp;Neutral&nbsp;Curing</li><li>ยึดเกาะได้ดีกับวัสดุหลากหลายประเภท</li><li>ยืดหยุ่นถาวร</li><li>มีคุณสมบัติต้านทานเชื้อรา</li><li>ทน&nbsp;UV&nbsp;และทนสภาพอากาศ</li><li>เหมาะสำหรับงานห้องน้ำและห้องครัว</li><li>ใช้งานง่าย&nbsp;เนื้อซิลิโคนเรียบสวย</li><li>เหมาะกับพื้นที่เปียกชื้นและงานสุขภัณฑ์</li><li>ผ่านการทดสอบ&nbsp;Fungus&nbsp;Resistance&nbsp;Test&nbsp;ตามมาตรฐาน&nbsp;ASTM&nbsp;G21-15</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>งานยาแนวห้องน้ำ</li><li>งานยาแนวห้องครัว</li><li>งานซีลรอบอ่างล้างหน้า</li><li>งานซีลรอบอ่างล้างจาน</li><li>งานซีลรอบสุขภัณฑ์</li><li>งานซีลรอยต่อกระเบื้อง</li><li>งานซีลรอยต่อเคาน์เตอร์ครัว</li><li>งาน&nbsp;Top&nbsp;Sealing&nbsp;ในพื้นที่เปียกชื้น</li><li>งานภายในอาคารที่ต้องการความสะอาดและทนเชื้อรา</li></ul><p></p><p><strong>พื้นผิวที่เหมาะสม:</strong></p><ul><li>กระเบื้อง</li><li>เซรามิก</li><li>สุขภัณฑ์</li><li>กระจก</li><li>พื้นผิวเคลือบ</li><li>วัสดุงานครัวและห้องน้ำทั่วไป</li><li>พื้นผิวไม่พรุนส่วนใหญ่&nbsp;โดยควรทดสอบการยึดเกาะก่อนใช้งานจริง</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;Neutral&nbsp;Silicone&nbsp;Sealant</li><li>Base:&nbsp;Neutral&nbsp;Silicone</li><li>100%&nbsp;Modulus:&nbsp;0.48&nbsp;N/mm²</li><li>Application&nbsp;Temperature:&nbsp;+5°C&nbsp;ถึง&nbsp;+40°C</li><li>Curing&nbsp;Time:&nbsp;ประมาณ&nbsp;3.5&nbsp;มม.&nbsp;/&nbsp;24&nbsp;ชั่วโมง&nbsp;ที่&nbsp;+23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Density:&nbsp;1.02&nbsp;g/ml</li><li>Elongation&nbsp;at&nbsp;Break:&nbsp;470%</li><li>Shore&nbsp;A&nbsp;Hardness:&nbsp;26</li><li>Tack&nbsp;Free&nbsp;Time:&nbsp;ประมาณ&nbsp;5&nbsp;นาที&nbsp;ที่&nbsp;+23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Temperature&nbsp;Resistance:&nbsp;-50°C&nbsp;ถึง&nbsp;+150°C</li><li>Tensile&nbsp;Strength:&nbsp;1.70&nbsp;N/mm²</li></ul><p></p><p><strong>สีสินค้า:</strong></p><ul><li>Clear&nbsp;/&nbsp;ใส</li><li>White&nbsp;/&nbsp;ขาว</li><li>Black&nbsp;/&nbsp;ดำ</li></ul><p></p><p><strong>บรรจุภัณฑ์:</strong></p><p>260&nbsp;ml&nbsp;Cartridge</p><p>25&nbsp;หลอด&nbsp;/&nbsp;กล่อง</p><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>พื้นผิวต้องสะอาด&nbsp;แห้ง&nbsp;แข็งแรง&nbsp;และปราศจากฝุ่น&nbsp;คราบน้ำมัน&nbsp;หรือคราบไขมัน</li><li>ตัดปลายหลอดซิลิโคนและใส่หัวฉีดตามขนาดรอยต่อที่ต้องการ</li><li>ใส่หลอดซิลิโคนในปืนยิงซิลิโคน</li><li>ยิงซิลิโคนลงในรอยต่อให้ต่อเนื่องและเต็มแนว</li><li>ปาดแต่งผิวซิลิโคนให้เรียบก่อนผิวเริ่มแห้ง</li><li>รอให้ซิลิโคนบ่มตัวเต็มที่ก่อนใช้งานพื้นที่ตามปกติ</li></ol><p></p><p><strong>คำแนะนำเรื่องขนาดรอยต่อ:</strong></p><ul><li>รอยต่อกว้างไม่เกิน&nbsp;10&nbsp;มม.&nbsp;แนะนำอัตราส่วนความลึกต่อความกว้างประมาณ&nbsp;1:1&nbsp;โดยมีความกว้างและความลึกขั้นต่ำ&nbsp;5&nbsp;มม.</li><li>รอยต่อกว้างมากกว่า&nbsp;10&nbsp;มม.&nbsp;ความลึกควรคำนวณจากความกว้างหาร&nbsp;3&nbsp;แล้วบวก&nbsp;6&nbsp;มม.</li></ul><p></p><p><strong>ข้อจำกัดการใช้งาน:</strong></p><ul><li>ไม่เหมาะสำหรับตู้ปลาและตู้เลี้ยงสัตว์</li><li>อาจเกิดการเปลี่ยนสีได้ในพื้นที่มืดหรือเมื่อสัมผัสสารเคมีบางชนิด</li><li>ไม่เหมาะกับพื้นผิว&nbsp;PE,&nbsp;PP,&nbsp;PC,&nbsp;PMMA,&nbsp;PTFE</li><li>ไม่เหมาะกับพลาสติกอ่อน&nbsp;นีโอพรีน&nbsp;และวัสดุบิทูมินัส</li><li>ไม่สามารถทาสีทับได้</li><li>ควรทดสอบการยึดเกาะก่อนใช้งานจริง&nbsp;โดยเฉพาะพื้นผิวเฉพาะทาง</li></ul><p></p><p><strong>การทาสีทับ:</strong></p><p>Bostik&nbsp;S546&nbsp;ไม่สามารถทาสีทับได้&nbsp;หากบริเวณใกล้เคียงต้องมีการทาสี&nbsp;ควรใช้เทปกาวปิดขอบรอยต่อก่อนยิงซิลิโคน&nbsp;เพื่อป้องกันการปนเปื้อนบนพื้นผิวที่จะทาสี</p><p></p><p><strong>การทำความสะอาด:</strong></p><ul><li>เครื่องมือควรทำความสะอาดหลังใช้งาน</li><li>ซิลิโคนที่แห้งแล้วสามารถลอกหรือขูดออกได้ด้วยวิธีกลเท่านั้น</li><li>ควรทำความสะอาดมือด้วย&nbsp;Bostik&nbsp;Wipes&nbsp;หรือน้ำและสบู่</li></ul><p></p><p><strong>การเก็บรักษา:</strong></p><p>เก็บในบรรจุภัณฑ์เดิมที่ยังไม่เปิดใช้งาน&nbsp;ที่อุณหภูมิ&nbsp;+5°C&nbsp;ถึง&nbsp;+25°C&nbsp;และเก็บในที่แห้ง</p><p></p><p><strong>อายุการเก็บรักษา:</strong></p><p>12&nbsp;เดือน&nbsp;นับจากวันที่ผลิต&nbsp;เมื่อเก็บในสภาพแวดล้อมที่เหมาะสม</p><p></p><p><strong>เหมาะสำหรับ:</strong></p><ul><li>ช่างห้องน้ำ</li><li>ช่างครัว</li><li>ช่างสุขภัณฑ์</li><li>ช่างซิลิโคน</li><li>ผู้รับเหมา</li><li>งานซ่อมแซมบ้าน</li><li>งานโครงการที่ต้องการซิลิโคนสำหรับพื้นที่เปียกชื้น</li></ul>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "id": "bostik-smartflex",
+      "groupId": "g6",
+      "title": "Smart Flex (MS)",
+      "desc": "กาวยาแนวสูตรไฮบริดคุณภาพสูง สำหรับงานรอยต่อโครงสร้าง งานฟาซาด ประตู หน้าต่าง และวัสดุก่อสร้างหลากหลายชนิด ยึดเกาะดี ทน UV ทนน้ำ ทนสภาพอากาศ และสามารถทาสีทับได้",
+      "longDesc": "<p><em>Bostik&nbsp;SmartFlex&nbsp;Plus&nbsp;Hybrid&nbsp;กาวยาแนวไฮบริด&nbsp;MS&nbsp;สำหรับงานก่อสร้างและฟาซาด</em></p><p>กาวยาแนวสูตรไฮบริดคุณภาพสูง&nbsp;สำหรับงานรอยต่อโครงสร้าง&nbsp;งานฟาซาด&nbsp;ประตู&nbsp;หน้าต่าง&nbsp;และวัสดุก่อสร้างหลากหลายชนิด&nbsp;ยึดเกาะดี&nbsp;ทน&nbsp;UV&nbsp;ทนน้ำ&nbsp;ทนสภาพอากาศ&nbsp;และสามารถทาสีทับได้</p><p></p><p><strong>รายละเอียดสินค้า:</strong></p><p>Bostik&nbsp;SmartFlex&nbsp;Plus&nbsp;Hybrid&nbsp;เป็นกาวยาแนวชนิด&nbsp;Hybrid&nbsp;เทคโนโลยี&nbsp;MS&nbsp;คุณภาพสูง&nbsp;แบบส่วนประกอบเดียว&nbsp;ใช้สำหรับงานรอยต่อก่อสร้าง&nbsp;งานฟาซาด&nbsp;งานรอยต่อขยายตัว&nbsp;และงานซีลรอบประตู-หน้าต่าง&nbsp;เหมาะกับวัสดุทั้งพื้นผิวพรุนและไม่พรุน&nbsp;เช่น&nbsp;คอนกรีต&nbsp;อะลูมิเนียมคอมโพสิต&nbsp;สแตนเลส&nbsp;เหล็ก&nbsp;กัลวาไนซ์&nbsp;วงกบหน้าต่าง&nbsp;วงกบประตู&nbsp;และ&nbsp;UPVC</p><p>ตัวกาวมีคุณสมบัติยึดเกาะสูง&nbsp;ใช้งานได้ดีกับพื้นผิวหลากหลายชนิด&nbsp;รวมถึงพื้นผิวที่มีความชื้นเล็กน้อย&nbsp;เนื้อกาวไม่ย้อย&nbsp;ใช้งานง่าย&nbsp;ไม่มีฟองอากาศระหว่างการบ่มตัว&nbsp;และสามารถทาสีทับได้&nbsp;เหมาะสำหรับงานภายในและภายนอกอาคารที่ต้องการความทนทานและความเรียบร้อยของรอยต่อ</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>กาวยาแนวสูตร&nbsp;Hybrid&nbsp;/&nbsp;MS&nbsp;คุณภาพสูง</li><li>ยึดเกาะได้ดีกับวัสดุหลายประเภท</li><li>ใช้ได้กับพื้นผิวชื้นเล็กน้อย</li><li>ปราศจากตัวทำละลายและสาร&nbsp;Isocyanate</li><li>ทน&nbsp;UV&nbsp;ทนน้ำ&nbsp;และทนสภาพอากาศได้ดี</li><li>ไม่เกิดฟองอากาศระหว่างการบ่มตัว</li><li>เนื้อกาวไม่ย้อย&nbsp;เหมาะกับงานแนวตั้ง</li><li>สามารถทาสีทับได้</li><li>รองรับการเคลื่อนไหวของรอยต่อ&nbsp;Class&nbsp;50</li><li>เหมาะสำหรับงานก่อสร้าง&nbsp;งานฟาซาด&nbsp;และงานรอยต่ออาคาร</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>งานรอยต่อคอนกรีต</li><li>งานรอยต่อฟาซาดอาคาร</li><li>งานซีลรอบประตูและหน้าต่าง</li><li>งานอะลูมิเนียมคอมโพสิต</li><li>งานรอยต่อขยายตัวของอาคาร</li><li>งานรอยต่อระหว่างวัสดุก่อสร้าง</li><li>งานซีลวัสดุโลหะ&nbsp;เช่น&nbsp;สแตนเลส&nbsp;เหล็ก&nbsp;และกัลวาไนซ์</li><li>งานวงกบ&nbsp;UPVC</li><li>งานภายในและภายนอกอาคาร</li></ul><p></p><p><strong>พื้นผิวที่เหมาะสม:</strong></p><ul><li>คอนกรีต</li><li>อะลูมิเนียมคอมโพสิต</li><li>สแตนเลส</li><li>เหล็ก</li><li>เหล็กกัลวาไนซ์</li><li>วงกบประตูและหน้าต่าง</li><li>UPVC</li><li>วัสดุก่อสร้างทั่วไป</li><li>พื้นผิวพรุนและไม่พรุน&nbsp;โดยควรทดสอบการยึดเกาะก่อนใช้งานจริง</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;Hybrid&nbsp;Sealant&nbsp;/&nbsp;MS&nbsp;Sealant</li><li>Base:&nbsp;Hybrid</li><li>Consistency:&nbsp;Non-sag</li><li>Density:&nbsp;1.52&nbsp;g/cm³</li><li>Elongation&nbsp;at&nbsp;Break:&nbsp;มากกว่า&nbsp;600%</li><li>Tensile&nbsp;Strength:&nbsp;มากกว่า&nbsp;1.5&nbsp;MPa</li><li>Application&nbsp;Temperature:&nbsp;+5°C&nbsp;ถึง&nbsp;+40°C</li><li>Joint&nbsp;Movement:&nbsp;Class&nbsp;50</li><li>Skin&nbsp;Formation:&nbsp;น้อยกว่า&nbsp;50&nbsp;นาที&nbsp;ที่&nbsp;23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Shore&nbsp;A&nbsp;Hardness:&nbsp;25–35</li><li>Curing&nbsp;Time:&nbsp;ประมาณ&nbsp;3&nbsp;มม.&nbsp;/&nbsp;24&nbsp;ชั่วโมง&nbsp;ที่&nbsp;23°C&nbsp;/&nbsp;50%&nbsp;RH</li><li>Temperature&nbsp;Resistance:&nbsp;-40°C&nbsp;ถึง&nbsp;+90°C</li></ul><p></p><p><strong>สีสินค้า:</strong></p><ul><li>White&nbsp;/&nbsp;สีขาว</li><li>Gray&nbsp;/&nbsp;สีเทา</li><li>Black&nbsp;/&nbsp;สีดำ</li></ul><p></p><p><strong>บรรจุภัณฑ์:</strong></p><p>600&nbsp;ml&nbsp;Sausage</p><p>20&nbsp;ชิ้น&nbsp;/&nbsp;กล่อง</p><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>ตรวจสอบขนาดรอยต่อให้เหมาะสมกับการเคลื่อนไหวของวัสดุ</li><li>พื้นผิวต้องสะอาด&nbsp;แห้ง&nbsp;ปราศจากฝุ่น&nbsp;คราบน้ำมัน&nbsp;และไขมัน</li><li>ตัดปลายไส้กรอกและใส่ในปืนยิงกาวสำหรับ&nbsp;Sausage&nbsp;600&nbsp;ml</li><li>ยิงกาวลงในร่องรอยต่อให้เต็มและต่อเนื่อง</li><li>ปาดแต่งผิวกาวให้เรียบก่อนกาวเริ่มสร้างผิว</li><li>หากเป็นพื้นผิวคอนกรีตหรือพื้นผิวพรุน&nbsp;ควรทดสอบการยึดเกาะก่อนใช้งาน&nbsp;และใช้&nbsp;Primer&nbsp;ตามความเหมาะสม</li></ol><p></p><p><strong>คำแนะนำเรื่องขนาดรอยต่อ:</strong></p><ul><li>รอยต่อกว้างไม่เกิน&nbsp;10&nbsp;มม.&nbsp;อัตราส่วนความลึกต่อความกว้างประมาณ&nbsp;1:1&nbsp;และควรมีความกว้าง/ลึกขั้นต่ำ&nbsp;5&nbsp;มม.</li><li>รอยต่อกว้างมากกว่า&nbsp;10&nbsp;มม.&nbsp;ความลึกควรคำนวณโดยนำความกว้างหาร&nbsp;3&nbsp;แล้วบวก&nbsp;6&nbsp;มม.</li></ul><p></p><p><strong>ข้อจำกัดการใช้งาน:</strong></p><ul><li>ไม่เหมาะกับพื้นผิว&nbsp;PP,&nbsp;PE,&nbsp;PC,&nbsp;PMMA,&nbsp;PTFE</li><li>ไม่เหมาะกับพลาสติกอ่อน&nbsp;นีโอพรีน&nbsp;และวัสดุบิทูมินัส</li><li>ไม่เหมาะกับพื้นที่ที่แช่น้ำหรือรับน้ำถาวร</li><li>สำหรับคอนกรีตหรือพื้นผิวที่มีรูพรุน&nbsp;ควรทดสอบการยึดเกาะและใช้&nbsp;Primer&nbsp;ตามความเหมาะสม</li><li>ควรทดสอบความเข้ากันได้ของสี&nbsp;หากต้องการทาสีทับ</li></ul><p></p><p><strong>การทาสีทับ:</strong></p><p>สามารถทาสีทับได้ด้วยสีน้ำและสี&nbsp;2K&nbsp;หลายประเภท&nbsp;แต่ควรทดสอบความเข้ากันได้ของสีก่อนใช้งานจริง&nbsp;หากต้องการทาสีทับ&nbsp;แนะนำให้ขัดผิวกาวและบริเวณรอยต่อเล็กน้อยเพื่อให้ได้ผลลัพธ์ที่ดี</p><p></p><p><strong>การเก็บรักษา:</strong></p><p>เก็บในบรรจุภัณฑ์เดิมที่ยังไม่เปิดใช้งาน&nbsp;ที่อุณหภูมิ&nbsp;+5°C&nbsp;ถึง&nbsp;+25°C&nbsp;และเก็บในที่แห้ง</p><p></p><p><strong>อายุการเก็บรักษา:</strong></p><p>12&nbsp;เดือน&nbsp;นับจากวันที่ผลิต&nbsp;เมื่อเก็บในสภาพแวดล้อมที่เหมาะสม</p><p></p><p><strong>เหมาะสำหรับ:</strong></p><ul><li>ช่างก่อสร้าง</li><li>ช่างฟาซาด</li><li>ช่างกระจกและอะลูมิเนียม</li><li>ผู้รับเหมา</li><li>งานติดตั้งประตู-หน้าต่าง</li><li>งานซีลรอยต่ออาคาร</li><li>งานอาคารพาณิชย์&nbsp;บ้านพักอาศัย&nbsp;และโครงการก่อสร้าง</li></ul>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "id": "bostik-barrelgun",
+      "groupId": "g8",
+      "title": "Bostik Barrel Gun",
+      "desc": "ปืนยิงซิลิโคน Bostik Barrel Gun สำหรับงานยิงกาว ซิลิโคน และยาแนว รองรับงานอเนกประสงค์ทั้งบรรจุภัณฑ์แบบหลอดและแบบไส้กรอก 600 ml เหมาะสำหรับงานช่าง งานติดตั้ง และงานก่อสร้างมืออาชีพ",
+      "longDesc": "<p>ปืนยิงซิลิโคน&nbsp;Bostik&nbsp;Barrel&nbsp;Gun&nbsp;สำหรับงานยิงกาว&nbsp;ซิลิโคน&nbsp;และยาแนว&nbsp;รองรับงานอเนกประสงค์ทั้งบรรจุภัณฑ์แบบหลอดและแบบไส้กรอก&nbsp;600&nbsp;ml&nbsp;เหมาะสำหรับงานช่าง&nbsp;งานติดตั้ง&nbsp;และงานก่อสร้างมืออาชีพ</p><p></p><p><strong>รายละเอียดสินค้า:</strong></p><p>Bostik&nbsp;Barrel&nbsp;Gun&nbsp;เป็นปืนยิงซิลิโคนและกาวยาแนวสำหรับงานติดตั้งระดับมืออาชีพ&nbsp;ออกแบบมาเพื่อช่วยให้การยิงกาวหรือซิลิโคนทำได้แม่นยำ&nbsp;ควบคุมปริมาณเนื้อวัสดุได้ดี&nbsp;และลดความเมื่อยล้าระหว่างใช้งาน&nbsp;เหมาะสำหรับงานยาแนว&nbsp;งานซีลรอยต่อ&nbsp;งานติดตั้งประตู-หน้าต่าง&nbsp;งานอะลูมิเนียม&nbsp;งานกระจก&nbsp;งานก่อสร้าง&nbsp;และงานซ่อมแซมทั่วไป</p><p>ตัวกระบอกผลิตจากอะลูมิเนียม&nbsp;มีความแข็งแรง&nbsp;ทนทาน&nbsp;ใช้งานได้ต่อเนื่อง&nbsp;รองรับงานทั้งชนิดความหนืดต่ำและความหนืดสูง&nbsp;เหมาะสำหรับช่างมืออาชีพ&nbsp;ผู้รับเหมา&nbsp;และผู้ใช้งานทั่วไปที่ต้องการอุปกรณ์คุณภาพดีสำหรับงานยิงกาวและซิลิโคน</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>รองรับกาว&nbsp;ซิลิโคน&nbsp;และยาแนวได้หลากหลายประเภท</li><li>ใช้ได้กับบรรจุภัณฑ์แบบไส้กรอก&nbsp;600&nbsp;ml</li><li>รองรับการใช้งานกับหลอด&nbsp;Cartridge&nbsp;ตามรูปแบบสินค้า</li><li>กระบอกอะลูมิเนียม&nbsp;แข็งแรง&nbsp;น้ำหนักเหมาะมือ</li><li>ยิงกาวได้แม่นยำ&nbsp;ควบคุมปริมาณการไหลได้ดี</li><li>อัตราทดแรง&nbsp;12&nbsp;เท่า&nbsp;ช่วยให้ยิงง่าย&nbsp;ลดอาการเมื่อยมือ</li><li>เหมาะสำหรับงานมืออาชีพ&nbsp;งานอุตสาหกรรม&nbsp;และงานก่อสร้าง</li><li>ใช้งานกับผลิตภัณฑ์&nbsp;Bostik&nbsp;กลุ่มซิลิโคน&nbsp;ซีลแลนท์&nbsp;และกาวยาแนวได้</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>งานยิงซิลิโคนรอบประตูและหน้าต่าง</li><li>งานยาแนวรอยต่ออะลูมิเนียม&nbsp;กระจก&nbsp;และผนัง</li><li>งานซีลรอยต่ออาคาร</li><li>งานติดตั้งกระจก&nbsp;งานฟาซาด&nbsp;และงานก่อสร้าง</li><li>งานยิงกาวหรือซีลแลนท์แบบไส้กรอก&nbsp;600&nbsp;ml</li><li>งานซ่อมแซมและติดตั้งทั่วไป</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;ปืนยิงซิลิโคน&nbsp;/&nbsp;ปืนยิงกาวยาแนว</li><li>ระบบการใช้งาน:&nbsp;Manual&nbsp;Operated</li><li>วัสดุกระบอก:&nbsp;Aluminium</li><li>ความยาวกระบอก:&nbsp;ประมาณ&nbsp;37–38.3&nbsp;ซม.</li><li>ขนาดสินค้า:&nbsp;15&nbsp;นิ้ว</li><li>เส้นผ่านศูนย์กลางภายในท่อ:&nbsp;ประมาณ&nbsp;51&nbsp;มม.</li><li>ความหนาตัวเครื่อง:&nbsp;ประมาณ&nbsp;1.2&nbsp;มม.</li><li>อัตราทดแรง:&nbsp;12:1</li><li>สี:&nbsp;น้ำเงิน</li><li>รองรับบรรจุภัณฑ์:&nbsp;Sausage&nbsp;600&nbsp;ml&nbsp;/&nbsp;Cartridge&nbsp;ตามความเหมาะสมของสินค้า</li><li>จำนวนบรรจุ:&nbsp;1&nbsp;ชิ้น</li></ul><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>เปิดหัวกระบอกปืนยิงซิลิโคน</li><li>ใส่กาวหรือซิลิโคนชนิดไส้กรอก&nbsp;600&nbsp;ml&nbsp;หรือหลอด&nbsp;Cartridge&nbsp;ตามประเภทการใช้งาน</li><li>ตัดปลายบรรจุภัณฑ์และใส่หัวฉีดให้เรียบร้อย</li><li>บีบไกปืนเพื่อควบคุมการไหลของกาวหรือซิลิโคน</li><li>หลังใช้งานควรทำความสะอาดหัวฉีดและตัวปืน&nbsp;เพื่อยืดอายุการใช้งาน</li></ol><p></p><p><strong>ข้อควรระวัง:</strong></p><ul><li>เลือกใช้หัวฉีดและบรรจุภัณฑ์ให้เหมาะกับชนิดของกาวหรือซิลิโคน</li><li>ไม่ควรใช้แรงกดเกินความจำเป็น&nbsp;หากวัสดุไหลยากควรตรวจสอบหัวฉีดหรือสภาพบรรจุภัณฑ์ก่อน</li><li>หลังใช้งานควรเช็ดทำความสะอาดคราบกาวหรือซิลิโคนทันที</li><li>เก็บในที่แห้ง&nbsp;หลีกเลี่ยงความชื้นและแสงแดดโดยตรง</li></ul><p></p><p><strong>เหมาะสำหรับ:</strong></p><ul><li>ช่างซิลิโคน</li><li>ช่างกระจกและอะลูมิเนียม</li><li>ผู้รับเหมา</li><li>งานก่อสร้าง</li><li>งานติดตั้งประตู-หน้าต่าง</li><li>งานซ่อมแซมภายในและภายนอกอาคาร</li></ul>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "id": "bostik-fp404",
+      "groupId": "g7",
+      "title": "Bostik FP404",
+      "desc": "โฟมโพลียูรีเทนทนไฟชนิด 1 ส่วนประกอบ สำหรับอุดรอยต่อ ช่องว่าง และงานซีลบริเวณที่ต้องการคุณสมบัติทนไฟ ให้การยึดเกาะดี ใช้งานรวดเร็ว พร้อมคุณสมบัติฉนวนกันความร้อนและเสียง",
+      "longDesc": "<p><em>Bostik&nbsp;FP404&nbsp;โฟม&nbsp;PU&nbsp;ทนไฟ&nbsp;สำหรับอุดรอยต่อและช่องว่าง</em></p><p>โฟมโพลียูรีเทนทนไฟชนิด&nbsp;1&nbsp;ส่วนประกอบ&nbsp;สำหรับอุดรอยต่อ&nbsp;ช่องว่าง&nbsp;และงานซีลบริเวณที่ต้องการคุณสมบัติทนไฟ&nbsp;ให้การยึดเกาะดี&nbsp;ใช้งานรวดเร็ว&nbsp;พร้อมคุณสมบัติฉนวนกันความร้อนและเสียง</p><p></p><p><strong>รายละเอียดสินค้า:</strong></p><p>Bostik&nbsp;FP404&nbsp;Fire&nbsp;Retardent&nbsp;PU&nbsp;Foam&nbsp;เป็นโฟมโพลียูรีเทนชนิด&nbsp;1&nbsp;ส่วนประกอบ&nbsp;สำหรับงานอุดรอยต่อและช่องว่างในงานก่อสร้าง&nbsp;โดยเฉพาะบริเวณที่ต้องการคุณสมบัติทนไฟ&nbsp;ตัวโฟมมีโครงสร้างเซลล์ละเอียด&nbsp;ช่วยเติมเต็มช่องว่างได้ดี&nbsp;พร้อมคุณสมบัติด้านฉนวนความร้อนและเสียง&nbsp;เหมาะสำหรับงานซีลรอยต่อ&nbsp;ผนัง&nbsp;ช่องเปิด&nbsp;กรอบประตู-หน้าต่าง&nbsp;และบริเวณที่ต้องการระบบป้องกันการลามไฟ</p><p></p><p><strong>จุดเด่นสินค้า:</strong></p><ul><li>ผ่านการทดสอบตามมาตรฐาน&nbsp;EN&nbsp;1366-4</li><li>ใช้ได้กับรอยต่อกว้าง&nbsp;5–30&nbsp;มม.</li><li>ทนไฟได้สูงสุดประมาณ&nbsp;120&nbsp;นาที&nbsp;เมื่อติดตั้งแยกเดี่ยวตามเงื่อนไขการใช้งาน</li><li>เมื่อใช้ร่วมกับผลิตภัณฑ์&nbsp;Bostik&nbsp;FireProtect®&nbsp;สามารถเพิ่มประสิทธิภาพการทนไฟได้สูงสุดถึง&nbsp;240&nbsp;นาที&nbsp;ตามระบบที่กำหนด</li><li>Fire&nbsp;Behaviour:&nbsp;B1&nbsp;ตาม&nbsp;DIN&nbsp;4102-1</li><li>Tack&nbsp;Free&nbsp;Time&nbsp;ประมาณ&nbsp;8–12&nbsp;นาที</li><li>Cutting&nbsp;Time&nbsp;ประมาณ&nbsp;20–40&nbsp;นาที</li><li>ช่วยเป็นฉนวนกันความร้อนและเสียง</li><li>สามารถทาสีทับได้ด้วยสีน้ำและสีสังเคราะห์&nbsp;โดยแนะนำให้ทดสอบความเข้ากันได้ของสีก่อนใช้งานจริง</li></ul><p></p><p><strong>การใช้งานที่แนะนำ:</strong></p><ul><li>อุดรอยต่อและช่องว่างที่ต้องการคุณสมบัติทนไฟ</li><li>งานซีลช่องเปิดระหว่างผนัง&nbsp;พื้น&nbsp;หรือองค์ประกอบอาคาร</li><li>งานติดตั้งและซีลบริเวณกรอบประตู-หน้าต่าง</li><li>งานเติมช่องว่างในงานก่อสร้างทั่วไป</li><li>งานที่ต้องการคุณสมบัติฉนวนกันความร้อนและเสียง</li></ul><p></p><p><strong>ข้อมูลทางเทคนิค:</strong></p><ul><li>ประเภทสินค้า:&nbsp;Polyurethane&nbsp;Foam</li><li>Base:&nbsp;Polyurethane</li><li>สี:&nbsp;Red&nbsp;/&nbsp;Pink</li><li>Closed&nbsp;Cells:&nbsp;ประมาณ&nbsp;70%</li><li>Density:&nbsp;20–30&nbsp;kg/m³</li><li>Curing&nbsp;Time:&nbsp;80–100&nbsp;นาที</li><li>Cutting&nbsp;Time:&nbsp;20–40&nbsp;นาที</li><li>Tack&nbsp;Free&nbsp;Time:&nbsp;8–12&nbsp;นาที</li><li>Temperature&nbsp;Resistance:&nbsp;-40°C&nbsp;ถึง&nbsp;+90°C</li><li>Thermal&nbsp;Conductivity:&nbsp;30–35&nbsp;mW/m.K</li><li>Yield:&nbsp;750&nbsp;ml&nbsp;ได้ปริมาณโฟมประมาณ&nbsp;25–30&nbsp;ลิตร</li><li>Application&nbsp;Temperature:&nbsp;+10°C&nbsp;ถึง&nbsp;+35°C</li><li>Canister&nbsp;Temperature:&nbsp;+5°C&nbsp;ถึง&nbsp;+30°C</li><li>Recommended&nbsp;Temperature:&nbsp;+15°C&nbsp;ถึง&nbsp;+25°C</li></ul><p></p><p><strong>มาตรฐาน&nbsp;/&nbsp;ใบรับรอง:</strong></p><ul><li>EN&nbsp;1366-4</li><li>EMICODE&nbsp;EC1&nbsp;Plus</li><li>A+&nbsp;French&nbsp;VOC&nbsp;Regulation</li><li>M1&nbsp;Emission&nbsp;Classification&nbsp;for&nbsp;Building&nbsp;Materials</li><li>Environmental&nbsp;Product&nbsp;Declaration:&nbsp;EPD&nbsp;ตาม&nbsp;ISO&nbsp;14025&nbsp;และ&nbsp;EN&nbsp;15804+A2</li></ul><p></p><p><strong>วิธีใช้งานโดยสรุป:</strong></p><ol><li>พื้นผิวต้องสะอาด&nbsp;ปราศจากฝุ่น&nbsp;น้ำมัน&nbsp;และคราบไขมัน</li><li>เขย่ากระป๋องอย่างน้อย&nbsp;20&nbsp;ครั้งก่อนใช้งาน</li><li>ใช้งานโดยคว่ำกระป๋องลงและกดหัวฉีด</li><li>เติมโฟมประมาณครึ่งหนึ่งของช่องว่าง&nbsp;เพราะโฟมจะขยายตัวภายหลัง</li><li>หากสภาพอากาศแห้ง&nbsp;ควรพรมน้ำเล็กน้อยเพื่อช่วยการยึดเกาะและโครงสร้างเซลล์ของโฟม</li><li>สำหรับช่องว่างที่กว้างหรือลึกกว่า&nbsp;4&nbsp;ซม.&nbsp;ควรเติมเป็นหลายชั้น&nbsp;โดยรอประมาณ&nbsp;15–30&nbsp;นาทีระหว่างชั้น</li><li>ใช้งานในพื้นที่ที่มีการระบายอากาศดี&nbsp;และควรสวมถุงมือ&nbsp;แว่นตา&nbsp;และชุดป้องกันระหว่างทำงาน</li></ol><p></p><p><strong>ข้อจำกัดการใช้งาน:</strong></p><ul><li>ไม่เหมาะกับพื้นผิว&nbsp;PE,&nbsp;PP,&nbsp;PC,&nbsp;PMMA,&nbsp;PTFE</li><li>ไม่เหมาะกับพลาสติกอ่อน&nbsp;นีโอพรีน&nbsp;และวัสดุบิทูมินัส</li><li>ไม่เหมาะสำหรับพื้นที่ที่แช่น้ำหรือรับน้ำถาวร</li><li>ไม่เหมาะสำหรับช่องว่างที่มีความชื้นไม่เพียงพอ</li><li>กระป๋องมีแรงดัน&nbsp;ห้ามเจาะ&nbsp;เผา&nbsp;หรือวางใกล้เปลวไฟ</li><li>หลีกเลี่ยงแสงแดดโดยตรงและอุณหภูมิสูงเกิน&nbsp;50°C</li></ul><p></p><p><strong>การทำความสะอาด:</strong></p><p>โฟมที่ยังไม่แห้งสามารถทำความสะอาดได้ทันทีด้วย&nbsp;Bostik&nbsp;P100&nbsp;FOAM&#39;N&#39;CLEAN&nbsp;POWER&nbsp;ส่วนโฟมที่แห้งแล้วควรตัดออกด้วยมีดหรือเกรียง</p><p></p><p><strong>บรรจุภัณฑ์:</strong></p><p>750&nbsp;ml&nbsp;/&nbsp;กระป๋อง</p><p>12&nbsp;กระป๋อง&nbsp;/&nbsp;กล่อง</p><p></p><p><strong>อายุการเก็บรักษา:</strong></p><p>12&nbsp;เดือน&nbsp;นับจากวันที่ผลิต&nbsp;เมื่อเก็บในบรรจุภัณฑ์เดิมที่ยังไม่เปิดใช้งาน&nbsp;ที่อุณหภูมิ&nbsp;+5°C&nbsp;ถึง&nbsp;+25°C&nbsp;และเก็บในที่แห้ง</p>",
+      "headers": {
+        "shgc": "SHGC",
+        "vlt": "VLT",
+        "vlr": "VLR",
+        "uv": "UV",
+        "ir": "IR",
+        "tser": "TSER",
+        "thickness": "บรรจุ"
+      }
+    },
+    {
+      "title": "DF-PA Chill",
+      "desc": "โทนเย็น เปลี่ยนเฉดสีในกลุ่ม Blue / Magenta / Yellow และสะท้อน Gold / Green / Blue ให้ลุคโมเดิร์น สงบ หรู และร่วมสมัย",
+      "longDesc": "<p><strong>ฟิล์มตกแต่งกระจกเปลี่ยนสีตามมุมมอง&nbsp;สำหรับงานออกแบบอาคารระดับพรีเมียม</strong></p><p>3M™&nbsp;DICHROIC™&nbsp;เป็นฟิล์มตกแต่งกระจกสำหรับงานอาคารและงานออกแบบภายใน&nbsp;ช่วยเปลี่ยนกระจกธรรมดาให้กลายเป็นพื้นผิวที่มีสีสัน&nbsp;มีมิติ&nbsp;และสะท้อนเอกลักษณ์ของพื้นที่ได้อย่างโดดเด่น&nbsp;สีของฟิล์มจะเปลี่ยนไปตามมุมมอง&nbsp;แสง&nbsp;และสภาพแวดล้อม&nbsp;เหมาะสำหรับพื้นที่ที่ต้องการสร้างจุดเด่นด้านดีไซน์โดยไม่ต้องเปลี่ยนกระจกเดิม</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>✨&nbsp;<strong>เปลี่ยนสีตามมุมมอง</strong></p><p>ฟิล์มให้เอฟเฟกต์สีเหลือบหลายมิติ&nbsp;สีจะเปลี่ยนไปตามมุมมอง&nbsp;แสงตกกระทบ&nbsp;และระยะการมองเห็น&nbsp;ทำให้กระจกดูมีชีวิตและน่าสนใจมากขึ้น</p><p>🏢&nbsp;<strong>ยกระดับภาพลักษณ์พื้นที่ให้ดูพรีเมียม</strong></p><p>เหมาะกับอาคารหรือพื้นที่ที่ต้องการสร้างความโดดเด่น&nbsp;เช่น&nbsp;โรงแรม&nbsp;สำนักงาน&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;และพื้นที่ต้อนรับลูกค้า</p><p>🎨&nbsp;<strong>ใช้เป็นองค์ประกอบงาน&nbsp;Interior&nbsp;Design&nbsp;ได้ดี</strong></p><p>เหมาะสำหรับตกแต่งผนังกระจก&nbsp;ฉากกั้นกระจก&nbsp;ประตู&nbsp;กระจกห้องประชุม&nbsp;กระจกโถงทางเดิน&nbsp;หรือพื้นที่ที่ต้องการสร้างบรรยากาศเฉพาะตัว</p><p>🛡️&nbsp;<strong>พื้นผิวเคลือบแข็ง&nbsp;ช่วยลดรอยขีดข่วน</strong></p><p>มีชั้นเคลือบผิวที่ช่วยเพิ่มความทนทานในการใช้งาน&nbsp;เหมาะกับพื้นที่เชิงพาณิชย์ที่ต้องการทั้งความสวยงามและความคงทน</p><p>🔄&nbsp;<strong>ติดตั้งบนกระจกเดิมได้</strong></p><p>ช่วยเปลี่ยนลุคพื้นที่ได้โดยไม่จำเป็นต้องรื้อกระจกใหม่&nbsp;เหมาะกับงานรีโนเวต&nbsp;งานตกแต่งภายใน&nbsp;และงานปรับภาพลักษณ์แบรนด์</p><p></p><h3>แนะนำเหมาะกับพื้นที่ประเภท</h3><ul><li>โรงแรม&nbsp;/&nbsp;รีสอร์ต&nbsp;/&nbsp;ล็อบบี้</li><li>อาคารสำนักงาน&nbsp;/&nbsp;สำนักงานใหญ่</li><li>ห้องประชุม&nbsp;/&nbsp;กระจกกั้นห้อง</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;Flagship&nbsp;Store</li><li>คาเฟ่&nbsp;/&nbsp;ร้านอาหาร&nbsp;/&nbsp;พื้นที่&nbsp;Commercial</li><li>ศูนย์การค้า&nbsp;/&nbsp;พื้นที่&nbsp;Display</li><li>คลินิก&nbsp;/&nbsp;Wellness&nbsp;Space&nbsp;/&nbsp;Beauty&nbsp;Space</li><li>พื้นที่ต้อนรับลูกค้า&nbsp;/&nbsp;Reception&nbsp;Area</li><li>งานตกแต่งกระจกภายในอาคาร</li><li>งานรีโนเวตพื้นที่ที่ต้องการจุดเด่นด้านดีไซน์</li></ul><p></p><h3>รุ่น&nbsp;/&nbsp;โทนสีที่แนะนำ</h3><ul><li>DF-PA&nbsp;Blaze&nbsp;&nbsp;|&nbsp;&nbsp;โทนร้อน&nbsp;ให้เอฟเฟกต์สีอบอุ่น&nbsp;เช่น&nbsp;แดง&nbsp;ทอง&nbsp;ส้ม&nbsp;และโทนสีพลังงานสูง&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;โชว์รูม&nbsp;พื้นที่ที่ต้องการความโดดเด่นและพลังของแบรนด์</li><li>DF-PA&nbsp;Chill&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;โทนเย็น&nbsp;ให้เอฟเฟกต์สีเย็น&nbsp;เช่น&nbsp;น้ำเงิน&nbsp;ม่วง&nbsp;เขียว&nbsp;และโทนสีที่ดูสงบหรู&nbsp;โรงแรม&nbsp;สำนักงาน&nbsp;ล็อบบี้&nbsp;ห้องประชุม&nbsp;และพื้นที่ที่ต้องการความพรีเมียมแบบสุภาพ</li></ul><h3></h3><h3>แนวทางการใช้งานในงานออกแบบ</h3><p><strong>1.&nbsp;ใช้เป็นจุดเด่นของพื้นที่</strong></p><p>เหมาะกับผนังกระจกหรือฉากกั้นที่ต้องการให้เป็น&nbsp;Visual&nbsp;Highlight&nbsp;ของโครงการ</p><p><strong>2.&nbsp;ใช้สร้าง&nbsp;Brand&nbsp;Experience</strong></p><p>เหมาะกับพื้นที่แบรนด์ที่ต้องการสีสันเฉพาะตัว&nbsp;เช่น&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;หรือพื้นที่ต้อนรับลูกค้า</p><p><strong>3.&nbsp;ใช้เพิ่มมิติให้กระจกใส</strong></p><p>ช่วยให้กระจกดูมี&nbsp;Movement&nbsp;และ&nbsp;Texture&nbsp;มากขึ้น&nbsp;โดยไม่ต้องใช้วัสดุตกแต่งหนักหรือทึบ</p><p><strong>4.&nbsp;ใช้กับแสงธรรมชาติหรือแสงไฟตกแต่ง</strong></p><p>เมื่อมีแสงตกกระทบ&nbsp;ฟิล์มจะช่วยสร้างเอฟเฟกต์สีที่แตกต่าง&nbsp;ทำให้พื้นที่ดูมีชีวิตและเปลี่ยนบรรยากาศได้ตลอดวัน</p><h3></h3><p><strong>3M™&nbsp;DICHROIC™&nbsp;เหมาะสำหรับอาคารหรือพื้นที่ที่ต้องการตกแต่งกระจกให้โดดเด่น&nbsp;มีสีสัน&nbsp;และดูพรีเมียมมากขึ้น</strong>&nbsp;โดยเฉพาะงานโรงแรม&nbsp;สำนักงาน&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;และพื้นที่เชิงพาณิชย์ที่ต้องการสร้างภาพจำด้านดีไซน์และยกระดับประสบการณ์ของผู้ใช้งาน</p><h3></h3><h3>หมายเหตุ</h3><p>3M™&nbsp;DICHROIC™&nbsp;เป็นฟิล์มตกแต่งกระจก&nbsp;จุดเด่นหลักคือความสวยงาม&nbsp;สีเหลือบ&nbsp;และการเปลี่ยนสีตามมุมมอง&nbsp;ไม่ใช่ฟิล์มกรองแสงลดความร้อนโดยตรง&nbsp;หากลูกค้าต้องการลดร้อนควบคู่กับงานตกแต่ง&nbsp;แนะนำพิจารณาฟิล์มกรองแสงอาคารร่วมกับการออกแบบพื้นที่เพิ่มเติม</p>",
+      "groupId": "g9",
+      "id": "s-1782224447553",
+      "referenceFile": ""
+    },
+    {
+      "title": "DF-PA Blaze",
+      "desc": "โทนร้อน เปลี่ยนเฉดสีในกลุ่ม Cyan / Blue / Magenta และสะท้อน Red / Gold ให้ความรู้สึกโดดเด่น มีพลัง และหรูสะดุดตา",
+      "longDesc": "<p><strong>ฟิล์มตกแต่งกระจกเปลี่ยนสีตามมุมมอง&nbsp;สำหรับงานออกแบบอาคารระดับพรีเมียม</strong></p><p>3M™&nbsp;DICHROIC™&nbsp;เป็นฟิล์มตกแต่งกระจกสำหรับงานอาคารและงานออกแบบภายใน&nbsp;ช่วยเปลี่ยนกระจกธรรมดาให้กลายเป็นพื้นผิวที่มีสีสัน&nbsp;มีมิติ&nbsp;และสะท้อนเอกลักษณ์ของพื้นที่ได้อย่างโดดเด่น&nbsp;สีของฟิล์มจะเปลี่ยนไปตามมุมมอง&nbsp;แสง&nbsp;และสภาพแวดล้อม&nbsp;เหมาะสำหรับพื้นที่ที่ต้องการสร้างจุดเด่นด้านดีไซน์โดยไม่ต้องเปลี่ยนกระจกเดิม</p><h3></h3><h3>คุณสมบัติเด่น</h3><p>✨&nbsp;<strong>เปลี่ยนสีตามมุมมอง</strong></p><p>ฟิล์มให้เอฟเฟกต์สีเหลือบหลายมิติ&nbsp;สีจะเปลี่ยนไปตามมุมมอง&nbsp;แสงตกกระทบ&nbsp;และระยะการมองเห็น&nbsp;ทำให้กระจกดูมีชีวิตและน่าสนใจมากขึ้น</p><p>🏢&nbsp;<strong>ยกระดับภาพลักษณ์พื้นที่ให้ดูพรีเมียม</strong></p><p>เหมาะกับอาคารหรือพื้นที่ที่ต้องการสร้างความโดดเด่น&nbsp;เช่น&nbsp;โรงแรม&nbsp;สำนักงาน&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;และพื้นที่ต้อนรับลูกค้า</p><p>🎨&nbsp;<strong>ใช้เป็นองค์ประกอบงาน&nbsp;Interior&nbsp;Design&nbsp;ได้ดี</strong></p><p>เหมาะสำหรับตกแต่งผนังกระจก&nbsp;ฉากกั้นกระจก&nbsp;ประตู&nbsp;กระจกห้องประชุม&nbsp;กระจกโถงทางเดิน&nbsp;หรือพื้นที่ที่ต้องการสร้างบรรยากาศเฉพาะตัว</p><p>🛡️&nbsp;<strong>พื้นผิวเคลือบแข็ง&nbsp;ช่วยลดรอยขีดข่วน</strong></p><p>มีชั้นเคลือบผิวที่ช่วยเพิ่มความทนทานในการใช้งาน&nbsp;เหมาะกับพื้นที่เชิงพาณิชย์ที่ต้องการทั้งความสวยงามและความคงทน</p><p>🔄&nbsp;<strong>ติดตั้งบนกระจกเดิมได้</strong></p><p>ช่วยเปลี่ยนลุคพื้นที่ได้โดยไม่จำเป็นต้องรื้อกระจกใหม่&nbsp;เหมาะกับงานรีโนเวต&nbsp;งานตกแต่งภายใน&nbsp;และงานปรับภาพลักษณ์แบรนด์</p><p></p><h3>แนะนำเหมาะกับพื้นที่ประเภท</h3><ul><li>โรงแรม&nbsp;/&nbsp;รีสอร์ต&nbsp;/&nbsp;ล็อบบี้</li><li>อาคารสำนักงาน&nbsp;/&nbsp;สำนักงานใหญ่</li><li>ห้องประชุม&nbsp;/&nbsp;กระจกกั้นห้อง</li><li>โชว์รูม&nbsp;/&nbsp;ร้านค้า&nbsp;/&nbsp;Flagship&nbsp;Store</li><li>คาเฟ่&nbsp;/&nbsp;ร้านอาหาร&nbsp;/&nbsp;พื้นที่&nbsp;Commercial</li><li>ศูนย์การค้า&nbsp;/&nbsp;พื้นที่&nbsp;Display</li><li>คลินิก&nbsp;/&nbsp;Wellness&nbsp;Space&nbsp;/&nbsp;Beauty&nbsp;Space</li><li>พื้นที่ต้อนรับลูกค้า&nbsp;/&nbsp;Reception&nbsp;Area</li><li>งานตกแต่งกระจกภายในอาคาร</li><li>งานรีโนเวตพื้นที่ที่ต้องการจุดเด่นด้านดีไซน์</li></ul><p></p><h3>รุ่น&nbsp;/&nbsp;โทนสีที่แนะนำ</h3><ul><li>DF-PA&nbsp;Blaze&nbsp;&nbsp;|&nbsp;&nbsp;โทนร้อน&nbsp;ให้เอฟเฟกต์สีอบอุ่น&nbsp;เช่น&nbsp;แดง&nbsp;ทอง&nbsp;ส้ม&nbsp;และโทนสีพลังงานสูง&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;โชว์รูม&nbsp;พื้นที่ที่ต้องการความโดดเด่นและพลังของแบรนด์</li><li>DF-PA&nbsp;Chill&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;โทนเย็น&nbsp;ให้เอฟเฟกต์สีเย็น&nbsp;เช่น&nbsp;น้ำเงิน&nbsp;ม่วง&nbsp;เขียว&nbsp;และโทนสีที่ดูสงบหรู&nbsp;โรงแรม&nbsp;สำนักงาน&nbsp;ล็อบบี้&nbsp;ห้องประชุม&nbsp;และพื้นที่ที่ต้องการความพรีเมียมแบบสุภาพ</li></ul><h3></h3><h3>แนวทางการใช้งานในงานออกแบบ</h3><p><strong>1.&nbsp;ใช้เป็นจุดเด่นของพื้นที่</strong></p><p>เหมาะกับผนังกระจกหรือฉากกั้นที่ต้องการให้เป็น&nbsp;Visual&nbsp;Highlight&nbsp;ของโครงการ</p><p><strong>2.&nbsp;ใช้สร้าง&nbsp;Brand&nbsp;Experience</strong></p><p>เหมาะกับพื้นที่แบรนด์ที่ต้องการสีสันเฉพาะตัว&nbsp;เช่น&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;หรือพื้นที่ต้อนรับลูกค้า</p><p><strong>3.&nbsp;ใช้เพิ่มมิติให้กระจกใส</strong></p><p>ช่วยให้กระจกดูมี&nbsp;Movement&nbsp;และ&nbsp;Texture&nbsp;มากขึ้น&nbsp;โดยไม่ต้องใช้วัสดุตกแต่งหนักหรือทึบ</p><p><strong>4.&nbsp;ใช้กับแสงธรรมชาติหรือแสงไฟตกแต่ง</strong></p><p>เมื่อมีแสงตกกระทบ&nbsp;ฟิล์มจะช่วยสร้างเอฟเฟกต์สีที่แตกต่าง&nbsp;ทำให้พื้นที่ดูมีชีวิตและเปลี่ยนบรรยากาศได้ตลอดวัน</p><h3></h3><p><strong>3M™&nbsp;DICHROIC™&nbsp;เหมาะสำหรับอาคารหรือพื้นที่ที่ต้องการตกแต่งกระจกให้โดดเด่น&nbsp;มีสีสัน&nbsp;และดูพรีเมียมมากขึ้น</strong>&nbsp;โดยเฉพาะงานโรงแรม&nbsp;สำนักงาน&nbsp;โชว์รูม&nbsp;ร้านค้า&nbsp;คาเฟ่&nbsp;และพื้นที่เชิงพาณิชย์ที่ต้องการสร้างภาพจำด้านดีไซน์และยกระดับประสบการณ์ของผู้ใช้งาน</p><h3></h3><h3>หมายเหตุ</h3><p>3M™&nbsp;DICHROIC™&nbsp;เป็นฟิล์มตกแต่งกระจก&nbsp;จุดเด่นหลักคือความสวยงาม&nbsp;สีเหลือบ&nbsp;และการเปลี่ยนสีตามมุมมอง&nbsp;ไม่ใช่ฟิล์มกรองแสงลดความร้อนโดยตรง&nbsp;หากลูกค้าต้องการลดร้อนควบคู่กับงานตกแต่ง&nbsp;แนะนำพิจารณาฟิล์มกรองแสงอาคารร่วมกับการออกแบบพื้นที่เพิ่มเติม</p>",
+      "groupId": "g9",
+      "id": "s-1782224824281",
       "referenceFile": ""
     }
   ],
@@ -202,10 +988,9 @@
       "color": "Bluish",
       "shgc": "0.48",
       "vlt": "71%",
-      "reflectance": "8% / 9%",
+      "reflectance": "7% / 7%",
       "tser": "52%",
-      "uv": "99.90%",
-      "ir": "97%"
+      "uv": "99.90%"
     },
     {
       "id": "prex-50",
@@ -214,10 +999,9 @@
       "color": "Dark Smoke",
       "shgc": "0.42",
       "vlt": "51%",
-      "reflectance": "7% / 7%",
+      "reflectance": "6% / 6%",
       "tser": "58%",
-      "uv": "99.90%",
-      "ir": "97%"
+      "uv": "99.90%"
     },
     {
       "id": "prex-40",
@@ -226,10 +1010,9 @@
       "color": "Dark Smoke",
       "shgc": "0.39",
       "vlt": "42%",
-      "reflectance": "6% / 6%",
+      "reflectance": "5% / 6%",
       "tser": "61%",
-      "uv": "99.90%",
-      "ir": "97%"
+      "uv": "99.90%"
     },
     {
       "id": "prex-20",
@@ -240,8 +1023,7 @@
       "vlt": "21%",
       "reflectance": "5% / 5%",
       "tser": "66%",
-      "uv": "99.90%",
-      "ir": "97%"
+      "uv": "99.90%"
     },
     {
       "id": "pr-70",
@@ -253,7 +1035,9 @@
       "reflectance": "8% / 8%",
       "tser": "49%",
       "uv": "99.9%",
-      "ir": "97%"
+      "vlr": "8% / 8%",
+      "ir": "97%",
+      "thickness": ""
     },
     {
       "id": "pr-50",
@@ -265,7 +1049,9 @@
       "reflectance": "8% / 7%",
       "tser": "56%",
       "uv": "99.9%",
-      "ir": "97%"
+      "vlr": "8% / 7%",
+      "ir": "97%",
+      "thickness": ""
     },
     {
       "id": "pr-40",
@@ -277,7 +1063,9 @@
       "reflectance": "7% / 7%",
       "tser": "60%",
       "uv": "99.9%",
-      "ir": "97%"
+      "vlr": "7% / 7%",
+      "ir": "97%",
+      "thickness": ""
     },
     {
       "id": "pr-20",
@@ -289,7 +1077,9 @@
       "reflectance": "6% / 5%",
       "tser": "62%",
       "uv": "99.9%",
-      "ir": "97%"
+      "vlr": "6% / 5%",
+      "ir": "97%",
+      "thickness": ""
     },
     {
       "id": "ca-35",
@@ -344,7 +1134,10 @@
       "vlt": "8.7%",
       "reflectance": "4.6% / 4.6%",
       "tser": "61.8%",
-      "uv": "99.9%"
+      "uv": "99.9%",
+      "vlr": "4.6% / 4.6%",
+      "ir": "82.0%",
+      "thickness": ""
     },
     {
       "id": "x-15",
@@ -355,7 +1148,10 @@
       "vlt": "17.3%",
       "reflectance": "4.7% / 4.7%",
       "tser": "57.7%",
-      "uv": "99.7%"
+      "uv": "99.7%",
+      "vlr": "4.7% / 4.7%",
+      "ir": "74.0%",
+      "thickness": ""
     },
     {
       "id": "x-35",
@@ -366,7 +1162,10 @@
       "vlt": "32.2%",
       "reflectance": "4.9% / 4.9%",
       "tser": "53.4%",
-      "uv": "98.6%"
+      "uv": "98.6%",
+      "vlr": "4.9% / 4.9%",
+      "ir": "73.0%",
+      "thickness": ""
     },
     {
       "id": "cmir-5",
@@ -377,7 +1176,8 @@
       "vlt": "6%",
       "reflectance": "5% / 5%",
       "tser": "63%",
-      "uv": "99.9%"
+      "uv": "99.9%",
+      "ir": "95%"
     },
     {
       "id": "cmir-15",
@@ -388,7 +1188,8 @@
       "vlt": "19%",
       "reflectance": "5% / 5%",
       "tser": "59%",
-      "uv": "99.8%"
+      "uv": "99.8%",
+      "ir": "90%"
     },
     {
       "id": "cmir-25",
@@ -399,7 +1200,8 @@
       "vlt": "31%",
       "reflectance": "5% / 5%",
       "tser": "57%",
-      "uv": "99.7%"
+      "uv": "99.7%",
+      "ir": "90%"
     },
     {
       "id": "cmir-35",
@@ -410,7 +1212,8 @@
       "vlt": "45%",
       "reflectance": "5% / 6%",
       "tser": "52%",
-      "uv": "99.6%"
+      "uv": "99.6%",
+      "ir": "85%"
     },
     {
       "id": "cmir-50",
@@ -421,7 +1224,8 @@
       "vlt": "60%",
       "reflectance": "7% / 7%",
       "tser": "47%",
-      "uv": "99.6%"
+      "uv": "99.6%",
+      "ir": "83%"
     },
     {
       "id": "nv-15",
@@ -429,37 +1233,46 @@
       "name": "NV 15",
       "color": "Dark Smoke",
       "shgc": "0.28",
-      "vlt": "13%",
-      "reflectance": "35% / 9%",
+      "vlt": "15%",
+      "reflectance": "38% / 11%",
       "tser": "72%",
-      "uv": "99.9%"
+      "uv": "99%",
+      "vlr": "38% / 11%",
+      "ir": "",
+      "thickness": ""
     },
     {
       "id": "nv-25",
       "seriesId": "nv",
       "name": "NV 25",
       "color": "Dark Smoke",
-      "shgc": "0.37",
+      "shgc": "0.39",
       "vlt": "24%",
-      "reflectance": "24% / 9%",
-      "tser": "63%",
-      "uv": "99.9%"
+      "reflectance": "19% / 7%",
+      "tser": "61%",
+      "uv": "99%",
+      "vlr": "19% / 7%",
+      "ir": "",
+      "thickness": ""
     },
     {
       "id": "nv-35",
       "seriesId": "nv",
       "name": "NV 35",
       "color": "Light Smoke",
-      "shgc": "0.46",
-      "vlt": "33%",
-      "reflectance": "14% / 7%",
-      "tser": "54%",
-      "uv": "99.9%"
+      "shgc": "0.48",
+      "vlt": "36%",
+      "reflectance": "13% / 7%",
+      "tser": "52%",
+      "uv": "99%",
+      "vlr": "13% / 7%",
+      "ir": "",
+      "thickness": ""
     },
     {
       "id": "bc-10",
       "seriesId": "bc",
-      "name": "BC 10",
+      "name": "BC 10*",
       "color": "Dark Reflective",
       "shgc": "0.28",
       "vlt": "10%",
@@ -470,7 +1283,7 @@
     {
       "id": "bc-20",
       "seriesId": "bc",
-      "name": "BC 20",
+      "name": "BC 20*",
       "color": "Dark Reflective",
       "shgc": "0.32",
       "vlt": "17%",
@@ -479,130 +1292,217 @@
       "uv": "99%"
     },
     {
-      "id": "7725se-314",
-      "seriesId": "7725",
-      "name": "7725SE-314 (ลายฝุ่น)",
-      "specs": {
-        "vlt": "85%",
-        "vlr": "79%",
-        "uv": "-",
-        "ir": "-",
-        "tser": "-",
-        "thickness": "50 micron"
-      }
+      "id": "cmir-70",
+      "seriesId": "cmir",
+      "name": "CM-IR 70",
+      "color": "Light Bluish Black",
+      "shgc": "0.59",
+      "vlt": "78%",
+      "reflectance": "8% / 8%",
+      "ir": "78%",
+      "tser": "41%",
+      "uv": "99.2%"
     },
     {
-      "id": "7725se-324",
-      "seriesId": "7725",
-      "name": "7725SE-324 (สีกระจกฝ้า)",
-      "specs": {
-        "vlt": "-",
-        "vlr": "-",
-        "uv": "-",
-        "ir": "-",
-        "tser": "-",
-        "thickness": "50 micron"
-      }
+      "id": "bc-p18arl",
+      "seriesId": "bc",
+      "name": "P18ARL",
+      "color": "Silver",
+      "shgc": "0.23",
+      "vlt": "17%",
+      "reflectance": "56% / 58%",
+      "tser": "77%",
+      "uv": "99%"
     },
     {
       "id": "upr-s50",
       "seriesId": "upr",
       "name": "Ultra PR S50",
+      "thickness": "8 mil",
+      "color": "Clear",
       "shgc": "0.44",
       "vlt": "49%",
-      "reflectance": "8% / 7%",
+      "reflectance": "7% / 8%",
       "tser": "56%",
       "uv": "99.90%",
-      "thickness": "8 mil (0.20 mm)",
-      "ir": "97%"
+      "construction": "Micro-Layered",
+      "tearResistance": "1,100 lbs%",
+      "tensileStrength": "25,000 psi (MD) / 26,000 psi (TD)",
+      "breakStrength": "210 lb/in (MD) / 220 lb/in (TD)",
+      "elongation": "111% (MD) / 102% (TD)",
+      "peelStrength": "4.5 lb./in",
+      "abrasion": "3% Δ Haze"
     },
     {
       "id": "unv-s25",
       "seriesId": "unv",
       "name": "Ultra NV S25",
+      "thickness": "8 mil",
+      "color": "Clear",
       "shgc": "0.42",
-      "vlt": "27%",
-      "reflectance": "17% / 7%",
-      "tser": "58%",
+      "vlt": "24%",
+      "reflectance": "7% / 17%",
+      "tser": "60%",
       "uv": "99.90%",
-      "thickness": "8 mil (0.20 mm)"
+      "construction": "Micro-Layered",
+      "tearResistance": "1,100 lbs% (MD) / 900 lbs% (TD)",
+      "tensileStrength": "28,000 psi (MD) / 27,000 psi (TD)",
+      "breakStrength": "235 lb/in (MD) / 230 lb/in (TD)",
+      "elongation": "120% (MD) / 85% (TD)",
+      "peelStrength": "4.5 lb./in",
+      "abrasion": "3% Δ Haze",
+      "vlr": "7% / 17%",
+      "ir": ""
     },
     {
       "id": "usafety-s800",
       "seriesId": "usafety",
       "name": "Ultra S800",
-      "shgc": "-",
-      "vlt": "-",
-      "reflectance": "-",
-      "tser": "-",
-      "uv": "-",
-      "thickness": "8 mil (0.20 mm)"
+      "thickness": "8 mil",
+      "construction": "Micro-Layered",
+      "tearResistance": "1,100 lbs% (MD) / 1,050 lbs% (TD)",
+      "tensileStrength": "31,500 psi",
+      "breakStrength": "253 lb/in",
+      "elongation": "131%",
+      "peelStrength": "9 lb./in",
+      "abrasion": "2.3% Δ Haze",
+      "shgc": "0.79",
+      "vlt": "87–88%",
+      "vlr": "≤ 9%",
+      "reflectance": "≤ 9%",
+      "uv": "99.9%",
+      "ir": "-",
+      "tser": "21%"
     },
     {
       "id": "safety-s40",
       "seriesId": "safety",
       "name": "Safety S40",
-      "shgc": "-",
-      "vlt": "-",
-      "reflectance": "-",
-      "tser": "-",
-      "uv": "-",
-      "thickness": "4 mil (0.10 mm)"
+      "thickness": "4 mil",
+      "construction": "Single ply",
+      "tensileStrength": "25,000 psi (172 MPa)",
+      "breakStrength": "100 lbs/in (445 N/25 mm)",
+      "elongation": ">125%",
+      "peelStrength": ">4 lbs/in (18 N/25 mm)",
+      "abrasion": "<5% Δ Haze",
+      "shgc": "0.82",
+      "vlt": "87%",
+      "vlr": "8% / 8%",
+      "reflectance": "8% / 8%",
+      "uv": "99%",
+      "ir": "",
+      "tser": "19%"
     },
     {
       "id": "safety-s70",
       "seriesId": "safety",
       "name": "Safety S70",
-      "shgc": "-",
-      "vlt": "-",
-      "reflectance": "-",
-      "tser": "-",
-      "uv": "-",
-      "thickness": "7 mil (0.18 mm)"
+      "thickness": "7 mil",
+      "construction": "Single ply",
+      "tensileStrength": "25,000 psi (172 MPa)",
+      "breakStrength": "175 lbs/in (778 N/25 mm)",
+      "elongation": ">125%",
+      "peelStrength": ">5 lbs/in (22 N/25mm)",
+      "abrasion": "<5% Δ Haze",
+      "shgc": "0.79",
+      "vlt": "87%",
+      "vlr": "8% / 8%",
+      "reflectance": "8% / 8%",
+      "uv": "98%",
+      "ir": "",
+      "tser": "19%"
     },
     {
       "id": "sas-5",
       "seriesId": "sas",
       "name": "SAS 5",
-      "shgc": "-",
+      "thickness": "4 mil",
       "vlt": "6%",
-      "reflectance": "5%",
       "tser": "41%",
-      "uv": "99%",
-      "thickness": "4 mil (0.10 mm)"
+      "reflectance": "5%",
+      "uv": "99%"
     },
     {
       "id": "sas-20",
       "seriesId": "sas",
       "name": "SAS 20",
-      "shgc": "-",
+      "thickness": "4 mil",
       "vlt": "20%",
-      "reflectance": "5%",
       "tser": "39%",
-      "uv": "98%",
-      "thickness": "4 mil (0.10 mm)"
+      "reflectance": "5%",
+      "uv": "98%"
     },
     {
       "id": "sas-35",
       "seriesId": "sas",
       "name": "SAS 35",
-      "shgc": "-",
+      "thickness": "4 mil",
       "vlt": "33%",
-      "reflectance": "6%",
       "tser": "36%",
-      "uv": "99%",
-      "thickness": "4 mil (0.10 mm)"
+      "reflectance": "6%",
+      "uv": "99%"
     },
     {
       "id": "sas-50",
       "seriesId": "sas",
       "name": "SAS 50",
-      "shgc": "-",
+      "thickness": "4 mil",
       "vlt": "50%",
-      "reflectance": "6%",
       "tser": "30%",
-      "uv": "97%",
-      "thickness": "4 mil (0.10 mm)"
+      "reflectance": "6%",
+      "uv": "97%"
+    },
+    {
+      "id": "m-1782178830312",
+      "seriesId": "7725",
+      "name": "7725-314",
+      "shgc": "Dusted Crystal",
+      "vlt": "ฝ้าใส เนียนละมุน",
+      "vlr": "งานที่ต้องการความโปร่ง สบายตา",
+      "reflectance": "งานที่ต้องการความโปร่ง สบายตา",
+      "uv": "รับประกัน 10 ปี ภายในอาคาร / 3-5 ปี ภายนอกอาคาร",
+      "ir": "",
+      "tser": "",
+      "thickness": ""
+    },
+    {
+      "id": "m-1782178834767",
+      "seriesId": "7725",
+      "name": "7725SE-324",
+      "shgc": " Frosted Crystal",
+      "vlt": "ฝ้าขาวชัด พรางสายตามากกว่า",
+      "vlr": "ห้องประชุม ห้องทำงาน พื้นที่ต้องการ Privacy สูง",
+      "reflectance": "ห้องประชุม ห้องทำงาน พื้นที่ต้องการ Privacy สูง",
+      "uv": "รับประกัน 10 ปี ภายในอาคาร / 3-5 ปี ภายนอกอาคาร",
+      "ir": "",
+      "tser": "",
+      "thickness": ""
+    },
+    {
+      "id": "m-1782178886215",
+      "seriesId": "5525",
+      "name": "5524-314",
+      "shgc": "Haze / Dusted Crystal",
+      "vlt": "ฝ้าละมุน โปร่งกว่า",
+      "vlr": "ต้องการความเบา เรียบ สบายตา",
+      "reflectance": "ต้องการความเบา เรียบ สบายตา",
+      "uv": "รับประกัน 5 ปี ภายในอาคาร / 2-3 ปี ภายนอกอาคาร",
+      "ir": "",
+      "tser": "",
+      "thickness": ""
+    },
+    {
+      "id": "m-1782178889919",
+      "seriesId": "5525",
+      "name": "5524-324",
+      "shgc": "Sandblast / Frosted Crystal",
+      "vlt": "ฝ้าชัด คล้ายพ่นทราย",
+      "vlr": "ต้องการพรางสายตามากขึ้น ดูพรีเมียม",
+      "reflectance": "ต้องการพรางสายตามากขึ้น ดูพรีเมียม",
+      "uv": "รับประกัน 5 ปี ภายในอาคาร / 2-3 ปี ภายนอกอาคาร",
+      "ir": "",
+      "tser": "",
+      "thickness": ""
     }
   ],
   "portfolio": [
@@ -633,6 +1533,1048 @@
       "beforeLabel": "กระจกใส (ก่อนติด)",
       "afterLabel": "หลังติดฟิล์ม",
       "id": "1781516922369"
+    },
+    {
+      "title": "นิว ริเวอร์เรสต์ ราษฎร์บูรณะ",
+      "seriesId": "prex",
+      "modelId": "prex-20",
+      "beforeImage": "/portfolio/1781601284544-546873326.jpg",
+      "afterImage": "/portfolio/1781601284578-908111530.jpg",
+      "image1": "/portfolio/1781601284590-903744640.jpg",
+      "image2": "/portfolio/1781601284609-585387898.jpg",
+      "image3": "/portfolio/1781601284631-48084914.jpg",
+      "image4": "/portfolio/1781601284650-171201670.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1781601284070"
+    },
+    {
+      "title": "Andaz Pattaya Jomtien Beach , By Hyatt ",
+      "seriesId": "prex",
+      "modelId": "prex-40",
+      "beforeImage": "/portfolio/1781606340212-669705337.jpg",
+      "afterImage": "/portfolio/1781606340310-212928976.jpg",
+      "image1": "/portfolio/1781606340331-796854536.jpg",
+      "image2": "/portfolio/1781606340350-889246597.jpg",
+      "image3": "/portfolio/1781606340368-996030311.jpg",
+      "image4": "/portfolio/1781606340390-770667534.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1781606339898"
+    },
+    {
+      "title": "Spring Tower Phayathai",
+      "seriesId": "prex",
+      "modelId": "prex-40",
+      "beforeImage": "/portfolio/1781606726768-216199409.jpg",
+      "afterImage": "/portfolio/1781606726788-860301758.jpg",
+      "image1": "/portfolio/1781606726809-153708434.jpg",
+      "image2": "/portfolio/1781606726829-208251095.jpg",
+      "image3": "/portfolio/1781606726847-45265686.jpg",
+      "image4": "/portfolio/1781606726864-559566938.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1781606726387"
+    },
+    {
+      "title": "Jetts Fitness SJ",
+      "seriesId": "nv",
+      "modelId": "nv-25",
+      "beforeImage": "/portfolio/1782101312901-683327104.jpg",
+      "afterImage": "/portfolio/1782101313062-820317192.jpg",
+      "image1": "/portfolio/1782101313186-360764519.jpg",
+      "image2": "/portfolio/1782101313293-410044062.jpg",
+      "image3": "/portfolio/1782101313401-123654386.jpg",
+      "image4": "/portfolio/1782101313496-762172425.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782101318303"
+    },
+    {
+      "title": "Motto กาญจนาภิเษก-พระราม2",
+      "seriesId": "nv",
+      "modelId": "nv-35",
+      "beforeImage": "/portfolio/1782101702354-811171302.jpg",
+      "afterImage": "/portfolio/1782101702630-710946647.jpg",
+      "image1": "/portfolio/1782101702741-957757062.jpg",
+      "image2": "/portfolio/1782101703069-86681048.jpg",
+      "image3": "/portfolio/1782101703179-596439896.jpg",
+      "image4": "/portfolio/1782101703271-187178806.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782101708072"
+    },
+    {
+      "title": "หมู่บ้านชัยพฤกษ์-บางนา กม.15",
+      "seriesId": "bc",
+      "modelId": "bc-10",
+      "beforeImage": "/portfolio/1782102078133-503126353.jpg",
+      "afterImage": "/portfolio/1782102078235-508200353.jpg",
+      "image1": "/portfolio/1782102078335-324572720.jpg",
+      "image2": "/portfolio/1782102078534-88661048.jpg",
+      "image3": "/portfolio/1782102078704-534437871.jpg",
+      "image4": "/portfolio/1782102078796-117226541.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782102083609"
+    },
+    {
+      "title": " บริษัท บิวตี้ คอมมูนิตี้ จำกัด(มหาชน) ",
+      "seriesId": "cmir",
+      "modelId": "cmir-5",
+      "beforeImage": "/portfolio/1782102251585-221142969.jpg",
+      "afterImage": "/portfolio/1782102251712-380157027.jpg",
+      "image1": "/portfolio/1782102251813-375007179.jpg",
+      "image2": "/portfolio/1782102251918-370991990.jpg",
+      "image3": "",
+      "image4": "/portfolio/1782102252008-552942002.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782102252104"
+    },
+    {
+      "title": "บริษัท DKSH (ประเทศไทย)",
+      "seriesId": "bc",
+      "modelId": "bc-20",
+      "beforeImage": "/portfolio/1782102546383-300803735.jpg",
+      "afterImage": "/portfolio/1782102546543-414159377.jpg",
+      "image1": "/portfolio/1782102546646-272750901.jpg",
+      "image2": "/portfolio/1782102546742-298101233.jpg",
+      "image3": "/portfolio/1782102546832-383488109.jpg",
+      "image4": "/portfolio/1782102546925-338978108.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782102551753"
+    },
+    {
+      "title": "เดอะวอเตอร์ฟอร์ด พาร์ค คอนโด",
+      "seriesId": "cmir",
+      "modelId": "cmir-15",
+      "beforeImage": "/portfolio/1782103232971-477187551.jpg",
+      "afterImage": "/portfolio/1782103233173-487603940.jpg",
+      "image1": "/portfolio/1782103233297-701635088.jpg",
+      "image2": "/portfolio/1782103233395-4485226.jpg",
+      "image3": "/portfolio/1782103233532-996555603.jpg",
+      "image4": "/portfolio/1782103233627-391115976.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782103233717"
+    },
+    {
+      "title": "@work home office รามอินทรา",
+      "seriesId": "pr",
+      "modelId": "pr-40",
+      "beforeImage": "/portfolio/1782103883079-377658604.jpg",
+      "afterImage": "/portfolio/1782103883328-81131704.jpg",
+      "image1": "/portfolio/1782103883426-80659077.jpg",
+      "image2": "/portfolio/1782103883520-245821863.jpg",
+      "image3": "/portfolio/1782103883622-144415266.jpg",
+      "image4": "/portfolio/1782103883718-90914613.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782103888538"
+    },
+    {
+      "title": "ศุภาลัยสี่พระยา",
+      "seriesId": "cmir",
+      "modelId": "cmir-25",
+      "beforeImage": "/portfolio/1782104212555-886379697.jpg",
+      "afterImage": "/portfolio/1782104212671-281601160.jpg",
+      "image1": "/portfolio/1782104212776-987050693.jpg",
+      "image2": "/portfolio/1782104212884-754026349.jpg",
+      "image3": "/portfolio/1782104212976-856409061.jpg",
+      "image4": "/portfolio/1782104213071-308874408.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782104213167"
+    },
+    {
+      "title": "หมู่บ้านเนอวาน่าบียอนด์ เกษตรนวมินทร์",
+      "seriesId": "pr",
+      "modelId": "pr-50",
+      "beforeImage": "/portfolio/1782104350397-904247814.jpg",
+      "afterImage": "/portfolio/1782104350494-861547525.jpg",
+      "image1": "/portfolio/1782104350594-379343552.jpg",
+      "image2": "/portfolio/1782104350691-241213143.jpg",
+      "image3": "/portfolio/1782104350782-67722118.jpg",
+      "image4": "/portfolio/1782104350877-946976766.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782104355756"
+    },
+    {
+      "title": "หมู่บ้านอัลฟ่าแกรนด์ กาญจนบุรี",
+      "seriesId": "pr",
+      "modelId": "pr-20",
+      "beforeImage": "/portfolio/1782104945463-389668720.jpg",
+      "afterImage": "/portfolio/1782104945720-787251692.jpg",
+      "image1": "/portfolio/1782104945869-593237310.jpg",
+      "image2": "/portfolio/1782104945975-633504050.jpg",
+      "image3": "/portfolio/1782104946085-38798341.jpg",
+      "image4": "/portfolio/1782104946192-902118004.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782104951023"
+    },
+    {
+      "title": " คอนโดไลฟ์-ลาดพร้าว",
+      "seriesId": "cmir",
+      "modelId": "cmir-35",
+      "beforeImage": "/portfolio/1782105348181-233335117.jpg",
+      "afterImage": "/portfolio/1782105348398-274825526.jpg",
+      "image1": "/portfolio/1782105348494-973538341.jpg",
+      "image2": "/portfolio/1782105348590-464402769.jpg",
+      "image3": "/portfolio/1782105348696-256741143.jpg",
+      "image4": "/portfolio/1782105348792-268455082.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782105348892"
+    },
+    {
+      "title": "ตรงข้ามวัดโคก ",
+      "seriesId": "cmir",
+      "modelId": "cmir-70",
+      "beforeImage": "/portfolio/1782111087291-880108701.jpg",
+      "afterImage": "/portfolio/1782111087457-670044429.jpg",
+      "image1": "/portfolio/1782111087608-822923135.jpg",
+      "image2": "/portfolio/1782111087771-764899937.jpg",
+      "image3": "/portfolio/1782111087927-396815712.jpg",
+      "image4": "/portfolio/1782111088086-29694275.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782111087929"
+    },
+    {
+      "title": "โตไค ริคะ เอเชีย จำกัด  นิคม อมตะนครชลบุรี",
+      "seriesId": "ca",
+      "modelId": "ca-35",
+      "beforeImage": "/portfolio/1782111654972-916418139.jpg",
+      "afterImage": "/portfolio/1782111655755-637402690.jpg",
+      "image1": "/portfolio/1782111656174-897795757.jpg",
+      "image2": "/portfolio/1782111656635-92364707.jpg",
+      "image3": "/portfolio/1782111656985-1430147.jpg",
+      "image4": "/portfolio/1782111657376-8497964.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782111657241"
+    },
+    {
+      "title": "จังหวัดพระนครศรีอยุธยา",
+      "seriesId": "ca",
+      "modelId": "ca-60",
+      "beforeImage": "/portfolio/1782113451176-207192253.jpg",
+      "afterImage": "/portfolio/1782113451373-554705445.jpg",
+      "image1": "/portfolio/1782113451689-12463536.jpg",
+      "image2": "/portfolio/1782113451978-663930076.jpg",
+      "image3": "/portfolio/1782113452182-590560584.jpg",
+      "image4": "/portfolio/1782113452378-124213353.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782113452209"
+    },
+    {
+      "title": "คอนโด  แขวงสีลม เขตบางรัก ",
+      "seriesId": "ca",
+      "modelId": "ca-45",
+      "beforeImage": "/portfolio/1782113700043-998148378.jpg",
+      "afterImage": "/portfolio/1782113700176-828063154.jpg",
+      "image1": "/portfolio/1782113700347-50813691.jpg",
+      "image2": "/portfolio/1782113700498-248082862.jpg",
+      "image3": "/portfolio/1782113700674-244676476.jpg",
+      "image4": "/portfolio/1782113700873-822867254.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782113700706"
+    },
+    {
+      "title": "สนามกอฟล์ฟ กรีนวู๊ด บ้านบึง",
+      "seriesId": "ca",
+      "modelId": "ca-80",
+      "beforeImage": "/portfolio/1782115452232-828710463.jpg",
+      "afterImage": "/portfolio/1782115452421-399488494.jpg",
+      "image1": "/portfolio/1782115452601-602219958.jpg",
+      "image2": "/portfolio/1782115452741-26907680.jpg",
+      "image3": "/portfolio/1782115452862-596061470.jpg",
+      "image4": "/portfolio/1782115452997-269949181.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม",
+      "id": "1782115452817"
+    },
+    {
+      "id": "1782115498764",
+      "type": "sample",
+      "seriesId": "upr",
+      "modelId": "upr-s50",
+      "title": "รุ่น",
+      "label1": "*ภาพจำลองสีและความเข้มของฟิล์มเท่านั้น กรุณาขอดูตัวอย่างฟิล์มจริงก่อนตัดสินใจติดตั้ง",
+      "label2": "ภาพจำลองความเข้ม มองจากภายในอาคาร",
+      "image1": "/samples/recovered-55266323fdb0436c.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "label3": "",
+      "label4": ""
+    },
+    {
+      "id": "1782115578736",
+      "type": "sample",
+      "seriesId": "unv",
+      "modelId": "unv-s25",
+      "title": "*ภาพจำลองสีและความเข้มของฟิล์มเท่านั้น กรุณาขอดูตัวอย่างฟิล์มจริงก่อนตัดสินใจติดตั้ง",
+      "label1": "ภาพจำลองความเข้ม มองจากภายนอกอาคาร",
+      "label2": "ภาพจำลองความเข้ม มองจากภายในอาคาร",
+      "image1": "/samples/recovered-be5b1d8523fab187.jpg",
+      "image2": "/samples/recovered-c19416daac7e693f.jpg",
+      "image3": "",
+      "image4": ""
+    },
+    {
+      "id": "1782115608717",
+      "type": "sample",
+      "seriesId": "usafety",
+      "modelId": "usafety-s800",
+      "title": "*ภาพจำลองสีและความเข้มของฟิล์มเท่านั้น กรุณาขอดูตัวอย่างฟิล์มจริงก่อนตัดสินใจติดตั้ง",
+      "label1": "ภาพจำลองความเข้ม มองจากภายนอกอาคาร",
+      "label2": "ภาพจำลองความเข้ม มองจากภายในอาคาร",
+      "image1": "/samples/recovered-e598fae10deb7d11.jpg",
+      "image2": "/samples/recovered-1110c1877352de52.jpg",
+      "image3": "",
+      "image4": ""
+    },
+    {
+      "id": "1782179123932",
+      "title": "วิทยาลัยเทคโนปัญญาภิวัฒน์ งามวงศ์วาน ",
+      "seriesId": "7725",
+      "modelId": "m-1782178834767",
+      "beforeImage": "/portfolio/1782179123501-158478394.jpg",
+      "afterImage": "/portfolio/1782179123654-490798463.jpg",
+      "image1": "/portfolio/1782179123790-775215337.jpg",
+      "image2": "/portfolio/1782179328083-746053737.jpg",
+      "image3": "/portfolio/1782179124070-112282151.jpg",
+      "image4": "/portfolio/1782179124201-119391939.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม"
+    },
+    {
+      "id": "1782181054597",
+      "title": "ริษัท ริโซ่ (ประเทศไทย) จำกัด สำนักงานใหญ่",
+      "seriesId": "7725",
+      "modelId": "m-1782178830312",
+      "beforeImage": "/portfolio/1782183842749-978765245.jpg",
+      "afterImage": "/portfolio/1782183842886-824697091.jpg",
+      "image1": "/portfolio/1782183843021-561290699.jpg",
+      "image2": "/portfolio/1782183843215-604741666.jpg",
+      "image3": "/portfolio/1782183843347-111546163.jpg",
+      "image4": "/portfolio/1782183843448-484886405.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม"
+    },
+    {
+      "id": "1782184257414",
+      "title": "บริษัทเมก้า ไลฟ์ไซแอ็นซ์ พีทีวาย จำกัด",
+      "seriesId": "5525",
+      "modelId": "m-1782178886215",
+      "beforeImage": "/portfolio/1782184256797-944886633.jpg",
+      "afterImage": "/portfolio/1782184547439-251937238.jpg",
+      "image1": "/portfolio/1782184257139-563360141.jpg",
+      "image2": "/portfolio/1782184257267-272736768.jpg",
+      "image3": "/portfolio/1782184257399-540454075.jpg",
+      "image4": "/portfolio/1782184257544-441553324.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม"
+    },
+    {
+      "id": "1782185172657",
+      "title": "บริษัท ริโซ่ บางนา",
+      "seriesId": "5525",
+      "modelId": "m-1782178889919",
+      "beforeImage": "/portfolio/1782185171912-432892129.jpg",
+      "afterImage": "/portfolio/1782185172040-198430313.jpg",
+      "image1": "/portfolio/1782185172219-549723484.jpg",
+      "image2": "/portfolio/1782185172383-838145424.jpg",
+      "image3": "/portfolio/1782185172589-884772744.jpg",
+      "image4": "/portfolio/1782185172786-224279648.jpg",
+      "beforeLabel": "กระจกใส (ก่อนติด)",
+      "afterLabel": "หลังติดฟิล์ม"
+    },
+    {
+      "id": "recovered-0f7acc5ad534dc90",
+      "type": "sample",
+      "seriesId": "nv",
+      "modelId": "nv-15",
+      "title": "Recovered sample pending review #1",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "ภาพจำลองความเข้ม มองจากภายในอาคาร",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-0f7acc5ad534dc90.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782050036068-sample-2-1782049885991.jpg",
+      "contentHash": "0F7ACC5AD534DC9021FB37B6649E1E7A67B7D9E04FAFADB4345FA9E09F9B47DD"
+    },
+    {
+      "id": "recovered-12de8dcf048cbe95",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #2",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-12de8dcf048cbe95.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782049812828-sample-2-1782049662356.jpg",
+      "contentHash": "12DE8DCF048CBE9594EE57DE06CC21C110D133BADAB22496BD7B1CE2AEBDB07C"
+    },
+    {
+      "id": "recovered-20b45e9844bfcb1b",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #4",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-20b45e9844bfcb1b.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782184607451-sample-1-1782184454691.jpg",
+      "contentHash": "20B45E9844BFCB1BF3808267C0F26977D1EAAED94095EF7DC8BEFCAD3DF6F510"
+    },
+    {
+      "id": "recovered-37350d9e3a16609d",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #5",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-37350d9e3a16609d.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782049812730-sample-1-1782049662355.jpg",
+      "contentHash": "37350D9E3A16609DB37A4D1FE3954C8FC4E27CF00637674F78FE2A46F7BBB8EE"
+    },
+    {
+      "id": "recovered-46475a0d20ac709a",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #6",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-46475a0d20ac709a.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782050776791-sample-1-1782050626704.jpg",
+      "contentHash": "46475A0D20AC709A1DBDBD8680046641BAE1C24C2D038ACB06C28BD57DC68F45"
+    },
+    {
+      "id": "recovered-47752eac2cc219b1",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #7",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-47752eac2cc219b1.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782045919204-sample-1-1782045769041.jpg",
+      "contentHash": "47752EAC2CC219B1985F24ADD059D2F9D3775792D328A60FAA05DC4C553639A1"
+    },
+    {
+      "id": "recovered-4d761982737cce7c",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #8",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-4d761982737cce7c.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782045491706-sample-1-1782045341636.jpg",
+      "contentHash": "4D761982737CCE7C8A26D9385F2DAB7284F2BB75398489CC675BE979C51F7BDC"
+    },
+    {
+      "id": "recovered-54d324d84daaaa87",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #9",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-54d324d84daaaa87.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782053184317-sample-2-1782053033394.jpg",
+      "contentHash": "54D324D84DAAAA87A2E7B9305044E3819C7A0F61C3608D7E482D336FABEF11D0"
+    },
+    {
+      "id": "recovered-5e4d8d7d7359cae2",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #10",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-5e4d8d7d7359cae2.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782184622467-sample-1-1782184469869.jpg",
+      "contentHash": "5E4D8D7D7359CAE2B65C1A254BDEB573BCFC47854484EA5865026B1E791E442A"
+    },
+    {
+      "id": "recovered-5ea9fd17db1f7849",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #11",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-5ea9fd17db1f7849.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782050566180-sample-1-1782050415427.jpg",
+      "contentHash": "5EA9FD17DB1F7849FE9E7ECB5FBF3F6DC32C044027811D662CE002D4DDF5425A"
+    },
+    {
+      "id": "recovered-64fb5f4c136a9fed",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #12",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-64fb5f4c136a9fed.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782046351334-sample-1-1782046201492.jpg",
+      "contentHash": "64FB5F4C136A9FEDF59B63094EA4CCE68259D49BCAAEEE5FCD07FF626A33B996"
+    },
+    {
+      "id": "recovered-65296a9104d6db62",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #13",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-65296a9104d6db62.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782053183947-sample-1-1782053033393.jpg",
+      "contentHash": "65296A9104D6DB622E643A704A70F99350A472F9008C046BB59723C8303FFC54"
+    },
+    {
+      "id": "recovered-659da1a36ba737d8",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #14",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-659da1a36ba737d8.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782184632000-sample-1-1782184479379.jpg",
+      "contentHash": "659DA1A36BA737D89652395A4B7DB8521C3CE682F67016814CF2B9406C0A4EBD"
+    },
+    {
+      "id": "recovered-6ff8bb1236e9e412",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #15",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-6ff8bb1236e9e412.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782049421365-sample-1-1782049271306.jpg",
+      "contentHash": "6FF8BB1236E9E4122679A0F95DC2FC44DB52A27435B8BB1EBE5005725593DBE7"
+    },
+    {
+      "id": "recovered-70e364ecb2a14ace",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #16",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-70e364ecb2a14ace.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782020373825-sample-1-1782020224412.jpg",
+      "contentHash": "70E364ECB2A14ACE70604DD5E5E44B64122A498820DD40ED47F0004B9AB29484"
+    },
+    {
+      "id": "recovered-7dd85ce0f2ff7479",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #17",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-7dd85ce0f2ff7479.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782049559283-sample-1-1782049409242.jpg",
+      "contentHash": "7DD85CE0F2FF74792276137086779EFD70C3E255E1CAB255B45F538984126605"
+    },
+    {
+      "id": "recovered-89cba2bdd0664da1",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #18",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-89cba2bdd0664da1.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782053738790-sample-2-1782053588682.jpg",
+      "contentHash": "89CBA2BDD0664DA1070D6B8063E8ECE5E1500BDBA4771566D1FD8D05C4D2221C"
+    },
+    {
+      "id": "recovered-8b4fa4c4ff354971",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #19",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-8b4fa4c4ff354971.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782050566333-sample-2-1782050415428.jpg",
+      "contentHash": "8B4FA4C4FF354971C4A6D0E7F6694BABDBC25C7B3B46C85F05E3AF09443CCD72"
+    },
+    {
+      "id": "recovered-8ea34cb00142ac5b",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #20",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-8ea34cb00142ac5b.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782184664793-sample-1-1782184512190.jpg",
+      "contentHash": "8EA34CB00142AC5B29D6CE4D5675CEFEE8658BEEEA39DF0339263D963D824A1A"
+    },
+    {
+      "id": "recovered-9d58ee219c68d1d8",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #21",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-9d58ee219c68d1d8.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782020402338-sample-1-1782020253035.jpg",
+      "contentHash": "9D58EE219C68D1D80AC8B8D7994521F447212BA5F2DD0184928FC58E73161E84"
+    },
+    {
+      "id": "recovered-a110d5f25a29e937",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #22",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-a110d5f25a29e937.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782047084027-sample-1-1782046933693.jpg",
+      "contentHash": "A110D5F25A29E9371203F5D3014AC376E44DE4E37052C02E636FC28FE68B9E96"
+    },
+    {
+      "id": "recovered-a5ac823ffbf4bb4e",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #23",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-a5ac823ffbf4bb4e.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782184673891-sample-1-1782184521278.jpg",
+      "contentHash": "A5AC823FFBF4BB4E426663C114BC9F1684D0CA51349566110FD0EE64A1E2FA4E"
+    },
+    {
+      "id": "recovered-aeda92be41b79f82",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #24",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-aeda92be41b79f82.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782046251613-sample-1-1782046101484.jpg",
+      "contentHash": "AEDA92BE41B79F823B501DCDFF2CD31501BEE4A91E71721049697CF9EC4A26E6"
+    },
+    {
+      "id": "recovered-af15fb266c870fa9",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #25",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-af15fb266c870fa9.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782049559246-sample-2-1782049409242.jpg",
+      "contentHash": "AF15FB266C870FA9AFAB7911544E4BE652AC8E48E903D8875DEDC403F6B39C6C"
+    },
+    {
+      "id": "recovered-b276308a59e7823c",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #26",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-b276308a59e7823c.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782053738788-sample-1-1782053588681.jpg",
+      "contentHash": "B276308A59E7823CB61746FD9FF56E1BFDF07CEC455A950512A52F75364F7085"
+    },
+    {
+      "id": "recovered-b38daaca6da3a6f1",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #27",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-b38daaca6da3a6f1.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782050036066-sample-1-1782049885990.jpg",
+      "contentHash": "B38DAACA6DA3A6F14CD78E4552E5E8A3279D0ECEE3852617C3E7D60C2A88548A"
+    },
+    {
+      "id": "recovered-c9570ef140ae3207",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #28",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-c9570ef140ae3207.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782050776792-sample-2-1782050626705.jpg",
+      "contentHash": "C9570EF140AE3207FD4259A10793EB99BF078B8074B36BA55683C8FBAE831C8F"
+    },
+    {
+      "id": "recovered-cd59ee6d0bbff13c",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #29",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-cd59ee6d0bbff13c.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782051474945-sample-1-1782051324911.jpg",
+      "contentHash": "CD59EE6D0BBFF13C6A5A982263F7F821AEFB7645DA4C1A47EEA26DC2A4906049"
+    },
+    {
+      "id": "recovered-cdb820bf17ac97b0",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #30",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-cdb820bf17ac97b0.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782044449427-sample-1-1782044299424.jpg",
+      "contentHash": "CDB820BF17AC97B08702D14A08E2B2F5CB8EB32EC420261377A4E029F1F71EE9"
+    },
+    {
+      "id": "recovered-d0f030e608afaa7f",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #31",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-d0f030e608afaa7f.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782051410583-sample-1-1782051260439.jpg",
+      "contentHash": "D0F030E608AFAA7FEDF573E0CA0DAF9A99957F3786B561798FA0DD7C53659978"
+    },
+    {
+      "id": "recovered-d243ce83b9ebd0bd",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #32",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-d243ce83b9ebd0bd.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782136228537-sample-1-1782136077792.jpg",
+      "contentHash": "D243CE83B9EBD0BD9D02CC082C8C6A9345D731E938B35EB7F1FD393A705BF567"
+    },
+    {
+      "id": "recovered-d66027904f151c78",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #33",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-d66027904f151c78.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782184656545-sample-1-1782184503947.jpg",
+      "contentHash": "D66027904F151C783BBAA5F7DF064DBA06C792678B24124DE7BDFFC6C78E8FD0"
+    },
+    {
+      "id": "recovered-dcecbc2b1294a5ec",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #34",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-dcecbc2b1294a5ec.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782046888391-sample-1-1782046738165.jpg",
+      "contentHash": "DCECBC2B1294A5ECECAE5FD1A2592FA9317DE03F519FD9C677D184F86453BFBC"
+    },
+    {
+      "id": "recovered-e0290e918ac51cf1",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #35",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-e0290e918ac51cf1.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782184645603-sample-1-1782184492946.jpg",
+      "contentHash": "E0290E918AC51CF11E2B7471F66D95C34DB761560BE53ABCE6975760662A08FA"
+    },
+    {
+      "id": "recovered-e360f22189c16e15",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #36",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-e360f22189c16e15.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782048415783-sample-2-1782048264249.jpg",
+      "contentHash": "E360F22189C16E154D5A61723F26D865471B7C5E7BE482A54E67756A533FC65D"
+    },
+    {
+      "id": "recovered-e898e87499821269",
+      "type": "sample",
+      "seriesId": "",
+      "modelId": "",
+      "title": "Recovered sample pending review #37",
+      "label1": "Recovered from an existing file; please verify and select the product model.",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/recovered-e898e87499821269.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": "",
+      "recovered": true,
+      "recoveredFrom": "1782049421363-sample-2-1782049271307.jpg",
+      "contentHash": "E898E874998212690C32B0CE44D4CAA734F934275C041F53E1609A93D332D639"
+    },
+    {
+      "id": "1782459900694",
+      "type": "sample",
+      "seriesId": "bostik-a326",
+      "modelId": "",
+      "title": "",
+      "label1": "",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/1782459900715-sample-1-1782459900694.jpg",
+      "image2": "",
+      "image3": "",
+      "image4": ""
+    },
+    {
+      "id": "1782460036778",
+      "type": "sample",
+      "seriesId": "prex",
+      "modelId": "",
+      "title": "",
+      "label1": "",
+      "label2": "",
+      "label3": "",
+      "label4": "",
+      "image1": "/samples/1782460036805-sample-1-1782460036778.jpg",
+      "image2": "/samples/1782460036811-sample-2-1782460036778.jpg",
+      "image3": "",
+      "image4": ""
     }
-  ]
+  ],
+  "videos": []
 }

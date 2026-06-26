@@ -7,18 +7,28 @@ services:
     restart: unless-stopped
     ports:
       - "3001:3001"
+    environment:
+      NODE_ENV: production
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in .env}
+      DOWNLOAD_PASSWORD: ${DOWNLOAD_PASSWORD:?Set DOWNLOAD_PASSWORD in .env}
+      ADMIN_SESSION_SECRET: ${ADMIN_SESSION_SECRET:?Set ADMIN_SESSION_SECRET in .env}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-https://goodfilmshop.com,https://www.goodfilmshop.com,https://nas.goodfilmshop.com}
     volumes:
-      - ./db.json:/app/db.json
       - ./public:/app/public
-      - ./server.js:/app/server.js
-      - ./dist:/app/dist
       - ./data:/app/data
       - ./backups:/app/backups
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--spider", "http://127.0.0.1:3001/auth/status"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
 
   cloudflared:
     image: cloudflare/cloudflared:latest
     container_name: good-film-tunnel
     restart: unless-stopped
-    command: tunnel --no-autoupdate run --token eyJhIjoiYmI0ODI4MmQwMjkyMTY4ZmEyODUxYjQ3M2I1N2YzMjciLCJ0IjoiZTA4ZDgzYzMtMTA5MC00ODEzLWI2NjgtMjJhNDI1MWZjYjcxIiwicyI6IllqRm1PRFF4T0RVdE5UUTJPQzAwWWpRd0xXSmxOakV0WXpCaU1HRTBZamM0TkdJdyJ9
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN:?Set CLOUDFLARE_TUNNEL_TOKEN in .env}
     depends_on:
-      - good-film-app
+      good-film-app:
+        condition: service_healthy

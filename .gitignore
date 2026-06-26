@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.env
 
 dist-ssr
 *.local
@@ -25,3 +26,25 @@ dist-ssr
 
 database.json
 backups/
+
+# Local one-off migration and extraction helpers
+/append_sample_manager.cjs
+/apply_changes.js
+/compact_tabs.cjs
+/extract*.cjs
+/fix*.js
+/fix*.cjs
+/find_pages.cjs
+/insert_bostik.cjs
+/modify*.cjs
+/patch*.js
+/patch*.cjs
+/patch*.py
+/remove.cjs
+/temp*
+/dummy*
+/test-css.js
+/test_upload.*
+/test.pdf
+/update_mapping.cjs
+/ppt/
