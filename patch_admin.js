@@ -1,0 +1,1 @@
+const fs = require('fs'); const lines = fs.readFileSync('src/AdminPanel.jsx', 'utf8').split('\n'); const start = lines.findIndex(l => l.includes('// --- PORTFOLIO MANAGER ---')); const end = lines.findIndex(l => l.includes('// --- CATALOG MANAGER ---')); if (start !== -1 && end !== -1) { console.log('Found indices:', start, end); }

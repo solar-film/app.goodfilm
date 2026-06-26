@@ -1,0 +1,9 @@
+﻿const cp = require('child_process');
+const fs = require('fs');
+const code = cp.execSync('git show a51f62e:src/AdminPanel.jsx').toString('utf8');
+const start = code.indexOf('function CatalogManager');
+const end = code.indexOf('function DownloadManager');
+const catalogCode = code.substring(start, end);
+const imports = "import React, { useState, useEffect } from 'react';\nimport { Trash2, Edit2, Check, X } from 'lucide-react';\nimport ReactQuill from 'react-quill-new';\nimport 'react-quill-new/dist/quill.snow.css';\n\n";
+fs.writeFileSync('src/CatalogManager.jsx', imports + catalogCode + "\nexport default CatalogManager;\n", 'utf8');
+console.log('Extracted');

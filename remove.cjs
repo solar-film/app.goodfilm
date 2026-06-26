@@ -1,0 +1,1 @@
+const fs = require('fs'); const code = fs.readFileSync('src/AdminPanel.jsx', 'utf8'); const start = code.indexOf('function CatalogManager'); const end = code.indexOf('function DownloadManager'); const newCode = code.substring(0, start) + code.substring(end); fs.writeFileSync('src/AdminPanel.jsx', newCode); console.log('Removed from AdminPanel.jsx');

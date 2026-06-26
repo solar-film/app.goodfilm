@@ -28,6 +28,7 @@ export default defineConfig({
       '/portfolio': 'http://127.0.0.1:3001',
       '/downloads': 'http://127.0.0.1:3001',
       '/banners': 'http://127.0.0.1:3001',
+      '/videos': 'http://127.0.0.1:3001',
       '/upload-download': 'http://127.0.0.1:3001',
       '/upload-portfolio': 'http://127.0.0.1:3001',
       '/upload-sample-and-register': 'http://127.0.0.1:3001',
