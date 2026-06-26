@@ -1509,6 +1509,9 @@ function MainApp() {
               <div className="sidebar-item" onClick={() => { setIsSidebarOpen(false); setCurrentTab('contact'); setSelectedSeries(null); }} style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '20px', cursor: 'pointer', borderRadius: '12px', marginBottom: '0.5rem', transition: 'all 0.2s ease', backgroundColor: currentTab === 'contact' ? 'var(--light-blue)' : 'transparent', color: currentTab === 'contact' ? 'var(--primary-blue)' : 'var(--text-main)' }}>
                 <Phone size={22} color={currentTab === 'contact' ? 'var(--primary-blue)' : '#666'} /> <span style={{ fontWeight: '600', fontSize: '1.05rem' }}>ติดต่อเรา</span>
               </div>
+              <div className="sidebar-item" onClick={() => { setIsSidebarOpen(false); navigate('/bostik-presentation'); }} style={{ padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '20px', cursor: 'pointer', borderRadius: '12px', marginBottom: '0.5rem', transition: 'all 0.2s ease', backgroundColor: 'transparent', color: 'var(--text-main)' }}>
+                <Shield size={22} color="#666" /> <span style={{ fontWeight: '600', fontSize: '1.05rem' }}>Bostik</span>
+              </div>
             </div>
             <div style={{ padding: '1.5rem', borderTop: '1px solid #f0f0f0', textAlign: 'center' }}>
               <p style={{ fontSize: '0.8rem', color: '#999' }}>© 2026 GOODFILM App</p>
