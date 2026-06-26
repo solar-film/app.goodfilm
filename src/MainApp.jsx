@@ -1190,6 +1190,52 @@ function MainApp() {
   }
 
   const renderDownload = () => {
+    const isBostik = (doc) => {
+      if (doc.title && doc.title.toLowerCase().includes('bostik')) return true;
+      if (doc.seriesId) {
+        const s = series.find(s => s.id === doc.seriesId);
+        if (s && ['g6', 'g7', 'g8'].includes(s.groupId)) return true;
+      }
+      return false;
+    };
+
+    const filteredDownloads = downloadsList.filter(d => 
+      (downloadFilter === 'all' || d.category === downloadFilter) &&
+      (!downloadSearchQuery || d.title.toLowerCase().includes(downloadSearchQuery.toLowerCase()) || (d.file && d.file.toLowerCase().includes(downloadSearchQuery.toLowerCase())))
+    );
+
+    const downloads3M = filteredDownloads.filter(d => !isBostik(d));
+    const downloadsBostik = filteredDownloads.filter(d => isBostik(d));
+
+    const renderDocList = (docs) => docs.map(doc => (
+      <div key={doc.id} style={{ display: 'flex', alignItems: 'center', backgroundColor: 'white', padding: '0.8rem 1rem', borderRadius: '12px', marginBottom: '0.6rem', border: '1px solid #f0f0f0', boxShadow: '0 4px 15px rgba(0,0,0,0.02)', gap: '1.2rem' }}>
+        {/* Document Icon */}
+        <div style={{ position: 'relative', width: '54px', height: '64px', border: '1.5px solid rgba(211,47,47,0.4)', borderRadius: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0, backgroundColor: 'white' }}>
+          <div style={{ backgroundColor: 'var(--primary-red)', borderRadius: '6px', width: '32px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2px', marginTop: '2px' }}>
+            <FileText size={14} color="white" />
+          </div>
+          <div style={{ fontSize: '0.9rem', color: 'var(--primary-red)', fontWeight: '900', letterSpacing: '0.5px' }}>{doc.ext}</div>
+        </div>
+        
+        {/* Info */}
+        <div style={{ flex: 1 }}>
+          <h4 style={{ fontSize: '0.95rem', fontWeight: 'bold', color: '#1a2b4c', marginBottom: '0.4rem', lineHeight: '1.5', whiteSpace: 'pre-line' }}>{doc.title}</h4>
+          <p style={{ fontSize: '0.8rem', color: '#666', margin: 0, fontWeight: '600' }}>{doc.info}</p>
+        </div>
+
+        {/* Download Icon (Clickable Link) */}
+        {doc.category === 'test_report' ? (
+          <div onClick={() => setDownloadPasswordPrompt({ isOpen: true, doc: doc, password: '', error: '' })} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0 }}>
+            <Download size={24} strokeWidth={2.5} />
+          </div>
+        ) : (
+          <a href="#" onClick={(e) => handleForceDownload(e, getFullUrl(doc.file), doc.title || doc.ext)} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0, textDecoration: 'none' }}>
+            <Download size={24} strokeWidth={2.5} />
+          </a>
+        )}
+      </div>
+    ));
+
     return (
       <div className="mobile-view" style={{ backgroundColor: '#fafafa', minHeight: '100vh', paddingBottom: '80px' }}>
         {/* Header */}
@@ -1237,37 +1283,25 @@ function MainApp() {
 
         {/* List */}
         <div style={{ padding: '1rem 1.5rem' }}>
-          {downloadsList.filter(d => 
-            (downloadFilter === 'all' || d.category === downloadFilter) &&
-            (!downloadSearchQuery || d.title.toLowerCase().includes(downloadSearchQuery.toLowerCase()) || (d.file && d.file.toLowerCase().includes(downloadSearchQuery.toLowerCase())))
-          ).map(doc => (
-            <div key={doc.id} style={{ display: 'flex', alignItems: 'center', backgroundColor: 'white', padding: '0.8rem 1rem', borderRadius: '12px', marginBottom: '0.6rem', border: '1px solid #f0f0f0', boxShadow: '0 4px 15px rgba(0,0,0,0.02)', gap: '1.2rem' }}>
-              {/* Document Icon */}
-              <div style={{ position: 'relative', width: '54px', height: '64px', border: '1.5px solid rgba(211,47,47,0.4)', borderRadius: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0, backgroundColor: 'white' }}>
-                <div style={{ backgroundColor: 'var(--primary-red)', borderRadius: '6px', width: '32px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2px', marginTop: '2px' }}>
-                  <FileText size={14} color="white" />
-                </div>
-                <div style={{ fontSize: '0.9rem', color: 'var(--primary-red)', fontWeight: '900', letterSpacing: '0.5px' }}>{doc.ext}</div>
-              </div>
-              
-              {/* Info */}
-              <div style={{ flex: 1 }}>
-                <h4 style={{ fontSize: '0.95rem', fontWeight: 'bold', color: '#1a2b4c', marginBottom: '0.4rem', lineHeight: '1.5', whiteSpace: 'pre-line' }}>{doc.title}</h4>
-                <p style={{ fontSize: '0.8rem', color: '#666', margin: 0, fontWeight: '600' }}>{doc.info}</p>
-              </div>
-
-              {/* Download Icon (Clickable Link) */}
-              {doc.category === 'test_report' ? (
-                <div onClick={() => setDownloadPasswordPrompt({ isOpen: true, doc: doc, password: '', error: '' })} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0 }}>
-                  <Download size={24} strokeWidth={2.5} />
-                </div>
-              ) : (
-                <a href="#" onClick={(e) => handleForceDownload(e, getFullUrl(doc.file), doc.title || doc.ext)} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0, textDecoration: 'none' }}>
-                  <Download size={24} strokeWidth={2.5} />
-                </a>
-              )}
+          {downloads3M.length > 0 && (
+            <div style={{ marginBottom: '2rem' }}>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>กลุ่มผลิตภัณฑ์ฟิล์ม 3M</h3>
+              {renderDocList(downloads3M)}
             </div>
-          ))}
+          )}
+
+          {downloadsBostik.length > 0 && (
+            <div style={{ marginBottom: '2rem' }}>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>ผลิตภัณฑ์ Bostik</h3>
+              {renderDocList(downloadsBostik)}
+            </div>
+          )}
+
+          {downloads3M.length === 0 && downloadsBostik.length === 0 && (
+            <div style={{ textAlign: 'center', padding: '2.5rem 0', color: 'var(--text-muted)', fontSize: '1.05rem' }}>
+              ไม่พบเอกสารที่ค้นหา
+            </div>
+          )}
         </div>
       </div>
     );
