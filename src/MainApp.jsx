@@ -512,6 +512,7 @@ function MainApp() {
 
   const renderWorks = () => {
     const filteredSeries = series.filter(s => {
+      if (['g6', 'g7', 'g8'].includes(s.groupId)) return false;
       const matchesGroup = activeGroupId === 'all' || s.groupId === activeGroupId;
       const searchLower = searchQuery.toLowerCase();
       const matchesSearch = searchQuery === '' || 
@@ -544,7 +545,7 @@ function MainApp() {
 
         {/* Filters */}
         <div style={{ padding: '0.5rem 1.5rem 1rem', display: 'flex', gap: '0.8rem', overflowX: 'auto', WebkitOverflowScrolling: 'touch', backgroundColor: '#fff' }} className="hide-scrollbar">
-          {[{ id: 'all', title: 'ทั้งหมด' }, ...groups].map(group => (
+          {[{ id: 'all', title: 'ทั้งหมด' }, ...groups.filter(g => !['g6', 'g7', 'g8'].includes(g.id))].map(group => (
             <div 
               key={group.id}
               onClick={() => setActiveGroupId(group.id)}
@@ -1548,7 +1549,7 @@ function MainApp() {
         </div>
         <div className={`nav-item ${currentTab === 'works' && !selectedSeries ? 'active' : ''}`} onClick={() => { setCurrentTab('works'); setSelectedSeries(null); }}>
           <Briefcase size={24} />
-          <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>รุ่นสินค้า</span>
+          <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>รุ่นฟิล์ม</span>
         </div>
         <div className={`nav-item ${showCompareModal ? 'active' : ''}`} onClick={() => setShowCompareModal(true)}>
           <GitCompare size={24} />
