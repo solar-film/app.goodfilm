@@ -200,6 +200,7 @@ function MainApp() {
   const [expandedSeriesId, setExpandedSeriesId] = useState(null);
   const [loadState, setLoadState] = useState('loading'); // 'loading' | 'ready' | 'error'
   const [downloadFilter, setDownloadFilter] = useState('all');
+  const [downloadBrandTab, setDownloadBrandTab] = useState('3m'); // '3m' or 'bostik'
   const [downloadSearchQuery, setDownloadSearchQuery] = useState('');
   const [expandedImage, setExpandedImage] = useState(null);
   const [expandedImageFile, setExpandedImageFile] = useState(null);
@@ -1281,29 +1282,65 @@ function MainApp() {
           ))}
         </div>
 
+        {/* Brand Tabs */}
+        <div style={{ display: 'flex', borderBottom: '1px solid #eee', backgroundColor: '#fff', padding: '0 1.5rem' }}>
+          <div 
+            onClick={() => setDownloadBrandTab('3m')}
+            style={{ 
+              flex: 1, 
+              textAlign: 'center', 
+              padding: '1rem 0', 
+              fontWeight: 'bold', 
+              color: downloadBrandTab === '3m' ? 'var(--primary-red)' : '#666',
+              borderBottom: downloadBrandTab === '3m' ? '3px solid var(--primary-red)' : '3px solid transparent',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            กลุ่มผลิตภัณฑ์ฟิล์ม 3M
+          </div>
+          <div 
+            onClick={() => setDownloadBrandTab('bostik')}
+            style={{ 
+              flex: 1, 
+              textAlign: 'center', 
+              padding: '1rem 0', 
+              fontWeight: 'bold', 
+              color: downloadBrandTab === 'bostik' ? 'var(--primary-red)' : '#666',
+              borderBottom: downloadBrandTab === 'bostik' ? '3px solid var(--primary-red)' : '3px solid transparent',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            ผลิตภัณฑ์ Bostik
+          </div>
+        </div>
+
         {/* List */}
         <div style={{ padding: '1rem 1.5rem' }}>
-          <div style={{ marginBottom: '2.5rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>กลุ่มผลิตภัณฑ์ฟิล์ม 3M</h3>
-            {downloads3M.length > 0 ? (
-              renderDocList(downloads3M)
-            ) : (
-              <div style={{ padding: '1rem', color: '#999', textAlign: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px dashed #eee' }}>
-                ไม่มีเอกสารในกลุ่มนี้
-              </div>
-            )}
-          </div>
+          {downloadBrandTab === '3m' && (
+            <div style={{ marginBottom: '2.5rem' }}>
+              {downloads3M.length > 0 ? (
+                renderDocList(downloads3M)
+              ) : (
+                <div style={{ padding: '2rem 1rem', color: '#999', textAlign: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px dashed #eee' }}>
+                  ไม่มีเอกสารในกลุ่มนี้
+                </div>
+              )}
+            </div>
+          )}
 
-          <div style={{ marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>ผลิตภัณฑ์ Bostik</h3>
-            {downloadsBostik.length > 0 ? (
-              renderDocList(downloadsBostik)
-            ) : (
-              <div style={{ padding: '1rem', color: '#999', textAlign: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px dashed #eee' }}>
-                ไม่มีเอกสารในกลุ่มนี้
-              </div>
-            )}
-          </div>
+          {downloadBrandTab === 'bostik' && (
+            <div style={{ marginBottom: '2.5rem' }}>
+              {downloadsBostik.length > 0 ? (
+                renderDocList(downloadsBostik)
+              ) : (
+                <div style={{ padding: '2rem 1rem', color: '#999', textAlign: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px dashed #eee' }}>
+                  ไม่มีเอกสารในกลุ่มนี้
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     );
