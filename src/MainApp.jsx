@@ -1283,25 +1283,27 @@ function MainApp() {
 
         {/* List */}
         <div style={{ padding: '1rem 1.5rem' }}>
-          {downloads3M.length > 0 && (
-            <div style={{ marginBottom: '2rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>กลุ่มผลิตภัณฑ์ฟิล์ม 3M</h3>
-              {renderDocList(downloads3M)}
-            </div>
-          )}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>กลุ่มผลิตภัณฑ์ฟิล์ม 3M</h3>
+            {downloads3M.length > 0 ? (
+              renderDocList(downloads3M)
+            ) : (
+              <div style={{ padding: '1rem', color: '#999', textAlign: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px dashed #eee' }}>
+                ไม่มีเอกสารในกลุ่มนี้
+              </div>
+            )}
+          </div>
 
-          {downloadsBostik.length > 0 && (
-            <div style={{ marginBottom: '2rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>ผลิตภัณฑ์ Bostik</h3>
-              {renderDocList(downloadsBostik)}
-            </div>
-          )}
-
-          {downloads3M.length === 0 && downloadsBostik.length === 0 && (
-            <div style={{ textAlign: 'center', padding: '2.5rem 0', color: 'var(--text-muted)', fontSize: '1.05rem' }}>
-              ไม่พบเอกสารที่ค้นหา
-            </div>
-          )}
+          <div style={{ marginBottom: '2rem' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '2px solid var(--primary-red)', paddingBottom: '0.5rem', display: 'inline-block' }}>ผลิตภัณฑ์ Bostik</h3>
+            {downloadsBostik.length > 0 ? (
+              renderDocList(downloadsBostik)
+            ) : (
+              <div style={{ padding: '1rem', color: '#999', textAlign: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px dashed #eee' }}>
+                ไม่มีเอกสารในกลุ่มนี้
+              </div>
+            )}
+          </div>
         </div>
       </div>
     );
