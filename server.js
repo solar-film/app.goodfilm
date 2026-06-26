@@ -46,6 +46,7 @@ const defaultAllowedOrigins = [
   'https://goodfilmshop.com',
   'https://www.goodfilmshop.com',
   'https://nas.goodfilmshop.com',
+  'https://app.goodfilmshop.com',
   'http://localhost:5173',
   'http://127.0.0.1:5173'
 ];
