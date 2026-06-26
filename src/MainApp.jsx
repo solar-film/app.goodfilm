@@ -1551,6 +1551,10 @@ function MainApp() {
           <GitCompare size={24} />
           <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>เทียบสเปค</span>
         </div>
+        <div className="nav-item" onClick={() => navigate('/bostik-presentation')}>
+          <Shield size={24} />
+          <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>Bostik</span>
+        </div>
         <div className={`nav-item ${currentTab === 'download' && !selectedSeries ? 'active' : ''}`} onClick={() => { setCurrentTab('download'); setSelectedSeries(null); }}>
           <Download size={24} />
           <span style={{ fontSize: '0.65rem', marginTop: '4px' }}>แคตตาล็อก</span>
