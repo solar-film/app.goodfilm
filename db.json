@@ -2576,5 +2576,48 @@
       "image4": ""
     }
   ],
-  "videos": []
+  "videos": [
+    {
+      "id": "1782469283743",
+      "title": "Dichroic DF-PA Chill",
+      "youtubeId": "3w-yv3Ftl5M",
+      "seriesId": "s-1782224447553"
+    },
+    {
+      "id": "1782469346931",
+      "title": "Dichroic DF-PA BLAZE",
+      "youtubeId": "TlIIW3_vRwc",
+      "seriesId": "s-1782224824281"
+    },
+    {
+      "id": "1782469528788",
+      "title": "ตัวอย่างงานติดตั้ง Dichroic DF-PA BLAZE",
+      "youtubeId": "UBqpfjFtWbo",
+      "seriesId": "s-1782224824281"
+    },
+    {
+      "id": "1782469586363",
+      "title": "ตัวอย่างงานติดตั้ง Dichroic DF-PA BLAZE",
+      "youtubeId": "ez2l8PruaUA",
+      "seriesId": "s-1782224824281"
+    },
+    {
+      "id": "1782469722684",
+      "title": "เทียบตัวอย่างฟิล์ม",
+      "youtubeId": "DOM6mweEbS0",
+      "seriesId": "7725"
+    },
+    {
+      "id": "1782469738367",
+      "title": "เทียบตัวอย่างฟิล์ม",
+      "youtubeId": "DOM6mweEbS0",
+      "seriesId": "5525"
+    },
+    {
+      "id": "1782470075304",
+      "title": "การทดสอบประสิทธิภาพของฟิล์มนิรภัย Ultra S800",
+      "youtubeId": "8sveMaKlYTE",
+      "seriesId": "usafety"
+    }
+  ]
 }

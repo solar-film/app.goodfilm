@@ -390,8 +390,16 @@ function MainApp() {
           ].map(section => (
             <div key={section.id}>
               {searchQuery === '' && groups.filter(section.filter).length > 0 && (
-                <div className="section-title" style={{ marginTop: section.id === 'bostik' ? '2.5rem' : '0', marginBottom: '1.2rem' }}>
-                  <h2 style={{ fontSize: '1.35rem', color: 'var(--primary-blue)', fontWeight: 'bold' }}>{section.title}</h2>
+                <div className="section-title" style={{ marginTop: section.id === 'bostik' ? '2.5rem' : '0', marginBottom: '1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <h2 style={{ fontSize: '1.35rem', color: 'var(--primary-blue)', fontWeight: 'bold', margin: 0 }}>{section.title}</h2>
+                  {section.id === 'bostik' && (
+                    <button 
+                      onClick={() => navigate('/bostik-presentation')} 
+                      style={{ padding: '0.4rem 0.8rem', fontSize: '0.85rem', backgroundColor: 'var(--primary-red)', color: 'white', border: 'none', borderRadius: '20px', fontWeight: 'bold', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.4rem', boxShadow: '0 2px 8px rgba(227, 24, 55, 0.3)' }}
+                    >
+                      <PlayCircle size={14} /> ดูพรีเซนเทชั่น
+                    </button>
+                  )}
                 </div>
               )}
               {groups.filter(section.filter).map((group) => {
