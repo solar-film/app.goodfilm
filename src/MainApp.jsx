@@ -520,92 +520,115 @@ function MainApp() {
     </div>
   );
 
-  const renderBostik = () => (
-    <div className="mobile-view" style={{ backgroundColor: '#fafafa', minHeight: '100vh', paddingBottom: '80px' }}>
-      {/* Header */}
-      <div style={{ display: 'flex', alignItems: 'center', padding: '1.5rem 1.5rem 1rem', backgroundColor: '#fff', position: 'sticky', top: 0, zIndex: 10 }}>
-        <ArrowLeft size={28} color="#1a2b4c" onClick={() => setCurrentTab('home')} style={{ cursor: 'pointer' }} strokeWidth={2.5} />
-        <h2 style={{ flex: 1, textAlign: 'center', fontSize: '1.25rem', fontWeight: 'bold', color: '#1a2b4c', margin: 0, marginRight: '28px' }}>ผลิตภัณฑ์ Bostik</h2>
-      </div>
+  const renderBostik = () => {
+    const bostikGroups = groups.filter(g => ['g6', 'g7', 'g8'].includes(g.id));
+    const filteredSeries = series.filter(s => {
+      if (!['g6', 'g7', 'g8'].includes(s.groupId)) return false;
+      const matchesGroup = activeGroupId === 'all' || s.groupId === activeGroupId;
+      const searchLower = searchQuery.toLowerCase();
+      const matchesSearch = searchQuery === '' || 
+        s.title.toLowerCase().includes(searchLower) || 
+        s.desc.toLowerCase().includes(searchLower) ||
+        models.some(m => m.seriesId === s.id && m.name.toLowerCase().includes(searchLower));
+      return matchesGroup && matchesSearch;
+    });
 
-      <div style={{ padding: '1rem' }}>
-        <button 
-          onClick={() => navigate('/bostik-presentation')} 
-          style={{ width: '100%', padding: '0.8rem', fontSize: '1rem', backgroundColor: 'var(--primary-red)', color: 'white', border: 'none', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', boxShadow: '0 4px 12px rgba(227, 24, 55, 0.3)', marginBottom: '1.5rem' }}
-        >
-          <PlayCircle size={20} /> ดูพรีเซนเทชั่นและวิดีโอทดสอบ
-        </button>
+    return (
+      <div className="mobile-view" style={{ backgroundColor: '#fafafa', minHeight: '100vh', paddingBottom: '80px' }}>
+        {/* Header */}
+        <div style={{ display: 'flex', alignItems: 'center', padding: '1.5rem 1.5rem 1rem', backgroundColor: '#fff', position: 'sticky', top: 0, zIndex: 10 }}>
+          <ArrowLeft size={28} color="#1a2b4c" onClick={() => setCurrentTab('home')} style={{ cursor: 'pointer' }} strokeWidth={2.5} />
+          <h2 style={{ flex: 1, textAlign: 'center', fontSize: '1.25rem', fontWeight: 'bold', color: '#1a2b4c', margin: 0, marginRight: '28px' }}>ผลิตภัณฑ์ Bostik</h2>
+        </div>
 
-        {groups.filter(g => ['g6', 'g7', 'g8'].includes(g.id)).map((group) => {
-          const groupSeries = series.filter(s => s.groupId === group.id);
-          if (groupSeries.length === 0) return null;
-          
-          return (
-            <div key={group.id} style={{ marginBottom: '1rem', backgroundColor: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-soft)', border: '1px solid var(--border-color)' }}>
-              <div style={{ padding: '0.9rem 1.2rem', backgroundColor: 'var(--light-blue)' }}>
-                <h3 style={{ fontSize: '1.15rem', color: 'var(--primary-blue)', fontWeight: 'bold', margin: 0 }}>{group.title}</h3>
-              </div>
-              <div style={{ padding: '0 1.5rem 1.5rem 1.5rem' }}>
-                <div style={{ marginTop: '1rem' }}>
-                  {groupSeries.map((s) => {
-                    const seriesModels = models.filter(m => m.seriesId === s.id);
-                    return (
-                      <div key={s.id} style={{ marginBottom: '0.6rem', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '10px', overflow: 'hidden', backgroundColor: '#f8f9fa' }}>
-                        <div 
-                          onClick={(e) => { 
-                            e.stopPropagation(); 
-                            if (seriesModels.length === 0) {
-                              setSelectedSeries(s);
-                            } else {
-                              setExpandedSeriesId(expandedSeriesId === s.id ? null : s.id);
-                            }
-                          }}
-                          style={{ padding: '0.9rem 1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
-                        >
-                          <div>
-                            <div style={{ fontWeight: 'bold', fontSize: '1.05rem', color: 'var(--text-main)' }}>{s.title}</div>
-                            {s.desc && <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '2px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{s.desc}</div>}
-                          </div>
-                          {seriesModels.length > 0 && (
-                            <ChevronRight size={20} color="#999" style={{ transform: expandedSeriesId === s.id ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
-                          )}
-                        </div>
-                        
-                        {/* Models List */}
-                        {expandedSeriesId === s.id && seriesModels.length > 0 && (
-                          <div style={{ padding: '0 1.2rem 1rem 1.2rem', backgroundColor: 'white' }}>
-                            <div style={{ height: '1px', backgroundColor: '#eee', marginBottom: '0.8rem' }}></div>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.5rem' }}>
-                              {seriesModels.map(m => (
-                                <div 
-                                  key={m.id} 
-                                  onClick={(e) => { e.stopPropagation(); setSelectedSeries({...s, initialModelId: m.id}); }}
-                                  style={{ padding: '0.7rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#fcfcfc', borderRadius: '8px', border: '1px solid #f0f0f0', cursor: 'pointer' }}
-                                >
-                                  <span style={{ fontWeight: '600', color: 'var(--primary-blue)', fontSize: '0.95rem' }}>{m.name}</span>
-                                  {m.price && m.price !== '-' && <span style={{ fontSize: '0.85rem', color: 'var(--primary-red)', fontWeight: 'bold' }}>{m.price}</span>}
-                                </div>
-                              ))}
-                            </div>
-                            <div 
-                              onClick={(e) => { e.stopPropagation(); setSelectedSeries(s); }}
-                              style={{ marginTop: '0.8rem', textAlign: 'center', padding: '0.6rem', fontSize: '0.9rem', color: 'var(--primary-blue)', fontWeight: 'bold', cursor: 'pointer', backgroundColor: 'var(--light-blue)', borderRadius: '8px' }}
-                            >
-                              ดูรายละเอียดทั้งหมด
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+        {/* Presentation Button */}
+        <div style={{ padding: '0 1.5rem 1rem', backgroundColor: '#fff' }}>
+          <button 
+            onClick={() => navigate('/bostik-presentation')} 
+            style={{ width: '100%', padding: '0.8rem', fontSize: '1rem', backgroundColor: 'var(--primary-red)', color: 'white', border: 'none', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', boxShadow: '0 4px 12px rgba(227, 24, 55, 0.3)' }}
+          >
+            <PlayCircle size={20} /> ดูพรีเซนเทชั่นและวิดีโอทดสอบ
+          </button>
+        </div>
+
+        {/* Search Bar */}
+        <div style={{ padding: '0 1.5rem 1rem', backgroundColor: '#fff' }}>
+          <div style={{ position: 'relative' }}>
+            <Search size={20} color="#999" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
+            <input 
+              type="text" 
+              placeholder="ค้นหาสินค้า Bostik..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{ width: '100%', padding: '0.8rem 1rem 0.8rem 44px', borderRadius: '12px', border: '1px solid #e0e0e0', fontSize: '0.95rem', outline: 'none', backgroundColor: '#f9f9f9', boxSizing: 'border-box' }}
+            />
+          </div>
+        </div>
+
+        {/* Filters */}
+        <div style={{ padding: '0.5rem 1.5rem 1rem', display: 'flex', gap: '0.8rem', overflowX: 'auto', WebkitOverflowScrolling: 'touch', backgroundColor: '#fff' }} className="hide-scrollbar">
+          {[{ id: 'all', title: 'ทั้งหมด' }, ...bostikGroups].map(group => (
+            <div 
+              key={group.id}
+              onClick={() => setActiveGroupId(group.id)}
+              style={{ 
+                padding: '0.65rem 1.2rem', 
+                borderRadius: '20px', 
+                whiteSpace: 'nowrap',
+                fontWeight: 'bold',
+                fontSize: '0.9rem',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                backgroundColor: activeGroupId === group.id ? 'var(--primary-red)' : '#f0f0f0',
+                color: activeGroupId === group.id ? '#fff' : '#666',
+              }}
+            >
+              {group.title.replace('ผลิตภัณฑ์', '')}
             </div>
-          );
-        })}
+          ))}
+        </div>
+
+        <div className="works-list" style={{ padding: '1rem' }}>
+          {filteredSeries.length > 0 ? filteredSeries.map(s => {
+            const seriesModels = models.filter(m => m.seriesId === s.id);
+            return (
+              <div 
+                key={s.id} 
+                onClick={() => setSelectedSeries(s)} 
+                style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  padding: '0.8rem 1rem', 
+                  backgroundColor: 'white',
+                  borderRadius: '12px',
+                  border: '1px solid #f0f0f0',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.02)',
+                  marginBottom: '0.6rem',
+                  cursor: 'pointer'
+                }}
+              >
+                <div style={{ width: '45px', height: '45px', backgroundColor: 'white', border: '1px solid #E0E0E0', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-red)', fontWeight: 'bold', fontSize: '0.7rem', marginRight: '1rem', flexShrink: 0 }}>
+                  Bostik
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <h3 style={{ color: 'var(--primary-blue)', fontSize: '1.05rem', fontWeight: 'bold', marginBottom: '0.2rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{s.title}</h3>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', marginBottom: '0.5rem', lineHeight: '1.4' }}>{s.desc}</p>
+                  <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+                    {seriesModels.map(m => (
+                      <span key={m.id} style={{ fontSize: '0.7rem', padding: '0.15rem 0.5rem', backgroundColor: 'var(--bg-light)', borderRadius: '4px', color: 'var(--text-muted)' }}>{m.name}</span>
+                    ))}
+                  </div>
+                </div>
+                <ChevronRight size={18} color="#ccc" style={{ marginLeft: '0.5rem' }} />
+              </div>
+            )
+          }) : (
+            <div style={{ padding: '1.5rem 0', color: 'var(--text-muted)', fontSize: '1.1rem', textAlign: 'center' }}>ไม่พบสินค้ายี่ห้อ Bostik ที่ค้นหา</div>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const renderWorks = () => {
     const filteredSeries = series.filter(s => {
