@@ -48,3 +48,4 @@ backups/
 /test.pdf
 /update_mapping.cjs
 /ppt/
+SECURITY-rotate-secrets.md

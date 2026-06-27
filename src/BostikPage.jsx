@@ -122,23 +122,29 @@ export default function BostikPage() {
     const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement;
     const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
 
-    if (fullscreenElement) {
+    if (fullscreenElement || isFullscreen) {
       try {
         screen.orientation?.unlock?.();
       } catch {
         // Some browsers do not allow unlocking orientation from script.
       }
-      if (exitFullscreen) await exitFullscreen.call(document);
+      if (fullscreenElement && exitFullscreen) {
+        await exitFullscreen.call(document);
+      }
+      setIsFullscreen(false);
       setOrientationNotice('ปิดโหมดเต็มจอแล้ว');
+      setTimeout(() => setPageWidth(getPageWidth()), 250);
       return;
     }
 
     const target = document.querySelector('.bostik-presentation-fullscreen') || document.documentElement;
     const requestFullscreen = target.requestFullscreen || target.webkitRequestFullscreen;
 
+    let nativeFS = false;
     try {
       if (requestFullscreen) {
         await requestFullscreen.call(target);
+        nativeFS = true;
       }
     } catch {
       // Continue to orientation guidance even when fullscreen is unavailable.
@@ -153,6 +159,10 @@ export default function BostikPage() {
       }
     } catch {
       setOrientationNotice('ถ้าหน้าจอยังไม่หมุน ให้ปลดล็อกหมุนจอ แล้วหมุนเครื่องเป็นแนวนอน');
+    }
+
+    if (!nativeFS) {
+      setIsFullscreen(true);
     }
 
     setTimeout(() => setPageWidth(getPageWidth()), 250);
@@ -174,7 +184,19 @@ export default function BostikPage() {
         </button>
       </div>
 
-      <div className="bostik-presentation-fullscreen" style={{ backgroundColor: '#eef1f5' }}>
+      <div 
+        className="bostik-presentation-fullscreen" 
+        style={isFullscreen && !document.fullscreenElement && !document.webkitFullscreenElement ? {
+          backgroundColor: '#eef1f5',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 9999,
+          overflowY: 'auto'
+        } : { backgroundColor: '#eef1f5' }}
+      >
       <main className="bostik-presentation-viewer" style={{ padding: '18px 16px 30px', scrollMarginTop: '72px', backgroundColor: '#eef1f5' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto 12px', display: 'flex', justifyContent: 'center' }}>
           <button

@@ -55,12 +55,16 @@ const defaultAllowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173'
 ];
-const allowedOrigins = new Set(
-  String(process.env.CORS_ALLOWED_ORIGINS || defaultAllowedOrigins.join(','))
-    .split(',')
-    .map(origin => origin.trim().replace(/\/$/, ''))
-    .filter(Boolean)
-);
+// Always include the known production/app origins, then merge any extras from env,
+// so a stale or partial .env can never lock out app.goodfilmshop.com.
+const envOrigins = String(process.env.CORS_ALLOWED_ORIGINS || '')
+  .split(',')
+  .map(origin => origin.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+const allowedOrigins = new Set([
+  ...defaultAllowedOrigins.map(o => o.replace(/\/$/, '')),
+  ...envOrigins
+]);
 
 if (isProduction && (!adminPassword || !downloadPassword || !sessionSecret || sessionSecret.length < 32)) {
   throw new Error('ADMIN_PASSWORD, DOWNLOAD_PASSWORD, and ADMIN_SESSION_SECRET (at least 32 characters) are required in production.');
