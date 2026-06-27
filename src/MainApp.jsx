@@ -1238,15 +1238,10 @@ function MainApp() {
         </div>
 
         {/* Download Icon (Clickable Link) */}
-        {doc.category === 'test_report' ? (
-          <div onClick={() => setDownloadPasswordPrompt({ isOpen: true, doc: doc, password: '', error: '', loading: false })} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0 }}>
-            <Download size={24} strokeWidth={2.5} />
-          </div>
-        ) : (
-          <a href="#" onClick={(e) => handleForceDownload(e, getFullUrl(doc.file), doc.title || doc.ext)} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0, textDecoration: 'none' }}>
-            <Download size={24} strokeWidth={2.5} />
-          </a>
-        )}
+        {/* All download docs require the password prompt, which fetches a token before opening. */}
+        <div onClick={() => setDownloadPasswordPrompt({ isOpen: true, doc: doc, password: '', error: '', loading: false })} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0 }}>
+          <Download size={24} strokeWidth={2.5} />
+        </div>
       </div>
     ));
 
