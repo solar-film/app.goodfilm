@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Search, Home, Briefcase, Heart, User, Building2, Store, ChevronRight, Share2, Download, ChevronLeft, ArrowLeft, FileText, Shield, Sun, Image, Phone, GitCompare, BookOpen, Columns, Layers, PlayCircle } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { apiFetch, assetUrl } from './apiConfig';
+import { shouldUseNativePdfViewer } from './deviceUtils';
 import './App.css';
 
 const BeforeAfterSlider = ({ beforeImage, afterImage, beforeLabel, afterLabel }) => {
@@ -206,6 +207,9 @@ function MainApp() {
   const [expandedImageFile, setExpandedImageFile] = useState(null);
   const [pdfActionModal, setPdfActionModal] = useState({ isOpen: false, url: '', filename: '', file: null, loading: false });
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // Detects touch tablets too (incl. iPadOS that reports as "Macintosh") so PDFs open
+  // in the device's native viewer (full document) instead of a first-page-only blob iframe.
+  const useNativePdf = shouldUseNativePdfViewer(navigator);
 
   useEffect(() => {
     if (location.state?.tab) {
@@ -232,8 +236,12 @@ function MainApp() {
 
   useEffect(() => {
     if (pdfActionModal.isOpen && pdfActionModal.url && !pdfActionModal.file) {
-      fetch(pdfActionModal.url)
-        .then(res => res.blob())
+      // Use apiFetch so the download session cookie is sent for protected /download files.
+      apiFetch(pdfActionModal.url)
+        .then(res => {
+          if (!res.ok) throw new Error(res.status === 401 ? 'unauthorized' : 'fetch-failed');
+          return res.blob();
+        })
         .then(blob => {
           const file = new File([blob], pdfActionModal.filename, { type: blob.type || 'application/pdf' });
           const blobUrl = window.URL.createObjectURL(file);
@@ -241,12 +249,15 @@ function MainApp() {
         })
         .catch(error => {
           console.error(error);
-          setPdfActionModal(prev => ({ ...prev, loading: false, error: 'Failed to prepare file' }));
+          const msg = error?.message === 'unauthorized'
+            ? 'ต้องใส่รหัสผ่านเพื่อเปิดเอกสารนี้'
+            : 'เปิดไฟล์ไม่สำเร็จ';
+          setPdfActionModal(prev => ({ ...prev, loading: false, error: msg }));
         });
     }
   }, [pdfActionModal.isOpen, pdfActionModal.url]);
 
-  const [downloadPasswordPrompt, setDownloadPasswordPrompt] = useState({ isOpen: false, doc: null, password: '', error: '' });
+  const [downloadPasswordPrompt, setDownloadPasswordPrompt] = useState({ isOpen: false, doc: null, password: '', error: '', loading: false });
   const [compareList, setCompareList] = useState([]);
 
   // Mobile browsers often render only the first page of a blob PDF inside an iframe.
@@ -260,7 +271,7 @@ function MainApp() {
       return;
     }
 
-    if (isMobile && /\.pdf(?:[?#]|$)/i.test(url)) {
+    if (useNativePdf && /\.pdf(?:[?#]|$)/i.test(url)) {
       const link = document.createElement('a');
       link.href = getFullUrl(url);
       link.target = '_blank';
@@ -1226,7 +1237,7 @@ function MainApp() {
 
         {/* Download Icon (Clickable Link) */}
         {doc.category === 'test_report' ? (
-          <div onClick={() => setDownloadPasswordPrompt({ isOpen: true, doc: doc, password: '', error: '' })} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0 }}>
+          <div onClick={() => setDownloadPasswordPrompt({ isOpen: true, doc: doc, password: '', error: '', loading: false })} style={{ width: '36px', height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#00205B', cursor: 'pointer', flexShrink: 0 }}>
             <Download size={24} strokeWidth={2.5} />
           </div>
         ) : (
@@ -1827,19 +1838,38 @@ function MainApp() {
               >
                 ยกเลิก
               </button>
-              <button 
-                onClick={() => {
-                  if (downloadPasswordPrompt.password === 'goodfilm') {
-                    // Correct password, trigger download programmatically using the safe method
-                    handleForceDownload({ preventDefault: () => {} }, getFullUrl(downloadPasswordPrompt.doc.file), downloadPasswordPrompt.doc.title || downloadPasswordPrompt.doc.ext);
-                    setDownloadPasswordPrompt({ isOpen: false, doc: null, password: '', error: '' });
-                  } else {
-                    setDownloadPasswordPrompt({ ...downloadPasswordPrompt, error: 'รหัสผ่านไม่ถูกต้อง' });
+              <button
+                disabled={downloadPasswordPrompt.loading}
+                onClick={async () => {
+                  const pwd = downloadPasswordPrompt.password;
+                  if (!pwd) {
+                    setDownloadPasswordPrompt({ ...downloadPasswordPrompt, error: 'กรุณากรอกรหัสผ่าน' });
+                    return;
+                  }
+                  setDownloadPasswordPrompt({ ...downloadPasswordPrompt, loading: true, error: '' });
+                  try {
+                    // Exchange the password for a download session cookie that the server requires.
+                    const res = await apiFetch('/auth/download-access', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ password: pwd })
+                    });
+                    if (res.ok) {
+                      const doc = downloadPasswordPrompt.doc;
+                      setDownloadPasswordPrompt({ isOpen: false, doc: null, password: '', error: '', loading: false });
+                      handleForceDownload({ preventDefault: () => {} }, getFullUrl(doc.file), doc.title || doc.ext);
+                    } else if (res.status === 429) {
+                      setDownloadPasswordPrompt({ ...downloadPasswordPrompt, loading: false, error: 'ลองผิดหลายครั้งเกินไป กรุณารอสักครู่' });
+                    } else {
+                      setDownloadPasswordPrompt({ ...downloadPasswordPrompt, loading: false, error: 'รหัสผ่านไม่ถูกต้อง' });
+                    }
+                  } catch {
+                    setDownloadPasswordPrompt({ ...downloadPasswordPrompt, loading: false, error: 'เชื่อมต่อเซิร์ฟเวอร์ไม่สำเร็จ' });
                   }
                 }}
-                style={{ flex: 1, padding: '0.8rem', border: 'none', borderRadius: '8px', backgroundColor: 'var(--primary-blue)', color: 'white', fontWeight: 'bold', cursor: 'pointer' }}
+                style={{ flex: 1, padding: '0.8rem', border: 'none', borderRadius: '8px', backgroundColor: 'var(--primary-blue)', color: 'white', fontWeight: 'bold', cursor: downloadPasswordPrompt.loading ? 'wait' : 'pointer', opacity: downloadPasswordPrompt.loading ? 0.7 : 1 }}
               >
-                ตกลง
+                {downloadPasswordPrompt.loading ? 'กำลังตรวจสอบ...' : 'ตกลง'}
               </button>
             </div>
           </div>

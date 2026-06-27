@@ -42,6 +42,11 @@ const sessionSecret = process.env.ADMIN_SESSION_SECRET || (isProduction ? '' : '
 const sessionCookieName = 'goodfilm_admin_session';
 const downloadCookieName = 'goodfilm_download_session';
 const sessionDurationMs = 8 * 60 * 60 * 1000;
+// The app (app.goodfilmshop.com) and API (nas.goodfilmshop.com) live on different
+// subdomains, so session cookies must be SameSite=None + Secure to be sent cross-site.
+// SameSite=None requires Secure, so force secure on in production.
+const cookieSameSite = isProduction ? 'none' : 'lax';
+const cookieSecure = isProduction ? true : false;
 const defaultAllowedOrigins = [
   'https://goodfilmshop.com',
   'https://www.goodfilmshop.com',
@@ -445,8 +450,8 @@ server.post('/auth/login', (req, res) => {
   const expiresAt = now + sessionDurationMs;
   res.cookie(sessionCookieName, signSession(expiresAt, 'admin'), {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: 'strict',
+    secure: cookieSecure,
+    sameSite: cookieSameSite,
     path: '/',
     maxAge: sessionDurationMs
   });
@@ -456,8 +461,8 @@ server.post('/auth/login', (req, res) => {
 server.post('/auth/logout', (req, res) => {
   res.clearCookie(sessionCookieName, {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: 'strict',
+    secure: cookieSecure,
+    sameSite: cookieSameSite,
     path: '/'
   });
   res.json({ authenticated: false });
@@ -486,8 +491,8 @@ server.post('/auth/download-access', (req, res) => {
   const expiresAt = now + sessionDurationMs;
   res.cookie(downloadCookieName, signSession(expiresAt, 'download'), {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: 'strict',
+    secure: cookieSecure,
+    sameSite: cookieSameSite,
     path: '/download',
     maxAge: sessionDurationMs
   });
