@@ -121,7 +121,12 @@ const hasAdminSession = (req) => {
 
 const hasDownloadSession = (req) => {
   const cookies = parseCookies(req.headers.cookie);
-  return isValidSession(cookies[downloadCookieName], 'download');
+  if (isValidSession(cookies[downloadCookieName], 'download')) return true;
+  // Fallback for cross-subdomain (app. -> nas.) where third-party cookies are blocked:
+  // accept the signed token via query string or header instead of a cookie.
+  const headerToken = req.headers['x-download-token'];
+  const queryToken = req.query && req.query.token;
+  return isValidSession(headerToken || queryToken, 'download');
 };
 
 const requireAdmin = (req, res, next) => {
@@ -496,7 +501,7 @@ server.post('/auth/download-access', (req, res) => {
     path: '/download',
     maxAge: sessionDurationMs
   });
-  return res.json({ authorized: true, expiresAt });
+  return res.json({ authorized: true, expiresAt, token: signSession(expiresAt, 'download') });
 });
 
 server.use('/download', requireDownloadAccess, express.static(path.join(publicDir, 'download'), {

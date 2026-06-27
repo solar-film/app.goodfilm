@@ -258,6 +258,8 @@ function MainApp() {
   }, [pdfActionModal.isOpen, pdfActionModal.url]);
 
   const [downloadPasswordPrompt, setDownloadPasswordPrompt] = useState({ isOpen: false, doc: null, password: '', error: '', loading: false });
+  // Holds the signed download token (cross-subdomain safe; appended to file URLs instead of relying on cookies).
+  const [downloadToken, setDownloadToken] = useState('');
   const [compareList, setCompareList] = useState([]);
 
   // Mobile browsers often render only the first page of a blob PDF inside an iframe.
@@ -1855,9 +1857,15 @@ function MainApp() {
                       body: JSON.stringify({ password: pwd })
                     });
                     if (res.ok) {
+                      const data = await res.json().catch(() => ({}));
+                      if (data && data.token) setDownloadToken(data.token);
                       const doc = downloadPasswordPrompt.doc;
                       setDownloadPasswordPrompt({ isOpen: false, doc: null, password: '', error: '', loading: false });
-                      handleForceDownload({ preventDefault: () => {} }, getFullUrl(doc.file), doc.title || doc.ext);
+                      const fileUrl = getFullUrl(doc.file);
+                      const authedUrl = data && data.token
+                        ? fileUrl + (fileUrl.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(data.token)
+                        : fileUrl;
+                      handleForceDownload({ preventDefault: () => {} }, authedUrl, doc.title || doc.ext);
                     } else if (res.status === 429) {
                       setDownloadPasswordPrompt({ ...downloadPasswordPrompt, loading: false, error: 'ลองผิดหลายครั้งเกินไป กรุณารอสักครู่' });
                     } else {
