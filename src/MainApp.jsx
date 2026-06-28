@@ -218,6 +218,9 @@ function MainApp() {
         setShowCompareModal(true);
       }
     }
+    if (location.state?.skipWelcome) {
+      setShowWelcome(false);
+    }
   }, [location.state]);
 
   useEffect(() => {
