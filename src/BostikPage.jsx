@@ -39,10 +39,18 @@ const VIDEO_MAPPING = {
   44: { file: 'media9.mp4', label: 'Bostik Hightack Solutions', style: { top: '10.5%', left: '10.5%', width: '80.5%', height: '80%' } },
 };
 
-const getPageWidth = () => Math.min(
-  Math.max((typeof window === 'undefined' ? 430 : window.innerWidth) - 32, 280),
-  1000,
-);
+const getPageWidth = (isFull = false) => {
+  if (typeof window === 'undefined') return 430;
+  if (isFull) {
+    const aspect = 16 / 9;
+    let width = window.innerHeight * aspect;
+    if (width > window.innerWidth) {
+      width = window.innerWidth;
+    }
+    return width;
+  }
+  return Math.min(Math.max(window.innerWidth - 32, 280), 1000);
+};
 
 export default function BostikPage() {
   const navigate = useNavigate();
@@ -55,15 +63,16 @@ export default function BostikPage() {
   const [orientationNotice, setOrientationNotice] = useState('');
 
   useEffect(() => {
-    const handleResize = () => setPageWidth(getPageWidth());
+    const handleResize = () => setPageWidth(getPageWidth(isFullscreen));
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [isFullscreen]);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(Boolean(document.fullscreenElement || document.webkitFullscreenElement));
-      setTimeout(() => setPageWidth(getPageWidth()), 150);
+      const isFull = Boolean(document.fullscreenElement || document.webkitFullscreenElement);
+      setIsFullscreen(isFull);
+      setTimeout(() => setPageWidth(getPageWidth(isFull)), 150);
     };
     document.addEventListener('fullscreenchange', handleFullscreenChange);
     document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
@@ -133,7 +142,7 @@ export default function BostikPage() {
       }
       setIsFullscreen(false);
       setOrientationNotice('ปิดโหมดเต็มจอแล้ว');
-      setTimeout(() => setPageWidth(getPageWidth()), 250);
+      setTimeout(() => setPageWidth(getPageWidth(false)), 250);
       return;
     }
 
@@ -165,7 +174,7 @@ export default function BostikPage() {
       setIsFullscreen(true);
     }
 
-    setTimeout(() => setPageWidth(getPageWidth()), 250);
+    setTimeout(() => setPageWidth(getPageWidth(true)), 250);
   };
 
   const videoData = VIDEO_MAPPING[currentPage];
@@ -186,84 +195,119 @@ export default function BostikPage() {
 
       <div 
         className="bostik-presentation-fullscreen" 
-        style={isFullscreen && !document.fullscreenElement && !document.webkitFullscreenElement ? {
-          backgroundColor: '#eef1f5',
+        style={isFullscreen ? {
+          backgroundColor: '#000',
           position: 'fixed',
           top: 0,
           left: 0,
           width: '100vw',
           height: '100vh',
           zIndex: 9999,
-          overflowY: 'auto'
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          overflow: 'hidden'
         } : { backgroundColor: '#eef1f5' }}
       >
-      <main className="bostik-presentation-viewer" style={{ padding: '18px 16px 30px', scrollMarginTop: '72px', backgroundColor: '#eef1f5' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto 12px', display: 'flex', justifyContent: 'center' }}>
-          <button
-            type="button"
-            onClick={handleLandscapeMode}
-            style={{
-              width: '100%',
-              maxWidth: '420px',
-              padding: '11px 14px',
-              border: '1px solid #b8d4f4',
-              borderRadius: '12px',
-              backgroundColor: '#fff',
-              color: '#1a4993',
-              fontFamily: 'inherit',
-              fontWeight: '800',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              cursor: 'pointer',
-              boxShadow: '0 2px 8px rgba(26, 73, 147, 0.08)',
-            }}
-          >
-            {isFullscreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
-            {isFullscreen ? 'ปิดเต็มจอ' : 'ดูแนวนอน / เต็มจอ'}
-          </button>
-        </div>
-        {orientationNotice && (
-          <div role="status" style={{ maxWidth: '1000px', margin: '0 auto 12px', padding: '9px 12px', borderRadius: '10px', backgroundColor: '#e8f1fc', color: '#1a4993', textAlign: 'center', fontSize: '0.9rem', fontWeight: '700' }}>
-            {orientationNotice}
-          </div>
-        )}
-        <div style={{ maxWidth: '1000px', margin: '0 auto 12px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <button
-            type="button"
-            onClick={() => changePage(currentPage - 1)}
-            disabled={!canGoBack}
-            aria-label="สไลด์ก่อนหน้า"
-            style={{ width: '42px', height: '42px', borderRadius: '50%', border: '1px solid #d7e0ea', backgroundColor: canGoBack ? '#fff' : '#e5e7eb', color: canGoBack ? '#1a4993' : '#9ca3af', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: canGoBack ? 'pointer' : 'default' }}
-          >
-            <ChevronLeft size={22} />
-          </button>
-          <div aria-live="polite" style={{ minWidth: '132px', textAlign: 'center', color: '#1a2b4c', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
-            <span>หน้า</span>
-            <select
-              aria-label="เลือกหน้าสไลด์"
-              value={currentPage}
-              onChange={(event) => changePage(Number(event.target.value))}
-              disabled={!numPages}
-              style={{ padding: '5px 7px', border: '1px solid #cbd5e1', borderRadius: '7px', backgroundColor: '#fff', color: '#1a2b4c', fontFamily: 'inherit', fontWeight: '700' }}
+        {isFullscreen && (
+          <>
+            <button
+              onClick={handleLandscapeMode}
+              aria-label="ปิดเต็มจอ"
+              style={{ position: 'absolute', top: '16px', right: '16px', zIndex: 10001, backgroundColor: 'rgba(255,255,255,0.15)', color: '#fff', border: 'none', borderRadius: '50%', width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', backdropFilter: 'blur(4px)' }}
             >
-              {Array.from({ length: numPages || 1 }, (_, index) => (
-                <option key={index + 1} value={index + 1}>{index + 1}</option>
-              ))}
-            </select>
-            <span>/ {numPages || '...'}</span>
-          </div>
-          <button
-            type="button"
-            onClick={() => changePage(currentPage + 1)}
-            disabled={!canGoForward}
-            aria-label="สไลด์ถัดไป"
-            style={{ width: '42px', height: '42px', borderRadius: '50%', border: '1px solid #d7e0ea', backgroundColor: canGoForward ? '#fff' : '#e5e7eb', color: canGoForward ? '#1a4993' : '#9ca3af', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: canGoForward ? 'pointer' : 'default' }}
-          >
-            <ChevronRight size={22} />
-          </button>
-        </div>
+              <X size={24} />
+            </button>
+            <button
+               onClick={() => changePage(currentPage - 1)}
+               disabled={!canGoBack}
+               aria-label="สไลด์ก่อนหน้า"
+               style={{ position: 'absolute', left: 'max(16px, env(safe-area-inset-left))', zIndex: 10001, backgroundColor: 'rgba(255,255,255,0.15)', color: canGoBack ? '#fff' : 'rgba(255,255,255,0.3)', border: 'none', borderRadius: '50%', width: '56px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: canGoBack ? 'pointer' : 'default', backdropFilter: 'blur(4px)' }}
+            >
+               <ChevronLeft size={36} />
+            </button>
+            <button
+               onClick={() => changePage(currentPage + 1)}
+               disabled={!canGoForward}
+               aria-label="สไลด์ถัดไป"
+               style={{ position: 'absolute', right: 'max(16px, env(safe-area-inset-right))', zIndex: 10001, backgroundColor: 'rgba(255,255,255,0.15)', color: canGoForward ? '#fff' : 'rgba(255,255,255,0.3)', border: 'none', borderRadius: '50%', width: '56px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: canGoForward ? 'pointer' : 'default', backdropFilter: 'blur(4px)' }}
+            >
+               <ChevronRight size={36} />
+            </button>
+          </>
+        )}
+
+      <main className="bostik-presentation-viewer" style={{ padding: isFullscreen ? 0 : '18px 16px 30px', scrollMarginTop: isFullscreen ? 0 : '72px', backgroundColor: isFullscreen ? 'transparent' : '#eef1f5', width: isFullscreen ? 'auto' : '100%', maxWidth: isFullscreen ? 'none' : '1000px', margin: '0 auto' }}>
+        {!isFullscreen && (
+          <>
+            <div style={{ maxWidth: '1000px', margin: '0 auto 12px', display: 'flex', justifyContent: 'center' }}>
+              <button
+                type="button"
+                onClick={handleLandscapeMode}
+                style={{
+                  width: '100%',
+                  maxWidth: '420px',
+                  padding: '11px 14px',
+                  border: '1px solid #b8d4f4',
+                  borderRadius: '12px',
+                  backgroundColor: '#fff',
+                  color: '#1a4993',
+                  fontFamily: 'inherit',
+                  fontWeight: '800',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  cursor: 'pointer',
+                  boxShadow: '0 2px 8px rgba(26, 73, 147, 0.08)',
+                }}
+              >
+                {isFullscreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
+                {isFullscreen ? 'ปิดเต็มจอ' : 'ดูแนวนอน / เต็มจอ'}
+              </button>
+            </div>
+            {orientationNotice && (
+              <div role="status" style={{ maxWidth: '1000px', margin: '0 auto 12px', padding: '9px 12px', borderRadius: '10px', backgroundColor: '#e8f1fc', color: '#1a4993', textAlign: 'center', fontSize: '0.9rem', fontWeight: '700' }}>
+                {orientationNotice}
+              </div>
+            )}
+            <div style={{ maxWidth: '1000px', margin: '0 auto 12px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+              <button
+                type="button"
+                onClick={() => changePage(currentPage - 1)}
+                disabled={!canGoBack}
+                aria-label="สไลด์ก่อนหน้า"
+                style={{ width: '42px', height: '42px', borderRadius: '50%', border: '1px solid #d7e0ea', backgroundColor: canGoBack ? '#fff' : '#e5e7eb', color: canGoBack ? '#1a4993' : '#9ca3af', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: canGoBack ? 'pointer' : 'default' }}
+              >
+                <ChevronLeft size={22} />
+              </button>
+              <div aria-live="polite" style={{ minWidth: '132px', textAlign: 'center', color: '#1a2b4c', fontWeight: '700', fontSize: '0.95rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+                <span>หน้า</span>
+                <select
+                  aria-label="เลือกหน้าสไลด์"
+                  value={currentPage}
+                  onChange={(event) => changePage(Number(event.target.value))}
+                  disabled={!numPages}
+                  style={{ padding: '5px 7px', border: '1px solid #cbd5e1', borderRadius: '7px', backgroundColor: '#fff', color: '#1a2b4c', fontFamily: 'inherit', fontWeight: '700' }}
+                >
+                  {Array.from({ length: numPages || 1 }, (_, index) => (
+                    <option key={index + 1} value={index + 1}>{index + 1}</option>
+                  ))}
+                </select>
+                <span>/ {numPages || '...'}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => changePage(currentPage + 1)}
+                disabled={!canGoForward}
+                aria-label="สไลด์ถัดไป"
+                style={{ width: '42px', height: '42px', borderRadius: '50%', border: '1px solid #d7e0ea', backgroundColor: canGoForward ? '#fff' : '#e5e7eb', color: canGoForward ? '#1a4993' : '#9ca3af', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: canGoForward ? 'pointer' : 'default' }}
+              >
+                <ChevronRight size={22} />
+              </button>
+            </div>
+          </>
+        )}
 
         <Document
           file={PRESENTATION_URL}
@@ -318,10 +362,12 @@ export default function BostikPage() {
           </div>
         </Document>
 
-        <div style={{ maxWidth: '1000px', margin: '14px auto 0', display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-          <button type="button" disabled={!canGoBack} onClick={() => changePage(currentPage - 1)} style={{ flex: 1, maxWidth: '180px', padding: '10px 14px', border: '1px solid #d7e0ea', borderRadius: '10px', backgroundColor: canGoBack ? '#fff' : '#e5e7eb', color: canGoBack ? '#1a4993' : '#9ca3af', fontFamily: 'inherit', fontWeight: '700', cursor: canGoBack ? 'pointer' : 'default' }}>หน้าก่อนหน้า</button>
-          <button type="button" disabled={!canGoForward} onClick={() => changePage(currentPage + 1)} style={{ flex: 1, maxWidth: '180px', padding: '10px 14px', border: '1px solid #d7e0ea', borderRadius: '10px', backgroundColor: canGoForward ? '#1a4993' : '#e5e7eb', color: canGoForward ? '#fff' : '#9ca3af', fontFamily: 'inherit', fontWeight: '700', cursor: canGoForward ? 'pointer' : 'default' }}>หน้าถัดไป</button>
-        </div>
+        {!isFullscreen && (
+          <div style={{ maxWidth: '1000px', margin: '14px auto 0', display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
+            <button type="button" disabled={!canGoBack} onClick={() => changePage(currentPage - 1)} style={{ flex: 1, maxWidth: '180px', padding: '10px 14px', border: '1px solid #d7e0ea', borderRadius: '10px', backgroundColor: canGoBack ? '#fff' : '#e5e7eb', color: canGoBack ? '#1a4993' : '#9ca3af', fontFamily: 'inherit', fontWeight: '700', cursor: canGoBack ? 'pointer' : 'default' }}>หน้าก่อนหน้า</button>
+            <button type="button" disabled={!canGoForward} onClick={() => changePage(currentPage + 1)} style={{ flex: 1, maxWidth: '180px', padding: '10px 14px', border: '1px solid #d7e0ea', borderRadius: '10px', backgroundColor: canGoForward ? '#1a4993' : '#e5e7eb', color: canGoForward ? '#fff' : '#9ca3af', fontFamily: 'inherit', fontWeight: '700', cursor: canGoForward ? 'pointer' : 'default' }}>หน้าถัดไป</button>
+          </div>
+        )}
       </main>
 
       {activeVideo && (
