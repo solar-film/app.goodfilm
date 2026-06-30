@@ -417,6 +417,14 @@ const upload = multer({
   limits: uploadLimits(DOCUMENT_MAX_BYTES)
 });
 
+server.use((req, res, next) => {
+  const countryCode = req.headers['cf-ipcountry'];
+  if (countryCode && countryCode.toUpperCase() !== 'TH') {
+    return res.status(403).send('Access denied: This service is only available in Thailand.');
+  }
+  next();
+});
+
 server.use(helmet({
   contentSecurityPolicy: false,
   crossOriginResourcePolicy: { policy: 'cross-origin' }
